@@ -1,0 +1,26 @@
+# C-CAN
+# 2016-11-17 03:39:09Z
+
+# IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 0
+# IO_1@[IOP=(1)][IoId=(1)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 1
+# IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 1 3
+# IO_0@[IOP=(15)][IoId=(0)] is reserved: MhzXtalEnabled
+dont_use_io iocell 15 0
+# IO_1@[IOP=(15)][IoId=(1)] is reserved: MhzXtalEnabled
+dont_use_io iocell 15 1
+set_io "two(0)" iocell 3 2
+set_io "\ADC_SAR_1:Bypass(0)\" iocell 0 4
+set_io "one(0)" iocell 3 1
+set_io "zero(0)" iocell 3 0
+set_io "LED(0)" iocell 2 1
+set_io "RX_2(0)" iocell 1 4
+set_io "TX_2(0)" iocell 1 5
+set_io "Enc_L(0)" iocell 1 6
+set_io "Enc_R(0)" iocell 1 7
+set_io "three(0)" iocell 3 3
+set_io "four(0)" iocell 3 4
+set_io "five(0)" iocell 3 5
+set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 0

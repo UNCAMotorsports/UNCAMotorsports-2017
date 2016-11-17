@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CE95277 ADC and UART\C-CAN">
+<ExpandedNodeIds>
+<v>CE95277 ADC and UART</v>
+<v>CE95277 ADC and UART\C-CAN</v>
+<v>CE95277 ADC and UART\C-CAN\TopDesign</v>
+<v>CE95277 ADC and UART\C-CAN\C-CAN.cydwr</v>
+<v>CE95277 ADC and UART\C-CAN\Header Files</v>
+<v>CE95277 ADC and UART\C-CAN\Header Files\device.h</v>
+<v>CE95277 ADC and UART\C-CAN\Source Files</v>
+<v>CE95277 ADC and UART\C-CAN\Source Files\main.c</v>
+<v>CE95277 ADC and UART\C-CAN\CE95277 ADC and UART.pdf</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_INT.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_PM.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\AMux_1</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_INT.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_PM.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_TX_RX_func.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_ISR</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_ISR\CAN_ISR.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_ISR\CAN_ISR.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_TIMER</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_TIMER\CAN_TIMER.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_TIMER\CAN_TIMER.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_TIMER\CAN_TIMER_PM.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Clock_1</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Clock_1\Clock_1.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Clock_1\Clock_1.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Clock_2</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Clock_2\Clock_2.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Clock_2\Clock_2.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Clock_3</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Clock_3\Clock_3.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Clock_3\Clock_3.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Enc_A</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Enc_A\Enc_A.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Enc_A\Enc_A.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Enc_A\Enc_A_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Encoder_Count</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Encoder_Count\Encoder_Count.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Encoder_Count\Encoder_Count.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Encoder_Count\Encoder_Count_PM.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ISR_PIN</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ISR_PIN\ISR_PIN.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ISR_PIN\ISR_PIN.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ISR_PIN\ISR_PIN_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\mcp2515_clk</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\mcp2515_clk\mcp2515_clk.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\mcp2515_clk\mcp2515_clk.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\mcp2515_clk\mcp2515_clk_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\RX_2</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\RX_2\RX_2.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\RX_2\RX_2.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\RX_2\RX_2_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Test_Pin</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Test_Pin\Test_Pin.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Test_Pin\Test_Pin.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Test_Pin\Test_Pin_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Time_Count</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Time_Count\Time_Count.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Time_Count\Time_Count.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Time_Count\Time_Count_PM.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\TX_2</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\TX_2\TX_2.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\TX_2\TX_2.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\TX_2\TX_2_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\UART_1</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\UART_1\UART_1.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\UART_1\UART_1.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\UART_1\UART_1_BOOT.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\UART_1\UART_1_INT.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\UART_1\UART_1_PM.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\UART_1_IntClock</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_180</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_180\Vin_180.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_180\Vin_180.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_180\Vin_180_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_90</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_90\Vin_90.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_90\Vin_90.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_90\Vin_90_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_Pot</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_Pot\Vin_Pot.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_Pot\Vin_Pot.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\Vin_Pot\Vin_Pot_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cydevice.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cyfitter.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\cymetadata.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\project.h</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CE95277 ADC and UART</v>
+<v>CE95277 ADC and UART\C-CAN</v>
+<v>CE95277 ADC and UART\C-CAN\TopDesign</v>
+<v>CE95277 ADC and UART\C-CAN\C-CAN.cydwr</v>
+<v>CE95277 ADC and UART\C-CAN\Header Files</v>
+<v>CE95277 ADC and UART\C-CAN\Header Files\device.h</v>
+<v>CE95277 ADC and UART\C-CAN\Source Files</v>
+<v>CE95277 ADC and UART\C-CAN\Source Files\main.c</v>
+<v>CE95277 ADC and UART\C-CAN\CE95277 ADC and UART.pdf</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_INT.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_PM.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass_aliases.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\AMux_1</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.h</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_INT.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_PM.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_TX_RX_func.c</v>
+<v>CE95277 ADC and UART\C-CAN\Generated_Source\PSoC5\CAN_ISR</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="CE95277 ADC and UART\C-CAN">
+<ExpandedNodeIds>
+<v>CE95277 ADC and UART</v>
+<v>CE95277 ADC and UART\C-CAN\TopDesign</v>
+<v>CE95277 ADC and UART\C-CAN\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CE95277 ADC and UART</v>
+<v>CE95277 ADC and UART\C-CAN</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>CE95277 ADC and UART</v>
+<v>CE95277 ADC and UART\C-CAN</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_Bypass.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\AMux_1.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_INT.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_PM.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_TX_RX_func.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_ISR.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_TIMER.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_TIMER_PM.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_3.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Enc_A.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Encoder_Count.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Encoder_Count_PM.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ISR_PIN.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\mcp2515_clk.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_2.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Test_Pin.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Time_Count.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Time_Count_PM.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\TX_2.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_INT.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_PM.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Vin_180.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Vin_90.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Vin_Pot.lst</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.elf</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.hex</v>
+<v>CE95277 ADC and UART\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.map</v>
+<v>CE95277 ADC and UART\C-CAN\C-CAN.gpdsc</v>
+<v>CE95277 ADC and UART\C-CAN\C-CAN.rpt</v>
+<v>CE95277 ADC and UART\C-CAN\C-CAN_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CE95277 ADC and UART</v>
+<v>CE95277 ADC and UART\C-CAN</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>CE95277 ADC and UART</v>
+<v>CE95277 ADC and UART\C-CAN</v>
+<v>CE95277 ADC and UART\C-CAN\PSoC 5 Architecture TRM</v>
+<v>CE95277 ADC and UART\C-CAN\CY8C58LP Family Datasheet</v>
+<v>CE95277 ADC and UART\C-CAN\System Reference Guides</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>CE95277 ADC and UART</v>
+<v>CE95277 ADC and UART\C-CAN</v>
+<v>CE95277 ADC and UART\C-CAN\PSoC 5 Architecture TRM</v>
+<v>CE95277 ADC and UART\C-CAN\CY8C58LP Family Datasheet</v>
+<v>CE95277 ADC and UART\C-CAN\System Reference Guides</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\CE95277 ADC and UART.cydsn\main.c" />
+<name v=".\CE95277 ADC and UART.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\CE95277 ADC and UART.cydsn\CE95277 ADC and UART.cydwr" />
+<name v=".\CE95277 ADC and UART.cydsn\Generated_Source\PSoC5\ADC_SAR_1.c" />
+<name v=".\CE95277 ADC and UART.cydsn\Generated_Source\PSoC5\CAN_TIMER.c" />
+<name v=".\CE95277 ADC and UART.cydsn\Generated_Source\PSoC5\CAN_ISR.c" />
+<name v=".\CE95277 ADC and UART.cydsn\Generated_Source\PSoC5\CAN_1_TX_RX_func.c" />
+<name v=".\CE95277 ADC and UART.cydsn\Generated_Source\PSoC5\CAN_1.c" />
+<name v=".\CE95277 ADC and UART.cydsn\Generated_Source\PSoC5\CAN_1.h" />
+</OpenDocs>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

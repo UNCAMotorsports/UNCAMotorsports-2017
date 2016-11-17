@@ -1,0 +1,7 @@
+C:\Users\Patrick\Documents\GitHub\PSoC 5LP FIles\C-CAN_PSoC_DevKit\Bootloader.cydsn\Bootloader.cyprj|5f6ab014-42ae-4930-8ecb-fd5189cbd335
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|bd19aa40-1a2c-45f8-b68f-2eca82ee80b1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|28577d53-ccad-447b-920c-2dd4a8393ba6
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|9bc63cf4-4a62-4cba-948c-4c6e1e977f0e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ca1bbd0c-9750-436c-bd70-b43c9afeb5f6
+C:\Users\Patrick\Documents\GitHub\PSoC 5LP FIles\C-CAN_PSoC_DevKit\C-CAN.cydsn\C-CAN.cyprj|fda8cfbb-3e99-4f00-8e19-9b670f252c17
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|13dccd4a-a682-423c-9db4-224117087a78
