@@ -47,6 +47,11 @@ void multiRateISR(){
 DAC_MCP49xx dac0(DAC_MCP49xx::MCP4921, CS_DAC0);
 DAC_MCP49xx dac1(DAC_MCP49xx::MCP4921, CS_DAC1);
 
+uint32_t lastThrottle = 0;
+uint32_t lastSteering = 0;
+uint32_t lastLeftRPM = 0;
+uint32_t lastRightRPM = 0;
+
 FlexCAN CANBus(1000000);
 
 static CAN_message_t rxmsg;
@@ -98,14 +103,6 @@ void setup()
     analogReadResolution(12);
     analogReadAveraging(4);
 
-    // Initialize the throttle sensor
-    //throttle.init();
-
-#ifdef DEBUG_THROTTLE
-    Serial.printf("Throttle Min:\t%d\n", throttle.getThrottleMin());
-    delay(1000);
-    Serial.printf("Throttle Max:\t%d\n", throttle.getThrottleMax());
-#endif
 
     // Start datalogging
 #ifdef LOGGING
@@ -113,7 +110,7 @@ void setup()
 #endif
 
     CANBus.begin();
-    //loopTimer.begin(multiRateISR, TIMER_RATE);        // Start the main loop timer
+    loopTimer.begin(multiRateISR, TIMER_RATE);        // Start the main loop timer
 
     lastTime = micros();
 }
@@ -131,14 +128,22 @@ void loop()
     {
         while (CANBus.read(rxmsg)){
             switch (rxmsg.id) {
-                case THROTTLE_ID: throttleTask(rxmsg); break;
+                case THROTTLE_ID: throttleTask(rxmsg); lastThrottle = globalClock; break;
                 //case STEERING_ID: steeringTask(rxmsg); break;
                 case LEFT_RPM_ID: leftRPMTask(rxmsg); break;
                 case RIGHT_RPM_ID: rightRPMTask(rxmsg); break;
             }
         }
     }
-
+    if (globalClock - lastThrottle > 100){
+        requestedThrottle = 0;
+        dac0.output(requestedThrottle);
+        dac1.output(requestedThrottle);
+#ifdef DEBUG_THROTTLE        
+        Serial.println("Missing throttle messages!");
+#endif
+        lastThrottle = globalClock;
+    }
 #ifdef DEBUG_PROFILING
     profiler = micros() - profiler;
     Serial.print("Loop Time: ");
@@ -183,17 +188,13 @@ void throttleTask(struct CAN_message_t msg){
 #endif
 
     requestedThrottle = msg.buf[0] << 8 | msg.buf[1];    // Safe throttle will need a better algorithm to handle noise
+
 #ifdef DEBUG_THROTTLE
     Serial.printf("\tRequested: %d\n", requestedThrottle);
 #endif
-    requestedThrottle = simple_constrain(requestedThrottle, THROTTLE_MIN, THROTTLE_MAX);
-    requestedThrottle -= THROTTLE_MIN;
-    requestedThrottle = requestedThrottle / (double)(THROTTLE_MAX-THROTTLE_MIN) * 4095;
-
+    
     if (requestedThrottle < 75)     // Filter the lowest values so the car doesn't crawl
         requestedThrottle = 0;
-
-
 
     switch (DIFFERENTIAL_MODE)
     {
@@ -201,8 +202,8 @@ void throttleTask(struct CAN_message_t msg){
         leftThrottle = requestedThrottle;
         rightThrottle = requestedThrottle;
         break;
-    case 1:
 
+    case 1:
         rightThrottle = requestedThrottle + requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer;
         leftThrottle = requestedThrottle - requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer;
 
