@@ -40,10 +40,9 @@
 
 #define CANTX               (3)
 #define CANRX               (4)
+
+// CAN IDs
 #define THROTTLE_ID         (0x040)
 #define STEERING_ID         (0x041)
 #define LEFT_RPM_ID         (0x042)
 #define RIGHT_RPM_ID        (0x043)
-
-#define THROTTLE_MIN        (220)
-#define THROTTLE_MAX        (2784)
