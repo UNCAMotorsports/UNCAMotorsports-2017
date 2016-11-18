@@ -12,7 +12,7 @@
 
 #include <C-CAN.h>
 
-void GetSample( Pot * pot){
+void GetSample(Pot * pot){
     
     /*This function applies a moving average filter to the data read by the ADC. Each sensor
     *has an associated sensor struct that contains all necessary variables. The multiplexer
@@ -110,6 +110,27 @@ void GetRPM(Encoder * encoder){
     UART_1_PutString("\n\r");
     #endif
 
+}
+
+void GetThrottle(Throttle * throttle){
+    GetSample(throttle->pot);
+    throttle->throttle = (throttle->pot->mV - throttle->throttleMin) * 4095 / PEDAL_THROW;
+    if(throttle->throttle > 4095){
+        throttle->throttle = 4095;   
+    }
+    if(throttle->throttle <= 100){
+        throttle->throttle = 0;
+    }
+}
+
+void ThrottleInit(Throttle * throttle, Pot * pot){
+    int i = 0;
+    throttle->pot = pot;
+    for(i = 0; i < throttle->pot->sensor.window; i++){
+        GetSample(throttle->pot);
+    }
+    throttle->throttleMin = throttle->pot->mV-30;
+    throttle->throttleMax = throttle->throttleMin + PEDAL_THROW;
 }
 
 void SensorSet(Sensor * sensor, uint8 number_set, uint8 window_set, uint16 rate_set, uint16 CAN_rate_set){

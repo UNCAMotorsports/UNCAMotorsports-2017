@@ -22,10 +22,9 @@
 #define CLOCK_FREQ BCLK__BUS_CLK__HZ
 #define INTERRUPT_FREQ 15000u
 #define TRANSMIT_BUFFER_SIZE  80
-    
+#define PEDAL_THROW 2564
 
 typedef unsigned char bool; //C doesn't have a boolean type by default
-
 
 typedef struct Sensors { //Struct that holds all necessary data for a sensor
     char name[17];
@@ -52,6 +51,13 @@ typedef struct Encoders { //Encoder objects inherit Sensor variables
     int16 rpm;
 }Encoder;
 
+typedef struct Throttle {
+    Pot * pot;
+    uint16 throttleMin;
+    uint16 throttleMax;
+    uint16 throttle;
+}Throttle;
+
 Pot zero; //Each C-CAN is set up to read 6 analog pots and 2 encoders
 Pot one;
 Pot two;
@@ -60,6 +66,7 @@ Pot four;
 Pot five;
 Encoder left;
 Encoder right;
+Throttle throttle;
 
 static bool temp_enable[8]; //Holds previous enable configuration during config()
 
@@ -74,7 +81,9 @@ uint8 RxFlag1;
 
 void GetSample(Pot * pot);
 void GetRPM(Encoder * encoder);
+void GetThrottle(Throttle * throttle);
 void SensorSet(Sensor * sensor, uint8 number_set, uint8 window_set, uint16 rate_set, uint16 CAN_rate_set);
+void ThrottleInit(Throttle * throttle, Pot * pot);
 void PotInit(Pot * pot);
 void EncoderInit(Encoder * encoder);
 

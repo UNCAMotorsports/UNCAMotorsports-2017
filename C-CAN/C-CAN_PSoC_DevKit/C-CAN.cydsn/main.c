@@ -62,7 +62,7 @@ CY_ISR(SysTick_ISR)
 
 int main()
 {
-    //char TransmitBuffer[TRANSMIT_BUFFER_SIZE];
+    
 
     /* Start the components */
     ADC_SAR_1_Start();
@@ -76,19 +76,6 @@ int main()
     //srand(12);
     
     uint32 temp = 0;
-    
-    #ifdef LOOP
-    /*Point the Systick vector to the ISR in this file */
-    CyIntSetSysVector(SYSTICK_INTERRUPT_VECTOR_NUMBER, SysTick_ISR);
-    
-    /* Set the number of ticks between interrupts.
-    Ignore the function success/fail return value.
-    Defined in auto-generated core_cm3.h */
-    (void)SysTick_Config(CLOCK_FREQ / INTERRUPT_FREQ); 
-    #endif
-    
-    
-
     
     /* Initialize Variables */
     CAN_Send_0(0xff,0,0xff,0,0xff,0,0xff,0);
@@ -116,13 +103,25 @@ int main()
     
     SensorSet(&zero.sensor,  0, 50, 1000, 200); //sensor, number, window, rate, CAN rate
     SensorSet(&one.sensor,   1, 10, 1000, 200);
-    SensorSet(&two.sensor,   2, 1, 1, 1);
-    SensorSet(&three.sensor, 3, 1, 1, 1);
-    SensorSet(&four.sensor,  4, 1, 1, 1);
-    SensorSet(&five.sensor,  5, 1, 1, 1);
+    SensorSet(&two.sensor,   2,  1,     1,  1);
+    SensorSet(&three.sensor, 3,  1,     1,  1);
+    SensorSet(&four.sensor,  4,  1,     1,  1);
+    SensorSet(&five.sensor,  5,  1,     1,  1);
     SensorSet(&left.sensor,  6, 50, 1000, 200);
     SensorSet(&right.sensor, 7, 50, 1000, 200);
-            
+    
+    ThrottleInit(&throttle,&zero);
+    
+    #ifdef LOOP
+    /*Point the Systick vector to the ISR in this file */
+    CyIntSetSysVector(SYSTICK_INTERRUPT_VECTOR_NUMBER, SysTick_ISR);
+    
+    /* Set the number of ticks between interrupts.
+    Ignore the function success/fail return value.
+    Defined in auto-generated core_cm3.h */
+    (void)SysTick_Config(CLOCK_FREQ / INTERRUPT_FREQ); 
+    #endif
+    
     
     
     /* Send message to verify COM port is connected properly */
@@ -142,7 +141,7 @@ int main()
         //Config();
         #ifdef LOOP
         if((zero.sensor.flag==TRUE)&&(zero.sensor.enable==TRUE)){
-            GetSample(&zero);
+            GetThrottle(&throttle);
             //CAN_Send((uint8)(zero.mV>>8),(uint8)zero.mV,0,0,0,0,0,0);
         }
         else if((one.sensor.flag==TRUE)&&(one.sensor.enable==TRUE)){
@@ -167,7 +166,7 @@ int main()
             GetRPM(&right);     
         }
         else if((zero.sensor.CAN_flag==TRUE)&&(zero.sensor.enable==TRUE)){
-            CAN_Send_0((uint8)(zero.mV>>8),(uint8)(zero.mV),0,0,0,0,0,0);
+            CAN_Send_0((uint8)(throttle.throttle>>8),(uint8)(throttle.throttle),0,0,0,0,0,0);
             zero.sensor.CAN_flag=FALSE;
         }
         else if((one.sensor.CAN_flag==TRUE)&&(one.sensor.enable==TRUE)){

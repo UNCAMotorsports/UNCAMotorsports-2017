@@ -1,6 +1,6 @@
 -- ======================================================================
 -- C-CAN.ctl generated from C-CAN
--- 11/16/2016 at 22:39
+-- 11/17/2016 at 19:58
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 
