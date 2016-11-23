@@ -1,0 +1,1 @@
+Current Shunt: Murata 3020-01105-0. 1000A 50mV shunt.
