@@ -53,9 +53,9 @@ typedef struct Encoders { //Encoder objects inherit Sensor variables
 
 typedef struct Throttle {
     Pot * pot;
-    uint16 throttleMin;
-    uint16 throttleMax;
-    uint16 throttle;
+    int16 throttleMin;
+    int16 throttleMax;
+    int16 throttle;
 }Throttle;
 
 Pot zero; //Each C-CAN is set up to read 6 analog pots and 2 encoders
