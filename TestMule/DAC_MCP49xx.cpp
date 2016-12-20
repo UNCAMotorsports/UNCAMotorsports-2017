@@ -141,7 +141,7 @@ void DAC_MCP49xx::shutdown(void) {
   // Sending all zeroes should work, too, but I'm unsure whether there might be a switching time
   // between buffer and gain modes, so we'll send them so that they have the same value once we
   // exit shutdown.
-  unsigned short out = (bufferVref << 14) | ((!(gain2x)) << 13); // gain == 0 means 2x, so we need to invert it
+  uint16_t out = (bufferVref << 14) | ((!(gain2x)) << 13); // gain == 0 means 2x, so we need to invert it
   SPI.transfer((out & 0xff00) >> 8);
   SPI.transfer(out & 0xff);
 
@@ -154,7 +154,7 @@ void DAC_MCP49xx::shutdown(void) {
 
 // Private function.
 // Called by the output* set of functions.
-void DAC_MCP49xx::_output(unsigned short data, Channel chan) {
+void DAC_MCP49xx::_output(uint16_t data, Channel chan) {
   // Truncate the unused bits to fit the 8/10/12 bits the DAC accepts
   if (this->bitwidth == 12)
     data &= 0xfff;
@@ -188,23 +188,23 @@ void DAC_MCP49xx::_output(unsigned short data, Channel chan) {
 }
 
 // For MCP49x1
-void DAC_MCP49xx::output(unsigned short data) {
+void DAC_MCP49xx::output(uint16_t data) {
   this->_output(data, CHANNEL_A);
 }
 
 // For MCP49x2
-void DAC_MCP49xx::outputA(unsigned short data) {
+void DAC_MCP49xx::outputA(uint16_t data) {
   this->_output(data, CHANNEL_A);
 }
 
 // For MCP49x2
-void DAC_MCP49xx::outputB(unsigned short data) {
+void DAC_MCP49xx::outputB(uint16_t data) {
   this->_output(data, CHANNEL_B);
 }
 
 // MCP49x2 (dual DAC) only.
 // Send a set of new values for the DAC to output in a single function call
-void DAC_MCP49xx::output2(unsigned short data_A, unsigned short data_B) {
+void DAC_MCP49xx::output2(uint16_t data_A, uint16_t data_B) {
   this->_output(data_A, CHANNEL_A);
   this->_output(data_B, CHANNEL_B);
   

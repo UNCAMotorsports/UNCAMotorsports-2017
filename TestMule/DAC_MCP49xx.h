@@ -38,16 +38,16 @@ class DAC_MCP49xx {
   void shutdown(void);
 
   /* All of these call _output() internally */
-  void output(unsigned short _out);
-  void outputA(unsigned short _out); /* same as output(), but having A/B makes more sense for dual DACs */
-  void outputB(unsigned short _out);
-  void output2(unsigned short _out, unsigned short _out2); // For MCP49x2
+  void output(uint16_t _out);
+  void outputA(uint16_t _out); /* same as output(), but having A/B makes more sense for dual DACs */
+  void outputB(uint16_t _out);
+  void output2(uint16_t _out, uint16_t _out2); // For MCP49x2
 
   void latch(void); // Actually change the output, if the LDAC pin isn't shorted to ground
   boolean setAutomaticallyLatchDual(bool _latch);
 
   private:
-    void _output(unsigned short _out, Channel _chan);
+    void _output(uint16_t _out, Channel _chan);
     int ss_pin;
     int LDAC_pin;
     int bitwidth;

@@ -1,0 +1,347 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:relays
+LIBS:UNCAMotorsports
+LIBS:Tractive System-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Battery BT?
+U 1 1 5840CE6A
+P 3450 2900
+F 0 "BT?" H 3568 2946 50  0000 L CNN
+F 1 "Battery" H 3568 2855 50  0000 L CNN
+F 2 "" V 3450 2940 50  0000 C CNN
+F 3 "" V 3450 2940 50  0000 C CNN
+	1    3450 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840CEEE
+P 3200 2900
+F 0 "BT?" H 3318 2946 50  0000 L CNN
+F 1 "Battery" H 3318 2855 50  0000 L CNN
+F 2 "" V 3200 2940 50  0000 C CNN
+F 3 "" V 3200 2940 50  0000 C CNN
+	1    3200 2900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840CFF9
+P 3450 3300
+F 0 "BT?" H 3568 3346 50  0000 L CNN
+F 1 "Battery" H 3568 3255 50  0000 L CNN
+F 2 "" V 3450 3340 50  0000 C CNN
+F 3 "" V 3450 3340 50  0000 C CNN
+	1    3450 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840CFFF
+P 3200 3300
+F 0 "BT?" H 3318 3346 50  0000 L CNN
+F 1 "Battery" H 3318 3255 50  0000 L CNN
+F 2 "" V 3200 3340 50  0000 C CNN
+F 3 "" V 3200 3340 50  0000 C CNN
+	1    3200 3300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D079
+P 3450 3700
+F 0 "BT?" H 3568 3746 50  0000 L CNN
+F 1 "Battery" H 3568 3655 50  0000 L CNN
+F 2 "" V 3450 3740 50  0000 C CNN
+F 3 "" V 3450 3740 50  0000 C CNN
+	1    3450 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D07F
+P 3200 3700
+F 0 "BT?" H 3318 3746 50  0000 L CNN
+F 1 "Battery" H 3318 3655 50  0000 L CNN
+F 2 "" V 3200 3740 50  0000 C CNN
+F 3 "" V 3200 3740 50  0000 C CNN
+	1    3200 3700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D085
+P 3450 4100
+F 0 "BT?" H 3568 4146 50  0000 L CNN
+F 1 "Battery" H 3568 4055 50  0000 L CNN
+F 2 "" V 3450 4140 50  0000 C CNN
+F 3 "" V 3450 4140 50  0000 C CNN
+	1    3450 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D08B
+P 3200 4100
+F 0 "BT?" H 3318 4146 50  0000 L CNN
+F 1 "Battery" H 3318 4055 50  0000 L CNN
+F 2 "" V 3200 4140 50  0000 C CNN
+F 3 "" V 3200 4140 50  0000 C CNN
+	1    3200 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D395
+P 3450 4500
+F 0 "BT?" H 3568 4546 50  0000 L CNN
+F 1 "Battery" H 3568 4455 50  0000 L CNN
+F 2 "" V 3450 4540 50  0000 C CNN
+F 3 "" V 3450 4540 50  0000 C CNN
+	1    3450 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D39B
+P 3200 4500
+F 0 "BT?" H 3318 4546 50  0000 L CNN
+F 1 "Battery" H 3318 4455 50  0000 L CNN
+F 2 "" V 3200 4540 50  0000 C CNN
+F 3 "" V 3200 4540 50  0000 C CNN
+	1    3200 4500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D3A1
+P 3450 4900
+F 0 "BT?" H 3568 4946 50  0000 L CNN
+F 1 "Battery" H 3568 4855 50  0000 L CNN
+F 2 "" V 3450 4940 50  0000 C CNN
+F 3 "" V 3450 4940 50  0000 C CNN
+	1    3450 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D3A7
+P 3200 4900
+F 0 "BT?" H 3318 4946 50  0000 L CNN
+F 1 "Battery" H 3318 4855 50  0000 L CNN
+F 2 "" V 3200 4940 50  0000 C CNN
+F 3 "" V 3200 4940 50  0000 C CNN
+	1    3200 4900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D3AD
+P 3450 5300
+F 0 "BT?" H 3568 5346 50  0000 L CNN
+F 1 "Battery" H 3568 5255 50  0000 L CNN
+F 2 "" V 3450 5340 50  0000 C CNN
+F 3 "" V 3450 5340 50  0000 C CNN
+	1    3450 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 5840D3B3
+P 3200 5300
+F 0 "BT?" H 3318 5346 50  0000 L CNN
+F 1 "Battery" H 3318 5255 50  0000 L CNN
+F 2 "" V 3200 5340 50  0000 C CNN
+F 3 "" V 3200 5340 50  0000 C CNN
+	1    3200 5300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L TYCO-EV200 RL?
+U 1 1 5840D9E2
+P 3000 6100
+F 0 "RL?" H 3430 6146 50  0000 L CNN
+F 1 "TYCO-EV200" H 3430 6055 50  0000 L CNN
+F 2 "" H 3000 6100 50  0000 C CNN
+F 3 "" H 3000 6100 50  0000 C CNN
+	1    3000 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L TYCO-EV200 RL?
+U 1 1 5840DDF8
+P 3000 2100
+F 0 "RL?" H 3430 2146 50  0000 L CNN
+F 1 "TYCO-EV200" H 3430 2055 50  0000 L CNN
+F 2 "" H 3000 2100 50  0000 C CNN
+F 3 "" H 3000 2100 50  0000 C CNN
+	1    3000 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P?
+U 1 1 5840E8B1
+P 5150 6650
+F 0 "P?" H 5228 6691 50  0000 L CNN
+F 1 "HVD" H 5228 6600 50  0000 L CNN
+F 2 "" H 5150 6650 50  0000 C CNN
+F 3 "" H 5150 6650 50  0000 C CNN
+	1    5150 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2400 3200 2600
+Wire Wire Line
+	3200 2600 3200 2750
+Wire Wire Line
+	3200 2600 3450 2600
+Wire Wire Line
+	3450 2600 3450 2750
+Wire Wire Line
+	3200 3050 3200 3150
+Wire Wire Line
+	3200 3550 3200 3450
+Wire Wire Line
+	3200 3950 3200 3850
+Wire Wire Line
+	3200 4350 3200 4250
+Wire Wire Line
+	3200 4750 3200 4650
+Wire Wire Line
+	3200 5150 3200 5050
+Wire Wire Line
+	3450 5150 3450 5050
+Wire Wire Line
+	3450 4750 3450 4650
+Wire Wire Line
+	3450 4350 3450 4250
+Wire Wire Line
+	3450 3950 3450 3850
+Wire Wire Line
+	3450 3550 3450 3450
+Wire Wire Line
+	3450 3150 3450 3050
+Wire Wire Line
+	3450 5600 3450 5450
+Connection ~ 3200 2600
+Wire Wire Line
+	3300 1800 3300 1650
+Wire Wire Line
+	3300 1650 4850 1650
+Wire Wire Line
+	4850 1650 5050 1650
+Wire Wire Line
+	3200 5450 3200 5600
+Wire Wire Line
+	3200 5600 3300 5600
+Wire Wire Line
+	3300 5600 3450 5600
+Wire Wire Line
+	3300 5800 3300 5600
+Connection ~ 3300 5600
+Wire Wire Line
+	2800 5800 2800 2400
+Wire Wire Line
+	3200 6400 3200 6700
+Wire Wire Line
+	3200 6700 3200 7050
+Wire Wire Line
+	3200 6700 4350 6700
+Wire Wire Line
+	4350 6700 4950 6700
+$Comp
+L Curtis1244_Motor U?
+U 1 1 58439DDB
+P 5450 1850
+F 0 "U?" H 5581 2337 60  0000 C CNN
+F 1 "Curtis1244_Motor" H 5581 2231 60  0000 C CNN
+F 2 "" H 5450 1850 60  0001 C CNN
+F 3 "" H 5450 1850 60  0001 C CNN
+	1    5450 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Curtis1244_Motor U?
+U 1 1 5843A154
+P 5450 2750
+F 0 "U?" H 5581 3237 60  0000 C CNN
+F 1 "Curtis1244_Motor" H 5581 3131 60  0000 C CNN
+F 2 "" H 5450 2750 60  0001 C CNN
+F 3 "" H 5450 2750 60  0001 C CNN
+	1    5450 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 1650 4850 2550
+Wire Wire Line
+	4850 2550 5050 2550
+Connection ~ 4850 1650
+Wire Wire Line
+	5050 2050 4950 2050
+Wire Wire Line
+	4950 2050 4950 2950
+Wire Wire Line
+	4950 2950 4950 5200
+Wire Wire Line
+	5050 2950 4950 2950
+Connection ~ 4950 2950
+$Comp
+L GNDPWR #PWR?
+U 1 1 5843BBC5
+P 3200 7050
+F 0 "#PWR?" H 3200 6850 50  0001 C CNN
+F 1 "GNDPWR" H 3204 7124 50  0000 C CNN
+F 2 "" H 3200 7000 50  0000 C CNN
+F 3 "" H 3200 7000 50  0000 C CNN
+	1    3200 7050
+	1    0    0    -1  
+$EndComp
+Connection ~ 3200 6700
+Wire Wire Line
+	4950 5200 4950 5900
+Wire Wire Line
+	4950 5900 4950 6600
+$EndSCHEMATC
