@@ -1,4 +1,4 @@
-update=12/20/2016 2:17:12 AM
+update=12/23/2016 11:40:45 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,4 @@ LibName28=contrib
 LibName29=valves
 LibName30=relays
 LibName31=UNCAMotorsports
+LibName32=Common-Parts-Library-CPL
