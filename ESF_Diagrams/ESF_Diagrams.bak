@@ -1,0 +1,226 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:SystemBlocks
+LIBS:UNCAMotorsports
+LIBS:relays
+LIBS:ESF_Diagrams-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MotorController MC?
+U 1 1 585DC538
+P 4800 1850
+F 0 "MC?" H 4825 2287 60  0000 C CNN
+F 1 "MotorController" H 4825 2181 60  0000 C CNN
+F 2 "" H 4800 1850 60  0001 C CNN
+F 3 "" H 4800 1850 60  0001 C CNN
+	1    4800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L MotorController MC?
+U 1 1 585DC635
+P 4800 2850
+F 0 "MC?" H 4825 3287 60  0000 C CNN
+F 1 "MotorController" H 4825 3181 60  0000 C CNN
+F 2 "" H 4800 2850 60  0001 C CNN
+F 3 "" H 4800 2850 60  0001 C CNN
+	1    4800 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 585DC67D
+P 2600 2350
+F 0 "BT?" H 2708 2396 50  0000 L CNN
+F 1 "Battery" H 2708 2305 50  0000 L CNN
+F 2 "" V 2600 2410 50  0000 C CNN
+F 3 "" V 2600 2410 50  0000 C CNN
+	1    2600 2350
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 2150 2600 1700
+Wire Wire Line
+	2600 1700 2900 1700
+Wire Wire Line
+	3700 1700 4300 1700
+Wire Wire Line
+	4300 2700 3900 2700
+Wire Wire Line
+	3900 2700 3900 1700
+Connection ~ 3900 1700
+Wire Wire Line
+	2600 3000 2900 3000
+Wire Wire Line
+	3700 3000 4300 3000
+Wire Wire Line
+	2600 3000 2600 2550
+Wire Wire Line
+	4300 2000 4150 2000
+Wire Wire Line
+	4150 2000 4150 3000
+Connection ~ 4150 3000
+$Comp
+L Motor M?
+U 1 1 585DCBC0
+P 6100 1850
+F 0 "M?" H 6269 1850 60  0000 L CNN
+F 1 "Motor" H 6050 2150 60  0001 C CNN
+F 2 "" H 6100 1850 60  0001 C CNN
+F 3 "" H 6100 1850 60  0001 C CNN
+	1    6100 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1700 5450 1700
+Wire Wire Line
+	5450 1700 5450 1550
+Wire Wire Line
+	5450 1550 6100 1550
+Wire Wire Line
+	5350 2000 5450 2000
+Wire Wire Line
+	5450 2000 5450 2150
+Wire Wire Line
+	5450 2150 6100 2150
+$Comp
+L L L?
+U 1 1 585DD077
+P 5900 1850
+F 0 "L?" H 5952 1896 50  0000 L CNN
+F 1 "Field" H 5952 1805 50  0000 L CNN
+F 2 "" H 5900 1850 50  0000 C CNN
+F 3 "" H 5900 1850 50  0000 C CNN
+	1    5900 1850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1800 5550 1800
+Wire Wire Line
+	5550 1800 5550 1650
+Wire Wire Line
+	5550 1650 5900 1650
+Wire Wire Line
+	5900 1650 5900 1700
+Wire Wire Line
+	5350 1900 5550 1900
+Wire Wire Line
+	5550 1900 5550 2050
+Wire Wire Line
+	5550 2050 5900 2050
+Wire Wire Line
+	5900 2050 5900 2000
+$Comp
+L Motor M?
+U 1 1 585DD474
+P 6100 2850
+F 0 "M?" H 6269 2850 60  0000 L CNN
+F 1 "Motor" H 6050 3150 60  0001 C CNN
+F 2 "" H 6100 2850 60  0001 C CNN
+F 3 "" H 6100 2850 60  0001 C CNN
+	1    6100 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2700 5450 2700
+Wire Wire Line
+	5450 2700 5450 2550
+Wire Wire Line
+	5450 2550 6100 2550
+Wire Wire Line
+	5350 3000 5450 3000
+Wire Wire Line
+	5450 3000 5450 3150
+Wire Wire Line
+	5450 3150 6100 3150
+$Comp
+L L L?
+U 1 1 585DD480
+P 5900 2850
+F 0 "L?" H 5952 2896 50  0000 L CNN
+F 1 "Field" H 5952 2805 50  0000 L CNN
+F 2 "" H 5900 2850 50  0000 C CNN
+F 3 "" H 5900 2850 50  0000 C CNN
+	1    5900 2850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 2800 5550 2800
+Wire Wire Line
+	5550 2800 5550 2650
+Wire Wire Line
+	5550 2650 5900 2650
+Wire Wire Line
+	5900 2650 5900 2700
+Wire Wire Line
+	5350 2900 5550 2900
+Wire Wire Line
+	5550 2900 5550 3050
+Wire Wire Line
+	5550 3050 5900 3050
+Wire Wire Line
+	5900 3050 5900 3000
+$Comp
+L Generic_1x1 U?
+U 1 1 585DE2C8
+P 3300 1700
+F 0 "U?" H 3200 1950 60  0000 C CNN
+F 1 "AIR" H 3300 1700 60  0000 C CNN
+F 2 "" H 3300 1700 60  0001 C CNN
+F 3 "" H 3300 1700 60  0001 C CNN
+	1    3300 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Generic_1x1 U?
+U 1 1 585DEC17
+P 3300 3000
+F 0 "U?" H 3200 3250 60  0000 C CNN
+F 1 "AIR" H 3300 3000 60  0000 C CNN
+F 2 "" H 3300 3000 60  0001 C CNN
+F 3 "" H 3300 3000 60  0001 C CNN
+	1    3300 3000
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
