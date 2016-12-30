@@ -26,6 +26,8 @@
 
 typedef unsigned char bool; //C doesn't have a boolean type by default
 
+bool THROTTLE_IMPLAUSIBLE;
+
 typedef struct Sensors { //Struct that holds all necessary data for a sensor
     char name[17];
     uint16 data[BUFF];
@@ -81,7 +83,7 @@ uint8 RxFlag1;
 
 void GetSample(Pot * pot);
 void GetRPM(Encoder * encoder);
-void GetThrottle(Throttle * throttle);
+void GetThrottle(Throttle * throttleOne, Throttle * throttleTwo);
 void SensorSet(Sensor * sensor, uint8 number_set, uint8 window_set, uint16 rate_set, uint16 CAN_rate_set);
 void ThrottleInit(Throttle * throttle, Pot * pot);
 void PotInit(Pot * pot);
