@@ -187,7 +187,12 @@ void throttleTask(struct CAN_message_t msg){
     uint16_t profiler = micros();
 #endif
 
-    requestedThrottle = msg.buf[0] << 8 | msg.buf[1];    // Safe throttle will need a better algorithm to handle noise
+    if (msg.buf[0] & (1 << 7)) {
+        requestedThrottle = 0;
+    }
+    else {
+        requestedThrottle = msg.buf[0] << 8 | msg.buf[1];
+    }
 
 #ifdef DEBUG_THROTTLE
     Serial.printf("\tRequested: %d\n", requestedThrottle);
