@@ -168,7 +168,7 @@ int main()
         }
         else if((zero.sensor.CAN_flag==TRUE)&&(zero.sensor.enable==TRUE)){
             if(THROTTLE_IMPLAUSIBLE){
-                CAN_Send_0((uint8)(throttle.throttle>>8)&0x8,(uint8)(throttle.throttle),0,0,0,0,0,0);
+                CAN_Send_0(0x80,0,0,0,0,0,0,0); //put a 1 in the MSB to indicate implausible throttle
             }
             CAN_Send_0((uint8)(throttle.throttle>>8),(uint8)(throttle.throttle),0,0,0,0,0,0);
             zero.sensor.CAN_flag=FALSE;
