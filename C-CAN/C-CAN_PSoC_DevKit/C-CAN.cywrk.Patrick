@@ -118,10 +118,6 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\leftEncTimer\leftEncTimer.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\leftEncTimer\leftEncTimer.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\leftEncTimer\leftEncTimer_PM.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\mcp2515_clk</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\mcp2515_clk\mcp2515_clk.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\mcp2515_clk\mcp2515_clk.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\mcp2515_clk\mcp2515_clk_aliases.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\one</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\one\one.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\one\one.h</v>
@@ -146,15 +142,6 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2_aliases.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1_BOOT.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1_INT.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1_PM.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1_IntClock</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero.h</v>
@@ -195,29 +182,18 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2_aliases.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1_BOOT.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1_INT.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1\UART_1_PM.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1_IntClock</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero_aliases.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cybootloader.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cybootloader.icf</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cycodeshareexport.ld</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cycodeshareimport.scat</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevice.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevice_trm.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicegnu.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydeviceiar.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicerv.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="C-CAN\C-CAN">
@@ -251,6 +227,7 @@
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\AMux_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloadable_1.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_INT.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_PM.lst</v>
@@ -259,7 +236,10 @@
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_3.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1_PM.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cybootloader.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
@@ -277,10 +257,10 @@
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Encoder_Right_PM.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\five.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\four.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\LED.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\leftEncTimer.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\leftEncTimer_PM.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\mcp2515_clk.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\one.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\rightEncTimer.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\rightEncTimer_PM.lst</v>
@@ -288,12 +268,8 @@
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\three.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\two.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\TX_2.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_BOOT.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_INT.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_IntClock.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_PM.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\zero.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.cyacd</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.elf</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.hex</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.map</v>
@@ -304,41 +280,6 @@
 <VisibleNodeIds>
 <v>C-CAN</v>
 <v>C-CAN\C-CAN</v>
-<v>C-CAN\C-CAN\CortexM3</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_Bypass.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_theACLK.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\AMux_1.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_INT.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_PM.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_TX_RX_func.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\C-CAN.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_3.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Em_EEPROM.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Enc_L.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Enc_R.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Encoder_Left.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Encoder_Left_PM.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Encoder_Right.lst</v>
-<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Encoder_Right_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -350,12 +291,14 @@
 <ExpandedNodeIds>
 <v>C-CAN</v>
 <v>C-CAN\C-CAN</v>
-<v>C-CAN\C-CAN\PSoC 5 Architecture TRM</v>
+<v>C-CAN\C-CAN\PSoC 5LP Architecture TRM</v>
 <v>C-CAN\C-CAN\CY8C58LP Family Datasheet</v>
 <v>C-CAN\C-CAN\System Reference Guides</v>
-<v>C-CAN\C-CAN\System Reference Guides\cy_boot_v5_40</v>
+<v>C-CAN\C-CAN\System Reference Guides\cy_boot_v5_50</v>
 <v>C-CAN\C-CAN\ADC_SAR_v3_0.pdf</v>
 <v>C-CAN\C-CAN\AMux_v1_80.pdf</v>
+<v>C-CAN\C-CAN\and_v1_0.pdf</v>
+<v>C-CAN\C-CAN\Bootloadable_v1_50.pdf</v>
 <v>C-CAN\C-CAN\CAN_v3_0.pdf</v>
 <v>C-CAN\C-CAN\Counter_v3_0</v>
 <v>C-CAN\C-CAN\Counter_v3_0\Counter_v3_0.pdf</v>
@@ -364,18 +307,20 @@
 <v>C-CAN\C-CAN\cy_pins_v2_20</v>
 <v>C-CAN\C-CAN\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>C-CAN\C-CAN\cy_sync_v1_0.pdf</v>
+<v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
 <v>C-CAN\C-CAN\Em_EEPROM_v1_10.pdf</v>
-<v>C-CAN\C-CAN\UART_v2_50.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>C-CAN</v>
 <v>C-CAN\C-CAN</v>
-<v>C-CAN\C-CAN\PSoC 5 Architecture TRM</v>
+<v>C-CAN\C-CAN\PSoC 5LP Architecture TRM</v>
 <v>C-CAN\C-CAN\CY8C58LP Family Datasheet</v>
 <v>C-CAN\C-CAN\System Reference Guides</v>
-<v>C-CAN\C-CAN\System Reference Guides\cy_boot_v5_40</v>
+<v>C-CAN\C-CAN\System Reference Guides\cy_boot_v5_50</v>
 <v>C-CAN\C-CAN\ADC_SAR_v3_0.pdf</v>
 <v>C-CAN\C-CAN\AMux_v1_80.pdf</v>
+<v>C-CAN\C-CAN\and_v1_0.pdf</v>
+<v>C-CAN\C-CAN\Bootloadable_v1_50.pdf</v>
 <v>C-CAN\C-CAN\CAN_v3_0.pdf</v>
 <v>C-CAN\C-CAN\Counter_v3_0</v>
 <v>C-CAN\C-CAN\Counter_v3_0\Counter_v3_0.pdf</v>
@@ -384,8 +329,8 @@
 <v>C-CAN\C-CAN\cy_pins_v2_20</v>
 <v>C-CAN\C-CAN\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>C-CAN\C-CAN\cy_sync_v1_0.pdf</v>
+<v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
 <v>C-CAN\C-CAN\Em_EEPROM_v1_10.pdf</v>
-<v>C-CAN\C-CAN\UART_v2_50.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -403,10 +348,16 @@
 <name v=".\C-CAN.cydsn\main.c" />
 <name v=".\C-CAN.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\C-CAN.cydsn\C-CAN.cydwr" />
-<name v=".\C-CAN.cydsn\Generated_Source\PSoC5\UART_1.c" />
 <name v=".\C-CAN.cydsn\C-CAN.c" />
 <name v=".\C-CAN.cydsn\C-CAN.h" />
 </OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="92e18b32-6ad8-4ace-b389-98681b435ddf"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="bb10d689-3bdf-4527-95bd-98d8fbb32f2e" Guid="92e18b32-6ad8-4ace-b389-98681b435ddf" /><DocumentWindow Key="f1b76670-8ee8-49cf-a527-21e35953d026" Guid="4fbaa9e0-98ab-49d9-8022-94f6b1a78b72" /><DocumentWindow Key="6d9ae0fd-55c6-440a-ada9-474dd332fe4c" Guid="e5237912-7095-4008-8526-5abdb0ad38bd" /><DocumentWindow Key="c640e92f-c446-42a5-8320-5cd62b12e889" Guid="815ccfba-409a-4ede-af01-10ef6dfd5b15" /><DocumentWindow Key="43a603f7-28bc-4f1e-b9dd-4d9270b366bd" Guid="bc09183f-6255-4063-99c7-d28e71f77942" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

@@ -76,6 +76,7 @@ int main()
     //srand(12);
     
     uint32 temp = 0;
+    THROTTLE_IMPLAUSIBLE = 0;
     
     /* Initialize Variables */
     CAN_Send_0(0xff,0,0xff,0,0xff,0,0xff,0);
@@ -141,7 +142,7 @@ int main()
         //Config();
         #ifdef LOOP
         if((zero.sensor.flag==TRUE)&&(zero.sensor.enable==TRUE)){
-            GetThrottle(&throttle);
+            GetThrottle(&throttle,&throttle); //placeholder, will be throttleOne and throttleTwo.
             //CAN_Send((uint8)(zero.mV>>8),(uint8)zero.mV,0,0,0,0,0,0);
         }
         else if((one.sensor.flag==TRUE)&&(one.sensor.enable==TRUE)){
@@ -166,6 +167,9 @@ int main()
             GetRPM(&right);     
         }
         else if((zero.sensor.CAN_flag==TRUE)&&(zero.sensor.enable==TRUE)){
+            if(THROTTLE_IMPLAUSIBLE){
+                CAN_Send_0(0x80,0,0,0,0,0,0,0); //put a 1 in the MSB to indicate implausible throttle
+            }
             CAN_Send_0((uint8)(throttle.throttle>>8),(uint8)(throttle.throttle),0,0,0,0,0,0);
             zero.sensor.CAN_flag=FALSE;
         }

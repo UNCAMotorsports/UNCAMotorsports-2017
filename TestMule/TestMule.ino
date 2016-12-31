@@ -15,11 +15,13 @@
  *      Set up the multi-rate main loop timer
  *
  * ---------------------------------------------------------------------------- */
-#define TIMER_RATE          (1000)                          // Check the timer every 1 millisecond
-#define RPM_RATE            (TIMER_RATE / 200)             // How often to check if we've stopped getting RPM readings
-#define THROTTLE_RATE       (TIMER_RATE / 200)             // Read throttle at 200Hz
-#define STEERING_RATE       (TIMER_RATE / 200)             // Read steering at 200Hz
-#define LOGGING_RATE        (TIMER_RATE / 200)             // Create data entries at 200Hz (10-entry FIFO)
+#define TIMER_RATE          (1000)                  // Check the timer every 1 millisecond
+#define RPM_RATE            (TIMER_RATE / 200)      // How often to check if we've stopped getting RPM readings
+#define THROTTLE_RATE       (TIMER_RATE / 200)      // Read throttle at 200Hz
+#define STEERING_RATE       (TIMER_RATE / 200)      // Read steering at 200Hz
+#define LOGGING_RATE        (TIMER_RATE / 200)      // Create data entries at 200Hz (10-entry FIFO)
+#define THROTTLE_TIMEOUT    (100)                   // Timeout throttle after 100ms    
+#define STEERING_TIMEOUT    (100)                   // Timeout steering after 100ms
 
 bool rpm_flag = false;
 bool throttle_flag = false;
@@ -27,20 +29,24 @@ bool steering_flag = false;
 bool logging_flag = false;
 
 IntervalTimer loopTimer;
-uint32_t timer = 0;
-uint32_t globalClock = 0;
+//uint32_t timer = 0;
+uint32_t throttleTimer = THROTTLE_TIMEOUT;
+uint32_t steeringTimer = STEERING_TIMEOUT;
+//uint32_t globalClock = 0;
 
 // Runs in an interrupt and sets the flags for our multi-rate main loop
 void multiRateISR(){
     
-    timer++;
-    globalClock++;
+    //timer++;
+    //globalClock++;
 
-    //if (timer % THROTTLE_RATE == 0) { throttle_flag = true; }
-    if (timer % STEERING_RATE == 0) { steering_flag = true; }
+    if (throttleTimer) throttleTimer--;
+    if (steeringTimer) steeringTimer--;
+
+    /*if (timer % STEERING_RATE == 0) { steering_flag = true; }
     if (timer % RPM_RATE == 0)      { rpm_flag = true; }
     if (timer % LOGGING_RATE == 0)  { logging_flag = true; }
-    if (timer >= TIMER_RATE)        { timer = 0; }
+    if (timer >= TIMER_RATE)        { timer = 0; }*/
 }
 /* ---------------------------------------------------------------------------- */
 
@@ -54,7 +60,8 @@ uint32_t lastRightRPM = 0;
 
 FlexCAN CANBus(1000000);
 
-static CAN_message_t rxmsg;
+CAN_message_t rxmsg;
+CAN_message_t txmsg;
 
 DataLogger sdLogger;
 MuleThrottle throttle;
@@ -113,10 +120,10 @@ void setup()
     loopTimer.begin(multiRateISR, TIMER_RATE);        // Start the main loop timer
 
     lastTime = micros();
-}
+    while (!CANBus.available()){
+        // Wait until we get at least one CAN message, so we know we've booted up.
+    }
 
-uint16_t CANtoDEC(uint8_t* arr){
-    return (uint32_t)arr[0] << 8 | arr[1];
 }
 
 /* ---------------------------------------------------------------------------- +
@@ -128,22 +135,34 @@ void loop()
     {
         while (CANBus.read(rxmsg)){
             switch (rxmsg.id) {
-                case THROTTLE_ID: throttleTask(rxmsg); lastThrottle = globalClock; break;
-                //case STEERING_ID: steeringTask(rxmsg); break;
-                case LEFT_RPM_ID: leftRPMTask(rxmsg); break;
-                case RIGHT_RPM_ID: rightRPMTask(rxmsg); break;
+                case THROTTLE_ID: throttleTask(&rxmsg); throttleTimer = THROTTLE_TIMEOUT; break;
+                case STEERING_ID: steeringTask(&rxmsg); steeringTimer = STEERING_TIMEOUT; break;
+                case LEFT_RPM_ID: leftRPMTask(&rxmsg); break;
+                case RIGHT_RPM_ID: rightRPMTask(&rxmsg); break;
             }
         }
     }
-    if (globalClock - lastThrottle > 100){
+
+    if (throttleTimer == 0)
+    {
         requestedThrottle = 0;
         dac0.output(requestedThrottle);
         dac1.output(requestedThrottle);
-#ifdef DEBUG_THROTTLE        
-        Serial.println("Missing throttle messages!");
-#endif
-        lastThrottle = globalClock;
+        
+        txmsg.id = THROTTLE_TIMEOUT_ID;
+        for (int i = 0; i < 8; i++){
+            txmsg.buf[i] = 0;
+        }
+        txmsg.len = 0;
+        txmsg.timeout = 0;
+        CANBus.write(txmsg)
     }
+    if (steeringTimer == 0 && DIFFERENTIAL_MODE > 0)
+    {
+        // Change DIFFERENTIAL_MODE to an lvalue so we can disable it if needed.
+    }
+
+
 #ifdef DEBUG_PROFILING
     profiler = micros() - profiler;
     Serial.print("Loop Time: ");
@@ -152,20 +171,20 @@ void loop()
 }
 /* ---------------------------------------------------------------------------- */
 
-void leftRPMTask(struct CAN_message_t msg){
-    uint16_t leftRPM = msg.buf[0] << 8 | msg.buf[1];
+void leftRPMTask(const struct CAN_message_t *msg){
+    uint16_t leftRPM = msg->buf[0] << 8 | msg->buf[1];
 }
 
-void rightRPMTask(struct CAN_message_t msg){
-    uint16_t rightRPM = msg.buf[0] << 8 | msg.buf[1];
+void rightRPMTask(const struct CAN_message_t *msg){
+    uint16_t rightRPM = msg->buf[0] << 8 | msg->buf[1];
 }
 
 /* ---------------------------------------------------------------------------- +
 *   Find the tangent of the steering angle
 * ---------------------------------------------------------------------------- */
-void steeringTask(struct CAN_message_t msg){
+void steeringTask(const struct CAN_message_t *msg){
 
-    uint16_t steeringVal = msg.buf[0] << 8 | msg.buf[1];
+    uint16_t steeringVal = msg->buf[0] << 8 | msg->buf[1];
     steerAngle = (steeringVal - STEERING_CENTER) * RAD_PER_VAL;
 
 #ifdef DEBUG_STEERING
@@ -181,13 +200,18 @@ void steeringTask(struct CAN_message_t msg){
 /* ---------------------------------------------------------------------------- +
 *   Poll the throttle sensor and calculate the differential action to each wheel
 * ---------------------------------------------------------------------------- */
-void throttleTask(struct CAN_message_t msg){
+void throttleTask(const struct CAN_message_t *msg){
 
 #ifdef DEBUG_PROFILING
     uint16_t profiler = micros();
 #endif
 
-    requestedThrottle = msg.buf[0] << 8 | msg.buf[1];    // Safe throttle will need a better algorithm to handle noise
+    if (msg->buf[0] & (1 << 7)) {    // Throttle implausible.  Kill power.
+        requestedThrottle = 0;
+    }
+    else {
+        requestedThrottle = msg->buf[0] << 8 | msg->buf[1];
+    }
 
 #ifdef DEBUG_THROTTLE
     Serial.printf("\tRequested: %d\n", requestedThrottle);

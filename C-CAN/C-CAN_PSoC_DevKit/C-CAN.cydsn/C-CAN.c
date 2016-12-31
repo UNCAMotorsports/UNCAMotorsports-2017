@@ -112,15 +112,43 @@ void GetRPM(Encoder * encoder){
 
 }
 
-void GetThrottle(Throttle * throttle){
-    GetSample(throttle->pot);
-    throttle->throttle = (throttle->pot->mV - throttle->throttleMin) * 4095 / PEDAL_THROW;
-    if(throttle->throttle > 4095){
-        throttle->throttle = 4095;   
+void GetThrottle(Throttle * throttleOne, Throttle * throttleTwo){
+    
+    static uint16 implausible_timer = 0;
+    
+    GetSample(throttleOne->pot);        //sample first throttle pot
+    GetSample(throttleTwo->pot);        //sample second throttle pot
+    
+    //The next bit of code scales the throttle such that the initial position is 0 and the maximum
+    //position is 4095. PEDAL_THROW is a macro for the pedal throw in mV.
+    //PEDAL_THROW can be approximated by mechanical_throw(degrees)/max_pot_throw(degrees)*5000
+    
+    throttleOne->throttle = (throttleOne->pot->mV - throttleOne->throttleMin) * 4095 / PEDAL_THROW;
+    if(throttleOne->throttle > 4095){
+        throttleOne->throttle = 4095;   
     }
-    if(throttle->throttle <= 100){
-        throttle->throttle = 0;
+    if(throttleOne->throttle <= 100){
+        throttleOne->throttle = 0;
     }
+    
+    throttleTwo->throttle = (throttleOne->pot->mV - throttleTwo->throttleMin) * 4095 / PEDAL_THROW;
+    if(throttleTwo->throttle > 4095){
+        throttleTwo->throttle = 4095;
+    }
+    if(throttleTwo->throttle <=100){
+        throttleTwo->throttle = 0;
+    }
+    
+    if(abs((throttleOne->throttle-throttleTwo->throttle)>409)){
+        implausible_timer++;
+        if(implausible_timer>=100){
+            THROTTLE_IMPLAUSIBLE = 1;
+        }
+    }
+    else if(abs((throttleOne->throttle-throttleTwo->throttle)<409)){
+        implausible_timer = 0;
+    }
+    
 }
 
 void ThrottleInit(Throttle * throttle, Pot * pot){
