@@ -139,13 +139,13 @@ void GetThrottle(Throttle * throttleOne, Throttle * throttleTwo){
         throttleTwo->throttle = 0;
     }
     
-    if(abs((throttleOne->throttle-throttleTwo->throttle)>409)){
+    if(abs(throttleOne->throttle-throttleTwo->throttle)>409){
         implausible_timer++;
-        if(implausible_timer>=100){
+        if(implausible_timer>=throttleOne->timer_constant){
             THROTTLE_IMPLAUSIBLE = 1;
         }
     }
-    else if(abs((throttleOne->throttle-throttleTwo->throttle)<409)){
+    else if(abs(throttleOne->throttle-throttleTwo->throttle)<409){
         implausible_timer = 0;
     }
     
@@ -159,6 +159,7 @@ void ThrottleInit(Throttle * throttle, Pot * pot){
     }
     throttle->throttleMin = throttle->pot->mV-30;
     throttle->throttleMax = throttle->throttleMin + PEDAL_THROW;
+    throttle->timer_constant = throttle->pot->sensor.rate * 0.1;
 }
 
 void SensorSet(Sensor * sensor, uint8 number_set, uint8 window_set, uint16 rate_set, uint16 CAN_rate_set){

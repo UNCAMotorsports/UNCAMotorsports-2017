@@ -58,6 +58,7 @@ typedef struct Throttle {
     int16 throttleMin;
     int16 throttleMax;
     int16 throttle;
+    int16 timer_constant;
 }Throttle;
 
 Pot zero; //Each C-CAN is set up to read 6 analog pots and 2 encoders
