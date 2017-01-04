@@ -79,28 +79,6 @@ F 3 "" V 1600 1960 50  0000 C CNN
 	1    1600 1900
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1600 1700 1600 1250
-Wire Wire Line
-	1600 1250 1750 1250
-Wire Wire Line
-	3250 1250 4350 1250
-Wire Wire Line
-	4350 2250 3950 2250
-Wire Wire Line
-	3950 2250 3950 1250
-Connection ~ 3950 1250
-Wire Wire Line
-	1600 2550 1750 2550
-Wire Wire Line
-	2550 2550 4350 2550
-Wire Wire Line
-	1600 2550 1600 2100
-Wire Wire Line
-	4350 1550 4200 1550
-Wire Wire Line
-	4200 1550 4200 2550
-Connection ~ 4200 2550
 $Comp
 L Motor M1
 U 1 1 585DCBC0
@@ -112,18 +90,6 @@ F 3 "" H 6150 1400 60  0001 C CNN
 	1    6150 1400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5400 1250 5500 1250
-Wire Wire Line
-	5500 1250 5500 1100
-Wire Wire Line
-	5500 1100 6150 1100
-Wire Wire Line
-	5400 1550 5500 1550
-Wire Wire Line
-	5500 1550 5500 1700
-Wire Wire Line
-	5500 1700 6150 1700
 $Comp
 L L L1
 U 1 1 585DD077
@@ -135,22 +101,6 @@ F 3 "" H 5950 1400 50  0000 C CNN
 	1    5950 1400
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5400 1350 5600 1350
-Wire Wire Line
-	5600 1350 5600 1200
-Wire Wire Line
-	5600 1200 5950 1200
-Wire Wire Line
-	5950 1200 5950 1250
-Wire Wire Line
-	5400 1450 5600 1450
-Wire Wire Line
-	5600 1450 5600 1600
-Wire Wire Line
-	5600 1600 5950 1600
-Wire Wire Line
-	5950 1600 5950 1550
 $Comp
 L Motor M2
 U 1 1 585DD474
@@ -162,18 +112,6 @@ F 3 "" H 6150 2400 60  0001 C CNN
 	1    6150 2400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5400 2250 5500 2250
-Wire Wire Line
-	5500 2250 5500 2100
-Wire Wire Line
-	5500 2100 6150 2100
-Wire Wire Line
-	5400 2550 5500 2550
-Wire Wire Line
-	5500 2550 5500 2700
-Wire Wire Line
-	5500 2700 6150 2700
 $Comp
 L L L2
 U 1 1 585DD480
@@ -185,22 +123,6 @@ F 3 "" H 5950 2400 50  0000 C CNN
 	1    5950 2400
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5400 2350 5600 2350
-Wire Wire Line
-	5600 2350 5600 2200
-Wire Wire Line
-	5600 2200 5950 2200
-Wire Wire Line
-	5950 2200 5950 2250
-Wire Wire Line
-	5400 2450 5600 2450
-Wire Wire Line
-	5600 2450 5600 2600
-Wire Wire Line
-	5600 2600 5950 2600
-Wire Wire Line
-	5950 2600 5950 2550
 $Comp
 L Generic_1x1 U2
 U 1 1 585DE2C8
@@ -228,7 +150,7 @@ L Generic_CAN_Node U1
 U 1 1 5861CF5E
 P 1900 4500
 F 0 "U1" H 2000 4750 60  0000 L CNN
-F 1 "C-CAN" H 1750 4250 60  0000 L CNB
+F 1 "C-CAN" H 1750 4250 60  0000 L CNN
 F 2 "" H 1900 4500 60  0001 C CNN
 F 3 "" H 1900 4500 60  0001 C CNN
 	1    1900 4500
@@ -311,8 +233,191 @@ F 3 "" H 5650 4500 60  0001 C CNN
 	1    5650 4500
 	1    0    0    -1  
 $EndComp
+$Comp
+L R R2
+U 1 1 586209EA
+P 7300 3650
+F 0 "R2" H 7370 3696 50  0000 L CNN
+F 1 "120" H 7370 3605 50  0000 L CNN
+F 2 "" V 7230 3650 50  0000 C CNN
+F 3 "" H 7300 3650 50  0000 C CNN
+	1    7300 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Generic_CAN_Node U10
+U 1 1 58620ECB
+P 6450 4500
+F 0 "U10" H 6550 4750 60  0000 L CNN
+F 1 "AMS" H 6350 4250 60  0000 L CNN
+F 2 "" H 6450 4500 60  0001 C CNN
+F 3 "" H 6450 4500 60  0001 C CNN
+	1    6450 4500
+	1    0    0    -1  
+$EndComp
+Text Label 1400 3500 0    60   ~ 0
+CANH
+Text Label 6800 3500 0    60   ~ 0
+CANH
+Text Label 1400 3800 0    60   ~ 0
+CANL
+Text Label 6800 3800 0    60   ~ 0
+CANL
+$Comp
+L Fuse F1
+U 1 1 5862563B
+P 3100 1250
+F 0 "F1" V 2903 1250 50  0000 C CNN
+F 1 "Main Fuse (800A)" V 2994 1250 50  0000 C CNN
+F 2 "" V 3030 1250 50  0000 C CNN
+F 3 "" H 3100 1250 50  0000 C CNN
+	1    3100 1250
+	0    1    1    0   
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 586C92FA
+P 3000 6650
+F 0 "BT?" H 3118 6746 50  0000 L CNN
+F 1 "Battery_Cell" H 3118 6655 50  0000 L CNN
+F 2 "" V 3000 6710 50  0000 C CNN
+F 3 "" V 3000 6710 50  0000 C CNN
+	1    3000 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 586C96F8
+P 2700 6650
+F 0 "BT?" H 2818 6746 50  0000 L CNN
+F 1 "Battery_Cell" H 2818 6655 50  0000 L CNN
+F 2 "" V 2700 6710 50  0000 C CNN
+F 3 "" V 2700 6710 50  0000 C CNN
+	1    2700 6650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 586C9B67
+P 2700 7050
+F 0 "BT?" H 2818 7146 50  0000 L CNN
+F 1 "Battery_Cell" H 2818 7055 50  0000 L CNN
+F 2 "" V 2700 7110 50  0000 C CNN
+F 3 "" V 2700 7110 50  0000 C CNN
+	1    2700 7050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 586C9C29
+P 3000 7050
+F 0 "BT?" H 3118 7146 50  0000 L CNN
+F 1 "Battery_Cell" H 3118 7055 50  0000 L CNN
+F 2 "" V 3000 7110 50  0000 C CNN
+F 3 "" V 3000 7110 50  0000 C CNN
+	1    3000 7050
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	1200 3500 7300 3500
+	1600 1700 1600 1250
+Wire Wire Line
+	1600 1250 1750 1250
+Wire Wire Line
+	3250 1250 3950 1250
+Wire Wire Line
+	3950 1250 4350 1250
+Wire Wire Line
+	4350 2250 3950 2250
+Wire Wire Line
+	3950 2250 3950 1250
+Connection ~ 3950 1250
+Wire Wire Line
+	1600 2550 1750 2550
+Wire Wire Line
+	2550 2550 4200 2550
+Wire Wire Line
+	4200 2550 4350 2550
+Wire Wire Line
+	1600 2550 1600 2100
+Wire Wire Line
+	4350 1550 4200 1550
+Wire Wire Line
+	4200 1550 4200 2550
+Connection ~ 4200 2550
+Wire Wire Line
+	5400 1250 5500 1250
+Wire Wire Line
+	5500 1250 5500 1100
+Wire Wire Line
+	5500 1100 6150 1100
+Wire Wire Line
+	5400 1550 5500 1550
+Wire Wire Line
+	5500 1550 5500 1700
+Wire Wire Line
+	5500 1700 6150 1700
+Wire Wire Line
+	5400 1350 5600 1350
+Wire Wire Line
+	5600 1350 5600 1200
+Wire Wire Line
+	5600 1200 5950 1200
+Wire Wire Line
+	5950 1200 5950 1250
+Wire Wire Line
+	5400 1450 5600 1450
+Wire Wire Line
+	5600 1450 5600 1600
+Wire Wire Line
+	5600 1600 5950 1600
+Wire Wire Line
+	5950 1600 5950 1550
+Wire Wire Line
+	5400 2250 5500 2250
+Wire Wire Line
+	5500 2250 5500 2100
+Wire Wire Line
+	5500 2100 6150 2100
+Wire Wire Line
+	5400 2550 5500 2550
+Wire Wire Line
+	5500 2550 5500 2700
+Wire Wire Line
+	5500 2700 6150 2700
+Wire Wire Line
+	5400 2350 5600 2350
+Wire Wire Line
+	5600 2350 5600 2200
+Wire Wire Line
+	5600 2200 5950 2200
+Wire Wire Line
+	5950 2200 5950 2250
+Wire Wire Line
+	5400 2450 5600 2450
+Wire Wire Line
+	5600 2450 5600 2600
+Wire Wire Line
+	5600 2600 5950 2600
+Wire Wire Line
+	5950 2600 5950 2550
+Wire Wire Line
+	1200 3500 2000 3500
+Wire Wire Line
+	2000 3500 2500 3500
+Wire Wire Line
+	2500 3500 3000 3500
+Wire Wire Line
+	3000 3500 3500 3500
+Wire Wire Line
+	3500 3500 4000 3500
+Wire Wire Line
+	4000 3500 4850 3500
+Wire Wire Line
+	4850 3500 5750 3500
+Wire Wire Line
+	5750 3500 6550 3500
+Wire Wire Line
+	6550 3500 7300 3500
 Wire Wire Line
 	2000 3500 2000 4100
 Wire Wire Line
@@ -353,30 +458,8 @@ Connection ~ 3800 3800
 Wire Wire Line
 	5550 3800 5550 4100
 Connection ~ 4650 3800
-$Comp
-L R R2
-U 1 1 586209EA
-P 7300 3650
-F 0 "R2" H 7370 3696 50  0000 L CNN
-F 1 "120" H 7370 3605 50  0000 L CNN
-F 2 "" V 7230 3650 50  0000 C CNN
-F 3 "" H 7300 3650 50  0000 C CNN
-	1    7300 3650
-	1    0    0    -1  
-$EndComp
 Connection ~ 5750 3500
 Connection ~ 5550 3800
-$Comp
-L Generic_CAN_Node U10
-U 1 1 58620ECB
-P 6450 4500
-F 0 "U10" H 6550 4750 60  0000 L CNN
-F 1 "AMS" H 6350 4250 60  0000 L CNN
-F 2 "" H 6450 4500 60  0001 C CNN
-F 3 "" H 6450 4500 60  0001 C CNN
-	1    6450 4500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6550 4100 6550 3500
 Connection ~ 6550 3500
@@ -384,30 +467,273 @@ Wire Wire Line
 	6350 3800 6350 4100
 Connection ~ 6350 3800
 Wire Wire Line
-	1200 3800 7300 3800
+	1200 3800 1800 3800
+Wire Wire Line
+	1800 3800 2300 3800
+Wire Wire Line
+	2300 3800 2800 3800
+Wire Wire Line
+	2800 3800 3300 3800
+Wire Wire Line
+	3300 3800 3800 3800
+Wire Wire Line
+	3800 3800 4650 3800
+Wire Wire Line
+	4650 3800 5550 3800
+Wire Wire Line
+	5550 3800 6350 3800
+Wire Wire Line
+	6350 3800 7300 3800
 Wire Notes Line
 	850  3100 7650 3100
 Wire Notes Line
 	750  5150 7750 5150
-Text Label 1400 3500 0    60   ~ 0
-CANH
-Text Label 6800 3500 0    60   ~ 0
-CANH
-Text Label 1400 3800 0    60   ~ 0
-CANL
-Text Label 6800 3800 0    60   ~ 0
-CANL
-$Comp
-L Fuse F1
-U 1 1 5862563B
-P 3100 1250
-F 0 "F1" V 2903 1250 50  0000 C CNN
-F 1 "Main Fuse (800A)" V 2994 1250 50  0000 C CNN
-F 2 "" V 3030 1250 50  0000 C CNN
-F 3 "" H 3100 1250 50  0000 C CNN
-	1    3100 1250
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	2950 1250 2550 1250
+Wire Wire Line
+	2700 6750 2700 6800
+Wire Wire Line
+	2700 6800 2700 6850
+Wire Wire Line
+	2700 6450 2700 6400
+Wire Wire Line
+	2700 6400 3000 6400
+Wire Wire Line
+	3000 6400 3500 6400
+Wire Wire Line
+	3000 6450 3000 6400
+Connection ~ 3000 6400
+Wire Wire Line
+	3000 6750 3000 6800
+Wire Wire Line
+	3000 6800 3000 6850
+Wire Wire Line
+	2700 6800 3000 6800
+Wire Wire Line
+	3000 6800 3500 6800
+Connection ~ 3000 6800
+Connection ~ 2700 6800
+Wire Wire Line
+	2700 7150 2700 7200
+Wire Wire Line
+	2700 7200 3000 7200
+Wire Wire Line
+	3000 7200 3500 7200
+Wire Wire Line
+	3000 7150 3000 7200
+Connection ~ 3000 7200
+$Comp
+L Battery BT?
+U 1 1 586CBB47
+P 4850 5700
+F 0 "BT?" H 4958 5746 50  0000 L CNN
+F 1 "Battery" H 4958 5655 50  0000 L CNN
+F 2 "" V 4850 5760 50  0000 C CNN
+F 3 "" V 4850 5760 50  0000 C CNN
+	1    4850 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CBBAA
+P 4650 5700
+F 0 "BT?" H 4758 5746 50  0000 L CNN
+F 1 "Battery" H 4758 5655 50  0000 L CNN
+F 2 "" V 4650 5760 50  0000 C CNN
+F 3 "" V 4650 5760 50  0000 C CNN
+	1    4650 5700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CC445
+P 4850 6200
+F 0 "BT?" H 4958 6246 50  0000 L CNN
+F 1 "Battery" H 4958 6155 50  0000 L CNN
+F 2 "" V 4850 6260 50  0000 C CNN
+F 3 "" V 4850 6260 50  0000 C CNN
+	1    4850 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CC44C
+P 4650 6200
+F 0 "BT?" H 4758 6246 50  0000 L CNN
+F 1 "Battery" H 4758 6155 50  0000 L CNN
+F 2 "" V 4650 6260 50  0000 C CNN
+F 3 "" V 4650 6260 50  0000 C CNN
+	1    4650 6200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CC5C3
+P 4850 6700
+F 0 "BT?" H 4958 6746 50  0000 L CNN
+F 1 "Battery" H 4958 6655 50  0000 L CNN
+F 2 "" V 4850 6760 50  0000 C CNN
+F 3 "" V 4850 6760 50  0000 C CNN
+	1    4850 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CC5CA
+P 4650 6700
+F 0 "BT?" H 4758 6746 50  0000 L CNN
+F 1 "Battery" H 4758 6655 50  0000 L CNN
+F 2 "" V 4650 6760 50  0000 C CNN
+F 3 "" V 4650 6760 50  0000 C CNN
+	1    4650 6700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CC687
+P 4850 7200
+F 0 "BT?" H 4958 7246 50  0000 L CNN
+F 1 "Battery" H 4958 7155 50  0000 L CNN
+F 2 "" V 4850 7260 50  0000 C CNN
+F 3 "" V 4850 7260 50  0000 C CNN
+	1    4850 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CC68E
+P 4650 7200
+F 0 "BT?" H 4758 7246 50  0000 L CNN
+F 1 "Battery" H 4758 7155 50  0000 L CNN
+F 2 "" V 4650 7260 50  0000 C CNN
+F 3 "" V 4650 7260 50  0000 C CNN
+	1    4650 7200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CC711
+P 4850 7700
+F 0 "BT?" H 4958 7746 50  0000 L CNN
+F 1 "Battery" H 4958 7655 50  0000 L CNN
+F 2 "" V 4850 7760 50  0000 C CNN
+F 3 "" V 4850 7760 50  0000 C CNN
+	1    4850 7700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CC718
+P 4650 7700
+F 0 "BT?" H 4758 7746 50  0000 L CNN
+F 1 "Battery" H 4758 7655 50  0000 L CNN
+F 2 "" V 4650 7760 50  0000 C CNN
+F 3 "" V 4650 7760 50  0000 C CNN
+	1    4650 7700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CD083
+P 4850 8200
+F 0 "BT?" H 4958 8246 50  0000 L CNN
+F 1 "Battery" H 4958 8155 50  0000 L CNN
+F 2 "" V 4850 8260 50  0000 C CNN
+F 3 "" V 4850 8260 50  0000 C CNN
+	1    4850 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery BT?
+U 1 1 586CD08A
+P 4650 8200
+F 0 "BT?" H 4758 8246 50  0000 L CNN
+F 1 "Battery" H 4758 8155 50  0000 L CNN
+F 2 "" V 4650 8260 50  0000 C CNN
+F 3 "" V 4650 8260 50  0000 C CNN
+	1    4650 8200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 7900 4650 7950
+Wire Wire Line
+	4650 7950 4650 8000
+Wire Wire Line
+	4850 7900 4850 7950
+Wire Wire Line
+	4850 7950 4850 8000
+Wire Wire Line
+	4650 7950 4850 7950
+Connection ~ 4850 7950
+Connection ~ 4650 7950
+Wire Wire Line
+	4650 7400 4650 7450
+Wire Wire Line
+	4650 7450 4650 7500
+Wire Wire Line
+	4650 7450 4850 7450
+Wire Wire Line
+	4850 7400 4850 7450
+Wire Wire Line
+	4850 7450 4850 7500
+Connection ~ 4650 7450
+Connection ~ 4850 7450
+Wire Wire Line
+	4650 7000 4650 6950
+Wire Wire Line
+	4650 6950 4650 6900
+Wire Wire Line
+	4850 7000 4850 6950
+Wire Wire Line
+	4850 6950 4850 6900
+Wire Wire Line
+	4650 6500 4650 6450
+Wire Wire Line
+	4650 6450 4650 6400
+Wire Wire Line
+	4850 6500 4850 6450
+Wire Wire Line
+	4850 6450 4850 6400
+Wire Wire Line
+	4650 6000 4650 5950
+Wire Wire Line
+	4650 5950 4650 5900
+Wire Wire Line
+	4850 6000 4850 5950
+Wire Wire Line
+	4850 5950 4850 5900
+Wire Wire Line
+	4650 5950 4850 5950
+Connection ~ 4850 5950
+Connection ~ 4650 5950
+Wire Wire Line
+	4650 6450 4850 6450
+Connection ~ 4850 6450
+Connection ~ 4650 6450
+Wire Wire Line
+	4650 6950 4850 6950
+Connection ~ 4850 6950
+Connection ~ 4650 6950
+Wire Wire Line
+	4650 8400 4650 8450
+Wire Wire Line
+	4650 8450 4850 8450
+Wire Wire Line
+	4850 8450 5450 8450
+Wire Wire Line
+	4850 8400 4850 8450
+Connection ~ 4850 8450
+Wire Wire Line
+	4650 5500 4650 5450
+Wire Wire Line
+	4650 5450 4850 5450
+Wire Wire Line
+	4850 5450 5450 5450
+Wire Wire Line
+	4850 5500 4850 5450
+Connection ~ 4850 5450
+Text Label 5450 5450 2    60   ~ 0
+TS+
+Text Label 5450 8450 2    60   ~ 0
+TS-
 $EndSCHEMATC
