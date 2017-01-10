@@ -1,6 +1,21 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
+# +12V
+#
+DEF +12V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "+12V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +12V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
 # Battery
 #
 DEF Battery BT 0 0 N N 1 F N
@@ -67,7 +82,7 @@ ENDDEF
 #
 DEF Generic_1x1 U 0 40 Y Y 1 F N
 F0 "U" -150 250 60 H V C CNN
-F1 "Generic_1x1" 0 -250 60 H V C CNN
+F1 "Generic_1x1" 0 0 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -81,7 +96,7 @@ ENDDEF
 #
 DEF Generic_CAN_Node U 0 40 Y Y 1 F N
 F0 "U" 300 150 60 H V C CNN
-F1 "Generic_CAN_Node" -50 -250 60 H V C CNN
+F1 "Generic_CAN_Node" 0 0 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW

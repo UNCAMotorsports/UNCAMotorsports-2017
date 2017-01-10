@@ -5,7 +5,7 @@ EESchema-LIBRARY Version 2.3
 #
 DEF Generic_1x1 U 0 40 Y Y 1 F N
 F0 "U" -150 250 60 H V C CNN
-F1 "Generic_1x1" 0 -250 60 H V C CNN
+F1 "Generic_1x1" 0 0 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -34,7 +34,7 @@ ENDDEF
 #
 DEF Generic_CAN_Node U 0 40 Y Y 1 F N
 F0 "U" 300 150 60 H V C CNN
-F1 "Generic_CAN_Node" -50 -250 60 H V C CNN
+F1 "Generic_CAN_Node" 0 0 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
