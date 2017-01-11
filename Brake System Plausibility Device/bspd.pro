@@ -1,4 +1,4 @@
-update=1/10/2017 2:14:40 AM
+update=1/10/2017 9:55:59 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,7 +25,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=../../UNCAM-Kicad-Parts
+LibDir=../../UNCAM-Kicad-Parts;../../UNCAMotorsports-2017
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -58,5 +58,10 @@ LibName28=contrib
 LibName29=valves
 LibName30=C:/Users/Patrick/Documents/GitHub/UNCAM-Kicad-Parts/UNCAMotorsports
 LibName31=UNCAMotorsports
+LibName32=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/Common-Parts-Library-CPL
+LibName33=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/relays
+LibName34=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/SystemBlocks
+LibName35=mechanical
+LibName36=switches
 [general]
 version=1
