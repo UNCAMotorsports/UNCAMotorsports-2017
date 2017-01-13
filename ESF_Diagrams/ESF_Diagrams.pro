@@ -1,4 +1,4 @@
-update=12/23/2016 7:52:55 PM
+update=1/10/2017 8:18:22 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,3 +61,4 @@ LibName29=valves
 LibName30=SystemBlocks
 LibName31=UNCAMotorsports
 LibName32=relays
+LibName33=switches

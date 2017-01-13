@@ -31,12 +31,13 @@ LIBS:valves
 LIBS:SystemBlocks
 LIBS:UNCAMotorsports
 LIBS:relays
+LIBS:switches
 LIBS:ESF_Diagrams-cache
 EELAYER 26 0
 EELAYER END
 $Descr A 8500 11000 portrait
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -243,8 +244,6 @@ Wire Wire Line
 Connection ~ 3950 1250
 Wire Wire Line
 	1600 2550 1750 2550
-Wire Wire Line
-	2550 2550 4350 2550
 Wire Wire Line
 	1600 2550 1600 2100
 Wire Wire Line
@@ -668,4 +667,25 @@ F 3 "" H 5850 4500 60  0001 C CNN
 $EndComp
 Text Notes 3250 3400 0    60   ~ 0
 CAN Bus Architecture
+$Sheet
+S 6650 6850 1250 850 
+U 5874D543
+F0 "ShutdownCircuit" 60
+F1 "file5874D542.sch" 60
+$EndSheet
+$Comp
+L Generic_1x1 U?
+U 1 1 58784B31
+P 3250 2550
+F 0 "U?" H 3100 2800 60  0000 C CNN
+F 1 "E-Meter" H 3250 2550 60  0000 C CNN
+F 2 "" H 3250 2550 60  0001 C CNN
+F 3 "" H 3250 2550 60  0001 C CNN
+	1    3250 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2550 2550 2550
+Wire Wire Line
+	3650 2550 4350 2550
 $EndSCHEMATC

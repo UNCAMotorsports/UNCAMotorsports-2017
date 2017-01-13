@@ -1,4 +1,4 @@
-update=12/31/2016 5:27:22 PM
+update=1/10/2017 8:23:41 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,4 @@ LibName30=opto
 LibName31=atmel
 LibName32=contrib
 LibName33=valves
+LibName34=switches
