@@ -2,7 +2,7 @@
 --	Conversion of C-CAN.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Fri Dec 30 00:53:22 2016
+--	Fri Jan 13 17:55:13 2017
 --
 
 USE cypress.cypress.all;

@@ -8,7 +8,7 @@
 //0x042 is left rpm (and perhaps also right rpm. might combine the two into one message)
 //0x043 is right rpm
 
-#include <device.h>
+#include <cydevice.h>
 #include "stdio.h"
 #include "stdlib.h"
 #include "string.h"
@@ -94,7 +94,7 @@ int main()
     EncoderInit(&right);
     
     SensorEnable(&zero.sensor,  TRUE);
-    SensorEnable(&one.sensor,   FALSE);
+    SensorEnable(&one.sensor,   TRUE);
     SensorEnable(&two.sensor,   FALSE);
     SensorEnable(&three.sensor, FALSE);
     SensorEnable(&four.sensor,  FALSE);
@@ -102,8 +102,8 @@ int main()
     SensorEnable(&left.sensor,  FALSE);
     SensorEnable(&right.sensor, FALSE);
     
-    SensorSet(&zero.sensor,  0, 50, 1000, 200); //sensor, number, window, rate, CAN rate
-    SensorSet(&one.sensor,   1, 10, 1000, 200);
+    SensorSet(&zero.sensor,  0, 50, 1000, 100); //sensor, number, window, rate, CAN rate
+    SensorSet(&one.sensor,   1, 50, 1000, 100);
     SensorSet(&two.sensor,   2,  1,     1,  1);
     SensorSet(&three.sensor, 3,  1,     1,  1);
     SensorSet(&four.sensor,  4,  1,     1,  1);
@@ -174,6 +174,9 @@ int main()
             zero.sensor.CAN_flag=FALSE;
         }
         else if((one.sensor.CAN_flag==TRUE)&&(one.sensor.enable==TRUE)){
+            if(one.mV>4095){
+                one.mV = 4095;
+            }
             CAN_Send_1((uint8)(one.mV>>8) ,(uint8)(one.mV) ,0,0,0,0,0,0);
             one.sensor.CAN_flag=FALSE;
         }

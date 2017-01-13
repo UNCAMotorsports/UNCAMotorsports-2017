@@ -139,7 +139,7 @@ void GetThrottle(Throttle * throttleOne, Throttle * throttleTwo){
         throttleTwo->throttle = 0;
     }
     
-    if(abs(throttleOne->throttle-throttleTwo->throttle)>409){
+    if(abs(throttleOne->throttle-throttleTwo->throttle)>=409){
         implausible_timer++;
         if(implausible_timer>=throttleOne->timer_constant){
             THROTTLE_IMPLAUSIBLE = 1;

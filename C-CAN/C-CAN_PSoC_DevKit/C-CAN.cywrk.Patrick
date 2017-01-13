@@ -168,18 +168,6 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\RX_2\RX_2.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\RX_2\RX_2_aliases.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\three</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\three\three.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\three\three.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\three\three_aliases.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\two</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\two\two.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\two\two.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\two\two_aliases.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2_aliases.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero</v>
@@ -194,6 +182,18 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevice.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevice_trm.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitter.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitterrv.inc</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="C-CAN\C-CAN">
@@ -381,7 +381,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="bbeb217b-ac1b-4ec4-92f4-8c2428e733d4"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><ToolWindow Key="CyFeedbackPageToolWindow:279a374f-99bb-478b-83b4-831f8474bf17:Component Feedback" Guid="c5bdeb8f-cacf-4e83-bc2c-4ad400c0f84c" /><DocumentWindow Key="9f77b33c-1b8e-4997-9c1a-222aa6639989" Guid="6ea63838-da4f-4838-8834-465541d9f362" /><DocumentWindow Key="12645a3b-af06-4fb6-8151-cbc925ab51d3" Guid="bbeb217b-ac1b-4ec4-92f4-8c2428e733d4" /><DocumentWindow Key="93101c9c-fd7a-42b6-ab0f-2ac8ea0fdae4" Guid="1a37895d-067a-42e7-9ded-ebd1c3b429cd" /><DocumentWindow Key="6588b6af-96fd-4159-b868-c3a837c2d7da" Guid="12e8c8c8-7027-45ec-bbc8-8f0d4a3693d8" /><DocumentWindow Key="b665cc0f-57a9-4923-8b1f-cb9654896453" Guid="0fbaa7e1-efe3-4057-905c-43233d571533" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="1ab2bf19-a49e-41be-ae2b-30b731f80af6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="d2423b63-218d-45a1-a1eb-58e2968d7faf" Guid="1ab2bf19-a49e-41be-ae2b-30b731f80af6" /><DocumentWindow Key="389ef762-4ce2-4dad-a581-469c42447301" Guid="1f1658b9-9e04-4107-b02a-b93c1ad77da3" /><DocumentWindow Key="bebd9587-1690-4bdf-a4ba-89afa9809e53" Guid="a270d1a3-a7af-4045-95d9-10d23751a5fc" /><DocumentWindow Key="84040f98-4b7f-4fc3-8e9f-61e98c483d62" Guid="ad44afdd-3ca1-4e24-9e34-48c314c0d37a" /><DocumentWindow Key="4618e727-916c-46d9-ae18-415e18facead" Guid="f820f4e1-56fe-4ad3-a1f3-dadbbef5429b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
