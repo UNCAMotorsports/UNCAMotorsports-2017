@@ -13,36 +13,33 @@
 #define simple_min(a,b) (((a)<(b)) ? (a) : (b))
 #define simple_constrain(amt,low,high) (((amt)<(low)) ? (low) : ((amt > high) ? (high) : (amt)))
 
+// Chip selects for SPI devices
 #define CS_FLASH            (2)
 #define CS_DAC0		        (8)
 #define CS_DAC1		        (7)
-#define LATCH_PIN	        (9)
 #define CS_SD               (10)
 
-#define THROTTLE0_PIN	    (A0)
-#define THROTTLE1_PIN	    (A1)
-#define STEERING0_PIN       (A2)
-#define STEERING1_PIN       (A3)
+// DAC latch pin
+#define LATCH_PIN	        (9)
 
-#define ENC_TO_RPM_RIGHT    (50000)    // 800 ppr effective
-#define ENC_TO_RPM_LEFT     (50000)
-#define LEFT_ENC_PIN	    (5)
-#define RIGHT_ENC_PIN	    (6)
+// Measurements of vehicle dimensions for use in differential steering
 #define WHEELBASE_IN        (72.0)      // In Inches
 #define REAR_TRACK_IN       (42.0)      // In inches
 #define TRACK_TO_WHEEL      (REAR_TRACK_IN/WHEELBASE_IN)
 
-#define RAD_PER_VAL         (.03)
-
-#define DIFFERENTIAL_MODE   (0)
-#define STEERING_CENTER     (2535)
-#define THROTTLE_FILTER_POLES (10)
-
-#define CANTX               (3)
-#define CANRX               (4)
+// Steering sensor calibration values
+#define DEG_PER_VAL         (.03)
+#define STEERING_CENTER     (2645)
 
 // CAN IDs
 #define THROTTLE_ID         (0x040)
 #define STEERING_ID         (0x041)
 #define LEFT_RPM_ID         (0x042)
 #define RIGHT_RPM_ID        (0x043)
+
+// CAN controller pins
+#define CANTX               (3)
+#define CANRX               (4)
+
+// Steering Differential mode
+uint8_t DIFFERENTIAL_MODE = 1;

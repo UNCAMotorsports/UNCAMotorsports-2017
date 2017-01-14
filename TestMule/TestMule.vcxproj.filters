@@ -24,24 +24,12 @@
     <ClInclude Include="DAC_MCP49xx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DataLogger.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MuleDefines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MuleThrottle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DAC_MCP49xx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DataLogger.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MuleThrottle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
