@@ -82,9 +82,9 @@ void setup()
 
 
     // Start datalogging
-#ifdef LOGGING
-    sdLogger.startBinLogger();
-#endif
+    #ifdef LOGGING
+        sdLogger.startBinLogger();
+    #endif
 
     CANBus.begin();
     loopTimer.begin(multiRateISR, TIMER_RATE);        // Start the main loop timer
@@ -118,30 +118,29 @@ void loop()
             dac0.output(requestedThrottle);
             dac1.output(requestedThrottle);
             throttleError = true;
-#ifdef DEBUG_THROTTLE
-
-            Serial.println("Error:\tThrottle timeout!");
-#endif
+            #ifdef DEBUG_THROTTLE
+                        Serial.println("Error:\tThrottle timeout!");
+            #endif
         }
-
     }
-    if (steeringTimer == 0 && DIFFERENTIAL_MODE > 0)
+
+    if (steeringTimer == 0 && DIFFERENTIAL_MODE != diffModeNone)
     {
         if (steeringError == false){
             DIFFERENTIAL_MODE = 0;
             steeringError = true;
-#ifdef DEBUG_STEERING
-            Serial.println("Error:\tSteering Timeout!");
-#endif
+            #ifdef DEBUG_STEERING
+                        Serial.println("Error:\tSteering Timeout!");
+            #endif
         }
     }
 
 
-#ifdef DEBUG_PROFILING
-    profiler = micros() - profiler;
-    Serial.print("Loop Time: ");
-    Serial.println(profiler);
-#endif
+    #ifdef DEBUG_PROFILING
+        profiler = micros() - profiler;
+        Serial.print("Loop Time: ");
+        Serial.println(profiler);
+    #endif
 }
 /* ---------------------------------------------------------------------------- */
 
@@ -161,10 +160,10 @@ void steeringTask(const struct CAN_message_t *msg){
     uint16_t steeringVal = msg->buf[0] << 8 | msg->buf[1];
     steerAngle = (steeringVal - STEERING_CENTER) * DEG_PER_VAL;
 
-#ifdef DEBUG_STEERING
+    #ifdef DEBUG_STEERING
 
-    Serial.printf("Raw Steering: %d\tSteer Angle: %0.2f\n", steeringVal, steerAngle);
-#endif
+        Serial.printf("Raw Steering: %d\tSteer Angle: %0.2f\n", steeringVal, steerAngle);
+    #endif
 
     tanSteer = tan(radians(steerAngle));
     calculateDifferentialSteering();
@@ -177,9 +176,9 @@ void steeringTask(const struct CAN_message_t *msg){
 * ---------------------------------------------------------------------------- */
 void throttleTask(const struct CAN_message_t *msg){
 
-#ifdef DEBUG_PROFILING
-    uint16_t profiler = micros();
-#endif
+    #ifdef DEBUG_PROFILING
+        uint16_t profiler = micros();
+    #endif
 
     if (msg->buf[0] & (1 << 7)) {    // Throttle implausible.  Kill power.
         requestedThrottle = 0;
@@ -188,45 +187,46 @@ void throttleTask(const struct CAN_message_t *msg){
         requestedThrottle = msg->buf[0] << 8 | msg->buf[1];
     }
 
-#ifdef DEBUG_THROTTLE
-    Serial.printf("\tRequested: %d\n", requestedThrottle);
-#endif
+    #ifdef DEBUG_THROTTLE
+        Serial.printf("\tRequested: %d\n", requestedThrottle);
+    #endif
 
     if (requestedThrottle < 75)     // Filter the lowest values so the car doesn't crawl
         requestedThrottle = 0;
 
     calculateDifferentialSteering();
 
-#ifdef DEBUG_THROTTLE
-    Serial.printf("Left Throttle: %d\tRight Throttle: %d\n", leftThrottle, rightThrottle);
-#endif
+    #ifdef DEBUG_THROTTLE
+        Serial.printf("Left Throttle: %d\tRight Throttle: %d\n", leftThrottle, rightThrottle);
+    #endif
     // Write to the DACs
     dac0.output(leftThrottle);
     dac1.output(rightThrottle);
 
-#ifdef DEBUG_PROFILING
-    profiler = micros() - profiler;
-    Serial.print("Throttle Time: ");
-    Serial.println(profiler);
-#endif
+    #ifdef DEBUG_PROFILING
+        profiler = micros() - profiler;
+        Serial.print("Throttle Time: ");
+        Serial.println(profiler);
+    #endif
 }
 
 // Calculates how much throttle each wheel gets based on the throttle and steering positions
 void calculateDifferentialSteering(){
     switch (DIFFERENTIAL_MODE)
     {
-    case 0:
+    case diffModeNone:
         leftThrottle = requestedThrottle;
         rightThrottle = requestedThrottle;
         break;
 
-    case 1:
+    case diffModeOpenLoop:
         rightThrottle = requestedThrottle + requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer;
         leftThrottle = requestedThrottle - requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer;
 
-#ifdef DEBUG_THROTTLE
-        Serial.printf("Delta: %f\n", requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer);
-#endif
+        #ifdef DEBUG_THROTTLE
+            Serial.printf("Delta: %f\n", requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer);
+        #endif
+
         double ratio = 1.0;
         if (rightThrottle > 4095){
             ratio = 4095.0 / rightThrottle;
@@ -241,6 +241,10 @@ void calculateDifferentialSteering(){
         // The throttles should already be constrained by the above calculation, but just to make sure...
         rightThrottle = simple_constrain(rightThrottle, 0, 4095);
         leftThrottle = simple_constrain(leftThrottle, 0, 4095);
+        break;
+
+    case diffModeClosedLoop:
+        // Not implemented yet
         break;
     }
 }
