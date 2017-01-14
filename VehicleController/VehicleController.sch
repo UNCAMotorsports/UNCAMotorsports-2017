@@ -1,0 +1,217 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:UNCAMotorsports
+LIBS:Common-Parts-Library-CPL
+LIBS:relays
+LIBS:SystemBlocks
+LIBS:VehicleController-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Battery BT?
+U 1 1 587A36CC
+P 2800 3550
+F 0 "BT?" H 2908 3596 50  0000 L CNN
+F 1 "Battery" H 2908 3505 50  0000 L CNN
+F 2 "" V 2800 3610 50  0000 C CNN
+F 3 "" V 2800 3610 50  0000 C CNN
+	1    2800 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Schottky D?
+U 1 1 587A3730
+P 3800 3150
+F 0 "D?" H 3800 2934 50  0000 C CNN
+F 1 "D_Schottky" H 3800 3025 50  0000 C CNN
+F 2 "" H 3800 3150 50  0000 C CNN
+F 3 "" H 3800 3150 50  0000 C CNN
+	1    3800 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Polyfuse F?
+U 1 1 587A378A
+P 3250 3150
+F 0 "F?" V 3025 3150 50  0000 C CNN
+F 1 "Polyfuse" V 3116 3150 50  0000 C CNN
+F 2 "" H 3300 2950 50  0001 L CNN
+F 3 "" H 3250 3150 50  0001 C CNN
+	1    3250 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L TL431 U?
+U 1 1 587A381D
+P 4850 4250
+F 0 "U?" H 4671 4303 60  0000 R CNN
+F 1 "TL431" H 4671 4197 60  0000 R CNN
+F 2 "" H 4850 4200 60  0000 C CNN
+F 3 "" H 4850 4200 60  0000 C CNN
+	1    4850 4250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L BTS6133D U?
+U 1 1 587A388E
+P 6000 3250
+F 0 "U?" H 6000 3637 60  0000 C CNN
+F 1 "BTS6133D" H 6000 3531 60  0000 C CNN
+F 2 "" H 6150 3450 60  0000 C CNN
+F 3 "" H 6150 3450 60  0000 C CNN
+	1    6000 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 587A38C6
+P 4300 3950
+F 0 "R?" H 4369 3996 50  0000 L CNN
+F 1 "R" H 4369 3905 50  0000 L CNN
+F 2 "" V 4230 3950 50  0000 C CNN
+F 3 "" H 4300 3950 50  0000 C CNN
+	1    4300 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 587A391C
+P 4300 4500
+F 0 "R?" H 4369 4546 50  0000 L CNN
+F 1 "R" H 4369 4455 50  0000 L CNN
+F 2 "" V 4230 4500 50  0000 C CNN
+F 3 "" H 4300 4500 50  0000 C CNN
+	1    4300 4500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 587A397B
+P 5450 3700
+F 0 "R?" H 5519 3746 50  0000 L CNN
+F 1 "R" H 5519 3655 50  0000 L CNN
+F 2 "" V 5380 3700 50  0000 C CNN
+F 3 "" H 5450 3700 50  0000 C CNN
+	1    5450 3700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 587A3B4C
+P 5450 3950
+F 0 "#PWR?" H 5450 3700 50  0001 C CNN
+F 1 "GND" H 5455 3777 50  0000 C CNN
+F 2 "" H 5450 3950 50  0000 C CNN
+F 3 "" H 5450 3950 50  0000 C CNN
+	1    5450 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3550 5450 3350
+Wire Wire Line
+	5450 3350 5600 3350
+Wire Wire Line
+	4850 3950 4850 3250
+Wire Wire Line
+	4850 3250 5600 3250
+Wire Wire Line
+	3950 3150 5600 3150
+Wire Wire Line
+	4300 3150 4300 3800
+Connection ~ 4300 3150
+Wire Wire Line
+	5450 3950 5450 3850
+Wire Wire Line
+	4300 4100 4300 4350
+Wire Wire Line
+	4500 4250 4300 4250
+Connection ~ 4300 4250
+Wire Wire Line
+	3400 3150 3650 3150
+Wire Wire Line
+	2800 3350 2800 3150
+Wire Wire Line
+	2800 3150 3100 3150
+$Comp
+L GND #PWR?
+U 1 1 587A3C06
+P 4300 4900
+F 0 "#PWR?" H 4300 4650 50  0001 C CNN
+F 1 "GND" H 4305 4727 50  0000 C CNN
+F 2 "" H 4300 4900 50  0000 C CNN
+F 3 "" H 4300 4900 50  0000 C CNN
+	1    4300 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4300 4900 4300 4650
+Wire Wire Line
+	4300 4800 4850 4800
+Wire Wire Line
+	4850 4800 4850 4550
+Connection ~ 4300 4800
+$Comp
+L GND #PWR?
+U 1 1 587A3C5B
+P 2800 3850
+F 0 "#PWR?" H 2800 3600 50  0001 C CNN
+F 1 "GND" H 2805 3677 50  0000 C CNN
+F 2 "" H 2800 3850 50  0000 C CNN
+F 3 "" H 2800 3850 50  0000 C CNN
+	1    2800 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3850 2800 3750
+$Comp
+L Teensy_3.5 U?
+U 1 1 587A3EBC
+P 7850 3250
+F 0 "U?" H 7850 4700 60  0000 C CNN
+F 1 "Teensy_3.5" H 7850 4600 60  0000 C CNN
+F 2 "" H 7850 3250 60  0000 C CNN
+F 3 "" H 7850 3250 60  0000 C CNN
+	1    7850 3250
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
