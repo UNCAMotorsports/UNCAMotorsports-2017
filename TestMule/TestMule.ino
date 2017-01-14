@@ -18,10 +18,13 @@
 #define TIMER_RATE          (1000)                  // Check the timer every 1 millisecond
 #define THROTTLE_TIMEOUT    (100)                   // Timeout throttle after 100ms    
 #define STEERING_TIMEOUT    (100)                   // Timeout steering after 100ms
+#define RPM_TIMEOUT         (100)
 
 IntervalTimer loopTimer;
 uint32_t throttleTimer = THROTTLE_TIMEOUT;
 uint32_t steeringTimer = STEERING_TIMEOUT;
+uint32_t leftRPMTimer = RPM_TIMEOUT;
+uint32_t rightRPMTimer = RPM_TIMEOUT;
 
 // Runs in an interrupt and sets the flags for our multi-rate main loop
 void multiRateISR(){
@@ -40,6 +43,9 @@ CAN_message_t rxmsg;
 int16_t leftThrottle = 0;
 int16_t rightThrottle = 0;
 uint16_t requestedThrottle = 0;
+
+uint16_t leftRPM;
+uint16_t rightRPM;
 
 float steerAngle = 0.0;
 float tanSteer = 0.0;
@@ -105,8 +111,8 @@ void loop()
             switch (rxmsg.id) {
             case THROTTLE_ID: throttleTask(&rxmsg); throttleTimer = THROTTLE_TIMEOUT; break;
             case STEERING_ID: steeringTask(&rxmsg); steeringTimer = STEERING_TIMEOUT; break;
-            case LEFT_RPM_ID: leftRPMTask(&rxmsg); break;
-            case RIGHT_RPM_ID: rightRPMTask(&rxmsg); break;
+            case LEFT_RPM_ID: leftRPMTask(&rxmsg); leftRPMTimer = RPM_TIMEOUT; break;
+            case RIGHT_RPM_ID: rightRPMTask(&rxmsg); rightRPMTimer = RPM_TIMEOUT; break;
             }
         }
     }
@@ -127,12 +133,17 @@ void loop()
     if (steeringTimer == 0 && DIFFERENTIAL_MODE != diffModeNone)
     {
         if (steeringError == false){
-            DIFFERENTIAL_MODE = 0;
+            DIFFERENTIAL_MODE = diffModeNone;
             steeringError = true;
             #ifdef DEBUG_STEERING
                         Serial.println("Error:\tSteering Timeout!");
             #endif
         }
+    }
+
+    if (DIFFERENTIAL_MODE == diffModeClosedLoop && (leftRPMTimer == 0 || rightRPMTimer == 0))
+    {
+        DIFFERENTIAL_MODE = diffModeOpenLoop;
     }
 
 
@@ -145,11 +156,11 @@ void loop()
 /* ---------------------------------------------------------------------------- */
 
 void leftRPMTask(const struct CAN_message_t *msg){
-    uint16_t leftRPM = msg->buf[0] << 8 | msg->buf[1];
+    leftRPM = msg->buf[0] << 8 | msg->buf[1];
 }
 
 void rightRPMTask(const struct CAN_message_t *msg){
-    uint16_t rightRPM = msg->buf[0] << 8 | msg->buf[1];
+    rightRPM = msg->buf[0] << 8 | msg->buf[1];
 }
 
 /* ---------------------------------------------------------------------------- +
@@ -220,11 +231,12 @@ void calculateDifferentialSteering(){
         break;
 
     case diffModeOpenLoop:
+    {
         rightThrottle = requestedThrottle + requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer;
         leftThrottle = requestedThrottle - requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer;
 
         #ifdef DEBUG_THROTTLE
-            Serial.printf("Delta: %f\n", requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer);
+                Serial.printf("Delta: %f\n", requestedThrottle * .5 * TRACK_TO_WHEEL * tanSteer);
         #endif
 
         double ratio = 1.0;
@@ -242,7 +254,7 @@ void calculateDifferentialSteering(){
         rightThrottle = simple_constrain(rightThrottle, 0, 4095);
         leftThrottle = simple_constrain(leftThrottle, 0, 4095);
         break;
-
+    }
     case diffModeClosedLoop:
         // Not implemented yet
         break;

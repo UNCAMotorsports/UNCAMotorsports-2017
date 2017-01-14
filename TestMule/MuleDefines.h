@@ -42,10 +42,12 @@
 #define CANRX               (4)
 
 // Steering Differential mode
-uint8_t DIFFERENTIAL_MODE = 1;
+
 
 enum eDifferentialMode{
     diffModeNone        =   0,
     diffModeOpenLoop    =   1,
     diffModeClosedLoop  =   2
 };
+
+eDifferentialMode DIFFERENTIAL_MODE = diffModeOpenLoop;
