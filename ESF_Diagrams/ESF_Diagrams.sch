@@ -37,7 +37,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 8500 11000 portrait
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -688,4 +688,10 @@ Wire Wire Line
 	2850 2550 2550 2550
 Wire Wire Line
 	3650 2550 4350 2550
+$Sheet
+S 1200 8250 900  750 
+U 587991D2
+F0 "GLVPowerDist" 60
+F1 "file587991D1.sch" 60
+$EndSheet
 $EndSCHEMATC
