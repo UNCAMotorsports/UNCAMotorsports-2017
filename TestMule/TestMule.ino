@@ -19,6 +19,7 @@
 #define THROTTLE_TIMEOUT    (100)                   // Timeout throttle after 100ms    
 #define STEERING_TIMEOUT    (100)                   // Timeout steering after 100ms
 #define RPM_TIMEOUT         (100)
+#define DRIVE_COMPUTE_TIMER (10)
 
 IntervalTimer loopTimer;
 uint32_t throttleTimer = THROTTLE_TIMEOUT;
@@ -26,10 +27,13 @@ uint32_t steeringTimer = STEERING_TIMEOUT;
 uint32_t leftRPMTimer = RPM_TIMEOUT;
 uint32_t rightRPMTimer = RPM_TIMEOUT;
 
+uint32_t torqueVectorTimer = DRIVE_COMPUTE_TIMER;
+
 // Runs in an interrupt and sets the flags for our multi-rate main loop
 void multiRateISR(){
     if (throttleTimer) throttleTimer--;
     if (steeringTimer) steeringTimer--;
+    if (torqueVectorTimer) torqueVectorTimer--;
 }
 /* ---------------------------------------------------------------------------- */
 
@@ -42,8 +46,9 @@ CAN_message_t rxmsg;
 
 int16_t leftThrottle = 0;
 int16_t rightThrottle = 0;
-uint16_t requestedThrottle = 0;
 
+uint16_t requestedThrottle;
+uint16_t steeringVal;
 uint16_t leftRPM;
 uint16_t rightRPM;
 
@@ -105,18 +110,19 @@ void setup()
 *  ---------------------------------------------------------------------------- */
 void loop()
 {
+    // Only pull one CAN message per loop
     if (CANBus.available())
     {
-        while (CANBus.read(rxmsg)){
-            switch (rxmsg.id) {
-            case THROTTLE_ID: throttleTask(&rxmsg); throttleTimer = THROTTLE_TIMEOUT; break;
-            case STEERING_ID: steeringTask(&rxmsg); steeringTimer = STEERING_TIMEOUT; break;
-            case LEFT_RPM_ID: leftRPMTask(&rxmsg); leftRPMTimer = RPM_TIMEOUT; break;
-            case RIGHT_RPM_ID: rightRPMTask(&rxmsg); rightRPMTimer = RPM_TIMEOUT; break;
-            }
+        CANBus.read(rxmsg);
+
+        switch (rxmsg.id) {
+        case THROTTLE_ID: throttleTask(&rxmsg); throttleTimer = THROTTLE_TIMEOUT; break;
+        case STEERING_ID: steeringTask(&rxmsg); steeringTimer = STEERING_TIMEOUT; break;
+        case LEFT_RPM_ID: leftRPMTask(&rxmsg); leftRPMTimer = RPM_TIMEOUT; break;
+        case RIGHT_RPM_ID: rightRPMTask(&rxmsg); rightRPMTimer = RPM_TIMEOUT; break;
         }
     }
-
+    
     if (throttleTimer == 0)
     {
         if (throttleError == false){
@@ -146,15 +152,18 @@ void loop()
         DIFFERENTIAL_MODE = diffModeOpenLoop;
     }
 
-
+    if (torqueVectorTimer == 0)
+    {
+        calculateDifferentialSteering();
+    }
     #ifdef DEBUG_PROFILING
         profiler = micros() - profiler;
         Serial.print("Loop Time: ");
         Serial.println(profiler);
     #endif
 }
-/* ---------------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------------- */
 void leftRPMTask(const struct CAN_message_t *msg){
     leftRPM = msg->buf[0] << 8 | msg->buf[1];
 }
@@ -163,63 +172,14 @@ void rightRPMTask(const struct CAN_message_t *msg){
     rightRPM = msg->buf[0] << 8 | msg->buf[1];
 }
 
-/* ---------------------------------------------------------------------------- +
-*   Find the tangent of the steering angle
-* ---------------------------------------------------------------------------- */
 void steeringTask(const struct CAN_message_t *msg){
+    steeringVal = msg->buf[0] << 8 | msg->buf[1];
+}
 
-    uint16_t steeringVal = msg->buf[0] << 8 | msg->buf[1];
-    steerAngle = (steeringVal - STEERING_CENTER) * DEG_PER_VAL;
-
-    #ifdef DEBUG_STEERING
-
-        Serial.printf("Raw Steering: %d\tSteer Angle: %0.2f\n", steeringVal, steerAngle);
-    #endif
-
-    tanSteer = tan(radians(steerAngle));
-    calculateDifferentialSteering();
+void throttleTask(const struct CAN_message_t *msg){
+    requestedThrottle = msg->buf[0] << 8 | msg->buf[1];
 }
 /* ---------------------------------------------------------------------------- */
-
-
-/* ---------------------------------------------------------------------------- +
-*   Poll the throttle sensor and calculate the differential action to each wheel
-* ---------------------------------------------------------------------------- */
-void throttleTask(const struct CAN_message_t *msg){
-
-    #ifdef DEBUG_PROFILING
-        uint16_t profiler = micros();
-    #endif
-
-    if (msg->buf[0] & (1 << 7)) {    // Throttle implausible.  Kill power.
-        requestedThrottle = 0;
-    }
-    else {
-        requestedThrottle = msg->buf[0] << 8 | msg->buf[1];
-    }
-
-    #ifdef DEBUG_THROTTLE
-        Serial.printf("\tRequested: %d\n", requestedThrottle);
-    #endif
-
-    if (requestedThrottle < 75)     // Filter the lowest values so the car doesn't crawl
-        requestedThrottle = 0;
-
-    calculateDifferentialSteering();
-
-    #ifdef DEBUG_THROTTLE
-        Serial.printf("Left Throttle: %d\tRight Throttle: %d\n", leftThrottle, rightThrottle);
-    #endif
-    // Write to the DACs
-    dac0.output(leftThrottle);
-    dac1.output(rightThrottle);
-
-    #ifdef DEBUG_PROFILING
-        profiler = micros() - profiler;
-        Serial.print("Throttle Time: ");
-        Serial.println(profiler);
-    #endif
-}
 
 // Calculates how much throttle each wheel gets based on the throttle and steering positions
 void calculateDifferentialSteering(){
@@ -256,7 +216,8 @@ void calculateDifferentialSteering(){
         break;
     }
     case diffModeClosedLoop:
-        // Not implemented yet
+        float vehicleSpeed = RPM_TO_RADS((leftRPM + rightRPM) / 2.0);
+        float dOmega = TRACK_TO_WHEEL*tan(radians((steeringVal - STEERING_CENTER)*DEG_PER_VAL))*vehicleSpeed;
         break;
     }
 }

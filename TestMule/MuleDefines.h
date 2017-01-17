@@ -13,6 +13,8 @@
 #define simple_min(a,b) (((a)<(b)) ? (a) : (b))
 #define simple_constrain(amt,low,high) (((amt)<(low)) ? (low) : ((amt > high) ? (high) : (amt)))
 
+#define RPM_TO_RADS(a)  ((a)*2*PI/60)
+
 // Chip selects for SPI devices
 #define CS_FLASH            (2)
 #define CS_DAC0		        (8)

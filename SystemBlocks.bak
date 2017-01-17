@@ -5,7 +5,7 @@ EESchema-LIBRARY Version 2.3
 #
 DEF Generic_1x1 U 0 40 Y Y 1 F N
 F0 "U" -150 250 60 H V C CNN
-F1 "Generic_1x1" 0 -250 60 H V C CNN
+F1 "Generic_1x1" 0 0 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -27,6 +27,22 @@ S -200 200 200 -200 0 1 0 N
 X ~ ~ -400 0 200 R 50 50 1 1 I
 X ~ ~ 400 -100 200 L 50 50 1 1 I
 X ~ ~ 400 100 200 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# Generic_2x2
+#
+DEF Generic_2x2 U 0 40 Y Y 1 F N
+F0 "U" -150 250 60 H V C CNN
+F1 "Generic_2x2" 0 -250 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S -200 200 200 -200 0 1 0 N
+X ~ ~ -350 -100 150 R 50 50 1 1 I
+X ~ ~ -350 100 150 R 50 50 1 1 I
+X ~ ~ 350 -100 150 L 50 50 1 1 I
+X ~ ~ 350 100 150 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
