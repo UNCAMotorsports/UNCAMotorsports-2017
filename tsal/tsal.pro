@@ -1,4 +1,4 @@
-update=1/18/2017 8:09:04 PM
+update=1/19/2017 10:40:55 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,7 +25,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=../../UNCAM-Kicad-Parts;../../UNCAMotorsports-2017
+LibDir=
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -56,12 +56,15 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/Users/Patrick/Documents/GitHub/UNCAM-Kicad-Parts/UNCAMotorsports
-LibName31=UNCAMotorsports
-LibName32=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/Common-Parts-Library-CPL
-LibName33=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/relays
-LibName34=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/SystemBlocks
-LibName35=mechanical
-LibName36=switches
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/tsal/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
 [general]
 version=1

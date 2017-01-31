@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="C-CAN">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.c">
 <ExpandedNodeIds>
 <v>C-CAN</v>
 <v>C-CAN\C-CAN</v>
@@ -168,32 +168,32 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\TX_2\TX_2_aliases.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\zero</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero_aliases.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cybootloader.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cybootloader.icf</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cycodeshareimport.ld</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevice.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevice_trm.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicegnu.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydeviceiar.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicerv.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cydisabledsheets.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitter.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitter_cfg.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitter_cfg.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfittergnu.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitteriar.inc</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_INT.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_PM.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass_aliases.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\AMux_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Bootloadable_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_INT.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_PM.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_TX_RX_func.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Clock_1</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="C-CAN\C-CAN">
@@ -374,6 +374,7 @@
 <name v=".\C-CAN.cydsn\C-CAN.cydwr" />
 <name v=".\C-CAN.cydsn\C-CAN.c" />
 <name v=".\C-CAN.cydsn\C-CAN.h" />
+<name v=".\C-CAN.cydsn\Generated_Source\PSoC5\CAN_1.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -381,7 +382,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="1ab2bf19-a49e-41be-ae2b-30b731f80af6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="d2423b63-218d-45a1-a1eb-58e2968d7faf" Guid="1ab2bf19-a49e-41be-ae2b-30b731f80af6" /><DocumentWindow Key="389ef762-4ce2-4dad-a581-469c42447301" Guid="1f1658b9-9e04-4107-b02a-b93c1ad77da3" /><DocumentWindow Key="bebd9587-1690-4bdf-a4ba-89afa9809e53" Guid="a270d1a3-a7af-4045-95d9-10d23751a5fc" /><DocumentWindow Key="84040f98-4b7f-4fc3-8e9f-61e98c483d62" Guid="ad44afdd-3ca1-4e24-9e34-48c314c0d37a" /><DocumentWindow Key="4618e727-916c-46d9-ae18-415e18facead" Guid="f820f4e1-56fe-4ad3-a1f3-dadbbef5429b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="53f93007-ad40-43b1-9101-ba369de777f8"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="a8e51aa5-80c2-4626-b51f-44730db87a5d" Guid="53f93007-ad40-43b1-9101-ba369de777f8" /><DocumentWindow Key="f26fe9fd-aed3-4296-8605-1c1a510bae45" Guid="402ae8d2-8bb6-428c-b135-8004eddd9241" /><DocumentWindow Key="f9969621-d851-409b-87b6-11194e11c8ec" Guid="60b32b85-2e76-43ce-a200-0e08fd684086" /><DocumentWindow Key="9f50d780-8f5e-46e3-b2f6-9523a34c580d" Guid="084da407-7e4d-4c5a-abf8-98fa83bcc68d" /><DocumentWindow Key="8e6893e0-188f-47f0-9586-993150dfea0e" Guid="da7e5ea7-5799-4c66-a9e8-e133f1c77b83" /><DocumentWindow Key="390869ee-eaa0-4e24-9e70-a9e74b77e64c" Guid="1416e9cf-2ac0-4895-81c6-46140abd4ced" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

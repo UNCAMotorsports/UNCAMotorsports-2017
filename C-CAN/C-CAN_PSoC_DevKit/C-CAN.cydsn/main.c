@@ -39,16 +39,16 @@ static const uint8 CYCODE CAN_rate_config[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 CY_ISR(SysTick_ISR)
 {
     timer++;
-    if ((timer) % GetRate(&zero.sensor)  == 0) { SetFlag(&zero.sensor,  TRUE); }
-    if ((timer+1) % GetRate(&one.sensor)   == 0) { SetFlag(&one.sensor,   TRUE); }
-    if ((timer+2) % GetRate(&two.sensor)   == 0) { SetFlag(&two.sensor,   TRUE); }
-    if ((timer+3) % GetRate(&three.sensor) == 0) { SetFlag(&three.sensor, TRUE); }
-    if ((timer+4) % GetRate(&four.sensor)  == 0) { SetFlag(&four.sensor,  TRUE); }
-    if ((timer+5) % GetRate(&five.sensor)  == 0) { SetFlag(&five.sensor,  TRUE); }
-    if ((timer+6) % GetRate(&left.sensor)  == 0) { SetFlag(&left.sensor,  TRUE); }
-    if ((timer+7) % GetRate(&right.sensor) == 0) { SetFlag(&right.sensor, TRUE); }
-    if ((timer+8) % GetCANRate(&zero.sensor)  == 0) { SetCANFlag(&zero.sensor,  TRUE); }
-    if ((timer+9) % GetCANRate(&one.sensor)   == 0) { SetCANFlag(&one.sensor,   TRUE); }
+    if ((timer)    % GetRate(&zero.sensor)  == 0) { SetFlag(&zero.sensor,  TRUE); }
+    if ((timer+1)  % GetRate(&one.sensor)   == 0) { SetFlag(&one.sensor,   TRUE); }
+    if ((timer+2)  % GetRate(&two.sensor)   == 0) { SetFlag(&two.sensor,   TRUE); }
+    if ((timer+3)  % GetRate(&three.sensor) == 0) { SetFlag(&three.sensor, TRUE); }
+    if ((timer+4)  % GetRate(&four.sensor)  == 0) { SetFlag(&four.sensor,  TRUE); }
+    if ((timer+5)  % GetRate(&five.sensor)  == 0) { SetFlag(&five.sensor,  TRUE); }
+    if ((timer+6)  % GetRate(&left.sensor)  == 0) { SetFlag(&left.sensor,  TRUE); }
+    if ((timer+7)  % GetRate(&right.sensor) == 0) { SetFlag(&right.sensor, TRUE); }
+    if ((timer+8)  % GetCANRate(&zero.sensor)  == 0) { SetCANFlag(&zero.sensor,  TRUE); }
+    if ((timer+9)  % GetCANRate(&one.sensor)   == 0) { SetCANFlag(&one.sensor,   TRUE); }
     if ((timer+10) % GetCANRate(&two.sensor)   == 0) { SetCANFlag(&two.sensor,   TRUE); }
     if ((timer+11) % GetCANRate(&three.sensor) == 0) { SetCANFlag(&three.sensor, TRUE); }
     if ((timer+12) % GetCANRate(&four.sensor)  == 0) { SetCANFlag(&four.sensor,  TRUE); }

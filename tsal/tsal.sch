@@ -1,0 +1,179 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LED D2
+U 1 1 58817E48
+P 4000 4050
+F 0 "D2" V 4038 3932 50  0000 R CNN
+F 1 "TSAL" V 3947 3932 50  0000 R CNN
+F 2 "" H 4000 4050 50  0000 C CNN
+F 3 "" H 4000 4050 50  0000 C CNN
+	1    4000 4050
+	0    -1   -1   0   
+$EndComp
+Text Label 4000 4400 0    60   ~ 0
+TractiveSystem-
+$Comp
+L TIP120 Q1
+U 1 1 58817FD6
+P 3650 3250
+F 0 "Q1" H 3400 3350 50  0000 L CNN
+F 1 "TIP120" H 3400 3450 50  0000 L CNN
+F 2 "TO-220" H 3350 3100 50  0001 L CIN
+F 3 "" H 3650 3250 50  0000 L CNN
+	1    3650 3250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L TIP120 Q2
+U 1 1 58818056
+P 4400 3250
+F 0 "Q2" H 4700 3300 50  0000 L CNN
+F 1 "TIP120" H 4650 3400 50  0000 L CNN
+F 2 "TO-220" H 4641 3159 50  0001 L CIN
+F 3 "" H 4400 3250 50  0000 L CNN
+	1    4400 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Zener D1
+U 1 1 58818161
+P 4000 3050
+F 0 "D1" V 3954 3129 50  0000 L CNN
+F 1 "26V" V 4045 3129 50  0000 L CNN
+F 2 "" H 4000 3050 50  0000 C CNN
+F 3 "" H 4000 3050 50  0000 C CNN
+	1    4000 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 3250 4200 3250
+Connection ~ 4000 3250
+$Comp
+L R R1
+U 1 1 58818219
+P 3550 3650
+F 0 "R1" H 3620 3696 50  0000 L CNN
+F 1 "1R" H 3620 3605 50  0000 L CNN
+F 2 "" V 3480 3650 50  0000 C CNN
+F 3 "" H 3550 3650 50  0000 C CNN
+	1    3550 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5881824F
+P 4500 3650
+F 0 "R4" H 4570 3696 50  0000 L CNN
+F 1 "1R" H 4570 3605 50  0000 L CNN
+F 2 "" V 4430 3650 50  0000 C CNN
+F 3 "" H 4500 3650 50  0000 C CNN
+	1    4500 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3450 3550 3500
+Wire Wire Line
+	4500 3450 4500 3500
+Connection ~ 4500 3800
+Wire Wire Line
+	4000 3200 4000 3400
+$Comp
+L R R2
+U 1 1 588183D6
+P 4000 2700
+F 0 "R2" H 4070 2746 50  0000 L CNN
+F 1 "100R" H 4070 2655 50  0000 L CNN
+F 2 "" V 3930 2700 50  0000 C CNN
+F 3 "" H 4000 2700 50  0000 C CNN
+	1    4000 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3050 3550 2550
+Wire Wire Line
+	3550 2550 4500 2550
+Wire Wire Line
+	4500 2550 4500 3050
+Connection ~ 4000 2550
+Wire Wire Line
+	4000 2850 4000 2900
+$Comp
+L R R3
+U 1 1 5881844C
+P 4000 3550
+F 0 "R3" H 4070 3596 50  0000 L CNN
+F 1 "15k" H 4070 3505 50  0000 L CNN
+F 2 "" V 3930 3550 50  0000 C CNN
+F 3 "" H 4000 3550 50  0000 C CNN
+	1    4000 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 3700 4000 3900
+Connection ~ 4000 3800
+$Comp
+L Fuse F1
+U 1 1 58818536
+P 4000 2300
+F 0 "F1" H 4060 2346 50  0000 L CNN
+F 1 "3A" H 4060 2255 50  0000 L CNN
+F 2 "" V 3930 2300 50  0000 C CNN
+F 3 "" H 4000 2300 50  0000 C CNN
+	1    4000 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2450 4000 2550
+Wire Wire Line
+	4000 4400 4000 4200
+Wire Wire Line
+	3550 3800 4500 3800
+Connection ~ 3550 3800
+Text Label 4000 2150 0    60   ~ 0
+TractiveSystem+
+Connection ~ 4000 2150
+Connection ~ 4000 4400
+$EndSCHEMATC
