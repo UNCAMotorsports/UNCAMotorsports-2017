@@ -216,8 +216,9 @@ void calculateDifferentialSteering(){
         break;
     }
     case diffModeClosedLoop:
-        float vehicleSpeed = RPM_TO_RADS((leftRPM + rightRPM) / 2.0);
-        float dOmega = TRACK_TO_WHEEL*tan(radians((steeringVal - STEERING_CENTER)*DEG_PER_VAL))*vehicleSpeed;
+        // Not implemented
+        leftThrottle = requestedThrottle;
+        rightThrottle = requestedThrottle;
         break;
     }
 }
