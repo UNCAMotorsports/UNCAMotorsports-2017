@@ -37,7 +37,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A 8500 11000 portrait
 encoding utf-8
-Sheet 2 3
+Sheet 2 2
 Title ""
 Date ""
 Rev ""

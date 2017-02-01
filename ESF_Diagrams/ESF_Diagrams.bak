@@ -190,45 +190,45 @@ $EndComp
 $Comp
 L Battery_Cell BT?
 U 1 1 586C92FA
-P 3000 6650
-F 0 "BT?" H 3118 6746 50  0000 L CNN
-F 1 "Battery_Cell" H 3118 6655 50  0000 L CNN
-F 2 "" V 3000 6710 50  0000 C CNN
-F 3 "" V 3000 6710 50  0000 C CNN
-	1    3000 6650
+P 3500 5550
+F 0 "BT?" H 3618 5646 50  0000 L CNN
+F 1 "Battery_Cell" H 3618 5555 50  0000 L CNN
+F 2 "" V 3500 5610 50  0000 C CNN
+F 3 "" V 3500 5610 50  0000 C CNN
+	1    3500 5550
 	1    0    0    -1  
 $EndComp
 $Comp
 L Battery_Cell BT?
 U 1 1 586C96F8
-P 2700 6650
-F 0 "BT?" H 2818 6746 50  0000 L CNN
-F 1 "Battery_Cell" H 2818 6655 50  0000 L CNN
-F 2 "" V 2700 6710 50  0000 C CNN
-F 3 "" V 2700 6710 50  0000 C CNN
-	1    2700 6650
+P 3200 5550
+F 0 "BT?" H 3318 5646 50  0000 L CNN
+F 1 "Battery_Cell" H 3318 5555 50  0000 L CNN
+F 2 "" V 3200 5610 50  0000 C CNN
+F 3 "" V 3200 5610 50  0000 C CNN
+	1    3200 5550
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Battery_Cell BT?
 U 1 1 586C9B67
-P 2700 7050
-F 0 "BT?" H 2818 7146 50  0000 L CNN
-F 1 "Battery_Cell" H 2818 7055 50  0000 L CNN
-F 2 "" V 2700 7110 50  0000 C CNN
-F 3 "" V 2700 7110 50  0000 C CNN
-	1    2700 7050
+P 3200 5950
+F 0 "BT?" H 3318 6046 50  0000 L CNN
+F 1 "Battery_Cell" H 3318 5955 50  0000 L CNN
+F 2 "" V 3200 6010 50  0000 C CNN
+F 3 "" V 3200 6010 50  0000 C CNN
+	1    3200 5950
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Battery_Cell BT?
 U 1 1 586C9C29
-P 3000 7050
-F 0 "BT?" H 3118 7146 50  0000 L CNN
-F 1 "Battery_Cell" H 3118 7055 50  0000 L CNN
-F 2 "" V 3000 7110 50  0000 C CNN
-F 3 "" V 3000 7110 50  0000 C CNN
-	1    3000 7050
+P 3500 5950
+F 0 "BT?" H 3618 6046 50  0000 L CNN
+F 1 "Battery_Cell" H 3618 5955 50  0000 L CNN
+F 2 "" V 3500 6010 50  0000 C CNN
+F 3 "" V 3500 6010 50  0000 C CNN
+	1    3500 5950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -366,27 +366,27 @@ Wire Notes Line
 Wire Wire Line
 	2950 1250 2550 1250
 Wire Wire Line
-	2700 6750 2700 6850
+	3200 5650 3200 5750
 Wire Wire Line
-	2700 6450 2700 6400
+	3200 5350 3200 5300
 Wire Wire Line
-	2700 6400 3500 6400
+	3200 5300 4000 5300
 Wire Wire Line
-	3000 6450 3000 6400
-Connection ~ 3000 6400
+	3500 5350 3500 5300
+Connection ~ 3500 5300
 Wire Wire Line
-	3000 6750 3000 6850
+	3500 5650 3500 5750
 Wire Wire Line
-	2700 6800 3500 6800
-Connection ~ 3000 6800
-Connection ~ 2700 6800
+	3200 5700 4000 5700
+Connection ~ 3500 5700
+Connection ~ 3200 5700
 Wire Wire Line
-	2700 7150 2700 7200
+	3200 6050 3200 6100
 Wire Wire Line
-	2700 7200 3500 7200
+	3200 6100 4000 6100
 Wire Wire Line
-	3000 7150 3000 7200
-Connection ~ 3000 7200
+	3500 6050 3500 6100
+Connection ~ 3500 6100
 $Comp
 L Battery BT?
 U 1 1 586CBB47
@@ -688,10 +688,650 @@ Wire Wire Line
 	2850 2550 2550 2550
 Wire Wire Line
 	3650 2550 4350 2550
-$Sheet
-S 1200 8250 900  750 
-U 587991D2
-F0 "GLVPowerDist" 60
-F1 "file587991D1.sch" 60
-$EndSheet
+$Comp
+L Battery_Cell BT?
+U 1 1 588FEA26
+P 1100 9250
+F 0 "BT?" H 1218 9346 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 9200 50  0001 L CNN
+F 2 "" V 1100 9310 50  0000 C CNN
+F 3 "" V 1100 9310 50  0000 C CNN
+	1    1100 9250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FEFE2
+P 1350 9250
+F 0 "BT?" H 1468 9346 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 9200 50  0001 L CNN
+F 2 "" V 1350 9310 50  0000 C CNN
+F 3 "" V 1350 9310 50  0000 C CNN
+	1    1350 9250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF055
+P 1600 9250
+F 0 "BT?" H 1718 9346 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 9200 50  0001 L CNN
+F 2 "" V 1600 9310 50  0000 C CNN
+F 3 "" V 1600 9310 50  0000 C CNN
+	1    1600 9250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF0AE
+P 1850 9250
+F 0 "BT?" H 1968 9346 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 9200 50  0001 L CNN
+F 2 "" V 1850 9310 50  0000 C CNN
+F 3 "" V 1850 9310 50  0000 C CNN
+	1    1850 9250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF22B
+P 1100 9650
+F 0 "BT?" H 1218 9746 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 9600 50  0001 L CNN
+F 2 "" V 1100 9710 50  0000 C CNN
+F 3 "" V 1100 9710 50  0000 C CNN
+	1    1100 9650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF231
+P 1350 9650
+F 0 "BT?" H 1468 9746 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 9600 50  0001 L CNN
+F 2 "" V 1350 9710 50  0000 C CNN
+F 3 "" V 1350 9710 50  0000 C CNN
+	1    1350 9650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF237
+P 1600 9650
+F 0 "BT?" H 1718 9746 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 9600 50  0001 L CNN
+F 2 "" V 1600 9710 50  0000 C CNN
+F 3 "" V 1600 9710 50  0000 C CNN
+	1    1600 9650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF23D
+P 1850 9650
+F 0 "BT?" H 1968 9746 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 9600 50  0001 L CNN
+F 2 "" V 1850 9710 50  0000 C CNN
+F 3 "" V 1850 9710 50  0000 C CNN
+	1    1850 9650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 9350 1850 9350
+Wire Wire Line
+	1850 9450 1100 9450
+Wire Wire Line
+	1100 9750 1850 9750
+Wire Wire Line
+	1850 9050 1100 9050
+Wire Wire Line
+	1350 9350 1350 9450
+Connection ~ 1350 9450
+Connection ~ 1350 9350
+Connection ~ 1600 9350
+Connection ~ 1600 9450
+Connection ~ 1600 9050
+Connection ~ 1350 9050
+Connection ~ 1350 9750
+Connection ~ 1600 9750
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF894
+P 1100 10000
+F 0 "BT?" H 1218 10096 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 9950 50  0001 L CNN
+F 2 "" V 1100 10060 50  0000 C CNN
+F 3 "" V 1100 10060 50  0000 C CNN
+	1    1100 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF89A
+P 1350 10000
+F 0 "BT?" H 1468 10096 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 9950 50  0001 L CNN
+F 2 "" V 1350 10060 50  0000 C CNN
+F 3 "" V 1350 10060 50  0000 C CNN
+	1    1350 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF8A0
+P 1600 10000
+F 0 "BT?" H 1718 10096 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 9950 50  0001 L CNN
+F 2 "" V 1600 10060 50  0000 C CNN
+F 3 "" V 1600 10060 50  0000 C CNN
+	1    1600 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF8A6
+P 1850 10000
+F 0 "BT?" H 1968 10096 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 9950 50  0001 L CNN
+F 2 "" V 1850 10060 50  0000 C CNN
+F 3 "" V 1850 10060 50  0000 C CNN
+	1    1850 10000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF8AC
+P 1100 10400
+F 0 "BT?" H 1218 10496 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 10350 50  0001 L CNN
+F 2 "" V 1100 10460 50  0000 C CNN
+F 3 "" V 1100 10460 50  0000 C CNN
+	1    1100 10400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF8B2
+P 1350 10400
+F 0 "BT?" H 1468 10496 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 10350 50  0001 L CNN
+F 2 "" V 1350 10460 50  0000 C CNN
+F 3 "" V 1350 10460 50  0000 C CNN
+	1    1350 10400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF8B8
+P 1600 10400
+F 0 "BT?" H 1718 10496 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 10350 50  0001 L CNN
+F 2 "" V 1600 10460 50  0000 C CNN
+F 3 "" V 1600 10460 50  0000 C CNN
+	1    1600 10400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FF8BE
+P 1850 10400
+F 0 "BT?" H 1968 10496 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 10350 50  0001 L CNN
+F 2 "" V 1850 10460 50  0000 C CNN
+F 3 "" V 1850 10460 50  0000 C CNN
+	1    1850 10400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 10100 1850 10100
+Wire Wire Line
+	1850 10200 1100 10200
+Wire Wire Line
+	1100 10500 1850 10500
+Wire Wire Line
+	1850 9800 1100 9800
+Wire Wire Line
+	1350 10100 1350 10200
+Connection ~ 1350 10200
+Connection ~ 1350 10100
+Connection ~ 1600 10100
+Connection ~ 1600 10200
+Connection ~ 1600 9800
+Connection ~ 1350 9800
+Connection ~ 1350 10500
+Connection ~ 1600 10500
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFBF7
+P 1100 7750
+F 0 "BT?" H 1218 7846 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 7700 50  0001 L CNN
+F 2 "" V 1100 7810 50  0000 C CNN
+F 3 "" V 1100 7810 50  0000 C CNN
+	1    1100 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFBFD
+P 1350 7750
+F 0 "BT?" H 1468 7846 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 7700 50  0001 L CNN
+F 2 "" V 1350 7810 50  0000 C CNN
+F 3 "" V 1350 7810 50  0000 C CNN
+	1    1350 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC03
+P 1600 7750
+F 0 "BT?" H 1718 7846 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 7700 50  0001 L CNN
+F 2 "" V 1600 7810 50  0000 C CNN
+F 3 "" V 1600 7810 50  0000 C CNN
+	1    1600 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC09
+P 1850 7750
+F 0 "BT?" H 1968 7846 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 7700 50  0001 L CNN
+F 2 "" V 1850 7810 50  0000 C CNN
+F 3 "" V 1850 7810 50  0000 C CNN
+	1    1850 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC0F
+P 1100 8150
+F 0 "BT?" H 1218 8246 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 8100 50  0001 L CNN
+F 2 "" V 1100 8210 50  0000 C CNN
+F 3 "" V 1100 8210 50  0000 C CNN
+	1    1100 8150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC15
+P 1350 8150
+F 0 "BT?" H 1468 8246 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 8100 50  0001 L CNN
+F 2 "" V 1350 8210 50  0000 C CNN
+F 3 "" V 1350 8210 50  0000 C CNN
+	1    1350 8150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC1B
+P 1600 8150
+F 0 "BT?" H 1718 8246 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 8100 50  0001 L CNN
+F 2 "" V 1600 8210 50  0000 C CNN
+F 3 "" V 1600 8210 50  0000 C CNN
+	1    1600 8150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC21
+P 1850 8150
+F 0 "BT?" H 1968 8246 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 8100 50  0001 L CNN
+F 2 "" V 1850 8210 50  0000 C CNN
+F 3 "" V 1850 8210 50  0000 C CNN
+	1    1850 8150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 7850 1850 7850
+Wire Wire Line
+	1850 7950 1100 7950
+Wire Wire Line
+	1100 8250 1850 8250
+Wire Wire Line
+	1850 7550 1100 7550
+Wire Wire Line
+	1350 7850 1350 7950
+Connection ~ 1350 7950
+Connection ~ 1350 7850
+Connection ~ 1600 7850
+Connection ~ 1600 7950
+Connection ~ 1600 7550
+Connection ~ 1350 7550
+Connection ~ 1350 8250
+Connection ~ 1600 8250
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC34
+P 1100 8500
+F 0 "BT?" H 1218 8596 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 8450 50  0001 L CNN
+F 2 "" V 1100 8560 50  0000 C CNN
+F 3 "" V 1100 8560 50  0000 C CNN
+	1    1100 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC3A
+P 1350 8500
+F 0 "BT?" H 1468 8596 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 8450 50  0001 L CNN
+F 2 "" V 1350 8560 50  0000 C CNN
+F 3 "" V 1350 8560 50  0000 C CNN
+	1    1350 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC40
+P 1600 8500
+F 0 "BT?" H 1718 8596 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 8450 50  0001 L CNN
+F 2 "" V 1600 8560 50  0000 C CNN
+F 3 "" V 1600 8560 50  0000 C CNN
+	1    1600 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC46
+P 1850 8500
+F 0 "BT?" H 1968 8596 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 8450 50  0001 L CNN
+F 2 "" V 1850 8560 50  0000 C CNN
+F 3 "" V 1850 8560 50  0000 C CNN
+	1    1850 8500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC4C
+P 1100 8900
+F 0 "BT?" H 1218 8996 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 8850 50  0001 L CNN
+F 2 "" V 1100 8960 50  0000 C CNN
+F 3 "" V 1100 8960 50  0000 C CNN
+	1    1100 8900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC52
+P 1350 8900
+F 0 "BT?" H 1468 8996 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 8850 50  0001 L CNN
+F 2 "" V 1350 8960 50  0000 C CNN
+F 3 "" V 1350 8960 50  0000 C CNN
+	1    1350 8900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC58
+P 1600 8900
+F 0 "BT?" H 1718 8996 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 8850 50  0001 L CNN
+F 2 "" V 1600 8960 50  0000 C CNN
+F 3 "" V 1600 8960 50  0000 C CNN
+	1    1600 8900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFC5E
+P 1850 8900
+F 0 "BT?" H 1968 8996 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 8850 50  0001 L CNN
+F 2 "" V 1850 8960 50  0000 C CNN
+F 3 "" V 1850 8960 50  0000 C CNN
+	1    1850 8900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 8600 1850 8600
+Wire Wire Line
+	1850 8700 1100 8700
+Wire Wire Line
+	1100 9000 1850 9000
+Wire Wire Line
+	1850 8300 1100 8300
+Wire Wire Line
+	1350 8600 1350 8700
+Connection ~ 1350 8700
+Connection ~ 1350 8600
+Connection ~ 1600 8600
+Connection ~ 1600 8700
+Connection ~ 1600 8300
+Connection ~ 1350 8300
+Connection ~ 1350 9000
+Connection ~ 1600 9000
+$Comp
+L Battery_Cell BT?
+U 1 1 588FFFFF
+P 1100 7000
+F 0 "BT?" H 1218 7096 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 6950 50  0001 L CNN
+F 2 "" V 1100 7060 50  0000 C CNN
+F 3 "" V 1100 7060 50  0000 C CNN
+	1    1100 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900005
+P 1350 7000
+F 0 "BT?" H 1468 7096 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 6950 50  0001 L CNN
+F 2 "" V 1350 7060 50  0000 C CNN
+F 3 "" V 1350 7060 50  0000 C CNN
+	1    1350 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 5890000B
+P 1600 7000
+F 0 "BT?" H 1718 7096 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 6950 50  0001 L CNN
+F 2 "" V 1600 7060 50  0000 C CNN
+F 3 "" V 1600 7060 50  0000 C CNN
+	1    1600 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900011
+P 1850 7000
+F 0 "BT?" H 1968 7096 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 6950 50  0001 L CNN
+F 2 "" V 1850 7060 50  0000 C CNN
+F 3 "" V 1850 7060 50  0000 C CNN
+	1    1850 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900017
+P 1100 7400
+F 0 "BT?" H 1218 7496 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 7350 50  0001 L CNN
+F 2 "" V 1100 7460 50  0000 C CNN
+F 3 "" V 1100 7460 50  0000 C CNN
+	1    1100 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 5890001D
+P 1350 7400
+F 0 "BT?" H 1468 7496 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 7350 50  0001 L CNN
+F 2 "" V 1350 7460 50  0000 C CNN
+F 3 "" V 1350 7460 50  0000 C CNN
+	1    1350 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900023
+P 1600 7400
+F 0 "BT?" H 1718 7496 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 7350 50  0001 L CNN
+F 2 "" V 1600 7460 50  0000 C CNN
+F 3 "" V 1600 7460 50  0000 C CNN
+	1    1600 7400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900029
+P 1850 7400
+F 0 "BT?" H 1968 7496 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 7350 50  0001 L CNN
+F 2 "" V 1850 7460 50  0000 C CNN
+F 3 "" V 1850 7460 50  0000 C CNN
+	1    1850 7400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 7100 1850 7100
+Wire Wire Line
+	1850 7200 1100 7200
+Wire Wire Line
+	1100 7500 1850 7500
+Wire Wire Line
+	1850 6800 1100 6800
+Wire Wire Line
+	1350 7100 1350 7200
+Connection ~ 1350 7200
+Connection ~ 1350 7100
+Connection ~ 1600 7100
+Connection ~ 1600 7200
+Connection ~ 1600 6800
+Connection ~ 1350 6800
+Connection ~ 1350 7500
+Connection ~ 1600 7500
+Wire Wire Line
+	1350 7500 1350 7550
+Wire Wire Line
+	1350 9750 1350 9800
+Wire Wire Line
+	1350 9050 1350 9000
+Wire Wire Line
+	1350 8300 1350 8250
+$Comp
+L Battery_Cell BT?
+U 1 1 58900BE0
+P 1100 6250
+F 0 "BT?" H 1218 6346 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 6200 50  0001 L CNN
+F 2 "" V 1100 6310 50  0000 C CNN
+F 3 "" V 1100 6310 50  0000 C CNN
+	1    1100 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900BE6
+P 1350 6250
+F 0 "BT?" H 1468 6346 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 6200 50  0001 L CNN
+F 2 "" V 1350 6310 50  0000 C CNN
+F 3 "" V 1350 6310 50  0000 C CNN
+	1    1350 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900BEC
+P 1600 6250
+F 0 "BT?" H 1718 6346 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 6200 50  0001 L CNN
+F 2 "" V 1600 6310 50  0000 C CNN
+F 3 "" V 1600 6310 50  0000 C CNN
+	1    1600 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900BF2
+P 1850 6250
+F 0 "BT?" H 1968 6346 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 6200 50  0001 L CNN
+F 2 "" V 1850 6310 50  0000 C CNN
+F 3 "" V 1850 6310 50  0000 C CNN
+	1    1850 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900BF8
+P 1100 6650
+F 0 "BT?" H 1218 6746 50  0001 L CNN
+F 1 "Battery_Cell" H 1200 6600 50  0001 L CNN
+F 2 "" V 1100 6710 50  0000 C CNN
+F 3 "" V 1100 6710 50  0000 C CNN
+	1    1100 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900BFE
+P 1350 6650
+F 0 "BT?" H 1468 6746 50  0001 L CNN
+F 1 "Battery_Cell" H 1450 6600 50  0001 L CNN
+F 2 "" V 1350 6710 50  0000 C CNN
+F 3 "" V 1350 6710 50  0000 C CNN
+	1    1350 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900C04
+P 1600 6650
+F 0 "BT?" H 1718 6746 50  0001 L CNN
+F 1 "Battery_Cell" H 1700 6600 50  0001 L CNN
+F 2 "" V 1600 6710 50  0000 C CNN
+F 3 "" V 1600 6710 50  0000 C CNN
+	1    1600 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Cell BT?
+U 1 1 58900C0A
+P 1850 6650
+F 0 "BT?" H 1968 6746 50  0001 L CNN
+F 1 "Battery_Cell" H 1950 6600 50  0001 L CNN
+F 2 "" V 1850 6710 50  0000 C CNN
+F 3 "" V 1850 6710 50  0000 C CNN
+	1    1850 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 6350 1850 6350
+Wire Wire Line
+	1850 6450 1100 6450
+Wire Wire Line
+	1100 6750 1850 6750
+Wire Wire Line
+	1850 6050 1100 6050
+Wire Wire Line
+	1350 6350 1350 6450
+Connection ~ 1350 6450
+Connection ~ 1350 6350
+Connection ~ 1600 6350
+Connection ~ 1600 6450
+Connection ~ 1600 6050
+Connection ~ 1350 6050
+Connection ~ 1350 6750
+Connection ~ 1600 6750
+Wire Wire Line
+	1350 6750 1350 6800
 $EndSCHEMATC
