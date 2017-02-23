@@ -492,7 +492,7 @@ Wire Wire Line
 Wire Wire Line
 	1550 9600 1550 9700
 Wire Wire Line
-	850  9650 1850 9650
+	750  9650 1850 9650
 Wire Wire Line
 	2150 9650 3150 9650
 Wire Wire Line
@@ -501,7 +501,7 @@ Connection ~ 1850 9650
 Wire Wire Line
 	1850 10000 1850 10100
 Wire Wire Line
-	850  10050 1850 10050
+	750  10050 1850 10050
 Wire Wire Line
 	2150 10050 3150 10050
 Connection ~ 1850 10050
@@ -509,7 +509,7 @@ Connection ~ 1550 10050
 Wire Wire Line
 	1550 10450 1550 10400
 Wire Wire Line
-	850  10450 3150 10450
+	750  10450 3150 10450
 Wire Wire Line
 	1850 10400 1850 10450
 Connection ~ 1850 10450
@@ -663,7 +663,7 @@ Wire Wire Line
 Wire Wire Line
 	1550 8800 1550 8900
 Wire Wire Line
-	850  8850 1850 8850
+	750  8850 1850 8850
 Wire Wire Line
 	2150 8850 3150 8850
 Wire Wire Line
@@ -672,7 +672,7 @@ Connection ~ 1850 8850
 Wire Wire Line
 	1850 9200 1850 9300
 Wire Wire Line
-	850  9250 1850 9250
+	750  9250 1850 9250
 Wire Wire Line
 	2150 9250 3150 9250
 Connection ~ 1850 9250
@@ -783,7 +783,7 @@ Wire Wire Line
 Wire Wire Line
 	1550 8000 1550 8100
 Wire Wire Line
-	850  8050 1850 8050
+	750  8050 1850 8050
 Wire Wire Line
 	2150 8050 3150 8050
 Wire Wire Line
@@ -792,7 +792,7 @@ Connection ~ 1850 8050
 Wire Wire Line
 	1850 8400 1850 8500
 Wire Wire Line
-	850  8450 1850 8450
+	750  8450 1850 8450
 Wire Wire Line
 	2150 8450 3150 8450
 Connection ~ 1850 8450
@@ -910,7 +910,7 @@ Connection ~ 1850 7250
 Wire Wire Line
 	1850 7600 1850 7700
 Wire Wire Line
-	850  7650 1850 7650
+	750  7650 1850 7650
 Wire Wire Line
 	2150 7650 3150 7650
 Connection ~ 1850 7650
@@ -1023,7 +1023,7 @@ Wire Wire Line
 Wire Wire Line
 	1550 6400 1550 6500
 Wire Wire Line
-	850  6450 1850 6450
+	750  6450 1850 6450
 Wire Wire Line
 	2150 6450 3150 6450
 Wire Wire Line
@@ -1032,7 +1032,7 @@ Connection ~ 1850 6450
 Wire Wire Line
 	1850 6800 1850 6900
 Wire Wire Line
-	850  6850 1850 6850
+	750  6850 1850 6850
 Wire Wire Line
 	2150 6850 3150 6850
 Connection ~ 1850 6850
@@ -1146,7 +1146,7 @@ Connection ~ 1850 5650
 Wire Wire Line
 	1850 6000 1850 6100
 Wire Wire Line
-	850  6050 1850 6050
+	750  6050 1850 6050
 Wire Wire Line
 	2150 6050 3150 6050
 Connection ~ 1850 6050
@@ -1238,40 +1238,40 @@ Text Label 3150 6450 2    60   ~ 0
 BMS_1_Wire_10
 Text Label 3150 6050 2    60   ~ 0
 BMS_1_Wire_11
-Text Label 850  10050 0    60   ~ 0
+Text Label 750  10050 0    60   ~ 0
 BMS_2_Wire_1
-Text Label 850  9650 0    60   ~ 0
+Text Label 750  9650 0    60   ~ 0
 BMS_2_Wire_2
-Text Label 850  9250 0    60   ~ 0
+Text Label 750  9250 0    60   ~ 0
 BMS_2_Wire_3
-Text Label 850  8850 0    60   ~ 0
+Text Label 750  8850 0    60   ~ 0
 BMS_2_Wire_4
-Text Label 850  8450 0    60   ~ 0
+Text Label 750  8450 0    60   ~ 0
 BMS_2_Wire_5
-Text Label 850  8050 0    60   ~ 0
+Text Label 750  8050 0    60   ~ 0
 BMS_2_Wire_6
-Text Label 850  7650 0    60   ~ 0
+Text Label 750  7650 0    60   ~ 0
 BMS_2_Wire_7
-Text Label 850  7250 0    60   ~ 0
+Text Label 750  7250 0    60   ~ 0
 BMS_2_Wire_8
-Text Label 850  6850 0    60   ~ 0
+Text Label 750  6850 0    60   ~ 0
 BMS_2_Wire_9
-Text Label 850  6450 0    60   ~ 0
+Text Label 750  6450 0    60   ~ 0
 BMS_2_Wire_10
-Text Label 850  6050 0    60   ~ 0
+Text Label 750  6050 0    60   ~ 0
 BMS_2_Wire_12
 Text Label 3150 5650 2    60   ~ 0
 BMS_1_TS+
-Text Label 850  5650 0    60   ~ 0
+Text Label 750  5650 0    60   ~ 0
 BMS_2_TS+
 Connection ~ 1550 5650
-Text Label 850  10350 0    60   ~ 0
+Text Label 750  10350 0    60   ~ 0
 BMS_1_TS-
-Text Label 850  10450 0    60   ~ 0
+Text Label 750  10450 0    60   ~ 0
 BMS_2_TS-
 Connection ~ 1550 10450
 Wire Wire Line
-	850  10350 1400 10350
+	750  10350 1400 10350
 Wire Wire Line
 	1400 10350 1400 10450
 Connection ~ 1400 10450
@@ -1536,7 +1536,7 @@ F 3 "" H 1700 5500 50  0000 C CNN
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	850  5650 1850 5650
+	750  5650 1850 5650
 Wire Wire Line
 	1700 5650 1700 5600
 Connection ~ 1700 5650
@@ -1594,4 +1594,52 @@ U 58ACE44A
 F0 "Sheet58ACE449" 60
 F1 "Accumulator.sch" 60
 $EndSheet
+Wire Notes Line
+	1450 5700 1450 6400
+Wire Notes Line
+	1450 6400 1950 6400
+Wire Notes Line
+	1950 6400 1950 5700
+Wire Notes Line
+	1950 5700 1450 5700
+Wire Notes Line
+	1450 6500 1950 6500
+Wire Notes Line
+	1950 6500 1950 7200
+Wire Notes Line
+	1950 7200 1450 7200
+Wire Notes Line
+	1450 7200 1450 6500
+Wire Notes Line
+	1450 7300 1950 7300
+Wire Notes Line
+	1950 7300 1950 8000
+Wire Notes Line
+	1950 8000 1450 8000
+Wire Notes Line
+	1450 8000 1450 7300
+Wire Notes Line
+	1450 8100 1450 8800
+Wire Notes Line
+	1450 8800 1950 8800
+Wire Notes Line
+	1950 8800 1950 8100
+Wire Notes Line
+	1950 8100 1450 8100
+Wire Notes Line
+	1450 8900 1450 9600
+Wire Notes Line
+	1450 9600 1950 9600
+Wire Notes Line
+	1950 9600 1950 8900
+Wire Notes Line
+	1950 8900 1450 8900
+Wire Notes Line
+	1450 9700 1950 9700
+Wire Notes Line
+	1950 9700 1950 10400
+Wire Notes Line
+	1950 10400 1450 10400
+Wire Notes Line
+	1450 10400 1450 9700
 $EndSCHEMATC
