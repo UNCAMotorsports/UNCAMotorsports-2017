@@ -1,5 +1,15 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP FGMMOPA6H
+D Adafruit Ultimate GPS
+K GPS, Ultimate GPS
+$ENDCMP
+#
+$CMP MCP2551
+D High Speed CAN Transceiver
+K CAN
+$ENDCMP
+#
 $CMP NE555
 D 555-series timer IC
 K timer

@@ -1,0 +1,215 @@
+EESchema Schematic File Version 2
+LIBS:VehicleController-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:UNCAMotorsports
+LIBS:Common-Parts-Library-CPL
+LIBS:relays
+LIBS:SystemBlocks
+LIBS:VehicleController-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_02X04 P?
+U 1 1 58B3656F
+P 6650 3100
+F 0 "P?" H 6650 3465 50  0000 C CNN
+F 1 "CAN_MX150" H 6650 3374 50  0000 C CNN
+F 2 "" H 6650 1900 50  0000 C CNN
+F 3 "" H 6650 1900 50  0000 C CNN
+	1    6650 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR?
+U 1 1 58B36576
+P 6250 2900
+F 0 "#PWR?" H 6250 2750 50  0001 C CNN
+F 1 "+12V" H 6265 3073 50  0000 C CNN
+F 2 "" H 6250 2900 50  0000 C CNN
+F 3 "" H 6250 2900 50  0000 C CNN
+	1    6250 2900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58B3657C
+P 7050 3350
+F 0 "#PWR?" H 7050 3100 50  0001 C CNN
+F 1 "GND" H 7055 3177 50  0000 C CNN
+F 2 "" H 7050 3350 50  0000 C CNN
+F 3 "" H 7050 3350 50  0000 C CNN
+	1    7050 3350
+	1    0    0    -1  
+$EndComp
+Text Label 6100 3150 0    60   ~ 0
+CANH
+Text Label 6100 3250 0    60   ~ 0
+CANL
+$Comp
+L MCP2551 U?
+U 1 1 58B36586
+P 5450 3250
+F 0 "U?" H 5450 3737 60  0000 C CNN
+F 1 "MCP2551" H 5450 3631 60  0000 C CNN
+F 2 "" H 5450 3250 60  0000 C CNN
+F 3 "" H 5450 3250 60  0000 C CNN
+	1    5450 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58B3658D
+P 5950 3500
+F 0 "#PWR?" H 5950 3250 50  0001 C CNN
+F 1 "GND" H 5955 3327 50  0000 C CNN
+F 2 "" H 5950 3500 50  0000 C CNN
+F 3 "" H 5950 3500 50  0000 C CNN
+	1    5950 3500
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5850 3050
+$Comp
+L +5V #PWR?
+U 1 1 58B36594
+P 4900 2950
+F 0 "#PWR?" H 4900 2800 50  0001 C CNN
+F 1 "+5V" H 4915 3123 50  0000 C CNN
+F 2 "" H 4900 2950 50  0000 C CNN
+F 3 "" H 4900 2950 50  0000 C CNN
+	1    4900 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58B3659A
+P 4950 3550
+F 0 "#PWR?" H 4950 3300 50  0001 C CNN
+F 1 "GND" H 4955 3377 50  0000 C CNN
+F 2 "" H 4950 3550 50  0000 C CNN
+F 3 "" H 4950 3550 50  0000 C CNN
+	1    4950 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58B365A2
+P 5250 2500
+F 0 "R?" V 5043 2500 50  0000 C CNN
+F 1 "120" V 5134 2500 50  0000 C CNN
+F 2 "" V 5180 2500 50  0000 C CNN
+F 3 "" H 5250 2500 50  0000 C CNN
+	1    5250 2500
+	0    1    1    0   
+$EndComp
+Text Label 4800 2500 0    60   ~ 0
+CANL
+$Comp
+L CONN_01X02 P?
+U 1 1 58B365AA
+P 5550 2250
+F 0 "P?" V 5750 2300 50  0000 R CNN
+F 1 "CONN_01X02" V 5650 2450 50  0000 R CNN
+F 2 "" H 5550 2250 50  0000 C CNN
+F 3 "" H 5550 2250 50  0000 C CNN
+	1    5550 2250
+	0    -1   -1   0   
+$EndComp
+Text Label 5900 2500 2    60   ~ 0
+CANH
+Wire Wire Line
+	6900 2950 7200 2950
+Wire Wire Line
+	6900 3050 7200 3050
+Connection ~ 6250 2950
+Wire Wire Line
+	6250 3050 6400 3050
+Connection ~ 7050 3250
+Wire Wire Line
+	6900 3150 7050 3150
+Wire Wire Line
+	7050 3150 7050 3350
+Wire Wire Line
+	6900 3250 7050 3250
+Wire Wire Line
+	6250 2900 6250 3050
+Wire Wire Line
+	6400 2950 6250 2950
+Wire Wire Line
+	5850 3250 6400 3250
+Wire Wire Line
+	5850 3150 6400 3150
+Wire Wire Line
+	5850 3350 5950 3350
+Wire Wire Line
+	5950 3350 5950 3500
+Wire Wire Line
+	4900 2950 4900 3050
+Wire Wire Line
+	4900 3050 5050 3050
+Wire Wire Line
+	4950 3550 4950 3350
+Wire Wire Line
+	4950 3350 5050 3350
+Wire Wire Line
+	5050 3150 4700 3150
+Wire Wire Line
+	4700 3250 5050 3250
+Wire Wire Line
+	5400 2500 5500 2500
+Wire Wire Line
+	5100 2500 4800 2500
+Wire Wire Line
+	5500 2500 5500 2450
+Wire Wire Line
+	5600 2450 5600 2500
+Wire Wire Line
+	5600 2500 5900 2500
+Text HLabel 4700 3150 0    60   Input ~ 0
+CANTX
+Text HLabel 4700 3250 0    60   Input ~ 0
+CANRX
+Text Label 7200 2950 2    60   ~ 0
+CANH
+Text Label 7200 3050 2    60   ~ 0
+CANL
+$EndSCHEMATC
