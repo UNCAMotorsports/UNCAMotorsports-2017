@@ -1,4 +1,4 @@
-update=2/17/2017 8:34:35 PM
+update=2/21/2017 1:08:22 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,13 @@ LibName32=relays
 LibName33=switches
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
