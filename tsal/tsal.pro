@@ -1,4 +1,4 @@
-update=1/19/2017 10:40:55 PM
+update=2/22/2017 7:04:40 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,9 +23,21 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/tsal/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
+[general]
+version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=../../UNCAM-Kicad-Parts/UNCAMotorsports.pretty;../../UNCAM-Kicad-Parts
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -56,15 +68,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/tsal/
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceAjustPassiveValues=0
-LabSize=60
-ERC_TestSimilarLabels=1
-[general]
-version=1
+LibName30=C:/Users/Patrick/Documents/GitHub/UNCAM-Kicad-Parts/UNCAMotorsports
