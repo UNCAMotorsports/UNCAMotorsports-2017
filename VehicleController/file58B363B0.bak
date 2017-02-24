@@ -38,7 +38,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 4 5
 Title ""
 Date ""
 Rev ""
@@ -167,11 +167,15 @@ Connection ~ 7050 3250
 Wire Wire Line
 	6900 3150 7050 3150
 Wire Wire Line
-	7050 3150 7050 3350
+	7050 3150 7050 3250
+Wire Wire Line
+	7050 3250 7050 3350
 Wire Wire Line
 	6900 3250 7050 3250
 Wire Wire Line
-	6250 2900 6250 3050
+	6250 2900 6250 2950
+Wire Wire Line
+	6250 2950 6250 3050
 Wire Wire Line
 	6400 2950 6250 2950
 Wire Wire Line
@@ -212,4 +216,41 @@ Text Label 7200 2950 2    60   ~ 0
 CANH
 Text Label 7200 3050 2    60   ~ 0
 CANL
+$Comp
+L C_Small C?
+U 1 1 58B0DDAC
+P 5250 3950
+F 0 "C?" H 5342 3996 50  0000 L CNN
+F 1 "C_Small" H 5342 3905 50  0000 L CNN
+F 2 "" H 5250 3950 50  0000 C CNN
+F 3 "" H 5250 3950 50  0000 C CNN
+	1    5250 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 58B0DEC8
+P 5250 3750
+F 0 "#PWR?" H 5250 3600 50  0001 C CNN
+F 1 "+5V" H 5265 3923 50  0000 C CNN
+F 2 "" H 5250 3750 50  0000 C CNN
+F 3 "" H 5250 3750 50  0000 C CNN
+	1    5250 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 3850 5250 3750
+$Comp
+L GND #PWR?
+U 1 1 58B0DF2A
+P 5250 4200
+F 0 "#PWR?" H 5250 3950 50  0001 C CNN
+F 1 "GND" H 5255 4027 50  0000 C CNN
+F 2 "" H 5250 4200 50  0000 C CNN
+F 3 "" H 5250 4200 50  0000 C CNN
+	1    5250 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4200 5250 4050
 $EndSCHEMATC

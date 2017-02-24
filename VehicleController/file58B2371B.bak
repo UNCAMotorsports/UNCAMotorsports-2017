@@ -38,7 +38,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 3 4
+Sheet 3 5
 Title ""
 Date ""
 Rev ""
@@ -114,13 +114,13 @@ F 3 "" H 8100 4050 50  0000 C CNN
 	1    8100 4050
 	1    0    0    -1  
 $EndComp
-Text HLabel 6250 3150 0    60   Input ~ 0
+Text HLabel 6050 3150 0    60   Input ~ 0
 3D-FIX
 Text HLabel 6250 3550 0    60   Input ~ 0
 GPS_TX
 Text HLabel 6250 3650 0    60   Input ~ 0
 GPS_RX
-Text HLabel 6250 3050 0    60   Input ~ 0
+Text HLabel 6050 3050 0    60   Input ~ 0
 VBACKUP
 $Comp
 L +3.3V #PWR?
@@ -221,7 +221,7 @@ Wire Wire Line
 	7500 3550 8100 3550
 Connection ~ 8100 3550
 Wire Wire Line
-	6250 3150 6500 3150
+	6050 3150 6500 3150
 Wire Wire Line
 	6250 3550 6500 3550
 Wire Wire Line
@@ -232,7 +232,7 @@ Wire Wire Line
 	6400 2950 6400 3450
 Connection ~ 6400 3450
 Wire Wire Line
-	6250 3050 6500 3050
+	6050 3050 6500 3050
 Wire Wire Line
 	4000 3300 4250 3300
 Wire Wire Line
@@ -257,4 +257,21 @@ Wire Wire Line
 Connection ~ 6150 2400
 Connection ~ 6150 2850
 NoConn ~ 7500 3350
+$Comp
+L C_Small C?
+U 1 1 58B346B2
+P 6250 3300
+F 0 "C?" H 6342 3346 50  0000 L CNN
+F 1 "C_Small" H 6342 3255 50  0000 L CNN
+F 2 "" H 6250 3300 50  0000 C CNN
+F 3 "" H 6250 3300 50  0000 C CNN
+	1    6250 3300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3200 6250 3050
+Connection ~ 6250 3050
+Wire Wire Line
+	6250 3400 6250 3450
+Connection ~ 6250 3450
 $EndSCHEMATC

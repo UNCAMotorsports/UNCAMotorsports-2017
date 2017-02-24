@@ -1,5 +1,10 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP ADM3260
+D Dual I2C Isolator with Integrated DC-DC Converter
+K Digital Isolator
+$ENDCMP
+#
 $CMP FGMMOPA6H
 D Adafruit Ultimate GPS
 K GPS, Ultimate GPS
@@ -14,6 +19,14 @@ $CMP NE555
 D 555-series timer IC
 K timer
 F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP R1SE-0505
+D Recom 5v to 5v Isolated DC-DC Converter 200mA
+$ENDCMP
+#
+$CMP RI-0505S
+D Recom 5v to 5v Isolated DC-DC Converter 400mA
 $ENDCMP
 #
 $CMP UltimateSensorFusion
