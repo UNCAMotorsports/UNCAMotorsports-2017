@@ -55,28 +55,7 @@ F 3 "" H 4000 3400 60  0001 C CNN
 	1    4000 3400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3400 3400 3400 3850
-Wire Wire Line
-	1600 3700 3400 3700
-Wire Wire Line
-	2250 3100 3400 3100
-Connection ~ 3400 3400
-Connection ~ 3400 3700
 NoConn ~ 4600 3400
-Wire Wire Line
-	4600 3250 4600 3100
-Wire Wire Line
-	4600 3550 4600 3850
-Connection ~ 4600 3250
-Connection ~ 4600 3100
-Connection ~ 4600 3550
-Connection ~ 4600 3700
-Connection ~ 3400 3100
-Wire Wire Line
-	4600 3100 6350 3100
-Wire Wire Line
-	4600 3700 6350 3700
 $Comp
 L C C2
 U 1 1 58AE4859
@@ -121,26 +100,6 @@ F 3 "" H 5500 3400 50  0000 C CNN
 	1    5500 3400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5150 3100 5150 3250
-Wire Wire Line
-	5500 3100 5500 3250
-Connection ~ 5150 3100
-Wire Wire Line
-	5150 3700 5150 3550
-Wire Wire Line
-	5500 3700 5500 3550
-Connection ~ 5150 3700
-Wire Wire Line
-	2850 3100 2850 3250
-Wire Wire Line
-	2850 3700 2850 3550
-Wire Wire Line
-	2500 3100 2500 3250
-Connection ~ 2850 3100
-Wire Wire Line
-	2500 3550 2500 3700
-Connection ~ 2850 3700
 $Comp
 L Fuse F1
 U 1 1 58AE4B47
@@ -152,8 +111,6 @@ F 3 "" H 2100 3100 50  0000 C CNN
 	1    2100 3100
 	0    1    1    0   
 $EndComp
-Connection ~ 2500 3100
-Connection ~ 2500 3700
 $Comp
 L GND #PWR01
 U 1 1 58AE4D06
@@ -198,20 +155,12 @@ F 3 "" H 6550 3650 50  0000 C CNN
 	1    6550 3650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6350 3200 5500 3200
-Connection ~ 5500 3200
-Connection ~ 5500 3100
-Wire Wire Line
-	6350 3600 5500 3600
-Connection ~ 5500 3600
-Connection ~ 5500 3700
 $Comp
 L CONN_01X01 P1
 U 1 1 58AE58DD
 P 1400 3100
 F 0 "P1" H 1319 2875 50  0000 C CNN
-F 1 "TS+" H 1319 2966 50  0000 C CNN
+F 1 "TS+ (PreAIR)" H 1319 2966 50  0000 C CNN
 F 2 "Wire_Pads:SolderWirePad_single_2mmDrill" H 1400 3100 50  0001 C CNN
 F 3 "" H 1400 3100 50  0000 C CNN
 	1    1400 3100
@@ -228,8 +177,6 @@ F 3 "" H 1400 3700 50  0000 C CNN
 	1    1400 3700
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	1600 3100 1950 3100
 $Comp
 L PWR_FLAG #FLG03
 U 1 1 58AE5B3A
@@ -241,5 +188,141 @@ F 3 "" H 2850 3100 50  0000 C CNN
 	1    2850 3100
 	1    0    0    -1  
 $EndComp
-Connection ~ 1750 3100
+$Comp
+L TL431 U2
+U 1 1 58AFA4D2
+P 2550 4500
+F 0 "U2" H 2371 4553 60  0000 R CNN
+F 1 "TL431" H 2371 4447 60  0000 R CNN
+F 2 "" H 2550 4450 60  0001 C CNN
+F 3 "" H 2550 4450 60  0000 C CNN
+	1    2550 4500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 58AFA803
+P 2050 4250
+F 0 "R1" H 2120 4296 50  0000 L CNN
+F 1 "10k" H 2120 4205 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1980 4250 50  0001 C CNN
+F 3 "" H 2050 4250 50  0000 C CNN
+	1    2050 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 58AFA870
+P 2050 4750
+F 0 "R2" H 2120 4796 50  0000 L CNN
+F 1 "1k" H 2120 4705 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 1980 4750 50  0001 C CNN
+F 3 "" H 2050 4750 50  0000 C CNN
+	1    2050 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 58AFA9A0
+P 2050 5150
+F 0 "#PWR04" H 2050 4900 50  0001 C CNN
+F 1 "GND" H 2055 4977 50  0000 C CNN
+F 2 "" H 2050 5150 50  0000 C CNN
+F 3 "" H 2050 5150 50  0000 C CNN
+	1    2050 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 58AFA9D5
+P 2550 5150
+F 0 "#PWR05" H 2550 4900 50  0001 C CNN
+F 1 "GND" H 2555 4977 50  0000 C CNN
+F 2 "" H 2550 5150 50  0000 C CNN
+F 3 "" H 2550 5150 50  0000 C CNN
+	1    2550 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 3700 3400 3700
+Wire Wire Line
+	2250 3100 3400 3100
+Connection ~ 3400 3700
+Wire Wire Line
+	4600 3250 4600 3100
+Wire Wire Line
+	4600 3550 4600 3850
+Connection ~ 4600 3250
+Connection ~ 4600 3100
+Connection ~ 4600 3550
+Connection ~ 4600 3700
+Connection ~ 3400 3100
+Wire Wire Line
+	4600 3100 6350 3100
+Wire Wire Line
+	4600 3700 6350 3700
+Wire Wire Line
+	5150 3100 5150 3250
+Wire Wire Line
+	5500 3100 5500 3250
+Connection ~ 5150 3100
+Wire Wire Line
+	5150 3700 5150 3550
+Wire Wire Line
+	5500 3700 5500 3550
+Connection ~ 5150 3700
+Wire Wire Line
+	2850 3100 2850 3250
+Wire Wire Line
+	2850 3700 2850 3550
+Wire Wire Line
+	2500 3100 2500 3250
+Connection ~ 2850 3100
+Wire Wire Line
+	2500 3550 2500 3700
+Connection ~ 2850 3700
+Connection ~ 2500 3100
+Connection ~ 2500 3700
+Wire Wire Line
+	6350 3200 5500 3200
+Connection ~ 5500 3200
+Connection ~ 5500 3100
+Wire Wire Line
+	6350 3600 5500 3600
+Connection ~ 5500 3600
+Connection ~ 5500 3700
+Wire Wire Line
+	1600 3100 1950 3100
+Connection ~ 2050 4500
+Wire Wire Line
+	2050 4500 2200 4500
+Wire Wire Line
+	2550 4100 2550 4200
+Wire Wire Line
+	3400 3400 3250 3400
+Wire Wire Line
+	3250 3400 3250 4100
+Wire Wire Line
+	3250 4100 2550 4100
+Wire Wire Line
+	2550 4800 2550 5150
+Wire Wire Line
+	2050 5150 2050 4900
+Wire Wire Line
+	3400 3700 3400 3850
+$Comp
+L CONN_01X01 P5
+U 1 1 58AFBE9A
+P 1400 4100
+F 0 "P5" H 1319 3875 50  0000 C CNN
+F 1 "TS+ (PostAIR)" H 1319 3966 50  0000 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1mmDrill" H 1400 4100 50  0001 C CNN
+F 3 "" H 1400 4100 50  0000 C CNN
+	1    1400 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2050 4400 2050 4600
+Wire Wire Line
+	2050 4100 1600 4100
 $EndSCHEMATC
