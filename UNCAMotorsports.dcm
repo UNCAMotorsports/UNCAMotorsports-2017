@@ -16,4 +16,9 @@ K timer
 F http://www.ti.com/lit/ds/symlink/ne555.pdf
 $ENDCMP
 #
+$CMP UltimateSensorFusion
+D EM7180 Senor Hub - Ultimate Sensor Fusion
+K Fusion, MPU9150, MPU9250, BMP280, EM7180, SENtral
+$ENDCMP
+#
 #End Doc Library

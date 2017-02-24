@@ -149,17 +149,6 @@ F 3 "" H 7350 2650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +3.3V #PWR05
-U 1 1 587CCB3B
-P 4200 3900
-F 0 "#PWR05" H 4200 3750 50  0001 C CNN
-F 1 "+3.3V" H 4215 4073 50  0000 C CNN
-F 2 "" H 4200 3900 50  0000 C CNN
-F 3 "" H 4200 3900 50  0000 C CNN
-	1    4200 3900
-	1    0    0    -1  
-$EndComp
-$Comp
 L USB_A P3
 U 1 1 58AE60E1
 P 1750 3200
@@ -264,7 +253,7 @@ Text Label 4200 2600 0    60   ~ 0
 GND
 Text Label 7100 2800 2    60   ~ 0
 +3.3V
-Text Label 7050 4000 2    60   ~ 0
+Text Label 7400 4000 2    60   ~ 0
 GND
 NoConn ~ 6750 2700
 Text Label 4200 3000 0    60   ~ 0
@@ -273,9 +262,9 @@ Text Label 4200 3100 0    60   ~ 0
 CANRX
 NoConn ~ 6750 4100
 NoConn ~ 6750 4200
-Text Label 7050 3300 2    60   ~ 0
+Text Label 7100 3300 2    60   ~ 0
 SCL0
-Text Label 7050 3400 2    60   ~ 0
+Text Label 7100 3400 2    60   ~ 0
 SDA0
 Wire Wire Line
 	3250 1100 3250 900 
@@ -290,24 +279,28 @@ Wire Wire Line
 Wire Wire Line
 	2400 3300 2400 3400
 Wire Wire Line
-	2050 3300 2400 3300
+	2050 3300 2250 3300
+Wire Wire Line
+	2250 3300 2400 3300
 Wire Wire Line
 	1650 3600 1650 3500
 Wire Wire Line
 	2400 3000 2400 2900
 Wire Wire Line
-	2050 3000 2400 3000
+	2050 3000 2250 3000
 Wire Wire Line
-	4200 4000 4200 3900
+	2250 3000 2400 3000
 Wire Wire Line
-	4550 4000 4200 4000
+	4550 4000 3550 4000
 Wire Wire Line
 	7350 2600 7350 2650
 Wire Wire Line
 	7250 2600 7350 2600
 Connection ~ 6900 2600
 Wire Wire Line
-	6750 2600 7050 2600
+	6750 2600 6900 2600
+Wire Wire Line
+	6900 2600 7050 2600
 Wire Wire Line
 	6900 2400 6900 2600
 Wire Wire Line
@@ -326,7 +319,9 @@ Connection ~ 2400 2150
 Wire Wire Line
 	2300 2150 2400 2150
 Wire Wire Line
-	2400 2050 2400 2250
+	2400 2050 2400 2150
+Wire Wire Line
+	2400 2150 2400 2250
 Wire Wire Line
 	2300 2050 2400 2050
 Connection ~ 1650 2050
@@ -335,21 +330,23 @@ Wire Wire Line
 Wire Wire Line
 	1650 2050 1800 2050
 Wire Wire Line
-	1650 1900 1650 2150
+	1650 1900 1650 2050
+Wire Wire Line
+	1650 2050 1650 2150
 Wire Wire Line
 	4200 2600 4550 2600
 Wire Wire Line
 	6750 2800 7100 2800
 Wire Wire Line
-	7050 4000 6750 4000
+	7400 4000 6750 4000
 Wire Wire Line
 	4550 3000 4200 3000
 Wire Wire Line
 	4550 3100 4200 3100
 Wire Wire Line
-	6750 3300 7050 3300
+	6750 3300 8000 3300
 Wire Wire Line
-	7050 3400 6750 3400
+	8000 3400 6750 3400
 $Comp
 L Battery_Cell BT?
 U 1 1 58B1FCEA
@@ -428,4 +425,85 @@ Wire Wire Line
 	9400 2200 9800 2200
 Text Label 9400 2200 0    60   ~ 0
 CANRX
+$Comp
+L UltimateSensorFusion U?
+U 1 1 58B0145C
+P 8550 3400
+F 0 "U?" H 8550 3887 60  0000 C CNN
+F 1 "UltimateSensorFusion" H 8550 3781 60  0000 C CNN
+F 2 "" H 8550 3300 60  0001 C CNN
+F 3 "" H 8550 3300 60  0001 C CNN
+	1    8550 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 58B0A4BD
+P 7850 3100
+F 0 "#PWR?" H 7850 2950 50  0001 C CNN
+F 1 "+3.3V" H 7865 3273 50  0000 C CNN
+F 2 "" H 7850 3100 50  0000 C CNN
+F 3 "" H 7850 3100 50  0000 C CNN
+	1    7850 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3100 7850 3200
+Wire Wire Line
+	7850 3200 8000 3200
+$Comp
+L GND #PWR?
+U 1 1 58B0C04F
+P 7850 3700
+F 0 "#PWR?" H 7850 3450 50  0001 C CNN
+F 1 "GND" H 7855 3527 50  0000 C CNN
+F 2 "" H 7850 3700 50  0000 C CNN
+F 3 "" H 7850 3700 50  0000 C CNN
+	1    7850 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3700 7850 3600
+Wire Wire Line
+	7850 3600 8000 3600
+Wire Wire Line
+	8000 3500 6750 3500
+NoConn ~ 9100 3200
+NoConn ~ 9100 3300
+NoConn ~ 9100 3400
+NoConn ~ 9100 3600
+NoConn ~ 9100 3500
+Text Label 7400 3800 2    60   ~ 0
+CurrentSense
+Wire Wire Line
+	7400 3800 6750 3800
+Wire Wire Line
+	3550 4000 3550 3900
+$Comp
+L +3.3V #PWR05
+U 1 1 587CCB3B
+P 3550 3900
+F 0 "#PWR05" H 3550 3750 50  0001 C CNN
+F 1 "+3.3V" H 3565 4073 50  0000 C CNN
+F 2 "" H 3550 3900 50  0000 C CNN
+F 3 "" H 3550 3900 50  0000 C CNN
+	1    3550 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3900 4200 3900
+Text Label 4200 3900 0    60   ~ 0
+MISO0
+Text Label 4200 3800 0    60   ~ 0
+MOSI0
+Text Label 4200 3700 0    60   ~ 0
+CS0
+Wire Wire Line
+	4200 3700 4550 3700
+Wire Wire Line
+	4200 3800 4550 3800
+Wire Wire Line
+	6750 3900 7400 3900
+Text Label 7400 3900 2    60   ~ 0
+SCK0
 $EndSCHEMATC
