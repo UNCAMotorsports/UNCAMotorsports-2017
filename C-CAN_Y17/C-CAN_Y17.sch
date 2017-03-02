@@ -1,0 +1,271 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:UNCAMotorsports
+LIBS:Cypress_cy8c5xlp
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Cypress_5LP U?
+U 1 1 58B77315
+P 8800 2600
+F 0 "U?" H 8800 4300 60  0000 C CNN
+F 1 "Cypress_5LP" H 8800 4194 60  0000 C CNN
+F 2 "" H 8800 2800 60  0000 C CNN
+F 3 "" H 8800 2800 60  0000 C CNN
+	1    8800 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP2551-I/SN U?
+U 1 1 58B7735B
+P 2200 3350
+F 0 "U?" H 2550 3700 50  0000 C CNN
+F 1 "MCP2551-I/SN" H 1800 3700 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 2200 2850 50  0001 C CIN
+F 3 "" H 2200 3350 50  0000 C CNN
+	1    2200 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L AP111750 U?
+U 1 1 58B7742F
+P 4250 1450
+F 0 "U?" H 4250 1817 50  0000 C CNN
+F 1 "AP111750" H 4250 1726 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 4250 1100 50  0001 C CNN
+F 3 "" H 4350 1200 50  0000 C CNN
+	1    4250 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X04 P?
+U 1 1 58B775B9
+P 1500 1100
+F 0 "P?" H 1500 1465 50  0000 C CNN
+F 1 "CAN_Connector" H 1500 1374 50  0000 C CNN
+F 2 "" H 1500 -100 50  0000 C CNN
+F 3 "" H 1500 -100 50  0000 C CNN
+	1    1500 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_02X08 P?
+U 1 1 58B77DCE
+P 1650 6300
+F 0 "P?" H 1650 6865 50  0000 C CNN
+F 1 "Sensor_Connector" H 1650 6774 50  0000 C CNN
+F 2 "" H 1650 5100 50  0000 C CNN
+F 3 "" H 1650 5100 50  0000 C CNN
+	1    1650 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR?
+U 1 1 58B77F9E
+P 3150 1300
+F 0 "#PWR?" H 3150 1150 50  0001 C CNN
+F 1 "+12V" H 3165 1473 50  0000 C CNN
+F 2 "" H 3150 1300 50  0000 C CNN
+F 3 "" H 3150 1300 50  0000 C CNN
+	1    3150 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 58B77FBC
+P 5200 1300
+F 0 "#PWR?" H 5200 1150 50  0001 C CNN
+F 1 "+5V" H 5215 1473 50  0000 C CNN
+F 2 "" H 5200 1300 50  0000 C CNN
+F 3 "" H 5200 1300 50  0000 C CNN
+	1    5200 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B77FDA
+P 3150 1600
+F 0 "C?" H 3265 1646 50  0000 L CNN
+F 1 "10u" H 3265 1555 50  0000 L CNN
+F 2 "" H 3188 1450 50  0000 C CNN
+F 3 "" H 3150 1600 50  0000 C CNN
+	1    3150 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B78024
+P 3650 1600
+F 0 "C?" H 3765 1646 50  0000 L CNN
+F 1 "1u" H 3765 1555 50  0000 L CNN
+F 2 "" H 3688 1450 50  0000 C CNN
+F 3 "" H 3650 1600 50  0000 C CNN
+	1    3650 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B7804C
+P 4850 1600
+F 0 "C?" H 4965 1646 50  0000 L CNN
+F 1 "10u" H 4965 1555 50  0000 L CNN
+F 2 "" H 4888 1450 50  0000 C CNN
+F 3 "" H 4850 1600 50  0000 C CNN
+	1    4850 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 58B7807E
+P 5200 1600
+F 0 "C?" H 5315 1646 50  0000 L CNN
+F 1 "1u" H 5315 1555 50  0000 L CNN
+F 2 "" H 5238 1450 50  0000 C CNN
+F 3 "" H 5200 1600 50  0000 C CNN
+	1    5200 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1300 3150 1450
+Wire Wire Line
+	3150 1450 3950 1450
+Connection ~ 3650 1450
+Wire Wire Line
+	4550 1450 5200 1450
+Connection ~ 4850 1450
+Wire Wire Line
+	5200 1450 5200 1300
+$Comp
+L GND #PWR?
+U 1 1 58B78147
+P 4250 1900
+F 0 "#PWR?" H 4250 1650 50  0001 C CNN
+F 1 "GND" H 4255 1727 50  0000 C CNN
+F 2 "" H 4250 1900 50  0000 C CNN
+F 3 "" H 4250 1900 50  0000 C CNN
+	1    4250 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1750 4250 1900
+Wire Wire Line
+	3150 1750 5200 1750
+Connection ~ 3650 1750
+Connection ~ 4250 1750
+Connection ~ 4850 1750
+$Comp
+L GND #PWR?
+U 1 1 58B78482
+P 2200 3900
+F 0 "#PWR?" H 2200 3650 50  0001 C CNN
+F 1 "GND" H 2205 3727 50  0000 C CNN
+F 2 "" H 2200 3900 50  0000 C CNN
+F 3 "" H 2200 3900 50  0000 C CNN
+	1    2200 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 3900 2200 3750
+Wire Wire Line
+	1700 3550 1700 3800
+Wire Wire Line
+	1700 3800 2200 3800
+Connection ~ 2200 3800
+Text Label 1300 3150 0    60   ~ 0
+CAN_TX
+Wire Wire Line
+	1300 3150 1700 3150
+Text Label 1300 3250 0    60   ~ 0
+CAN_RX
+Wire Wire Line
+	1300 3250 1700 3250
+NoConn ~ 1700 3450
+Text Label 3000 3250 2    60   ~ 0
+CAN_H
+Text Label 3000 3450 2    60   ~ 0
+CAN_L
+Wire Wire Line
+	3000 3250 2700 3250
+Wire Wire Line
+	2700 3450 3000 3450
+$Comp
+L +5V #PWR?
+U 1 1 58B786DB
+P 2200 2450
+F 0 "#PWR?" H 2200 2300 50  0001 C CNN
+F 1 "+5V" H 2215 2623 50  0000 C CNN
+F 2 "" H 2200 2450 50  0000 C CNN
+F 3 "" H 2200 2450 50  0000 C CNN
+	1    2200 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2450 2200 2950
+$Comp
+L C C?
+U 1 1 58B78755
+P 2350 2600
+F 0 "C?" H 2465 2646 50  0000 L CNN
+F 1 "1u" H 2465 2555 50  0000 L CNN
+F 2 "" H 2388 2450 50  0000 C CNN
+F 3 "" H 2350 2600 50  0000 C CNN
+	1    2350 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58B7879B
+P 2350 2800
+F 0 "#PWR?" H 2350 2550 50  0001 C CNN
+F 1 "GND" H 2355 2627 50  0000 C CNN
+F 2 "" H 2350 2800 50  0000 C CNN
+F 3 "" H 2350 2800 50  0000 C CNN
+	1    2350 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 2750 2350 2800
+Wire Wire Line
+	2350 2450 2200 2450
+Connection ~ 2200 2450
+$EndSCHEMATC
