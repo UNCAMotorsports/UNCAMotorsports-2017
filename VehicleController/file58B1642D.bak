@@ -62,9 +62,7 @@ $EndComp
 Wire Wire Line
 	6050 3100 5950 3100
 Wire Wire Line
-	6050 2800 6050 2850
-Wire Wire Line
-	6050 2850 6050 3100
+	6050 2800 6050 3100
 $Comp
 L +5VA #PWR?
 U 1 1 58B166C2
@@ -88,25 +86,19 @@ F 3 "" H 6200 3000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6050 2850 6200 2850
-Wire Wire Line
-	6200 2850 6500 2850
+	6050 2850 6500 2850
 Wire Wire Line
 	6200 2850 6200 2900
 Connection ~ 6050 2850
 Wire Wire Line
-	5950 3200 6200 3200
-Wire Wire Line
-	6200 3200 7050 3200
+	5950 3200 7050 3200
 Wire Wire Line
 	6200 3200 6200 3100
 Connection ~ 6200 3200
 Text Label 7050 3200 2    60   ~ 0
 SDA_ISO
 Wire Wire Line
-	5950 3300 6500 3300
-Wire Wire Line
-	6500 3300 7050 3300
+	5950 3300 7050 3300
 Text Label 7050 3300 2    60   ~ 0
 SCL_ISO
 $Comp
@@ -294,9 +286,7 @@ Wire Wire Line
 Wire Wire Line
 	9350 3250 9700 3250
 Wire Wire Line
-	5800 4550 6000 4550
-Wire Wire Line
-	6000 4550 6750 4550
+	5800 4550 6750 4550
 Text Label 6750 4550 2    60   ~ 0
 LATCH_ISO
 $Comp
@@ -342,9 +332,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 4750 5200 4750
 Wire Wire Line
-	4200 5100 4500 5100
-Wire Wire Line
-	4500 5100 4600 5100
+	4200 5100 4600 5100
 $Comp
 L GND #PWR?
 U 1 1 58B18A8E
@@ -357,9 +345,7 @@ F 3 "" H 4900 5600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 5300 4900 5500
-Wire Wire Line
-	4900 5500 4900 5600
+	4900 5300 4900 5600
 $Comp
 L +5V #PWR?
 U 1 1 58B18AFA

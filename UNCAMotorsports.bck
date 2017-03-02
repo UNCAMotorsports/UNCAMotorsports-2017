@@ -5,6 +5,11 @@ D Dual I2C Isolator with Integrated DC-DC Converter
 K Digital Isolator
 $ENDCMP
 #
+$CMP CONN_02X04
+D Connector, double row, 02x04
+K connector
+$ENDCMP
+#
 $CMP FGMMOPA6H
 D Adafruit Ultimate GPS
 K GPS, Ultimate GPS
@@ -23,6 +28,10 @@ $ENDCMP
 #
 $CMP R1SE-0505
 D Recom 5v to 5v Isolated DC-DC Converter 200mA
+$ENDCMP
+#
+$CMP RI-0505S
+D Recom 5v to 5v Isolated DC-DC Converter 400mA
 $ENDCMP
 #
 $CMP UltimateSensorFusion
