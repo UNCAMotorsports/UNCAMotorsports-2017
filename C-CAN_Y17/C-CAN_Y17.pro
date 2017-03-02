@@ -1,4 +1,4 @@
-update=3/1/2017 8:05:40 PM
+update=3/1/2017 9:03:45 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../../UNCAM-Kicad-Parts
+LibDir=../../UNCAM-Kicad-Parts;../../UNCAM-Kicad-Parts/UNCAMotorsports.pretty;../../UNCAMotorsports-2017
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -58,5 +58,7 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/Users/Patrick/Documents/GitHub/UNCAM-Kicad-Parts/UNCAMotorsports
-LibName31=C-CAN/KICAD/Libraries/Cypress_cy8c5xlp
+LibName30=C-CAN/KICAD/Libraries/Cypress_cy8c5xlp
+LibName31=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/UNCAMotorsports
+LibName32=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/relays
+LibName33=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/SystemBlocks

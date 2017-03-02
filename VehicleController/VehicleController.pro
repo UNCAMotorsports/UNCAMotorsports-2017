@@ -1,4 +1,4 @@
-update=1/15/2017 12:57:41 PM
+update=3/1/2017 9:37:12 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../UNCAMotorsports-2017
@@ -63,3 +61,5 @@ LibName31=UNCAMotorsports
 LibName32=Common-Parts-Library-CPL
 LibName33=relays
 LibName34=SystemBlocks
+[general]
+version=1
