@@ -33,6 +33,8 @@ LIBS:UNCAMotorsports
 LIBS:Common-Parts-Library-CPL
 LIBS:relays
 LIBS:SystemBlocks
+LIBS:dc-dc
+LIBS:Power_Management
 LIBS:VehicleController-cache
 EELAYER 26 0
 EELAYER END
@@ -146,17 +148,6 @@ F 1 "+12V" H 3015 1073 50  0000 C CNN
 F 2 "" H 3000 900 50  0000 C CNN
 F 3 "" H 3000 900 50  0000 C CNN
 	1    3000 900 
-	1    0    0    -1  
-$EndComp
-$Comp
-L CONN_02X16 P5
-U 1 1 58AF97B5
-P 9750 1900
-F 0 "P5" H 9750 2865 50  0000 C CNN
-F 1 "SMALL_SIG_MX150" H 9750 2774 50  0000 C CNN
-F 2 "" H 9750 800 50  0000 C CNN
-F 3 "" H 9750 800 50  0000 C CNN
-	1    9750 1900
 	1    0    0    -1  
 $EndComp
 Text Label 4100 2600 0    60   ~ 0

@@ -10,6 +10,16 @@ D Connector, double row, 02x04
 K connector
 $ENDCMP
 #
+$CMP CONN_02X08
+D Connector, double row, 02x08
+K connector
+$ENDCMP
+#
+$CMP CONN_02X16
+D Connector, double row, 02x16
+K connector
+$ENDCMP
+#
 $CMP FGMMOPA6H
 D Adafruit Ultimate GPS
 K GPS, Ultimate GPS
@@ -18,6 +28,11 @@ $ENDCMP
 $CMP MCP2551
 D High Speed CAN Transceiver
 K CAN
+$ENDCMP
+#
+$CMP MX150_16
+D Connector, double row, 02x08
+K connector
 $ENDCMP
 #
 $CMP MX150_8
@@ -37,6 +52,10 @@ $ENDCMP
 #
 $CMP RI-0505S
 D Recom 5v to 5v Isolated DC-DC Converter 400mA
+$ENDCMP
+#
+$CMP Relay-SPST
+D Relay (SPST)
 $ENDCMP
 #
 $CMP UltimateSensorFusion

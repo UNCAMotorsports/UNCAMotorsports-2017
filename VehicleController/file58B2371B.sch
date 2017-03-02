@@ -33,6 +33,8 @@ LIBS:UNCAMotorsports
 LIBS:Common-Parts-Library-CPL
 LIBS:relays
 LIBS:SystemBlocks
+LIBS:dc-dc
+LIBS:Power_Management
 LIBS:VehicleController-cache
 EELAYER 26 0
 EELAYER END

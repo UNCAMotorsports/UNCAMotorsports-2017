@@ -148,17 +148,6 @@ F 3 "" H 3000 900 50  0000 C CNN
 	1    3000 900 
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_02X16 P5
-U 1 1 58AF97B5
-P 9750 1900
-F 0 "P5" H 9750 2865 50  0000 C CNN
-F 1 "SMALL_SIG_MX150" H 9750 2774 50  0000 C CNN
-F 2 "" H 9750 800 50  0000 C CNN
-F 3 "" H 9750 800 50  0000 C CNN
-	1    9750 1900
-	1    0    0    -1  
-$EndComp
 Text Label 4100 2600 0    60   ~ 0
 GND
 Text Label 7200 2800 2    60   ~ 0
@@ -764,4 +753,41 @@ Wire Wire Line
 Wire Wire Line
 	7000 5200 6900 5200
 Connection ~ 6900 5200
+$Comp
+L MX150_16 P?
+U 1 1 58B80B35
+P 9900 2100
+F 0 "P?" H 9900 2665 50  0000 C CNN
+F 1 "MX150_16" H 9900 2574 50  0000 C CNN
+F 2 "" H 9900 900 50  0000 C CNN
+F 3 "" H 9900 900 50  0000 C CNN
+	1    9900 2100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 1750 10650 1750
+Text Label 10650 1750 2    60   ~ 0
+KSI
+Wire Wire Line
+	10150 1850 10650 1850
+Text Label 10650 1850 2    60   ~ 0
+Interlock
+Text Label 10650 1950 2    60   ~ 0
+Mode1
+Text Label 10650 2050 2    60   ~ 0
+Mode2
+Wire Wire Line
+	10650 1950 10150 1950
+Wire Wire Line
+	10150 2050 10650 2050
+Wire Wire Line
+	10650 2150 10150 2150
+Text Label 10650 2150 2    60   ~ 0
+FWD
+Wire Wire Line
+	10150 2250 10650 2250
+Text Label 10650 2250 2    60   ~ 0
+ContactorL
+Wire Wire Line
+	10150 2350 10650 2350
 $EndSCHEMATC

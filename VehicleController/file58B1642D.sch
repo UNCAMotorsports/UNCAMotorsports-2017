@@ -33,6 +33,8 @@ LIBS:UNCAMotorsports
 LIBS:Common-Parts-Library-CPL
 LIBS:relays
 LIBS:SystemBlocks
+LIBS:dc-dc
+LIBS:Power_Management
 LIBS:VehicleController-cache
 EELAYER 26 0
 EELAYER END
@@ -442,4 +444,112 @@ F 3 "" H 4950 2950 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	4950 2950 4950 3100
+$Comp
+L MX150_16 P?
+U 1 1 58B93178
+P 9650 1800
+F 0 "P?" H 9650 2365 50  0000 C CNN
+F 1 "MX150_16" H 9650 2274 50  0000 C CNN
+F 2 "" H 9650 600 50  0000 C CNN
+F 3 "" H 9650 600 50  0000 C CNN
+	1    9650 1800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 1450 10400 1450
+Text Label 10400 1450 2    60   ~ 0
+KSI
+Text Label 10400 1550 2    60   ~ 0
+Mode1
+Text Label 10400 1650 2    60   ~ 0
+Mode2
+Wire Wire Line
+	10400 1550 9900 1550
+Wire Wire Line
+	9900 1650 10400 1650
+Wire Wire Line
+	10400 1750 9900 1750
+Text Label 10400 1750 2    60   ~ 0
+Fwd
+Wire Wire Line
+	9900 1850 10400 1850
+Text Label 10400 1850 2    60   ~ 0
+ContactorL
+Wire Wire Line
+	9900 2050 10400 2050
+$Comp
+L GNDA #PWR?
+U 1 1 58B932D6
+P 10000 2250
+F 0 "#PWR?" H 10000 2000 50  0001 C CNN
+F 1 "GNDA" H 10005 2077 50  0000 C CNN
+F 2 "" H 10000 2250 50  0000 C CNN
+F 3 "" H 10000 2250 50  0000 C CNN
+	1    10000 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 2150 10000 2150
+Wire Wire Line
+	10000 2150 10000 2250
+$Comp
+L GNDA #PWR?
+U 1 1 58B93532
+P 9300 2250
+F 0 "#PWR?" H 9300 2000 50  0001 C CNN
+F 1 "GNDA" H 9305 2077 50  0000 C CNN
+F 2 "" H 9300 2250 50  0000 C CNN
+F 3 "" H 9300 2250 50  0000 C CNN
+	1    9300 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 2250 9300 2150
+Wire Wire Line
+	9300 2150 9400 2150
+Text Label 10400 2050 2    60   ~ 0
+DACL
+Text Label 8850 1450 0    60   ~ 0
+KSI
+Wire Wire Line
+	8850 1450 9400 1450
+Wire Wire Line
+	8850 1550 9400 1550
+Text Label 8850 1550 0    60   ~ 0
+Mode1
+Text Label 8850 1650 0    60   ~ 0
+Mode2
+Text Label 8850 1750 0    60   ~ 0
+Fwd
+Wire Wire Line
+	8850 1750 9400 1750
+Wire Wire Line
+	8850 1650 9400 1650
+Text Label 8850 1850 0    60   ~ 0
+ContactorR
+Wire Wire Line
+	8850 1850 9400 1850
+Wire Wire Line
+	8850 2050 9400 2050
+Text Label 8850 2050 0    60   ~ 0
+DACR
+Wire Wire Line
+	9400 1950 8850 1950
+Text Label 8850 1950 0    60   ~ 0
+CoilReturn
+Wire Wire Line
+	9900 1950 10400 1950
+Text Label 10400 1950 2    60   ~ 0
+CoilReturn
+$Comp
+L Relay-SPST RL?
+U 1 1 58B98C67
+P 8000 1700
+F 0 "RL?" V 7433 1700 50  0000 C CNN
+F 1 "Relay-SPST" V 7524 1700 50  0000 C CNN
+F 2 "" H 8000 1700 50  0000 C CNN
+F 3 "" H 8000 1700 50  0000 C CNN
+	1    8000 1700
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
