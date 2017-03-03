@@ -1,4 +1,4 @@
-update=3/2/2017 12:10:48 AM
+update=3/2/2017 3:40:09 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -65,3 +65,4 @@ LibName33=relays
 LibName34=SystemBlocks
 LibName35=dc-dc
 LibName36=Power_Management
+LibName37=switches

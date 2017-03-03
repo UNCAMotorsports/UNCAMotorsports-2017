@@ -54,6 +54,10 @@ $CMP RI-0505S
 D Recom 5v to 5v Isolated DC-DC Converter 400mA
 $ENDCMP
 #
+$CMP Relay-SPST
+D Relay (SPST)
+$ENDCMP
+#
 $CMP UltimateSensorFusion
 D EM7180 Senor Hub - Ultimate Sensor Fusion
 K Fusion, MPU9150, MPU9250, BMP280, EM7180, SENtral
