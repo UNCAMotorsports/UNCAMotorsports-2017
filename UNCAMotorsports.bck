@@ -66,11 +66,6 @@ D High Speed CAN Transceiver
 K CAN
 $ENDCMP
 #
-$CMP MX150_16
-D Connector, double row, 02x08
-K connector
-$ENDCMP
-#
 $CMP MX150_8
 D Connector, double row, 02x04
 K connector
