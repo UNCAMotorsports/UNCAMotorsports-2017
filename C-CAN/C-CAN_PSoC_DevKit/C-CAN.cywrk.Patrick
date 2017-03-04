@@ -332,7 +332,7 @@
 <v>C-CAN\C-CAN\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>C-CAN\C-CAN\cy_sync_v1_0.pdf</v>
 <v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
-<v>C-CAN\C-CAN\Em_EEPROM_v1_10.pdf</v>
+<v>C-CAN\C-CAN\Em_EEPROM_v1_20.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>C-CAN</v>
@@ -354,7 +354,7 @@
 <v>C-CAN\C-CAN\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
 <v>C-CAN\C-CAN\cy_sync_v1_0.pdf</v>
 <v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
-<v>C-CAN\C-CAN\Em_EEPROM_v1_10.pdf</v>
+<v>C-CAN\C-CAN\Em_EEPROM_v1_20.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -382,7 +382,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="597cc1d0-ad5f-4043-b582-1783213cbcc8"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="7830b8b1-352d-436e-8d17-5d67d5355e29" Guid="d04eaaaa-6c82-473d-8658-2a7bab9b2b92" /><DocumentWindow Key="f31bf9e9-8b09-4c5f-ad1d-6563f2860363" Guid="597cc1d0-ad5f-4043-b582-1783213cbcc8" /><DocumentWindow Key="37cbef4c-4224-4cfc-9c0e-652dfb2f6742" Guid="c75877a1-447f-463c-bec5-d47ca5e2f56d" /><DocumentWindow Key="c6a2aabc-8ff0-4fa3-b08e-957ca7ef4e1a" Guid="19ca077c-93ff-4af6-99c8-ae955e0e43bd" /><DocumentWindow Key="5490154b-f4af-4f97-89c6-e48130b426eb" Guid="982595b7-7aa7-4ae9-9260-d4a8fa0b21df" /><DocumentWindow Key="69975e08-1af6-4704-99f3-db36d8907b10" Guid="ac6cb461-91d3-4225-9820-d44372a11891" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1268, 524" SelectedTabbedMdiWindow="4ef7eeab-65d2-49cf-9783-48135a70e1e7"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="c87e18cb-a76b-4cf2-809a-22e09fbdcb0e" Guid="e66c6287-aa5a-4841-bb52-f41ecc8a4284" /><DocumentWindow Key="d972d243-33d0-4d48-ba9f-c266f28ae810" Guid="e31de9d8-db04-4799-a7ca-dbc94963d6e6" /><DocumentWindow Key="e31ed9c4-4de7-4095-92f3-65b4ff995a54" Guid="4ef7eeab-65d2-49cf-9783-48135a70e1e7" /><DocumentWindow Key="9d1a1387-5da9-4472-8825-4b2a395b2d83" Guid="043bd958-8d8e-4b70-bed8-995fa2e2dd3c" /><DocumentWindow Key="c82d13af-abc9-4139-894d-891da367567c" Guid="ce7c4bf6-213e-4cc2-96bd-e3e9d52f4b2a" /><DocumentWindow Key="981e2849-4419-42eb-afb9-536270591400" Guid="f47e663f-9aa7-4106-898e-e90d5893e898" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
