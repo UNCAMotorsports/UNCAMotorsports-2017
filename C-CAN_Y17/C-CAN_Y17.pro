@@ -1,4 +1,4 @@
-update=3/5/2017 4:03:49 PM
+update=3/5/2017 4:31:23 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -29,8 +29,8 @@ version=1
 version=1
 LibDir=../../UNCAM-Kicad-Parts;../../UNCAM-Kicad-Parts/UNCAMotorsports.pretty;../../UNCAMotorsports-2017
 [eeschema/libraries]
-LibName1=C-CAN_Y17-rescue
-LibName2=UNCAMotorsports
+LibName1=UNCAMotorsports
+LibName2=C-CAN_Y17-rescue
 LibName3=power
 LibName4=device
 LibName5=transistors

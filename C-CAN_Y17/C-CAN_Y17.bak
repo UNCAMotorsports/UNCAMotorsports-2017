@@ -881,4 +881,49 @@ Text Label 3950 6700 2    60   ~ 0
 GND
 Text Label 3950 6800 2    60   ~ 0
 GND
+$Comp
+L MX150_8 P?
+U 1 1 58BD5DFF
+P 1500 1900
+F 0 "P?" H 1500 2265 50  0000 C CNN
+F 1 "MX150_8" H 1500 2174 50  0000 C CNN
+F 2 "" H 150 -850 50  0000 C CNN
+F 3 "" H 150 -850 50  0000 C CNN
+	1    1500 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1750 900  1750
+Text Label 900  1750 0    60   ~ 0
++12V
+Wire Wire Line
+	1250 1850 900  1850
+Text Label 900  1850 0    60   ~ 0
+CANH
+Wire Wire Line
+	1250 1950 1200 1950
+Wire Wire Line
+	1200 1950 1200 1850
+Connection ~ 1200 1850
+Wire Wire Line
+	1250 2050 900  2050
+Text Label 900  2050 0    60   ~ 0
++12V
+Wire Wire Line
+	1750 1850 2100 1850
+Wire Wire Line
+	1750 1950 1800 1950
+Wire Wire Line
+	1800 1950 1800 1850
+Connection ~ 1800 1850
+Text Label 2100 1850 2    60   ~ 0
+CANL
+Wire Wire Line
+	1750 1750 2100 1750
+Text Label 2100 1750 2    60   ~ 0
+GND
+Wire Wire Line
+	1750 2050 2100 2050
+Text Label 2100 2050 2    60   ~ 0
+GND
 $EndSCHEMATC
