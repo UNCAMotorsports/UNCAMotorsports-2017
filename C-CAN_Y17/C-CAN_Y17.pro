@@ -1,4 +1,4 @@
-update=3/5/2017 4:31:23 PM
+update=3/6/2017 3:27:35 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../UNCAM-Kicad-Parts;../../UNCAM-Kicad-Parts/UNCAMotorsports.pretty;../../UNCAMotorsports-2017
@@ -64,3 +62,5 @@ LibName32=C-CAN/KICAD/Libraries/Cypress_cy8c5xlp
 LibName33=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/relays
 LibName34=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/SystemBlocks
 LibName35=switches
+[general]
+version=1
