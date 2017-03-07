@@ -689,4 +689,184 @@ F 3 "" H 200 300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2700 1450
+$Comp
+L CONN_01X03 J1
+U 1 1 58BF3A96
+P 5300 5150
+F 0 "J1" H 5378 5191 50  0000 L CNN
+F 1 "S1_Pull" H 5378 5100 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 850 -1250 50  0001 C CNN
+F 3 "" H 850 -1250 50  0001 C CNN
+	1    5300 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J2
+U 1 1 58BF3AFC
+P 5300 5550
+F 0 "J2" H 5378 5591 50  0000 L CNN
+F 1 "S2_Pull" H 5378 5500 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 0   0   50  0001 C CNN
+F 3 "" H 0   0   50  0001 C CNN
+	1    5300 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J3
+U 1 1 58BF3B4E
+P 5300 5950
+F 0 "J3" H 5378 5991 50  0000 L CNN
+F 1 "S3_Pull" H 5378 5900 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 50  0   50  0001 C CNN
+F 3 "" H 50  0   50  0001 C CNN
+	1    5300 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J4
+U 1 1 58BF3BA4
+P 5300 6350
+F 0 "J4" H 5378 6391 50  0000 L CNN
+F 1 "S4_Pull" H 5378 6300 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 0   -50 50  0001 C CNN
+F 3 "" H 0   -50 50  0001 C CNN
+	1    5300 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 J5
+U 1 1 58BF3BFC
+P 5300 6750
+F 0 "J5" H 5378 6791 50  0000 L CNN
+F 1 "S5_Pull" H 5378 6700 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 0   -50 50  0001 C CNN
+F 3 "" H 0   -50 50  0001 C CNN
+	1    5300 6750
+	1    0    0    -1  
+$EndComp
+Text Label 4850 5050 0    60   ~ 0
++5V
+Text Label 4850 5450 0    60   ~ 0
++5V
+Text Label 4850 5850 0    60   ~ 0
++5V
+Text Label 4850 6250 0    60   ~ 0
++5V
+Text Label 4850 6650 0    60   ~ 0
++5V
+Text Label 4850 5250 0    60   ~ 0
+GND
+Text Label 4850 5650 0    60   ~ 0
+GND
+Text Label 4850 6050 0    60   ~ 0
+GND
+Text Label 4850 6450 0    60   ~ 0
+GND
+Text Label 4850 6850 0    60   ~ 0
+GND
+Text Label 4400 5150 0    60   ~ 0
+S1
+Text Label 4400 5550 0    60   ~ 0
+S2
+Text Label 4400 5950 0    60   ~ 0
+S3
+Text Label 4400 6350 0    60   ~ 0
+S4
+Text Label 4400 6750 0    60   ~ 0
+H1
+$Comp
+L R R3
+U 1 1 58BF40AB
+P 4700 5150
+F 0 "R3" V 4493 5150 50  0000 C CNN
+F 1 "1M" V 4584 5150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 630 -350 50  0001 C CNN
+F 3 "" H 700 -350 50  0001 C CNN
+	1    4700 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 58BF4147
+P 4700 5550
+F 0 "R4" V 4493 5550 50  0000 C CNN
+F 1 "1M" V 4584 5550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 130 0   50  0001 C CNN
+F 3 "" H 200 0   50  0001 C CNN
+	1    4700 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L R R5
+U 1 1 58BF41C2
+P 4700 5950
+F 0 "R5" V 4493 5950 50  0000 C CNN
+F 1 "1M" V 4584 5950 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 130 0   50  0001 C CNN
+F 3 "" H 200 0   50  0001 C CNN
+	1    4700 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L R R6
+U 1 1 58BF42C4
+P 4700 6350
+F 0 "R6" V 4493 6350 50  0000 C CNN
+F 1 "1M" V 4584 6350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 130 0   50  0001 C CNN
+F 3 "" H 200 0   50  0001 C CNN
+	1    4700 6350
+	0    1    1    0   
+$EndComp
+$Comp
+L R R7
+U 1 1 58BF4345
+P 4700 6750
+F 0 "R7" V 4493 6750 50  0000 C CNN
+F 1 "1M" V 4584 6750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 130 0   50  0001 C CNN
+F 3 "" H 200 0   50  0001 C CNN
+	1    4700 6750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 5150 4550 5150
+Wire Wire Line
+	4400 5550 4550 5550
+Wire Wire Line
+	4400 5950 4550 5950
+Wire Wire Line
+	4400 6350 4550 6350
+Wire Wire Line
+	4400 6750 4550 6750
+Wire Wire Line
+	4850 5150 5100 5150
+Wire Wire Line
+	4850 5050 5100 5050
+Wire Wire Line
+	4850 5250 5100 5250
+Wire Wire Line
+	4850 5450 5100 5450
+Wire Wire Line
+	4850 5550 5100 5550
+Wire Wire Line
+	4850 5650 5100 5650
+Wire Wire Line
+	4850 5850 5100 5850
+Wire Wire Line
+	4850 5950 5100 5950
+Wire Wire Line
+	4850 6050 5100 6050
+Wire Wire Line
+	4850 6250 5100 6250
+Wire Wire Line
+	4850 6350 5100 6350
+Wire Wire Line
+	4850 6450 5100 6450
+Wire Wire Line
+	4850 6650 5100 6650
+Wire Wire Line
+	4850 6750 5100 6750
+Wire Wire Line
+	4850 6850 5100 6850
 $EndSCHEMATC
