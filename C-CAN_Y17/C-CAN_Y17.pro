@@ -1,4 +1,4 @@
-update=3/8/2017 5:45:39 PM
+update=3/9/2017 4:35:17 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,9 +23,11 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
-LibDir=../../UNCAM-Kicad-Parts;../../UNCAM-Kicad-Parts/UNCAMotorsports.pretty;../../UNCAMotorsports-2017
+LibDir=../../UNCAMotorsports-2017
 [eeschema/libraries]
 LibName1=UNCAMotorsports
 LibName2=C-CAN_Y17-rescue
@@ -58,9 +60,6 @@ LibName28=opto
 LibName29=atmel
 LibName30=contrib
 LibName31=valves
-LibName32=C-CAN/KICAD/Libraries/Cypress_cy8c5xlp
-LibName33=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/relays
-LibName34=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/SystemBlocks
-LibName35=switches
-[general]
-version=1
+LibName32=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/relays
+LibName33=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/SystemBlocks
+LibName34=switches
