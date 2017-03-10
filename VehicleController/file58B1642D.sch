@@ -1,6 +1,6 @@
 EESchema Schematic File Version 2
-LIBS:UNCAMotorsports
 LIBS:VehicleController-rescue
+LIBS:UNCAMotorsports
 LIBS:power
 LIBS:device
 LIBS:transistors
