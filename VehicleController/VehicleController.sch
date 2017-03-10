@@ -1,6 +1,6 @@
 EESchema Schematic File Version 2
-LIBS:UNCAMotorsports
 LIBS:VehicleController-rescue
+LIBS:UNCAMotorsports
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -569,17 +569,6 @@ SHTDWN_ISO
 Text Label 750  2050 0    60   ~ 0
 SHTDWN_IN
 $Comp
-L C_Small C13
-U 1 1 58BE72D2
-P 5600 8650
-F 0 "C13" H 5692 8696 50  0000 L CNN
-F 1 "10uF_Al" H 5692 8605 50  0000 L CNN
-F 2 "" H 5600 8650 50  0000 C CNN
-F 3 "" H 5600 8650 50  0000 C CNN
-	1    5600 8650
-	-1   0    0    -1  
-$EndComp
-$Comp
 L GND #PWR020
 U 1 1 58BE950D
 P 5600 8900
@@ -958,4 +947,26 @@ Wire Wire Line
 Wire Wire Line
 	900  2450 1250 2450
 Connection ~ 1250 2450
+$Comp
+L Q_NMOS_GDS Q?
+U 1 1 58C2CFE9
+P 5450 3950
+F 0 "Q?" H 5655 3996 50  0000 L CNN
+F 1 "Q_NMOS_GDS" H 5655 3905 50  0000 L CNN
+F 2 "" H 5650 4050 50  0000 C CNN
+F 3 "" H 5450 3950 50  0000 C CNN
+	1    5450 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP1_Small C?
+U 1 1 58C40E3F
+P 5600 8650
+F 0 "C?" H 5691 8696 50  0000 L CNN
+F 1 "10uF_Al" H 5691 8605 50  0000 L CNN
+F 2 "" H 0   0   50  0001 C CNN
+F 3 "" H 0   0   50  0001 C CNN
+	1    5600 8650
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-update=3/3/2017 8:04:39 PM
+update=03/09/17 22:59:16
 version=1
 last_client=kicad
 [pcbnew]
@@ -29,8 +29,8 @@ version=1
 version=1
 LibDir=../../UNCAMotorsports-2017
 [eeschema/libraries]
-LibName1=UNCAMotorsports
-LibName2=VehicleController-rescue
+LibName1=VehicleController-rescue
+LibName2=UNCAMotorsports
 LibName3=power
 LibName4=device
 LibName5=transistors

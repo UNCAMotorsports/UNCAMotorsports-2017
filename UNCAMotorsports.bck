@@ -41,6 +41,10 @@ K linear regulator ldo fixed positive obsolete
 F http://www.diodes.com/datasheets/AP1117.pdf
 $ENDCMP
 #
+$CMP BTS6133D
+D Automotive High Side Driver with Overcurrent Protection
+$ENDCMP
+#
 $CMP CONN_02X04
 D Connector, double row, 02x04
 K connector
