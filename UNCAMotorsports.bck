@@ -43,6 +43,7 @@ $ENDCMP
 #
 $CMP BTS6133D
 D Automotive High Side Driver with Overcurrent Protection
+K High Side, Driver
 $ENDCMP
 #
 $CMP CONN_02X04
