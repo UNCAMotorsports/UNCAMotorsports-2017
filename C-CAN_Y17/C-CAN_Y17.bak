@@ -30,7 +30,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Cypress_cy8c5xlp
 LIBS:relays
 LIBS:SystemBlocks
 LIBS:switches
@@ -596,47 +595,47 @@ GND
 $Comp
 L MX150_8 P4
 U 1 1 58BD5DFF
-P 1800 6300
-F 0 "P4" H 1800 6665 50  0000 C CNN
-F 1 "MX150_8" H 1800 6574 50  0000 C CNN
-F 2 "UNCAMotorsports:MX150_8Pin" H 450 3550 50  0001 C CNN
-F 3 "" H 450 3550 50  0000 C CNN
-	1    1800 6300
+P 1700 3500
+F 0 "P4" H 1700 3865 50  0000 C CNN
+F 1 "MX150_8" H 1700 3774 50  0000 C CNN
+F 2 "UNCAMotorsports:MX150_8Pin" H 350 750 50  0001 C CNN
+F 3 "" H 350 750 50  0000 C CNN
+	1    1700 3500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 6150 1200 6150
-Text Label 1200 6150 0    60   ~ 0
+	1450 3350 1100 3350
+Text Label 1100 3350 0    60   ~ 0
 +12V
 Wire Wire Line
-	1550 6250 1200 6250
-Text Label 1200 6250 0    60   ~ 0
+	1450 3450 1100 3450
+Text Label 1100 3450 0    60   ~ 0
 CAN_H
 Wire Wire Line
-	1550 6350 1500 6350
+	1450 3550 1400 3550
 Wire Wire Line
-	1500 6350 1500 6250
-Connection ~ 1500 6250
+	1400 3550 1400 3450
+Connection ~ 1400 3450
 Wire Wire Line
-	1550 6450 1200 6450
-Text Label 1200 6450 0    60   ~ 0
+	1450 3650 1100 3650
+Text Label 1100 3650 0    60   ~ 0
 +12V
 Wire Wire Line
-	2050 6250 2400 6250
+	1950 3450 2300 3450
 Wire Wire Line
-	2050 6350 2100 6350
+	1950 3550 2000 3550
 Wire Wire Line
-	2100 6350 2100 6250
-Connection ~ 2100 6250
-Text Label 2400 6250 2    60   ~ 0
+	2000 3550 2000 3450
+Connection ~ 2000 3450
+Text Label 2300 3450 2    60   ~ 0
 CAN_L
 Wire Wire Line
-	2050 6150 2400 6150
-Text Label 2400 6150 2    60   ~ 0
+	1950 3350 2300 3350
+Text Label 2300 3350 2    60   ~ 0
 GND
 Wire Wire Line
-	2050 6450 2400 6450
-Text Label 2400 6450 2    60   ~ 0
+	1950 3650 2300 3650
+Text Label 2300 3650 2    60   ~ 0
 GND
 $Comp
 L AP1117 U2
@@ -665,7 +664,7 @@ Wire Wire Line
 	4450 1300 4450 1450
 Wire Wire Line
 	4150 1450 4500 1450
-Connection ~ 1500 6150
+Connection ~ 1400 3350
 $Comp
 L PWR_FLAG #FLG013
 U 1 1 58BDCA89

@@ -1,6 +1,6 @@
 EESchema Schematic File Version 2
-LIBS:UNCAMotorsports
 LIBS:C-CAN_Y17-rescue
+LIBS:UNCAMotorsports
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -499,7 +499,7 @@ U 1 1 58B77315
 P 8800 2600
 F 0 "U3" H 8250 4050 60  0000 C CNN
 F 1 "Cypress_5LP" H 8300 3950 60  0000 C CNN
-F 2 "UNCAMotorsports:CypressPSoC" H 8800 2800 60  0001 C CNN
+F 2 "UNCA Motorsports:PSoC5LP" H 8800 2800 60  0001 C CNN
 F 3 "" H 8800 2800 60  0000 C CNN
 	1    8800 2600
 	1    0    0    -1  
@@ -638,7 +638,7 @@ Wire Wire Line
 Text Label 2300 3650 2    60   ~ 0
 GND
 $Comp
-L AP1117 U2
+L AP1117-RESCUE-C-CAN_Y17 U2
 U 1 1 58BD7651
 P 6000 1450
 F 0 "U2" H 6000 1817 50  0000 C CNN
