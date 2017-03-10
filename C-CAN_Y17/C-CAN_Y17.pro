@@ -1,4 +1,4 @@
-update=3/9/2017 4:37:08 PM
+update=3/9/2017 11:22:13 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../UNCAMotorsports-2017
@@ -63,3 +61,5 @@ LibName31=valves
 LibName32=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/relays
 LibName33=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/SystemBlocks
 LibName34=switches
+[general]
+version=1
