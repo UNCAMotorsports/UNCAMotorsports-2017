@@ -86,6 +86,11 @@ D Connector, double row, 02x08
 K connector
 $ENDCMP
 #
+$CMP MX150_4
+D Connector, double row, 02x02, pin header
+K connector
+$ENDCMP
+#
 $CMP MX150_8
 D Connector, double row, 02x04
 K connector

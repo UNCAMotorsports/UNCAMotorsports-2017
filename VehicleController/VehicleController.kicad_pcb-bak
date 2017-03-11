@@ -360,7 +360,7 @@
   )
 
   (module Capacitors_SMD:c_elec_6.3x7.7 (layer F.Cu) (tedit 556FDD06) (tstamp 58C467B7)
-    (at 62.23 78.74 90)
+    (at 44.45 81.28 90)
     (descr "SMT capacitor, aluminium electrolytic, 6.3x7.7")
     (path /587C78BB/58C33250)
     (attr smd)
@@ -400,7 +400,7 @@
   )
 
   (module Capacitors_SMD:c_elec_4x4.5 (layer F.Cu) (tedit 55725C01) (tstamp 58C467BD)
-    (at 52.07 75.46086)
+    (at 34.29 78.00086)
     (descr "SMT capacitor, aluminium electrolytic, 4x4.5")
     (path /587C78BB/58C33352)
     (attr smd)
@@ -2736,7 +2736,7 @@
   )
 
   (module UNCAMotorsports:TO-252-5 (layer F.Cu) (tedit 56669107) (tstamp 58C469E1)
-    (at 52.07 60.96 90)
+    (at 34.29 63.5 90)
     (descr "DPAK / TO-252 2-lead smd package")
     (tags "dpak TO-252")
     (path /587C78BB/587C7BC7)
