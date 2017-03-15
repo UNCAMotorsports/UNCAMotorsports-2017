@@ -114,6 +114,12 @@ $CMP Relay-SPST
 D Relay (SPST)
 $ENDCMP
 #
+$CMP TCMT1103
+D DC Optocoupler, Vce 80V, CTR 50-200%, DIP4
+K NPN DC Optocoupler
+F http://www.semicon.toshiba.co.jp/docs/datasheet/en/Opto/TLP785_TLP785F_en_datasheet_120220.pdf
+$ENDCMP
+#
 $CMP UltimateSensorFusion
 D EM7180 Senor Hub - Ultimate Sensor Fusion
 K Fusion, MPU9150, MPU9250, BMP280, EM7180, SENtral
