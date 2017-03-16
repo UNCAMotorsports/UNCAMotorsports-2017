@@ -1,4 +1,4 @@
-update=2/23/2017 11:32:54 PM
+update=3/15/2017 8:26:02 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -33,9 +33,11 @@ NetFmtName=
 SpiceAjustPassiveValues=0
 LabSize=60
 ERC_TestSimilarLabels=1
+[general]
+version=1
 [eeschema]
 version=1
-LibDir=../../UNCAM-Kicad-Parts/UNCAMotorsports.pretty;../../UNCAM-Kicad-Parts
+LibDir=../../UNCAMotorsports-2017
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -66,6 +68,4 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/Users/Patrick/Documents/GitHub/UNCAM-Kicad-Parts/UNCAMotorsports
-[general]
-version=1
+LibName30=UNCAMotorsports
