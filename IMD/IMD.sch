@@ -1,0 +1,246 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:UNCAMotorsports
+LIBS:bspd-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L IR155-3204 U?
+U 1 1 58C9D24E
+P 2550 2650
+F 0 "U?" H 2550 2050 60  0000 C CNN
+F 1 "IR155-3204" H 2550 2150 60  0000 C CNN
+F 2 "" H 2550 2650 60  0001 C CNN
+F 3 "" H 2550 2650 60  0001 C CNN
+	1    2550 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58C9D329
+P 4200 2700
+F 0 "#PWR?" H 4200 2450 50  0001 C CNN
+F 1 "GND" H 4200 2550 50  0000 C CNN
+F 2 "" H 4200 2700 50  0001 C CNN
+F 3 "" H 4200 2700 50  0001 C CNN
+	1    4200 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2650 4200 2650
+Wire Wire Line
+	4200 2650 4200 2700
+Wire Wire Line
+	3350 2550 3750 2550
+Wire Wire Line
+	3750 2350 3750 2650
+Connection ~ 3750 2650
+Wire Wire Line
+	3350 2350 3750 2350
+Connection ~ 3750 2550
+$Comp
+L +12V #PWR?
+U 1 1 58C9D375
+P 4200 2450
+F 0 "#PWR?" H 4200 2300 50  0001 C CNN
+F 1 "+12V" H 4200 2590 50  0000 C CNN
+F 2 "" H 4200 2450 50  0001 C CNN
+F 3 "" H 4200 2450 50  0001 C CNN
+	1    4200 2450
+	1    0    0    -1  
+$EndComp
+Text Label 4000 2750 2    60   ~ 0
+MHS_PWM_Out
+Wire Wire Line
+	4000 2750 3350 2750
+$Comp
+L Battery BT?
+U 1 1 58C9D3E8
+P 1600 1800
+F 0 "BT?" H 1700 1900 50  0000 L CNN
+F 1 "TS" H 1700 1800 50  0000 L CNN
+F 2 "" V 1600 1860 50  0001 C CNN
+F 3 "" V 1600 1860 50  0001 C CNN
+	1    1600 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1600 2800 1600
+Wire Wire Line
+	1600 2000 2800 2000
+Wire Wire Line
+	2050 2100 2050 2000
+Connection ~ 2050 2000
+Wire Wire Line
+	2200 2100 2200 1600
+Connection ~ 2200 1600
+Text Notes 3200 1850 2    60   ~ 0
+Vehicle High Voltage\n
+Text Label 2800 1600 2    60   ~ 0
++
+Text Label 2800 2000 2    60   ~ 0
+-
+$Comp
+L Fuse F?
+U 1 1 58C9D6FC
+P 4000 2450
+F 0 "F?" V 4080 2450 50  0000 C CNN
+F 1 "Fuse" V 3925 2450 50  0000 C CNN
+F 2 "" V 3930 2450 50  0001 C CNN
+F 3 "" H 4000 2450 50  0001 C CNN
+	1    4000 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 2450 4150 2450
+Wire Wire Line
+	3850 2450 3350 2450
+$Comp
+L 74LVC2G74 U?
+U 1 1 58C9EE81
+P 4650 3550
+F 0 "U?" H 4950 3350 60  0000 C CNN
+F 1 "74LVC2G74" H 5050 3150 60  0000 C CNN
+F 2 "" H 4650 3550 60  0001 C CNN
+F 3 "" H 4650 3550 60  0001 C CNN
+	1    4650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58C9EF02
+P 4100 3700
+F 0 "#PWR?" H 4100 3450 50  0001 C CNN
+F 1 "GND" H 4100 3550 50  0000 C CNN
+F 2 "" H 4100 3700 50  0001 C CNN
+F 3 "" H 4100 3700 50  0001 C CNN
+	1    4100 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3700 4100 3500
+Wire Wire Line
+	4100 3500 4250 3500
+Wire Wire Line
+	4250 3600 4100 3600
+Connection ~ 4100 3600
+$Comp
+L GND #PWR?
+U 1 1 58C9EFA5
+P 4700 4150
+F 0 "#PWR?" H 4700 3900 50  0001 C CNN
+F 1 "GND" H 4700 4000 50  0000 C CNN
+F 2 "" H 4700 4150 50  0001 C CNN
+F 3 "" H 4700 4150 50  0001 C CNN
+	1    4700 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 4150 4700 4050
+$Comp
+L +5V #PWR?
+U 1 1 58C9EFDB
+P 4700 2950
+F 0 "#PWR?" H 4700 2800 50  0001 C CNN
+F 1 "+5V" H 4700 3090 50  0000 C CNN
+F 2 "" H 4700 2950 50  0001 C CNN
+F 3 "" H 4700 2950 50  0001 C CNN
+	1    4700 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2950 4700 3050
+$Comp
+L +5V #PWR?
+U 1 1 58C9F4F3
+P 4250 4150
+F 0 "#PWR?" H 4250 4000 50  0001 C CNN
+F 1 "+5V" H 4250 4290 50  0000 C CNN
+F 2 "" H 4250 4150 50  0001 C CNN
+F 3 "" H 4250 4150 50  0001 C CNN
+	1    4250 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 58C9F50F
+P 4250 4350
+F 0 "R?" V 4330 4350 50  0000 C CNN
+F 1 "R" V 4250 4350 50  0000 C CNN
+F 2 "" V 4180 4350 50  0001 C CNN
+F 3 "" H 4250 4350 50  0001 C CNN
+	1    4250 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SW_Push SW?
+U 1 1 58C9F530
+P 4600 4750
+F 0 "SW?" H 4650 4850 50  0000 L CNN
+F 1 "Reset" H 4600 4690 50  0000 C CNN
+F 2 "" H 4600 4950 50  0001 C CNN
+F 3 "" H 4600 4950 50  0001 C CNN
+	1    4600 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 4150 4250 4200
+Wire Wire Line
+	4250 4500 4600 4500
+Wire Wire Line
+	4600 4050 4600 4550
+Connection ~ 4600 4500
+$Comp
+L GND #PWR?
+U 1 1 58C9F6A4
+P 4600 5000
+F 0 "#PWR?" H 4600 4750 50  0001 C CNN
+F 1 "GND" H 4600 4850 50  0000 C CNN
+F 2 "" H 4600 5000 50  0001 C CNN
+F 3 "" H 4600 5000 50  0001 C CNN
+	1    4600 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 5000 4600 4950
+$EndSCHEMATC

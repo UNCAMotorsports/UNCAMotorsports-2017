@@ -1,4 +1,4 @@
-update=3/15/2017 7:14:50 PM
+update=3/15/2017 9:44:08 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,8 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=../../UNCAMotorsports-2017
@@ -56,7 +58,5 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=relays
-LibName31=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/UNCAMotorsports
-[general]
-version=1
+LibName30=UNCAMotorsports
+LibName31=Brake System Plausibility Device/bspd-cache
