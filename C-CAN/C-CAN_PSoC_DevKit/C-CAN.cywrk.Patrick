@@ -336,7 +336,6 @@
 <v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
 <v>C-CAN\C-CAN\Em_EEPROM_v1_20.pdf</v>
 <v>C-CAN\C-CAN\QuadDec_v3_0.pdf</v>
->>>>>>> Stashed changes
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>C-CAN</v>
@@ -362,7 +361,6 @@
 <v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
 <v>C-CAN\C-CAN\Em_EEPROM_v1_20.pdf</v>
 <v>C-CAN\C-CAN\QuadDec_v3_0.pdf</v>
->>>>>>> Stashed changes
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -390,11 +388,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
-<<<<<<< Updated upstream
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="d94fa465-caed-4143-bf5f-4ed9475f1ff2"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="21c4a09f-e67e-4aef-986f-884e907a0a22" Guid="d94fa465-caed-4143-bf5f-4ed9475f1ff2" /><DocumentWindow Key="6033bd63-9d46-4712-9d15-bf0114ca7c66" Guid="e998596d-cea1-49f3-b308-539b2735c940" /><DocumentWindow Key="7721b31c-8141-444a-92b7-ce6a5a6fed7b" Guid="a3fe8466-6cd6-49ca-a0c8-a9fbcb95c38c" /><DocumentWindow Key="70852cdd-c1a8-4bd2-ae43-4d709239d9ca" Guid="a5359168-8ec3-4a2d-b684-301abc2012a8" /><DocumentWindow Key="cf26a7d5-79ef-4532-a2fa-6f4db0b0cdde" Guid="841b75b5-72a1-410e-a631-a341bb45bfe3" /><DocumentWindow Key="c07b2ee9-571d-46d4-8283-57ebcc23e3ca" Guid="6d8c9efa-a4ac-4a44-96f2-11be1eee3380" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
-=======
 --><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="7759e8e4-4467-4473-b5d2-16da980e7db5"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="5b84d567-180e-4605-a804-c3295a7d2d7b" Guid="c00e451d-91e5-4108-b115-a096450c078d" /><DocumentWindow Key="c3f77ee4-fc89-4458-bc91-64de28f5e369" Guid="7759e8e4-4467-4473-b5d2-16da980e7db5" /><DocumentWindow Key="3a7b7069-0425-4479-a11e-e099c49a0e9e" Guid="ef530f15-6b9e-4e24-818d-332f27ad55ad" /><DocumentWindow Key="93ad3249-145b-427f-83f5-87f9c305c02e" Guid="85a3154e-2b21-4cc7-8383-0ae971631e12" /><DocumentWindow Key="76151ce2-5efb-48c6-8dad-e7f70eb4380d" Guid="ededbd45-7280-4a3e-a6ff-8a1897eb5f42" /><DocumentWindow Key="397b5122-25f8-4fa7-86e9-ac2c932c881c" Guid="7329c200-7f56-4731-88f1-11c723875119" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
->>>>>>> Stashed changes
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
