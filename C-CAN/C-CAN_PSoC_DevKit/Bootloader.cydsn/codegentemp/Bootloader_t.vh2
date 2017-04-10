@@ -1,6 +1,6 @@
 -- Project:   C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\Bootloader.cyprj
--- Generated: 11/17/2016 19:58:45
--- PSoC Creator  4.0
+-- Generated: 04/07/2017 20:38:33
+-- PSoC Creator  4.0 Update 1
 
 ENTITY Bootloader IS
     PORT(

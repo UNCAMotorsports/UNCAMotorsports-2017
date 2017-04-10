@@ -1,12 +1,12 @@
-Loading plugins phase: Elapsed time ==> 0s.299ms
+Loading plugins phase: Elapsed time ==> 0s.384ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\C-CAN.cyprj -d CY8C5888LTI-LP097 -s C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 2s.244ms
+Elaboration phase: Elapsed time ==> 2s.993ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.102ms
+HDL generation phase: Elapsed time ==> 0s.123ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -40,7 +40,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Patri
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Fri Jan 13 17:55:11 2017
+Fri Apr 07 20:38:50 2017
 
 
 ======================================================================
@@ -50,7 +50,7 @@ Options  :    -yv2 -q10 C-CAN.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Fri Jan 13 17:55:11 2017
+Fri Apr 07 20:38:50 2017
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\AMux_v1_80\AMux_v1_80.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.v'
@@ -98,7 +98,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Patri
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Fri Jan 13 17:55:12 2017
+Fri Apr 07 20:38:51 2017
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -138,7 +138,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Patri
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Fri Jan 13 17:55:13 2017
+Fri Apr 07 20:38:52 2017
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -567,14 +567,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\C-CAN.cyprj -dcpsoc3 C-CAN.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 2s.288ms
+Warp synthesis phase: Elapsed time ==> 2s.109ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.0.0.432, Family: PSoC3, Started at: Friday, 13 January 2017 17:55:13
+cyp3fit: V4.0.0.432, Family: PSoC3, Started at: Friday, 07 April 2017 20:38:52
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\C-CAN.cyprj -d CY8C5888LTI-LP097 C-CAN.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.021ms
+Design parsing phase: Elapsed time ==> 0s.030ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -1979,7 +1979,7 @@ Analog Clocks                 :    0 :    4 :    4 :  0.00 %
 CapSense Buffers              :    0 :    2 :    2 :  0.00 %
 Digital Filter Block          :    0 :    1 :    1 :  0.00 %
 Interrupts                    :    2 :   30 :   32 :  6.25 %
-IO                            :   17 :   31 :   48 : 35.42 %
+IO                            :   15 :   33 :   48 : 31.25 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    1 :    0 :    1 : 100.00 %
 I2C                           :    0 :    1 :    1 :  0.00 %
@@ -2005,8 +2005,8 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.032ms
-Tech Mapping phase: Elapsed time ==> 0s.113ms
+Technology Mapping: Elapsed time ==> 0s.041ms
+Tech Mapping phase: Elapsed time ==> 0s.154ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
@@ -2040,10 +2040,10 @@ IO_0@[IOP=(3)][IoId=(0)] : zero(0) (fixed)
 SAR[0]@[FFB(SAR,0)] : \ADC_SAR_1:ADC_SAR\ (fixed, SAR-ExtVref)
 Vref[13]@[FFB(Vref,13)] : \ADC_SAR_1:vRef_Vdda_1\
 
-Analog Placement phase: Elapsed time ==> 0s.050ms
+Analog Placement phase: Elapsed time ==> 0s.057ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
-Analog Routing phase: Elapsed time ==> 0s.008ms
+Analog Routing phase: Elapsed time ==> 0s.011ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -2093,29 +2093,29 @@ Map of net to items {
     agl5_x_agr5
     agr5
     agr5_x_p3_5
-    agl4_x_sar_0_vplus
-    agl4
-    agl4_x_agr4
-    agr4
-    agr4_x_p3_0
-    agl7_x_sar_0_vplus
-    agl7
-    agl7_x_agr7
-    agr7
-    agr7_x_p3_3
     agl6_x_sar_0_vplus
     agl6
     agl6_x_agr6
     agr6
     agr6_x_p3_2
-    agr5_x_p3_1
+    agr5_x_vidac_3_iout
+    vidac_3_iout
+    agr4_x_vidac_3_iout
+    agr4
     agr4_x_p3_4
+    agl7_x_sar_0_vplus
+    agl7
+    agl7_x_agr7
+    agr7
+    agr7_x_p3_3
+    agr4_x_p3_0
+    agr5_x_p3_1
     p3_5
-    p3_0
-    p3_3
     p3_2
-    p3_1
     p3_4
+    p3_3
+    p3_0
+    p3_1
   }
 }
 Map of item to net {
@@ -2141,23 +2141,23 @@ Map of item to net {
   agl5_x_agr5                                      -> AmuxNet::AMux_1
   agr5                                             -> AmuxNet::AMux_1
   agr5_x_p3_5                                      -> AmuxNet::AMux_1
-  agl4_x_sar_0_vplus                               -> AmuxNet::AMux_1
-  agl4                                             -> AmuxNet::AMux_1
-  agl4_x_agr4                                      -> AmuxNet::AMux_1
-  agr4                                             -> AmuxNet::AMux_1
-  agr4_x_p3_0                                      -> AmuxNet::AMux_1
-  agl7_x_sar_0_vplus                               -> AmuxNet::AMux_1
-  agl7                                             -> AmuxNet::AMux_1
-  agl7_x_agr7                                      -> AmuxNet::AMux_1
-  agr7                                             -> AmuxNet::AMux_1
-  agr7_x_p3_3                                      -> AmuxNet::AMux_1
   agl6_x_sar_0_vplus                               -> AmuxNet::AMux_1
   agl6                                             -> AmuxNet::AMux_1
   agl6_x_agr6                                      -> AmuxNet::AMux_1
   agr6                                             -> AmuxNet::AMux_1
   agr6_x_p3_2                                      -> AmuxNet::AMux_1
-  agr5_x_p3_1                                      -> AmuxNet::AMux_1
+  agr5_x_vidac_3_iout                              -> AmuxNet::AMux_1
+  vidac_3_iout                                     -> AmuxNet::AMux_1
+  agr4_x_vidac_3_iout                              -> AmuxNet::AMux_1
+  agr4                                             -> AmuxNet::AMux_1
   agr4_x_p3_4                                      -> AmuxNet::AMux_1
+  agl7_x_sar_0_vplus                               -> AmuxNet::AMux_1
+  agl7                                             -> AmuxNet::AMux_1
+  agl7_x_agr7                                      -> AmuxNet::AMux_1
+  agr7                                             -> AmuxNet::AMux_1
+  agr7_x_p3_3                                      -> AmuxNet::AMux_1
+  agr4_x_p3_0                                      -> AmuxNet::AMux_1
+  agr5_x_p3_1                                      -> AmuxNet::AMux_1
 }
 Mux Info {
   Mux: AMux_1 {
@@ -2174,9 +2174,13 @@ Mux Info {
         p3_0
         agr4_x_p3_0
         agr4
-        agl4_x_agr4
-        agl4
-        agl4_x_sar_0_vplus
+        agr4_x_vidac_3_iout
+        vidac_3_iout
+        agr5_x_vidac_3_iout
+        agr5
+        agl5_x_agr5
+        agl5
+        agl5_x_sar_0_vplus
         sar_0_vplus
       }
     }
@@ -2230,9 +2234,13 @@ Mux Info {
         p3_4
         agr4_x_p3_4
         agr4
-        agl4_x_agr4
-        agl4
-        agl4_x_sar_0_vplus
+        agr4_x_vidac_3_iout
+        vidac_3_iout
+        agr5_x_vidac_3_iout
+        agr5
+        agl5_x_agr5
+        agl5
+        agl5_x_sar_0_vplus
         sar_0_vplus
       }
     }
@@ -2256,11 +2264,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = True
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.020ms
+Analog Code Generation phase: Elapsed time ==> 0s.382ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 1.0 sec.
+I2076: Total run-time: 1.2 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2284,14 +2292,14 @@ PLD Packing Summary
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.003ms
+PLD Packing: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.048ms
+Partitioning: Elapsed time ==> 0s.059ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -3874,31 +3882,31 @@ Port | Pin | Fixed |      Type |       Drive Mode |                  Name | Conn
 </CYPRESSTAG>
 </CYPRESSTAG>
 Digital component placer commit/Report: Elapsed time ==> 0s.002ms
-Digital Placement phase: Elapsed time ==> 1s.410ms
+Digital Placement phase: Elapsed time ==> 1s.598ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 Routing successful.
-Digital Routing phase: Elapsed time ==> 1s.720ms
+Digital Routing phase: Elapsed time ==> 2s.237ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.692ms
+Bitstream Generation phase: Elapsed time ==> 0s.822ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.099ms
+Bitstream Verification phase: Elapsed time ==> 0s.135ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in C-CAN_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.424ms
+Static timing analysis phase: Elapsed time ==> 0s.549ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
 Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.208ms
+Design database save phase: Elapsed time ==> 0s.283ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 4s.806ms
+cydsfit: Elapsed time ==> 6s.316ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 4s.807ms
-API generation phase: Elapsed time ==> 2s.616ms
-Dependency generation phase: Elapsed time ==> 0s.028ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 6s.317ms
+API generation phase: Elapsed time ==> 2s.816ms
+Dependency generation phase: Elapsed time ==> 0s.031ms
+Cleanup phase: Elapsed time ==> 0s.000ms

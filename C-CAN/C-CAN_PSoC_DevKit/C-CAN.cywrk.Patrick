@@ -13,19 +13,26 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="C-CAN\C-CAN\Generated_Source">
 <ExpandedNodeIds>
 <v>C-CAN</v>
 <v>C-CAN\C-CAN</v>
 <v>C-CAN\C-CAN\TopDesign</v>
-<v>C-CAN\C-CAN\C-CAN.cydwr</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Pins</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Analog</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Clocks</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Interrupts</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\DMA</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\System</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Directives</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Flash Security</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\EEPROM</v>
 <v>C-CAN\C-CAN\Header Files</v>
 <v>C-CAN\C-CAN\Header Files\C-CAN.h</v>
 <v>C-CAN\C-CAN\Header Files\device.h</v>
 <v>C-CAN\C-CAN\Source Files</v>
 <v>C-CAN\C-CAN\Source Files\C-CAN.c</v>
 <v>C-CAN\C-CAN\Source Files\main.c</v>
-<v>C-CAN\C-CAN\Generated_Source</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.c</v>
@@ -45,6 +52,9 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\AMux_1</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Bootloadable_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Bootloadable_1\Bootloadable_1.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Bootloadable_1\Bootloadable_1.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.h</v>
@@ -60,6 +70,10 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\Clock_3</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\Clock_3\Clock_3.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\Clock_3\Clock_3.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Control_Reg_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Control_Reg_1\Control_Reg_1.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Control_Reg_1\Control_Reg_1.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Control_Reg_1\Control_Reg_1_PM.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cy_boot</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
@@ -114,6 +128,10 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\four\four.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\four\four.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\four\four_aliases.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\LED</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\LED\LED.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\LED\LED.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\LED\LED_aliases.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\leftEncTimer</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\leftEncTimer\leftEncTimer.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\leftEncTimer\leftEncTimer.h</v>
@@ -146,6 +164,8 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero.h</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\zero\zero_aliases.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cybootloader.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cybootloader.icf</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cycodeshareexport.ld</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cycodeshareimport.ld</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cycodeshareimport.scat</v>
@@ -168,35 +188,20 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_INT.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_PM.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass_aliases.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ\ADC_SAR_1_IRQ.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_theACLK\ADC_SAR_1_theACLK.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\AMux_1</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\AMux_1\AMux_1.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\Bootloadable_1</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.h</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_INT.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_PM.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_TX_RX_func.c</v>
-<v>C-CAN\C-CAN\Generated_Source\PSoC5\Clock_1</v>
+<v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
+<v>C-CAN\C-CAN\TopDesign</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr</v>
+<v>C-CAN\C-CAN\Header Files</v>
+<v>C-CAN\C-CAN\Header Files\C-CAN.h</v>
+<v>C-CAN\C-CAN\Header Files\device.h</v>
+<v>C-CAN\C-CAN\Source Files</v>
+<v>C-CAN\C-CAN\Source Files\C-CAN.c</v>
+<v>C-CAN\C-CAN\Source Files\main.c</v>
+<v>C-CAN\C-CAN\Generated_Source</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="C-CAN\C-CAN">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>C-CAN</v>
 <v>C-CAN\C-CAN</v>
@@ -318,8 +323,6 @@
 <v>C-CAN\C-CAN\PSoC 5LP Architecture TRM</v>
 <v>C-CAN\C-CAN\CY8C58LP Family Datasheet</v>
 <v>C-CAN\C-CAN\System Reference Guides</v>
-<<<<<<< Updated upstream
-=======
 <v>C-CAN\C-CAN\System Reference Guides\cy_boot_v5_50</v>
 <v>C-CAN\C-CAN\ADC_SAR_v3_0.pdf</v>
 <v>C-CAN\C-CAN\AMux_v1_80.pdf</v>
@@ -335,7 +338,6 @@
 <v>C-CAN\C-CAN\cy_sync_v1_0.pdf</v>
 <v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
 <v>C-CAN\C-CAN\Em_EEPROM_v1_20.pdf</v>
-<v>C-CAN\C-CAN\QuadDec_v3_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>C-CAN</v>
@@ -343,8 +345,6 @@
 <v>C-CAN\C-CAN\PSoC 5LP Architecture TRM</v>
 <v>C-CAN\C-CAN\CY8C58LP Family Datasheet</v>
 <v>C-CAN\C-CAN\System Reference Guides</v>
-<<<<<<< Updated upstream
-=======
 <v>C-CAN\C-CAN\System Reference Guides\cy_boot_v5_50</v>
 <v>C-CAN\C-CAN\ADC_SAR_v3_0.pdf</v>
 <v>C-CAN\C-CAN\AMux_v1_80.pdf</v>
@@ -360,27 +360,17 @@
 <v>C-CAN\C-CAN\cy_sync_v1_0.pdf</v>
 <v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
 <v>C-CAN\C-CAN\Em_EEPROM_v1_20.pdf</v>
-<v>C-CAN\C-CAN\QuadDec_v3_0.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
 </dataGuid>
-<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
-<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
-<indicators />
-</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
-</dataGuid>
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\C-CAN.cydsn\main.c" />
 <name v=".\C-CAN.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\C-CAN.cydsn\C-CAN.cydwr" />
-<name v=".\C-CAN.cydsn\C-CAN.c" />
-<name v=".\C-CAN.cydsn\C-CAN.h" />
-<name v=".\C-CAN.cydsn\Generated_Source\PSoC5\CAN_1.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -388,7 +378,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="7759e8e4-4467-4473-b5d2-16da980e7db5"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="5b84d567-180e-4605-a804-c3295a7d2d7b" Guid="c00e451d-91e5-4108-b115-a096450c078d" /><DocumentWindow Key="c3f77ee4-fc89-4458-bc91-64de28f5e369" Guid="7759e8e4-4467-4473-b5d2-16da980e7db5" /><DocumentWindow Key="3a7b7069-0425-4479-a11e-e099c49a0e9e" Guid="ef530f15-6b9e-4e24-818d-332f27ad55ad" /><DocumentWindow Key="93ad3249-145b-427f-83f5-87f9c305c02e" Guid="85a3154e-2b21-4cc7-8383-0ae971631e12" /><DocumentWindow Key="76151ce2-5efb-48c6-8dad-e7f70eb4380d" Guid="ededbd45-7280-4a3e-a6ff-8a1897eb5f42" /><DocumentWindow Key="397b5122-25f8-4fa7-86e9-ac2c932c881c" Guid="7329c200-7f56-4731-88f1-11c723875119" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1014, 524" SelectedTabbedMdiWindow="45950ce0-2ebe-417b-8eb0-3a5606e65895"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="c23d34e6-3dba-4f5d-bafb-9805bdc354d5" Guid="45950ce0-2ebe-417b-8eb0-3a5606e65895" /><DocumentWindow Key="c94a0702-4263-4a25-b43f-24ae740f46e5" Guid="51c24719-548f-43a4-9609-c2f0e1cf1d66" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

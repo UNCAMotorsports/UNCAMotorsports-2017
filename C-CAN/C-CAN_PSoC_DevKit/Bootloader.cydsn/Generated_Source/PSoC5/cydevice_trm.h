@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: cydevice_trm.h
 * 
-* PSoC Creator  4.0
+* PSoC Creator  4.0 Update 1
 *
 * Description:
 * This file provides all of the address values for the entire PSoC device.

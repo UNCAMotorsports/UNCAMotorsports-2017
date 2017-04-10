@@ -1,12 +1,12 @@
 /*******************************************************************************
 * File Name: Em_EEPROM.c
-* Version 1.10
+* Version 1.20
 *
 * Description:
 *  This file provides the source code to API for the Emulated EEPROM Component.
 *
 ********************************************************************************
-* Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+* Copyright 2013-2016, Cypress Semiconductor Corporation.  All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -109,7 +109,7 @@ void Em_EEPROM_Stop(void)
         if (((uint32)eepromPtr >= Em_EEPROM_CODE_ADDR_OFFSET) &&
             (((uint32)eepromPtr + byteCount) <= Em_EEPROM_CODE_ADDR_END))
     #else
-        if (((uint32)eepromPtr + byteCount) < Em_EEPROM_FLASH_END_ADDR)
+        if (((uint32)eepromPtr + byteCount) <= Em_EEPROM_FLASH_END_ADDR)
     #endif /* (CY_PSOC3) */
     {
         #if (!CY_PSOC4)

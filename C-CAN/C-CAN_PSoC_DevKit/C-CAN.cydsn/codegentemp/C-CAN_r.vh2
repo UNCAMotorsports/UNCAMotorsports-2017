@@ -1,6 +1,6 @@
 -- Project:   C-CAN
--- Generated: 01/13/2017 17:55:15
--- PSoC Creator  4.0
+-- Generated: 04/07/2017 20:38:55
+-- PSoC Creator  4.0 Update 1
 
 ENTITY \C-CAN\ IS
     PORT(
