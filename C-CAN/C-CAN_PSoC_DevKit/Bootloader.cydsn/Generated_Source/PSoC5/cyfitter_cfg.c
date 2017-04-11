@@ -1,7 +1,7 @@
 /*******************************************************************************
 * File Name: cyfitter_cfg.c
 * 
-* PSoC Creator  4.0
+* PSoC Creator  4.0 Update 1
 *
 * Description:
 * This file contains device initialization code.
@@ -203,32 +203,17 @@ static void ClockSetup(void)
 
 	/* Configure Digital Clocks based on settings from Clock DWR */
 	CY_SET_XTND_REG16((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0), 0x5DBFu);
-	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0 + 0x2u), 0x1Au);
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_DCFG0_CFG0 + 0x2u), 0x19u);
 
 	/* Configure ILO based on settings from Clock DWR */
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_SLOWCLK_ILO_CR0), 0x06u);
 
-	/* Configure XTAL based on settings from Clock DWR */
-	CY_SET_XTND_REG16((void CYFAR *)(CYREG_FASTCLK_XMHZ_CFG0), 0x3313u);
-	CY_SET_XTND_REG8((void CYFAR *)(CYREG_FASTCLK_XMHZ_CSR), 0x05u);
-	/* Wait up to 130000us for the XTAL to lock */
-	CY_GET_XTND_REG8((void CYFAR *)CYREG_FASTCLK_XMHZ_CSR);
-	for (timeout = 130000u / 10u; (timeout > 0u) && ((CY_GET_XTND_REG8((void CYFAR *)CYREG_FASTCLK_XMHZ_CSR) & 0x80u) != 0u); timeout--)
-	{ 
-		
-		CyDelayCycles(10u * 48u); /* Delay 10us based on 48MHz clock */
-	}
-	if (timeout == 0u)
-	{
-		CyClockStartupError(CYCLOCKSTART_XTAL_ERROR);
-	}
-	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CLKDIST_CR), 0x40u);
-
 	/* Configure IMO based on settings from Clock DWR */
-	CY_SET_XTND_REG8((void CYFAR *)(CYREG_FASTCLK_IMO_CR), 0x70u);
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_FASTCLK_IMO_CR), 0x52u);
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_IMO_TR1), (CY_GET_XTND_REG8((void CYFAR *)CYREG_FLSHID_CUST_TABLES_IMO_USB)));
 
 	/* Configure PLL based on settings from Clock DWR */
-	CY_SET_XTND_REG16((void CYFAR *)(CYREG_FASTCLK_PLL_P), 0x0D2Au);
+	CY_SET_XTND_REG16((void CYFAR *)(CYREG_FASTCLK_PLL_P), 0x0718u);
 	CY_SET_XTND_REG16((void CYFAR *)(CYREG_FASTCLK_PLL_CFG0), 0x2251u);
 	/* Wait up to 250us for the PLL to lock */
 	pllLock = 0u;
@@ -356,6 +341,11 @@ void cyfitter_cfg(void)
 	CYGlobalIntDisable
 #endif
 
+
+	/* Set Flash Cycles based on max possible frequency in case a glitch occurs during ClockSetup(). */
+	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CACHE_CC_CTL), (((CYDEV_INSTRUCT_CACHE_ENABLED) != 0) ? 0x61u : 0x60u));
+	/* Setup clocks based on selections from Clock DWR */
+	ClockSetup();
 	/* Enable/Disable Debug functionality based on settings from System DWR */
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_MLOGIC_DEBUG, (CY_GET_XTND_REG8((void CYFAR *)CYREG_MLOGIC_DEBUG) | 0x04u));
 
@@ -479,11 +469,6 @@ void cyfitter_cfg(void)
 	CYCONFIGCPYCODE((void CYFAR *)(CYREG_PRT2_DM0), (const void CYCODE *)(BS_IOPINS0_2_VAL), 8u);
 	/* Switch Boost to the precision bandgap reference from its internal reference */
 	CY_SET_REG8((void CYXDATA *)CYREG_BOOST_CR2, (CY_GET_REG8((void CYXDATA *)CYREG_BOOST_CR2) | 0x08u));
-
-	/* Set Flash Cycles based on max possible frequency in case a glitch occurs during ClockSetup(). */
-	CY_SET_XTND_REG8((void CYFAR *)(CYREG_CACHE_CC_CTL), (((CYDEV_INSTRUCT_CACHE_ENABLED) != 0) ? 0x61u : 0x60u));
-	/* Setup clocks based on selections from Clock DWR */
-	ClockSetup();
 
 	/* Perform basic analog initialization to defaults */
 	AnalogSetDefault();

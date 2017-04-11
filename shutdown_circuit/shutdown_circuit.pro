@@ -1,4 +1,4 @@
-update=3/13/2017 7:29:13 PM
+update=3/15/2017 7:14:50 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,7 +25,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=../../UNCAM-Kicad-Parts
+LibDir=../../UNCAMotorsports-2017
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -56,7 +56,7 @@ LibName26=opto
 LibName27=atmel
 LibName28=contrib
 LibName29=valves
-LibName30=C:/Users/Patrick/Documents/GitHub/UNCAM-Kicad-Parts/UNCAMotorsports
-LibName31=relays
+LibName30=relays
+LibName31=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/UNCAMotorsports
 [general]
 version=1

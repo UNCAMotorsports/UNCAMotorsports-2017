@@ -1,6 +1,6 @@
 /*******************************************************************************
 * File Name: Em_EEPROM.h
-* Version 1.10
+* Version 1.20
 *
 * Description:
 *  This file provides constants and parameter values for the Emulated EEPROM

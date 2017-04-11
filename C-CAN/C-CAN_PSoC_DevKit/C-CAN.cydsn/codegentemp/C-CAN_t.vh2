@@ -1,6 +1,6 @@
 -- Project:   C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\C-CAN.cyprj
--- Generated: 01/13/2017 17:55:17
--- PSoC Creator  4.0
+-- Generated: 04/07/2017 20:38:58
+-- PSoC Creator  4.0 Update 1
 
 ENTITY \C-CAN\ IS
     PORT(
