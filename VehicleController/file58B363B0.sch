@@ -88,12 +88,12 @@ $EndComp
 $Comp
 L GND #PWR52
 U 1 1 58B3659A
-P 4950 3550
-F 0 "#PWR52" H 4950 3300 50  0001 C CNN
-F 1 "GND" H 4955 3377 50  0000 C CNN
-F 2 "" H 4950 3550 50  0000 C CNN
-F 3 "" H 4950 3550 50  0000 C CNN
-	1    4950 3550
+P 4950 3500
+F 0 "#PWR52" H 4950 3250 50  0001 C CNN
+F 1 "GND" H 4955 3327 50  0000 C CNN
+F 2 "" H 4950 3500 50  0000 C CNN
+F 3 "" H 4950 3500 50  0000 C CNN
+	1    4950 3500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -168,7 +168,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 3050 5050 3050
 Wire Wire Line
-	4950 3550 4950 3350
+	4950 3500 4950 3350
 Wire Wire Line
 	4950 3350 5050 3350
 Wire Wire Line
@@ -211,7 +211,9 @@ Wire Wire Line
 Text Label 6800 3150 0    60   ~ 0
 CANH
 Wire Wire Line
-	6800 3150 7100 3150
+	6800 3150 7050 3150
+Wire Wire Line
+	7050 3150 7100 3150
 Wire Wire Line
 	7100 3250 7050 3250
 Wire Wire Line
@@ -237,7 +239,9 @@ Wire Wire Line
 Wire Wire Line
 	7000 3350 7100 3350
 Wire Wire Line
-	7600 3150 7900 3150
+	7600 3150 7650 3150
+Wire Wire Line
+	7650 3150 7900 3150
 Text Label 7900 3150 2    60   ~ 0
 CANL
 Wire Wire Line
@@ -317,7 +321,9 @@ F 3 "" H 1200 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4700 4800 4700 5000
+	4700 4800 4700 4900
+Wire Wire Line
+	4700 4900 4700 5000
 Wire Wire Line
 	4700 4800 4800 4800
 Wire Wire Line
@@ -389,7 +395,9 @@ $EndComp
 Wire Wire Line
 	6150 4650 6350 4650
 Wire Wire Line
-	6350 4450 6350 4850
+	6350 4450 6350 4650
+Wire Wire Line
+	6350 4650 6350 4850
 Wire Wire Line
 	6350 4850 6150 4850
 Connection ~ 6350 4650
