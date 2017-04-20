@@ -1406,6 +1406,8 @@
 <v>Cypress Component Catalog\Ports and Pins</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
+<v>Cypress Component Catalog\Digital\Logic\SR Flip Flop [v1.0]</v>
+<v>Cypress Component Catalog\Digital\Logic\Toggle Flip Flop [v1.0]</v>
 <v>Cypress Component Catalog\Digital\Logic\Virtual Mux [v1.0]</v>
 <v>Cypress Component Catalog\Digital\Logic\Xnor [v1.0]</v>
 <v>Cypress Component Catalog\Digital\Logic\Xor [v1.0]</v>
@@ -2604,7 +2606,7 @@
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif</v>
 <v>C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif</v>
 </warp_dep>
-<deps_time v="131364838016470244" />
+<deps_time v="131371208356256376" />
 <top_block v="TopDesign" />
 <last_generation v="4" />
 <pdl_path v="C:\Users\Patrick\Documents\Cypress\PDL\2.1.0" />
