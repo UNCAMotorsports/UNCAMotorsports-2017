@@ -299,9 +299,7 @@ Wire Wire Line
 Wire Wire Line
 	1600 1250 1750 1250
 Wire Wire Line
-	3250 1250 3950 1250
-Wire Wire Line
-	3950 1250 4350 1250
+	3250 1250 4350 1250
 Wire Wire Line
 	4350 2250 3950 2250
 Wire Wire Line
@@ -373,23 +371,7 @@ Wire Wire Line
 Wire Wire Line
 	5950 2600 5950 2550
 Wire Wire Line
-	1400 3500 2000 3500
-Wire Wire Line
-	2000 3500 2500 3500
-Wire Wire Line
-	2500 3500 3000 3500
-Wire Wire Line
-	3000 3500 3500 3500
-Wire Wire Line
-	3500 3500 4000 3500
-Wire Wire Line
-	4000 3500 4650 3500
-Wire Wire Line
-	4650 3500 5300 3500
-Wire Wire Line
-	5300 3500 5950 3500
-Wire Wire Line
-	5950 3500 6300 3500
+	1400 3500 6300 3500
 Wire Wire Line
 	2000 3500 2000 4100
 Wire Wire Line
@@ -439,23 +421,7 @@ Wire Wire Line
 	5750 3800 5750 4100
 Connection ~ 5750 3800
 Wire Wire Line
-	1400 3800 1800 3800
-Wire Wire Line
-	1800 3800 2300 3800
-Wire Wire Line
-	2300 3800 2800 3800
-Wire Wire Line
-	2800 3800 3300 3800
-Wire Wire Line
-	3300 3800 3800 3800
-Wire Wire Line
-	3800 3800 4450 3800
-Wire Wire Line
-	4450 3800 5100 3800
-Wire Wire Line
-	5100 3800 5750 3800
-Wire Wire Line
-	5750 3800 6300 3800
+	1400 3800 6300 3800
 Wire Notes Line
 	850  3100 7650 3100
 Wire Notes Line
@@ -465,9 +431,7 @@ Wire Wire Line
 Wire Wire Line
 	2850 2550 2550 2550
 Wire Wire Line
-	3650 2550 4200 2550
-Wire Wire Line
-	4200 2550 4350 2550
+	3650 2550 4350 2550
 $Sheet
 S 750  5400 1650 1250
 U 58ACE44A
