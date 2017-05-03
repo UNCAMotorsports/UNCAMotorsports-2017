@@ -1,4 +1,4 @@
-update=4/27/2017 8:17:39 PM
+update=5/2/2017 8:16:22 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,8 +58,6 @@ LibName28=contrib
 LibName29=valves
 LibName30=relays
 LibName31=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/UNCAMotorsports
-[general]
-version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -70,3 +68,5 @@ NetFmtName=
 SpiceForceRefPrefix=0
 SpiceUseNetNumbers=0
 LabSize=60
+[general]
+version=1

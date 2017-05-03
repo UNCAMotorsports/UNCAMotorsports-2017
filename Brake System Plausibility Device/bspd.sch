@@ -466,7 +466,7 @@ Wire Wire Line
 	3050 1050 3050 1200
 Connection ~ 3050 1050
 Text Notes 5100 1500 0    79   ~ 0
-NOTES:\nR3 * C3 = a time constant such that it takes 500ms for the SD line to go low when both \ncomparator outputs are low. Given the diode drop and the logic-low threshold of the \nflipflop, RC = 1.2 (approximately). (0.3 * VCC) = (VCC - 0.7)*(1-e^(-0.5/(RC))\nThere is no hysteresis on the comparators because the impedances between In+ and VCC/GND\nare variable. In practice this should not be an issue due to the long time constant of the \nRC pair. The polyfuse should have a 1A trip current (a fault would be much greater than that). \nThe theoretical current consumption of the circuit is on the order of 10's of mA.
+NOTES:\nR7 * C3 = a time constant such that it takes 500ms for the ~PRE~ line to go low when both \ncomparator outputs are low. Given the diode drop and the logic-low threshold of the \nflipflop, RC = 1.2 (approximately). (0.3 * VCC) = (VCC - 0.7)*(1-e^(-0.5/(RC))\nThere is no hysteresis on the opamps because the impedances between In+ and VCC/GND\nare variable. In practice this should not be an issue due to the long time constant of the \nRC pair. The polyfuse should have a 1A trip current (a fault would be much greater than that). \nThe theoretical current consumption of the circuit is on the order of 10's of mA.
 Wire Wire Line
 	5700 3100 8150 3100
 Wire Wire Line
@@ -998,57 +998,51 @@ Wire Wire Line
 $Comp
 L C C6
 U 1 1 58D05677
-P 9050 4650
-F 0 "C6" H 9075 4750 50  0000 L CNN
-F 1 "1u" H 9075 4550 50  0000 L CNN
-F 2 "" H 9088 4500 50  0001 C CNN
-F 3 "" H 9050 4650 50  0001 C CNN
-	1    9050 4650
+P 8550 2950
+F 0 "C6" H 8575 3050 50  0000 L CNN
+F 1 "1u" H 8575 2850 50  0000 L CNN
+F 2 "" H 8588 2800 50  0001 C CNN
+F 3 "" H 8550 2950 50  0001 C CNN
+	1    8550 2950
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C7
 U 1 1 58D056FA
-P 9300 4650
-F 0 "C7" H 9325 4750 50  0000 L CNN
-F 1 "1u" H 9325 4550 50  0000 L CNN
-F 2 "" H 9338 4500 50  0001 C CNN
-F 3 "" H 9300 4650 50  0001 C CNN
-	1    9300 4650
+P 9150 4900
+F 0 "C7" H 9175 5000 50  0000 L CNN
+F 1 "1u" H 9175 4800 50  0000 L CNN
+F 2 "" H 9188 4750 50  0001 C CNN
+F 3 "" H 9150 4900 50  0001 C CNN
+	1    9150 4900
 	1    0    0    -1  
 $EndComp
 $Comp
 L +5V #PWR37
 U 1 1 58D05BAC
-P 9050 4350
-F 0 "#PWR37" H 9050 4200 50  0001 C CNN
-F 1 "+5V" H 9050 4490 50  0000 C CNN
-F 2 "" H 9050 4350 50  0001 C CNN
-F 3 "" H 9050 4350 50  0001 C CNN
-	1    9050 4350
+P 8550 2650
+F 0 "#PWR37" H 8550 2500 50  0001 C CNN
+F 1 "+5V" H 8550 2790 50  0000 C CNN
+F 2 "" H 8550 2650 50  0001 C CNN
+F 3 "" H 8550 2650 50  0001 C CNN
+	1    8550 2650
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR38
 U 1 1 58D05C08
-P 9050 4950
-F 0 "#PWR38" H 9050 4700 50  0001 C CNN
-F 1 "GND" H 9050 4800 50  0000 C CNN
-F 2 "" H 9050 4950 50  0001 C CNN
-F 3 "" H 9050 4950 50  0001 C CNN
-	1    9050 4950
+P 8550 3250
+F 0 "#PWR38" H 8550 3000 50  0001 C CNN
+F 1 "GND" H 8550 3100 50  0000 C CNN
+F 2 "" H 8550 3250 50  0001 C CNN
+F 3 "" H 8550 3250 50  0001 C CNN
+	1    8550 3250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9050 4950 9050 4800
+	8550 3250 8550 3100
 Wire Wire Line
-	9050 4800 9300 4800
-Wire Wire Line
-	9300 4500 9050 4500
-Wire Wire Line
-	9050 4500 9050 4350
-Text Notes 9150 4400 0    60   ~ 0
-Logic Decoupling\n
+	8550 2800 8550 2650
 $Comp
 L L01Z400S05 U5
 U 1 1 58D5EDD8
@@ -1217,4 +1211,34 @@ Text Label 9600 3800 2    60   ~ 0
 BSPD_Latched_Output
 Text Notes 1650 1600 0    60   ~ 0
 Opamp Decoupling
+Text Notes 8250 2450 0    60   ~ 0
+U3 Decoupling\nPlace close to pin 4
+$Comp
+L +5V #PWR?
+U 1 1 59093498
+P 9150 4700
+F 0 "#PWR?" H 9150 4550 50  0001 C CNN
+F 1 "+5V" H 9150 4840 50  0000 C CNN
+F 2 "" H 9150 4700 50  0001 C CNN
+F 3 "" H 9150 4700 50  0001 C CNN
+	1    9150 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 4700 9150 4750
+$Comp
+L GND #PWR?
+U 1 1 590935A3
+P 9150 5100
+F 0 "#PWR?" H 9150 4850 50  0001 C CNN
+F 1 "GND" H 9150 4950 50  0000 C CNN
+F 2 "" H 9150 5100 50  0001 C CNN
+F 3 "" H 9150 5100 50  0001 C CNN
+	1    9150 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 5100 9150 5050
+Text Notes 8850 4500 0    60   ~ 0
+U4 Decoupling\nPlace close to pin 4\n
 $EndSCHEMATC
