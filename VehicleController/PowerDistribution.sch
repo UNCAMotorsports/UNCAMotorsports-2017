@@ -205,41 +205,6 @@ $EndComp
 Text HLabel 5550 1200 3    60   Input ~ 0
 12V
 $Comp
-L USB_A-RESCUE-VehicleController P3
-U 1 1 58B30D8B
-P 9000 4900
-F 0 "P3" V 8575 4824 50  0000 C CNN
-F 1 "RPi_USB_PWR" V 8666 4824 50  0000 C CNN
-F 2 "UNCAMotorsports:USB-A-THT" V 8950 4800 50  0001 C CNN
-F 3 "" V 8950 4800 50  0000 C CNN
-	1    9000 4900
-	0    -1   1    0   
-$EndComp
-$Comp
-L GND #PWR46
-U 1 1 58B30D9F
-P 8900 5300
-F 0 "#PWR46" H 8900 5050 50  0001 C CNN
-F 1 "GND" H 8905 5127 50  0000 C CNN
-F 2 "" H 8900 5300 50  0000 C CNN
-F 3 "" H 8900 5300 50  0000 C CNN
-	1    8900 5300
-	1    0    0    -1  
-$EndComp
-NoConn ~ 9300 4800
-NoConn ~ 9300 4900
-$Comp
-L GND #PWR49
-U 1 1 58B31164
-P 9650 5100
-F 0 "#PWR49" H 9650 4850 50  0001 C CNN
-F 1 "GND" H 9655 4927 50  0000 C CNN
-F 2 "" H 9650 5100 50  0000 C CNN
-F 3 "" H 9650 5100 50  0000 C CNN
-	1    9650 5100
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR40
 U 1 1 58B0EFE3
 P 3350 3250
@@ -405,17 +370,6 @@ F 3 "" H 2600 1150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP1_Small C9
-U 1 1 58C289B7
-P 9500 4850
-F 0 "C9" H 9591 4896 50  0000 L CNN
-F 1 "1uF_Al" H 9591 4805 50  0000 L CNN
-F 2 "Capacitors_SMD:c_elec_4x5.3" H 0   0   50  0001 C CNN
-F 3 "" H 0   0   50  0001 C CNN
-	1    9500 4850
-	1    0    0    -1  
-$EndComp
-$Comp
 L D_Zener_Small D7
 U 1 1 58FBF2F0
 P 6050 3300
@@ -487,22 +441,6 @@ Wire Wire Line
 Connection ~ 7350 2750
 Wire Wire Line
 	5550 1200 5550 1000
-Connection ~ 9500 4700
-Wire Wire Line
-	9500 4750 9500 4700
-Connection ~ 9500 5000
-Wire Wire Line
-	9500 4950 9500 5000
-Wire Wire Line
-	9650 5000 9650 5100
-Wire Wire Line
-	9300 5000 9650 5000
-Wire Wire Line
-	8900 5300 8900 5200
-Wire Wire Line
-	9650 4700 9650 4600
-Wire Wire Line
-	9300 4700 9650 4700
 Wire Wire Line
 	3350 2900 3350 2750
 Connection ~ 3350 2750
@@ -552,16 +490,4 @@ Wire Wire Line
 	6050 3400 6050 3550
 Wire Wire Line
 	6050 3550 5850 3550
-Text HLabel 9650 4600 1    60   Input ~ 0
-5V
-Text Notes 8950 4350 0    60   ~ 0
-Needs Review
-Wire Notes Line
-	8800 4200 9900 4200
-Wire Notes Line
-	9900 4200 9900 5550
-Wire Notes Line
-	9900 5550 8800 5550
-Wire Notes Line
-	8800 5550 8800 4200
 $EndSCHEMATC
