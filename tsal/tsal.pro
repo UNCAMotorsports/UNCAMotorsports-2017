@@ -1,4 +1,4 @@
-update=3/15/2017 8:26:02 PM
+update=5/11/2017 12:18:13 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -69,3 +69,4 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=UNCAMotorsports
+LibName31=mechanical
