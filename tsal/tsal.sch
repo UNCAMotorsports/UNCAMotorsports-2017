@@ -290,13 +290,13 @@ $EndComp
 $Comp
 L R R3
 U 1 1 58CB3E27
-P 5500 2950
-F 0 "R3" H 5570 2996 50  0000 L CNN
-F 1 "1.2k" H 5570 2905 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 5430 2950 50  0001 C CNN
-F 3 "" H 5500 2950 50  0000 C CNN
-	1    5500 2950
-	1    0    0    -1  
+P 5200 2500
+F 0 "R3" H 5270 2546 50  0000 L CNN
+F 1 "1.2k" H 5270 2455 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5130 2500 50  0001 C CNN
+F 3 "" H 5200 2500 50  0000 C CNN
+	1    5200 2500
+	0    1    1    0   
 $EndComp
 $Comp
 L Polyfuse_Small F2
@@ -348,15 +348,12 @@ Wire Wire Line
 	6850 2000 6850 1900
 Wire Wire Line
 	6750 2000 7250 2000
-Connection ~ 5500 3200
 Wire Wire Line
-	5500 3100 5500 4000
+	5500 2700 5500 4000
 Wire Wire Line
 	8350 2400 8500 2400
 Wire Wire Line
 	7900 2400 8150 2400
-Wire Wire Line
-	5500 2700 5500 2800
 Connection ~ 3500 3000
 Wire Wire Line
 	2750 2500 3650 2500
@@ -375,8 +372,6 @@ Wire Wire Line
 	4500 2600 4500 2500
 Wire Wire Line
 	4050 2800 4050 3150
-Wire Wire Line
-	4450 2500 5850 2500
 Wire Wire Line
 	6550 2700 6550 2800
 Wire Wire Line
@@ -418,9 +413,7 @@ Wire Wire Line
 Wire Wire Line
 	8400 2650 8400 2500
 Wire Wire Line
-	5500 3200 5250 3200
-Wire Wire Line
-	4950 3000 4950 2500
+	4950 2500 4950 3000
 Connection ~ 4950 2500
 Wire Wire Line
 	4900 3800 4950 3800
@@ -531,4 +524,13 @@ Wire Notes Line
 	6200 1800 6200 3350
 Text Notes 6000 3450 0    60   ~ 0
 2mm gap
+Wire Wire Line
+	5400 2500 5400 3200
+Wire Wire Line
+	5400 3200 5250 3200
+Wire Wire Line
+	5350 2500 5850 2500
+Connection ~ 5400 2500
+Wire Wire Line
+	4450 2500 5050 2500
 $EndSCHEMATC

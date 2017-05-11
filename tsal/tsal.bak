@@ -227,7 +227,7 @@ U 1 1 58CADA7B
 P 2550 2500
 F 0 "P1" H 2469 2275 50  0000 C CNN
 F 1 "TS+ (PreAIR)" H 2469 2366 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_single_2mmDrill" H 2550 2500 50  0001 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1mmDrill" H 2550 2500 50  0001 C CNN
 F 3 "" H 2550 2500 50  0000 C CNN
 	1    2550 2500
 	-1   0    0    1   
@@ -238,7 +238,7 @@ U 1 1 58CAECDC
 P 2550 3000
 F 0 "P2" H 2469 2775 50  0000 C CNN
 F 1 "TS-" H 2469 2866 50  0000 C CNN
-F 2 "Wire_Pads:SolderWirePad_single_2mmDrill" H 2550 3000 50  0001 C CNN
+F 2 "Wire_Pads:SolderWirePad_single_1mmDrill" H 2550 3000 50  0001 C CNN
 F 3 "" H 2550 3000 50  0000 C CNN
 	1    2550 3000
 	-1   0    0    1   
@@ -517,36 +517,14 @@ F 3 "" H 7200 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mounting_Hole MK2
-U 1 1 591475C5
-P 7200 6300
-F 0 "MK2" H 7200 6500 50  0000 C CNN
-F 1 "Mounting_Hole" H 7200 6425 50  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3mm" H 7200 6300 50  0001 C CNN
-F 3 "" H 7200 6300 50  0001 C CNN
-	1    7200 6300
-	1    0    0    -1  
-$EndComp
-$Comp
 L Mounting_Hole MK3
 U 1 1 59147621
-P 7750 6300
-F 0 "MK3" H 7750 6500 50  0000 C CNN
-F 1 "Mounting_Hole" H 7750 6425 50  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3mm" H 7750 6300 50  0001 C CNN
-F 3 "" H 7750 6300 50  0001 C CNN
-	1    7750 6300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mounting_Hole MK4
-U 1 1 591476D5
-P 7750 5950
-F 0 "MK4" H 7750 6150 50  0000 C CNN
-F 1 "Mounting_Hole" H 7750 6075 50  0000 C CNN
-F 2 "Mounting_Holes:MountingHole_3mm" H 7750 5950 50  0001 C CNN
-F 3 "" H 7750 5950 50  0001 C CNN
-	1    7750 5950
+P 7550 5950
+F 0 "MK3" H 7550 6150 50  0000 C CNN
+F 1 "Mounting_Hole" H 7550 6075 50  0000 C CNN
+F 2 "Mounting_Holes:MountingHole_3mm" H 7550 5950 50  0001 C CNN
+F 3 "" H 7550 5950 50  0001 C CNN
+	1    7550 5950
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
