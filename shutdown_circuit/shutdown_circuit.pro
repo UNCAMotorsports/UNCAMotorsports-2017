@@ -1,4 +1,4 @@
-update=5/2/2017 8:16:22 PM
+update=5/12/2017 10:41:43 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,6 +23,16 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=../../UNCAMotorsports-2017
@@ -58,15 +68,6 @@ LibName28=contrib
 LibName29=valves
 LibName30=relays
 LibName31=C:/Users/Patrick/Documents/GitHub/UNCAMotorsports-2017/UNCAMotorsports
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
+LibName32=mechanical
 [general]
 version=1
