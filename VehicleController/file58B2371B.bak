@@ -148,6 +148,17 @@ F 3 "" H 3700 3600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
+L Q_NMOS_GDS Q3
+U 1 1 58B23C7C
+P 3800 3300
+F 0 "Q3" H 4006 3346 50  0000 L CNN
+F 1 "Q_NMOS_GDS" H 4006 3255 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 4000 3400 50  0001 C CNN
+F 3 "" H 3800 3300 50  0000 C CNN
+	1    3800 3300
+	-1   0    0    -1  
+$EndComp
+$Comp
 L +3.3V #PWR057
 U 1 1 58B23C75
 P 3700 2400
@@ -171,7 +182,7 @@ F 3 "" H 3700 2600 50  0000 C CNN
 $EndComp
 Text HLabel 4250 3300 2    60   Input ~ 0
 3D-FIX
-Text HLabel 8900 3000 2    60   Input ~ 0
+Text HLabel 7750 3450 2    60   Input ~ 0
 1PPS
 Text HLabel 6050 2850 0    60   Input ~ 0
 GPS_RST
@@ -197,7 +208,7 @@ Wire Wire Line
 	7500 2850 8100 2850
 Connection ~ 8100 3850
 Wire Wire Line
-	7500 3450 8450 3450
+	7500 3450 7750 3450
 Wire Wire Line
 	7500 3550 8100 3550
 Connection ~ 8100 3550
@@ -266,80 +277,4 @@ F 3 "" V 0   0   50  0001 C CNN
 	1    3700 2900
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Q_NMOS_GSD Q3
-U 1 1 591E7689
-P 3800 3300
-F 0 "Q3" H 4000 3350 50  0000 L CNN
-F 1 "Q_NMOS_GSD" H 4000 3250 50  0000 L CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 4000 3400 50  0001 C CNN
-F 3 "" H 3800 3300 50  0001 C CNN
-	1    3800 3300
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Q_NMOS_GSD Q4
-U 1 1 59218AFB
-P 8650 3450
-F 0 "Q4" H 8850 3500 50  0000 L CNN
-F 1 "Q_NMOS_GSD" H 8850 3400 50  0000 L CNN
-F 2 "" H 8850 3550 50  0001 C CNN
-F 3 "" H 8650 3450 50  0001 C CNN
-	1    8650 3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8900 3000 8750 3000
-Wire Wire Line
-	8750 3000 8750 3250
-$Comp
-L GND #PWR058
-U 1 1 59218D57
-P 8750 3850
-F 0 "#PWR058" H 8750 3600 50  0001 C CNN
-F 1 "GND" H 8755 3677 50  0000 C CNN
-F 2 "" H 8750 3850 50  0000 C CNN
-F 3 "" H 8750 3850 50  0000 C CNN
-	1    8750 3850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8750 3850 8750 3650
-$Comp
-L R_Small R32
-U 1 1 59219167
-P 8350 3250
-F 0 "R32" H 8380 3270 50  0000 L CNN
-F 1 "DNP" H 8380 3210 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 8350 3250 50  0001 C CNN
-F 3 "" H 8350 3250 50  0001 C CNN
-	1    8350 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8350 3150 8350 3100
-Wire Wire Line
-	8350 3100 8750 3100
-Connection ~ 8750 3100
-Wire Wire Line
-	8350 3350 8350 3550
-Connection ~ 8350 3450
-$Comp
-L R_Small R33
-U 1 1 5921923E
-P 8350 3650
-F 0 "R33" H 8380 3670 50  0000 L CNN
-F 1 "DNP" H 8380 3610 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" H 8350 3650 50  0001 C CNN
-F 3 "" H 8350 3650 50  0001 C CNN
-	1    8350 3650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8350 3750 8350 3800
-Wire Wire Line
-	8350 3800 8750 3800
-Connection ~ 8750 3800
-Text Notes 8250 2850 0    60   ~ 0
-DNP = Do Not Populate
 $EndSCHEMATC
