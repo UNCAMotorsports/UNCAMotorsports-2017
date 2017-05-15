@@ -1,4 +1,4 @@
-update=3/15/2017 8:26:02 PM
+update=5/11/2017 7:54:09 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -33,8 +33,6 @@ NetFmtName=
 SpiceAjustPassiveValues=0
 LabSize=60
 ERC_TestSimilarLabels=1
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../UNCAMotorsports-2017
@@ -69,3 +67,6 @@ LibName27=atmel
 LibName28=contrib
 LibName29=valves
 LibName30=UNCAMotorsports
+LibName31=mechanical
+[general]
+version=1
