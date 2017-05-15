@@ -1,43 +1,11 @@
 EESchema Schematic File Version 2
 LIBS:VehicleController-rescue
 LIBS:UNCAMotorsports
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
 LIBS:Common-Parts-Library-CPL
 LIBS:relays
 LIBS:SystemBlocks
-LIBS:dc-dc
-LIBS:Power_Management
-LIBS:switches
 LIBS:VehicleController-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -57,7 +25,7 @@ U 1 1 587C7BB2
 P 3000 2750
 F 0 "D5" H 3000 2534 50  0000 C CNN
 F 1 "D_Schottky" H 3000 2625 50  0000 C CNN
-F 2 "Diodes_SMD:SMC_Handsoldering" H 3000 2750 50  0001 C CNN
+F 2 "Diodes_SMD:SMA_Handsoldering" H 3000 2750 50  0001 C CNN
 F 3 "" H 3000 2750 50  0000 C CNN
 	1    3000 2750
 	-1   0    0    1   
@@ -232,7 +200,7 @@ U 1 1 58B90308
 P 5400 3850
 F 0 "D6" V 5354 3929 50  0000 L CNN
 F 1 "D_ALT" V 5445 3929 50  0000 L CNN
-F 2 "Diodes_SMD:SMC_Handsoldering" H 5400 3850 50  0001 C CNN
+F 2 "Diodes_SMD:SMA_Handsoldering" H 5400 3850 50  0001 C CNN
 F 3 "" H 5400 3850 50  0000 C CNN
 	1    5400 3850
 	0    1    1    0   

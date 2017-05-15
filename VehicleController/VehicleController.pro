@@ -1,4 +1,4 @@
-update=5/2/2017 9:45:32 PM
+update=5/14/2017 10:41:45 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,9 +23,11 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
-LibDir=../../UNCAMotorsports-2017
+LibDir=../../UNCAMotorsports-2017;../../../../../../msys64/mingw64/share/kicad
 [eeschema/libraries]
 LibName1=VehicleController-rescue
 LibName2=UNCAMotorsports
@@ -64,5 +66,3 @@ LibName34=SystemBlocks
 LibName35=dc-dc
 LibName36=Power_Management
 LibName37=switches
-[general]
-version=1

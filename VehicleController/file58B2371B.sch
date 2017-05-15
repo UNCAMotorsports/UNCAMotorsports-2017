@@ -1,43 +1,11 @@
 EESchema Schematic File Version 2
 LIBS:VehicleController-rescue
 LIBS:UNCAMotorsports
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
 LIBS:Common-Parts-Library-CPL
 LIBS:relays
 LIBS:SystemBlocks
-LIBS:dc-dc
-LIBS:Power_Management
-LIBS:switches
 LIBS:VehicleController-cache
-EELAYER 25 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -171,7 +139,7 @@ F 3 "" H 3700 2600 50  0000 C CNN
 $EndComp
 Text HLabel 4250 3300 2    60   Input ~ 0
 3D-FIX
-Text HLabel 7750 3450 2    60   Input ~ 0
+Text HLabel 8850 3000 2    60   Input ~ 0
 1PPS
 Text HLabel 6050 2850 0    60   Input ~ 0
 GPS_RST
@@ -197,7 +165,7 @@ Wire Wire Line
 	7500 2850 8100 2850
 Connection ~ 8100 3850
 Wire Wire Line
-	7500 3450 7750 3450
+	7500 3450 8400 3450
 Wire Wire Line
 	7500 3550 8100 3550
 Connection ~ 8100 3550
@@ -277,4 +245,65 @@ F 3 "" H 3800 3300 50  0001 C CNN
 	1    3800 3300
 	-1   0    0    -1  
 $EndComp
+$Comp
+L Q_NMOS_GSD Q7
+U 1 1 591A0E4B
+P 8600 3450
+F 0 "Q7" H 8800 3500 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 8800 3400 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 8800 3550 50  0001 C CNN
+F 3 "" H 8600 3450 50  0001 C CNN
+	1    8600 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3000 8850 3000
+Wire Wire Line
+	8700 3000 8700 3250
+$Comp
+L R_Small R49
+U 1 1 591A10E5
+P 8300 3250
+F 0 "R49" H 8359 3296 50  0000 L CNN
+F 1 "DNP" H 8359 3205 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 8300 3250 50  0001 C CNN
+F 3 "" H 8300 3250 50  0001 C CNN
+	1    8300 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3150 8300 3000
+Connection ~ 8700 3000
+Wire Wire Line
+	8300 3350 8300 3550
+Connection ~ 8300 3450
+$Comp
+L R_Small R50
+U 1 1 591A11A1
+P 8300 3650
+F 0 "R50" H 8359 3696 50  0000 L CNN
+F 1 "DNP" H 8359 3605 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 8300 3650 50  0001 C CNN
+F 3 "" H 8300 3650 50  0001 C CNN
+	1    8300 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3750 8300 3800
+Wire Wire Line
+	8300 3800 8700 3800
+Wire Wire Line
+	8700 3650 8700 3900
+$Comp
+L GND #PWR056
+U 1 1 591A124C
+P 8700 3900
+F 0 "#PWR056" H 8700 3650 50  0001 C CNN
+F 1 "GND" H 8705 3727 50  0000 C CNN
+F 2 "" H 8700 3900 50  0000 C CNN
+F 3 "" H 8700 3900 50  0000 C CNN
+	1    8700 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 8700 3800
 $EndSCHEMATC
