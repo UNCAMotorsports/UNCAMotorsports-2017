@@ -1,4 +1,4 @@
-update=5/14/2017 10:41:45 PM
+update=5/25/2017 7:03:13 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../UNCAMotorsports-2017;../../../../../../msys64/mingw64/share/kicad
@@ -66,3 +64,5 @@ LibName34=SystemBlocks
 LibName35=dc-dc
 LibName36=Power_Management
 LibName37=switches
+[general]
+version=1
