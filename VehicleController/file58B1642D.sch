@@ -1,11 +1,43 @@
 EESchema Schematic File Version 2
 LIBS:VehicleController-rescue
 LIBS:UNCAMotorsports
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
 LIBS:Common-Parts-Library-CPL
 LIBS:relays
 LIBS:SystemBlocks
+LIBS:dc-dc
+LIBS:Power_Management
+LIBS:switches
 LIBS:VehicleController-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
@@ -1268,4 +1300,97 @@ F 3 "" H 7100 1700 50  0001 C CNN
 	1    7100 1700
 	1    0    0    -1  
 $EndComp
+$Comp
+L TEST TP1
+U 1 1 59267245
+P 3250 1350
+F 0 "TP1" H 3250 1650 50  0000 C BNN
+F 1 "TEST" H 3250 1600 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 3250 1350 50  0001 C CNN
+F 3 "" H 3250 1350 50  0001 C CNN
+	1    3250 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L TEST TP2
+U 1 1 592677FE
+P 3250 1550
+F 0 "TP2" H 3250 1850 50  0000 C BNN
+F 1 "TEST" H 3250 1800 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 3250 1550 50  0001 C CNN
+F 3 "" H 3250 1550 50  0001 C CNN
+	1    3250 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L TEST TP3
+U 1 1 592678A8
+P 10250 750
+F 0 "TP3" H 10250 1050 50  0000 C BNN
+F 1 "TEST" H 10250 1000 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 10250 750 50  0001 C CNN
+F 3 "" H 10250 750 50  0001 C CNN
+	1    10250 750 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST TP4
+U 1 1 59267E34
+P 10250 1000
+F 0 "TP4" H 10250 1300 50  0000 C BNN
+F 1 "TEST" H 10250 1250 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Big" H 10250 1000 50  0001 C CNN
+F 3 "" H 10250 1000 50  0001 C CNN
+	1    10250 1000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDA #PWR095
+U 1 1 59267FA8
+P 10350 1100
+F 0 "#PWR095" H 10350 850 50  0001 C CNN
+F 1 "GNDA" H 10355 927 50  0000 C CNN
+F 2 "" H 10350 1100 50  0000 C CNN
+F 3 "" H 10350 1100 50  0000 C CNN
+	1    10350 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10250 1000 10350 1000
+Wire Wire Line
+	10350 1000 10350 1100
+$Comp
+L +5V #PWR096
+U 1 1 59269684
+P 3150 1250
+F 0 "#PWR096" H 3150 1100 50  0001 C CNN
+F 1 "+5V" H 3150 1390 50  0000 C CNN
+F 2 "" H 3150 1250 50  0001 C CNN
+F 3 "" H 3150 1250 50  0001 C CNN
+	1    3150 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1250 3150 1350
+Wire Wire Line
+	3150 1350 3250 1350
+$Comp
+L GND #PWR097
+U 1 1 59269CB2
+P 3150 1700
+F 0 "#PWR097" H 3150 1450 50  0001 C CNN
+F 1 "GND" H 3155 1527 50  0000 C CNN
+F 2 "" H 3150 1700 50  0000 C CNN
+F 3 "" H 3150 1700 50  0000 C CNN
+	1    3150 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1700 3150 1550
+Wire Wire Line
+	3150 1550 3250 1550
+Text Label 10500 750  2    60   ~ 0
+KSI
+Wire Wire Line
+	10250 750  10500 750 
 $EndSCHEMATC
