@@ -190,7 +190,7 @@ F 3 "" H 11600 9250 50  0000 C CNN
 	1    11600 9250
 	-1   0    0    -1  
 $EndComp
-Text Label 12400 4000 2    60   ~ 0
+Text Label 12400 4100 2    60   ~ 0
 GLV_CURRENT
 Text Label 12400 4600 2    60   ~ 0
 SDA1
@@ -342,25 +342,21 @@ $EndComp
 $Comp
 L GND #PWR012
 U 1 1 58BAD6C3
-P 1100 2150
-F 0 "#PWR012" H 1100 1900 50  0001 C CNN
-F 1 "GND" H 1105 1977 50  0000 C CNN
-F 2 "" H 1100 2150 50  0000 C CNN
-F 3 "" H 1100 2150 50  0000 C CNN
-	1    1100 2150
+P 650 2200
+F 0 "#PWR012" H 650 1950 50  0001 C CNN
+F 1 "GND" H 655 2027 50  0000 C CNN
+F 2 "" H 650 2200 50  0000 C CNN
+F 3 "" H 650 2200 50  0000 C CNN
+	1    650  2200
 	-1   0    0    -1  
 $EndComp
-Text Label 2450 2050 2    60   ~ 0
-SHTDWN_OUT
-Text Label 15850 5000 2    60   ~ 0
-SHTDWN_OUT
+Text Label 2500 2050 2    60   ~ 0
+SHUTDOWN_OUT
 Text Label 2250 2950 0    60   ~ 0
 GLVMS
 Text Label 4350 2950 2    60   ~ 0
-MC_SHUTDOWN
-Text Label 15850 4900 2    60   ~ 0
-MC_SHUTDOWN
-Text Label 750  2050 0    60   ~ 0
+SHUTDOWN_OUT
+Text Label 2500 2350 2    60   ~ 0
 GLVMS
 Text Label 8950 2900 0    60   ~ 0
 START_CAR
@@ -368,7 +364,6 @@ Text Label 15850 4750 2    60   ~ 0
 PC_CTRL
 Text Label 8950 3500 0    60   ~ 0
 1PPS
-NoConn ~ 11750 4100
 $Comp
 L +3.3V #PWR013
 U 1 1 58BC100A
@@ -677,9 +672,9 @@ F 3 "" H 11100 1950 50  0001 C CNN
 $EndComp
 Text Notes 9950 850  0    60   ~ 0
 Run USB from Teensy to J1, and J2 to exterior
-Text Label 2450 2150 2    60   ~ 0
+Text Label 2500 2150 2    60   ~ 0
 START_CAR
-Text Label 750  2250 0    60   ~ 0
+Text Label 850  2250 0    60   ~ 0
 BRAKE_IN
 Text Label 8950 3400 0    60   ~ 0
 BRAKE_IN
@@ -1076,11 +1071,11 @@ F 3 "" H 3350 6400 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 NoConn ~ 11750 3300
-Text Label 850  2350 0    60   ~ 0
+Text Label 2500 1950 2    60   ~ 0
 IMD_F_OUT
-Text Label 2450 2350 2    60   ~ 0
+Text Label 850  2050 0    60   ~ 0
 AMS_F_OUT
-Text Label 2450 1950 2    60   ~ 0
+Text Label 2500 2250 2    60   ~ 0
 TSMS
 $Comp
 L D_Zener_Small D1
@@ -1104,14 +1099,10 @@ F 3 "" V 5900 9800 50  0001 C CNN
 	1    5900 9800
 	1    0    0    -1  
 $EndComp
-Text Label 2450 2250 2    60   ~ 0
+Text Label 850  2350 0    60   ~ 0
 AIR+
 Text Notes 2650 4600 0    60   ~ 0
 Gets power from TSMS,\ndirectly controls TS+ AIR
-Text Label 15850 5150 2    60   ~ 0
-MC_OVERRIDE
-Text Label 12400 5000 2    60   ~ 0
-MC_OVERRIDE
 Text Label 14100 6500 0    60   ~ 0
 SCL0
 Text Label 14100 6600 0    60   ~ 0
@@ -1186,13 +1177,9 @@ Wire Wire Line
 	3650 4950 3650 4850
 Wire Wire Line
 	3650 3050 3650 2950
-Wire Wire Line
-	12400 5000 11750 5000
-Wire Wire Line
-	15050 5150 15850 5150
 Connection ~ 3650 4850
 Wire Wire Line
-	2450 2250 1850 2250
+	850  2350 1350 2350
 Connection ~ 2650 3500
 Wire Wire Line
 	2400 3500 2650 3500
@@ -1202,9 +1189,9 @@ Connection ~ 2400 3150
 Wire Wire Line
 	2400 3250 2400 3150
 Wire Wire Line
-	1850 1950 2450 1950
+	1850 2250 2500 2250
 Wire Wire Line
-	2450 2350 1850 2350
+	1350 2050 850  2050
 Wire Wire Line
 	2700 7450 2800 7450
 Wire Wire Line
@@ -1408,11 +1395,11 @@ Wire Wire Line
 Wire Wire Line
 	9550 3400 8950 3400
 Wire Wire Line
-	850  2350 1350 2350
+	2500 1950 1850 1950
 Wire Wire Line
-	1350 2250 750  2250
+	1350 2250 850  2250
 Wire Wire Line
-	1850 2150 2450 2150
+	1850 2150 2500 2150
 Connection ~ 11100 1900
 Wire Wire Line
 	11100 1850 11100 1950
@@ -1526,15 +1513,11 @@ Wire Wire Line
 Wire Wire Line
 	11750 4200 12050 4200
 Wire Wire Line
-	750  2050 1350 2050
-Wire Wire Line
-	15050 4900 15850 4900
+	2500 2350 1850 2350
 Wire Wire Line
 	2750 2950 2250 2950
 Wire Wire Line
-	15050 5000 15850 5000
-Wire Wire Line
-	1850 2050 2450 2050
+	1850 2050 2500 2050
 Wire Wire Line
 	850  950  850  850 
 Wire Wire Line
@@ -1613,7 +1596,7 @@ Wire Wire Line
 Wire Wire Line
 	7800 3600 9550 3600
 Wire Wire Line
-	12400 4000 11750 4000
+	12400 4100 11750 4100
 Wire Wire Line
 	11600 9150 11000 9150
 Wire Wire Line
@@ -1707,8 +1690,8 @@ $EndComp
 Wire Wire Line
 	650  2150 1350 2150
 Wire Wire Line
-	650  2150 650  2050
-Connection ~ 1100 2150
+	650  2050 650  2200
+Connection ~ 650  2150
 $Sheet
 S 13650 4400 1400 900 
 U 58B1642E
@@ -1717,16 +1700,13 @@ F1 "file58B1642D.sch" 60
 F2 "SDA_IN" I L 13650 4600 60 
 F3 "SCL_IN" I L 13650 4700 60 
 F4 "DAC_LATCH" I L 13650 4500 60 
-F5 "Shutdown_In" I R 15050 4900 60 
-F6 "Shutdown_Out" O R 15050 5000 60 
-F7 "PRECHARGE" I R 15050 4750 60 
-F8 "+5V" I R 15050 4500 60 
-F9 "TSMS" I R 15050 4650 60 
-F10 "F_L1" O L 13650 5100 60 
-F11 "F_L2" O L 13650 5000 60 
-F12 "F_R1" O L 13650 4900 60 
-F13 "F_R2" O L 13650 4800 60 
-F14 "MC_OVERRIDE" I R 15050 5150 60 
+F5 "PRECHARGE" I R 15050 4750 60 
+F6 "+5V" I R 15050 4500 60 
+F7 "TSMS" I R 15050 4650 60 
+F8 "F_L1" O L 13650 5100 60 
+F9 "F_L2" O L 13650 5000 60 
+F10 "F_R1" O L 13650 4900 60 
+F11 "F_R2" O L 13650 4800 60 
 $EndSheet
 $Comp
 L UltimateSensorFusion U6
@@ -1940,5 +1920,40 @@ Wire Wire Line
 	11750 4400 12400 4400
 Text Label 12050 4200 2    60   ~ 0
 GND
-NoConn ~ 11750 3900
+Wire Wire Line
+	13650 4800 13150 4800
+Text Label 13150 4800 0    60   ~ 0
+F_R2
+Text Label 13150 4900 0    60   ~ 0
+F_R1
+Text Label 13150 5000 0    60   ~ 0
+F_L2
+Text Label 13150 5100 0    60   ~ 0
+F_L1
+Wire Wire Line
+	13150 4900 13650 4900
+Wire Wire Line
+	13150 5000 13650 5000
+Wire Wire Line
+	13150 5100 13650 5100
+Wire Wire Line
+	11750 3700 12250 3700
+Text Label 12250 3700 2    60   ~ 0
+F_R2
+Text Label 12250 3800 2    60   ~ 0
+F_R1
+Text Label 12250 3900 2    60   ~ 0
+F_L2
+Text Label 12250 4000 2    60   ~ 0
+F_L1
+Wire Wire Line
+	12250 3800 11750 3800
+Wire Wire Line
+	12250 3900 11750 3900
+Wire Wire Line
+	12250 4000 11750 4000
+NoConn ~ 9550 3000
+NoConn ~ 9550 3100
+NoConn ~ 11750 3400
+NoConn ~ 11750 5000
 $EndSCHEMATC
