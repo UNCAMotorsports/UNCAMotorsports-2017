@@ -3,7 +3,11 @@
   (general
     (links 373)
     (no_connects 0)
+<<<<<<< Updated upstream
     (area 36.026674 70.76948 152.643114 132.54606)
+=======
+    (area 36.026674 70.4847 152.643114 132.54606)
+>>>>>>> Stashed changes
     (thickness 1.6)
     (drawings 12)
     (tracks 1392)
