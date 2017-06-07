@@ -1,0 +1,72 @@
+Reference, Quantity, Value, Footprint,In Cart
+C2 ,1,.1uF,Capacitors_SMD:C_0805_HandSoldering,Yes
+C10 C11 ,2,0.1uF,Capacitors_SMD:C_0805_HandSoldering,Yes
+C14 C15 C7 C8 C9 ,5,10uF,Capacitors_SMD:C_0805_HandSoldering,Yes
+C12 C13 C16 C17 C3 C4 ,6,1uF,Capacitors_SMD:C_0805_HandSoldering,Yes
+C6 ,1,1uF_Al,Capacitors_SMD:C_0805_HandSoldering,Yes
+C18 ,1,22uF,Capacitors_SMD:C_0805_HandSoldering,
+C1 ,1,10uF_Al,Capacitors_SMD:c_elec_5x5.8,
+C5 ,1,100uF_Al,Capacitors_SMD:c_elec_6.3x7.7,
+J11 ,1,RPI_PWR,Connectors_Molex:Molex_NanoFit_1x02x2.50mm_Straight,Yes
+P5 ,1,CONN_02X04,Connectors_Molex:Molex_NanoFit_2x04x2.50mm_Straight,Yes
+P1 P2 ,2,OUTPUTS,Connectors_Molex:Molex_NanoFit_2x04x2.50mm_Straight,Yes
+J1 ,1,CONN_02X05,Connectors_Molex:Molex_NanoFit_2x05x2.50mm_Straight,Yes
+J10 J9 ,2,CONN_01X12,Connectors_Molex:Molex_NanoFit_2x06x2.50mm_Straight,Yes
+D15 D18 ,2,1N4001,Diodes_SMD:SMA_Handsoldering,Yes
+D14 ,1,D,Diodes_SMD:SMA_Handsoldering,Yes
+D6 ,1,D_ALT,Diodes_SMD:SMA_Handsoldering,Yes
+D5 ,1,D_Schottky,Diodes_SMD:SMA_Handsoldering,Yes
+D1 D2 D7 ,3,3.3V,Diodes_SMD:SOD-323,Yes
+U24 ,1,MCP47FEBX2,Housings_SSOP:TSSOP-8_4.4x3mm_Pitch0.65mm,Yes
+D20 ,1,RPI_PWR,LEDs:LED_0805,Yes
+D8 ,1,12V_Status,LEDs:LED-0805,Yes
+D10 ,1,3DFix,LEDs:LED-0805,Yes
+D19 ,1,5V_ISO,LEDs:LED-0805,Yes
+D9 ,1,5V_Status,LEDs:LED-0805,Yes
+D11 ,1,CANRX,LEDs:LED-0805,Yes
+D12 ,1,CANTX,LEDs:LED-0805,Yes
+D3 ,1,SCL0,LEDs:LED-0805,Yes
+D4 ,1,SDA0,LEDs:LED-0805,Yes
+TP1 TP2 TP3 TP4 ,4,TEST,Measurement_Points:Measurement_Point_Round-SMD-Pad_Big,Yes
+P4 ,1,CONN_01X02,Pin_Headers:Pin_Header_Straight_1x02,
+J7 ,1,CAN_SER,Pin_Headers:Pin_Header_Straight_1x03,
+J8 ,1,CONN_01X03,Pin_Headers:Pin_Header_Straight_1x03,
+J5 ,1,I2C_0,Pin_Headers:Pin_Header_Straight_1x03,
+J6 ,1,I2C_1,Pin_Headers:Pin_Header_Straight_1x03,
+J2 ,1,USF_SLAVE_I2C,Pin_Headers:Pin_Header_Straight_1x03,
+R32 ,1,120,Resistors_SMD:R_0805_HandSoldering,
+R22 R23 R30 R33 R34 ,5,220,Resistors_SMD:R_0805_HandSoldering,
+R29 R39 R48 R51 ,4,470,Resistors_SMD:R_0805_HandSoldering,
+R27 R5 R6 ,3,620,Resistors_SMD:R_0805_HandSoldering,
+R2 R26 R4 ,3,0R,Resistors_SMD:R_0805_HandSoldering,
+R1 R10 R11 R12 R13 R14 R15 R16 R17 R18 R19 R21 R3 R31 R35 R40 R41 R7 R8 R9 ,20,10k,Resistors_SMD:R_0805_HandSoldering,
+R25 ,1,120k,Resistors_SMD:R_0805_HandSoldering,
+R20 R28 ,2,2.2k,Resistors_SMD:R_0805_HandSoldering,
+R24 ,1,330k,Resistors_SMD:R_0805_HandSoldering,
+R37 R38 R42 R43 R44 R45 R46 R47 ,8,4.7k,Resistors_SMD:R_0805_HandSoldering,
+R49 R50 ,2,DNP,Resistors_SMD:R_0805_HandSoldering,
+F11 ,1,2A,Resistors_SMD:R_1210_HandSoldering,
+F1 F10 F2 F3 F4 F5 F6 F7 F8 ,9,3A,Resistors_SMD:R_1210_HandSoldering,
+F9 ,1,5A,Resistors_SMD:R_1210_HandSoldering,
+U20 ,1,ISO1540,SMD_Packages:SOIC-8-N,Yes
+U15 ,1,MCP2551,SMD_Packages:SOIC-8-N,Yes
+Q1 Q2 Q3 Q6 Q7 ,5,Q_NMOS_GSD,TO_SOT_Packages_SMD:SOT-23_Handsoldering,
+Q4 ,1,Q_PMOS_GSD,TO_SOT_Packages_SMD:SOT-23_Handsoldering,
+U9 ,1,TL431,TO_SOT_Packages_SMD:SOT-23_Handsoldering,Yes
+U14 ,1,NDC7002N,TO_SOT_Packages_SMD:SOT-23-6,Yes
+U8 ,1,NDC7003P,TO_SOT_Packages_SMD:SOT-23-6,Yes
+BT1 ,1,CR1220,UNCAMotorsports:BATT_CR1220,Yes
+U23 ,1,PC_RLY,UNCAMotorsports:G6DN-1A,Yes
+U12 ,1,FGMMOPA6H,UNCAMotorsports:GPS_16x16,Yes
+U5 ,1,H3LIS331DL,UNCAMotorsports:LGA-16-3x3,Yes
+U11 ,1,R-78E5.0-1.0,UNCAMotorsports:R-78Cxx-1.0,Yes
+U25 ,1,V7805W-2000,UNCAMotorsports:R-78Cxx-1.0,Yes
+U19 ,1,RI-0505S,UNCAMotorsports:RI-0505S,Yes
+U22 ,1,OPTO-TRANSISTOR-4,UNCAMotorsports:SOIC16,Yes
+U1 U2 ,2,BTS4130QGA,UNCAMotorsports:SOIC20-WIDE,Yes
+U21 ,1,TCMT1103,UNCAMotorsports:SSOP-4,Yes
+U7 ,1,Teensy_3.5,UNCAMotorsports:Teensy_3.5,Yes
+U10 U3 U4 ,3,BTS6133D,UNCAMotorsports:TO-252-5,Yes
+U13 ,1,U.FL_Antenna,UNCAMotorsports:U.FL-CON,
+U6 ,1,UltimateSensorFusion,UNCAMotorsports:UltimateSensorFusion,
+J3 J4 ,2,USB_A,,

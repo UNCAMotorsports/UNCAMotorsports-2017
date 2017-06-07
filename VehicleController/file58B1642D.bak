@@ -609,13 +609,13 @@ F 3 "" H 3150 1700 50  0000 C CNN
 $EndComp
 Text Label 10500 750  2    60   ~ 0
 KSI
-Text Label 12650 4350 2    60   ~ 0
-FAULT_R2
 Text Label 12650 4250 2    60   ~ 0
+FAULT_R2
+Text Label 12650 4350 2    60   ~ 0
 FAULT_R1
-Text Label 11100 4250 0    60   ~ 0
-FAULT_L1
 Text Label 11100 4350 0    60   ~ 0
+FAULT_L1
+Text Label 11100 4250 0    60   ~ 0
 FAULT_L2
 $Comp
 L GNDA #PWR093
@@ -843,13 +843,13 @@ Connection ~ 10950 6000
 Wire Wire Line
 	10950 5900 10950 6000
 Wire Wire Line
-	12150 4250 12650 4250
+	12150 4350 12650 4350
 Wire Wire Line
-	12650 4350 12150 4350
-Wire Wire Line
-	11650 4350 11100 4350
+	12650 4250 12150 4250
 Wire Wire Line
 	11650 4250 11100 4250
+Wire Wire Line
+	11650 4350 11100 4350
 Wire Wire Line
 	10250 750  10500 750 
 Wire Wire Line
