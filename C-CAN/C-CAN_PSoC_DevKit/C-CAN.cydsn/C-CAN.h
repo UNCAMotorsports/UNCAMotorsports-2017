@@ -24,6 +24,13 @@
 #define TRANSMIT_BUFFER_SIZE  80
 #define PEDAL_THROW 2564
 
+//throttle maximums and minimums in millivolts
+
+#define T_ONE_MAX 5000
+#define T_TWO_MAX 5000
+#define T_ONE_MIN 0
+#define T_TWO_MIN 0
+
 typedef unsigned char bool; //C doesn't have a boolean type by default
 
 bool THROTTLE_IMPLAUSIBLE;
@@ -70,7 +77,8 @@ Pot two;
 Pot three;
 Pot four;
 Encoder wheel;
-Throttle throttle;
+Throttle tOne;
+Throttle tTwo;
 
 
 static bool temp_enable[8]; //Holds previous enable configuration during config()
@@ -91,7 +99,7 @@ void GetThrottle(Throttle * throttleOne, Throttle * throttleTwo);
 void SensorSet(Sensor * sensor, uint8 number_set,
     uint8 window_set, uint16 rate_set, uint16 CAN_rate_set, uint32 CAN_ID_set);
 
-void ThrottleInit(Throttle * throttle, Pot * pot);
+void ThrottleInit(Throttle * throttle, Pot * pot, int16 min, int16 max);
 void PotInit(Pot * pot);
 void EncoderInit(Encoder * encoder);
 

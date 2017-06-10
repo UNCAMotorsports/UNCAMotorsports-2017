@@ -168,7 +168,37 @@
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\cymetadata.c</v>
 <v>C-CAN\C-CAN\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
+<v>C-CAN\C-CAN\TopDesign</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Pins</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Analog</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Clocks</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Interrupts</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\DMA</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\System</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Directives</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Flash Security</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\EEPROM</v>
+<v>C-CAN\C-CAN\Header Files</v>
+<v>C-CAN\C-CAN\Header Files\C-CAN.h</v>
+<v>C-CAN\C-CAN\Source Files</v>
+<v>C-CAN\C-CAN\Source Files\C-CAN.c</v>
+<v>C-CAN\C-CAN\Source Files\main.c</v>
+<v>C-CAN\C-CAN\Generated_Source</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_INT.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1\ADC_SAR_1_PM.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass\ADC_SAR_1_Bypass_aliases.h</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -178,7 +208,13 @@
 <v>C-CAN\C-CAN\TopDesign\TopDesign.cysch</v>
 <v>C-CAN\C-CAN\TopDesign\TopDesign_01.cymacro</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
+<v>C-CAN\C-CAN\TopDesign</v>
+<v>C-CAN\C-CAN\TopDesign\TopDesign.cysch</v>
+<v>C-CAN\C-CAN\TopDesign\TopDesign_01.cymacro</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -215,6 +251,7 @@
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\DMA_1_dma.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Em_EEPROM.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Enc.lst</v>
 <v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Enc_Timer.lst</v>
@@ -237,7 +274,37 @@
 <v>C-CAN\C-CAN\C-CAN.rpt</v>
 <v>C-CAN\C-CAN\C-CAN_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
+<v>C-CAN\C-CAN\CortexM3</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_Bypass.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloadable_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_INT.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_PM.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_TX_RX_func.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\C-CAN.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_2.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_3.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_4.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1_PM.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cybootloader.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -271,7 +338,32 @@
 <v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
 <v>C-CAN\C-CAN\Em_EEPROM_v1_20.pdf</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
+<v>C-CAN\C-CAN\PSoC 5LP Architecture TRM</v>
+<v>C-CAN\C-CAN\CY8C58LP Family Datasheet</v>
+<v>C-CAN\C-CAN\System Reference Guides</v>
+<v>C-CAN\C-CAN\System Reference Guides\cy_boot_v5_50</v>
+<v>C-CAN\C-CAN\ADC_SAR_v3_0.pdf</v>
+<v>C-CAN\C-CAN\AMuxHw_v1_50.pdf</v>
+<v>C-CAN\C-CAN\and_v1_0.pdf</v>
+<v>C-CAN\C-CAN\BasicCounter_v1_0.pdf</v>
+<v>C-CAN\C-CAN\Bootloadable_v1_50.pdf</v>
+<v>C-CAN\C-CAN\CAN_v3_0.pdf</v>
+<v>C-CAN\C-CAN\Counter_v3_0</v>
+<v>C-CAN\C-CAN\Counter_v3_0\Counter_v3_0.pdf</v>
+<v>C-CAN\C-CAN\cy_clock_v2_20</v>
+<v>C-CAN\C-CAN\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>C-CAN\C-CAN\cy_constant_v1_0</v>
+<v>C-CAN\C-CAN\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>C-CAN\C-CAN\cy_dma_v1_70.pdf</v>
+<v>C-CAN\C-CAN\cy_pins_v2_20</v>
+<v>C-CAN\C-CAN\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>C-CAN\C-CAN\cy_sync_v1_0.pdf</v>
+<v>C-CAN\C-CAN\CyControlReg_v1_80.pdf</v>
+<v>C-CAN\C-CAN\Em_EEPROM_v1_20.pdf</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
@@ -295,7 +387,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="837, 559" SelectedTabbedMdiWindow="c1f8f295-fa8c-4044-8787-18f20398a72b"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="ed8c0dfa-55ab-4876-a956-927822663d25" Guid="c1f8f295-fa8c-4044-8787-18f20398a72b" /><DocumentWindow Key="c3eb13f3-87df-45a2-a52a-17577ac1c88f" Guid="d4d93b14-709e-483d-afe9-d6e370fd1dfe" /><DocumentWindow Key="c127124f-5f21-4ffc-aacf-44082d0a431e" Guid="7b18ef54-fda3-41e8-aefe-aa93365222aa" /><DocumentWindow Key="8becd79e-8d63-4c36-bb1f-b015d21c9ab1" Guid="7c19f011-38a4-4fe9-8338-edd124953df6" /><DocumentWindow Key="3cf28ff0-dc6c-4641-8c56-d4fabbe7cb8d" Guid="2c681005-124b-4b5d-a86a-f2c532700708" /><DocumentWindow Key="080a3b48-730a-4f2f-861e-c7894dad9df5" Guid="766cb2b9-4c03-4e69-a661-0736533cba80" /><DocumentWindow Key="87c1bbd7-143d-44b9-8c4f-621bdacc2f73" Guid="b35501d9-4890-44d9-9e0a-3b43ced69991" /><DocumentWindow Key="b76450ed-2cd3-4329-982a-2947b30b58ad" Guid="ba8c3063-e0a9-4502-924b-c836ddea4770" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="889, 559" SelectedTabbedMdiWindow="a0bb718b-11f0-4eb2-9687-b0b75ba7cf55"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="e776a305-f868-4fda-88a8-b267e114e35e" Guid="2a521560-2778-4c45-97aa-77b03f35b390" /><DocumentWindow Key="78e40e22-ad00-4cc4-b53d-415cb80721f3" Guid="f860bdd9-9ad6-48e0-8c37-8ec4a8cd2887" /><DocumentWindow Key="4159fedc-cd9d-476c-9cbd-3f17061520d8" Guid="3c37ac39-89e2-4ebc-a2b2-9e2e82099329" /><DocumentWindow Key="3e2db555-d731-4b0e-90bc-5694cb16e6ae" Guid="85a19ae5-e901-4195-a1c7-de63f87d0729" /><DocumentWindow Key="eade7fa2-ccae-4c13-9e93-067f215bf89c" Guid="a0bb718b-11f0-4eb2-9687-b0b75ba7cf55" /><DocumentWindow Key="55e928d0-59d6-4950-b8e8-8aee99301f9d" Guid="33c1cde8-e699-47fb-9c77-87c3e46a0b0a" /><DocumentWindow Key="f43eee48-ba49-46e5-9462-fba44329255e" Guid="2aa8ef34-594f-4316-97db-fdf28fd5b2ae" /><DocumentWindow Key="9134a646-b5e5-4335-b6b5-2e6ba1bd5356" Guid="c521e511-1f64-4f90-956c-110a801eff9b" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

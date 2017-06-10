@@ -135,14 +135,14 @@ void GetThrottle(Throttle * throttleOne, Throttle * throttleTwo){
     
 }
 
-void ThrottleInit(Throttle * throttle, Pot * pot){
+void ThrottleInit(Throttle * throttle, Pot * pot, int16 min, int16 max){
     int i = 0;
     throttle->pot = pot;
     for(i = 0; i < throttle->pot->sensor.window; i++){
         GetSample(throttle->pot);
     }
-    throttle->throttleMin = throttle->pot->mV-30;
-    throttle->throttleMax = throttle->throttleMin + PEDAL_THROW;
+    throttle->throttleMin = min;
+    throttle->throttleMax = max;
     throttle->timer_constant = throttle->pot->sensor.rate * 0.1;
 }
 

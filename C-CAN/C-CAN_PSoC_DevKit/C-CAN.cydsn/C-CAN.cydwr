@@ -28,6 +28,29 @@
         <Data key="sync_with_bus_clk" value="True" />
         <Data key="user_set_domain" value="False" />
       </Group>
+      <Group key="8a264757-46c5-4087-a731-d3638179e7ea">
+        <Data key="check_tolerance" value="True" />
+        <Data key="clock_version" value="v1" />
+        <Data key="derive_type" value="AUTO" />
+        <Data key="desired_freq" value="18" />
+        <Data key="desired_unit" value="6" />
+        <Data key="divider" value="4" />
+        <Data key="domain" value="DIGITAL" />
+        <Data key="enabled" value="True" />
+        <Data key="minus_accuracy" value="0.25" />
+        <Data key="minus_tolerance" value="5" />
+        <Data key="name" value="Clock_4" />
+        <Data key="netlist_name" value="Clock_4" />
+        <Data key="placement" value="AUTO" />
+        <Data key="plus_accuracy" value="0.25" />
+        <Data key="plus_tolerance" value="5" />
+        <Data key="scope" value="LOCAL" />
+        <Data key="src_clk_id" value="61737EF6-3B74-48f9-8B91-F7473A442AE7" />
+        <Data key="src_clk_name" value="MASTER_CLK" />
+        <Data key="start_on_reset" value="True" />
+        <Data key="sync_with_bus_clk" value="True" />
+        <Data key="user_set_domain" value="False" />
+      </Group>
       <Group key="8fbc7237-5877-481a-89b5-425e8138e74b/696a0979-21fc-4185-bf38-6c79febcde7a">
         <Data key="check_tolerance" value="False" />
         <Data key="clock_version" value="v1" />
@@ -103,10 +126,10 @@
         <Data key="derive_type" value="NAMED_FREQ" />
         <Data key="desired_freq" value="12.000000000000002" />
         <Data key="desired_unit" value="0" />
-        <Data key="divider" value="83" />
+        <Data key="divider" value="8333" />
         <Data key="domain" value="DIGITAL" />
         <Data key="enabled" value="True" />
-        <Data key="minus_accuracy" value="50" />
+        <Data key="minus_accuracy" value="55" />
         <Data key="minus_tolerance" value="5" />
         <Data key="name" value="Clock_1" />
         <Data key="named_src_direct_connect" value="False" />
@@ -337,8 +360,8 @@
         <Data key="ilo_1k_enabled" value="True" />
         <Data key="ilo_33k_enabled" value="False" />
         <Data key="ilo_100k_enabled" value="True" />
-        <Data key="ilo_oscillator" value="ILO_1kHz" />
-        <Data key="minus_accuracy" value="50" />
+        <Data key="ilo_oscillator" value="ILO_100kHz" />
+        <Data key="minus_accuracy" value="55" />
         <Data key="minus_tolerance" value="0" />
         <Data key="name" value="ILO" />
         <Data key="netlist_name" value="ILO" />
@@ -414,6 +437,7 @@
   <Group key="DWRInstGuidMapping">
     <Group key="Clock">
       <Data key="2c366327-8ea9-4813-ab0d-a7ce473af76e/ccbbccde-4db5-4009-af85-8e8bae589faa" value="CAN_1_Clock" />
+      <Data key="8a264757-46c5-4087-a731-d3638179e7ea" value="Clock_4" />
       <Data key="8fbc7237-5877-481a-89b5-425e8138e74b/696a0979-21fc-4185-bf38-6c79febcde7a" value="ADC_SAR_1_theACLK" />
       <Data key="41d54d57-17a5-4f4f-8473-3ab32489d000" value="Clock_1" />
       <Data key="44c7faef-3d84-40d8-b9a1-4626677b81d6" value="Clock_2" />

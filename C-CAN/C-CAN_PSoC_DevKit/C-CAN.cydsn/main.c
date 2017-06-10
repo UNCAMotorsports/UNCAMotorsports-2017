@@ -2,6 +2,21 @@
 * C-CAN
 * UNCA MOTORSPORTS
 *******************************************************************************/
+/*
+*TODO for pedal box C-CAN
+*
+*
+*
+*
+*
+*/
+
+//pedal C-CAN
+//sensor 1 is throttle one
+//sensor 2 is brake pedal
+//sensor 3 is throttle two
+//sensor 4 is steering
+
 
 #include <cydevice.h>
 #include "stdio.h"
@@ -68,8 +83,6 @@ int main()
     THROTTLE_IMPLAUSIBLE = 0;
     
     /* Initialize Variables */
-    CAN_Send_0(0xff,0,0xff,0,0xff,0,0xff,0);
-    CAN_Send_1(0xff,0,0xff,0,0xff,0,0xff,0);
     Control_Reg_1_Write(1);
     
     
@@ -80,19 +93,21 @@ int main()
     EncoderInit(&wheel);
     
     SensorEnable(&one.sensor,   TRUE);
-    SensorEnable(&two.sensor,   FALSE);
+    SensorEnable(&two.sensor,   TRUE);
     SensorEnable(&three.sensor, TRUE);
-    SensorEnable(&four.sensor,  FALSE);
+    SensorEnable(&four.sensor,  TRUE);
     SensorEnable(&wheel.sensor, FALSE);
     
-    //sensor, number, window, rate, CAN rate
-    SensorSet(&one.sensor,   0, 50, 1000, 100);
-    SensorSet(&two.sensor,   1,  1,     1,  1);
-    SensorSet(&three.sensor, 2, 50, 1000, 100);
-    SensorSet(&four.sensor,  3,  1,     1,  1);
-    SensorSet(&wheel.sensor,  6, 50, 1000, 200);
+    //sensor, number, window, rate, CAN rate, CAN msg ID
+    SensorSet(&one.sensor,   0, 50, 1000, 100, 0x01Du);
+    SensorSet(&two.sensor,   1, 50, 1000, 100, 0x011u); //brakes
+    SensorSet(&three.sensor, 2, 50, 1000, 100, 0x01Eu);
+    SensorSet(&four.sensor,  3, 50, 1000, 100, 0x012u); //steering
+    //SensorSet(&wheel.sensor, 6, 50, 1000, 100, );
     
-//    ThrottleInit(&throttle,&one);
+    //ThrottleInit(&tOne, &one,   T_ONE_MIN, T_TWO_MAX);
+    //ThrottleInit(&tTwo, &three, T_TWO_MIN, T_TWO_MAX);
+    //SensorSet(&tOne.pot->sensor, 0, 50, 1000, 100, 0x010u);
     
     #ifdef LOOP
     /*Point the Systick vector to the ISR in this file */
@@ -108,16 +123,12 @@ int main()
     
     /* Send message to verify COM port is connected properly */
     //UART_1_PutString("\n\rCOM Port Open\n\r");
-    CAN_Send_0(0xff,0,0xff,0,0xff,0,0xff,0);
-    CAN_Send_1(0xff,0,0xff,0,0xff,0,0xff,0);
     Control_Reg_1_Write(1);
     //LED_Write(1);
     
     CYGlobalIntEnable;
     
     Control_Reg_1_Write(0);
-    
-    CAN_Send_0('F','L',' ','G','O','O','D','!');
     
     for(;;){
         //CAN_Send(0,0,0,0,0,0,0,0);
@@ -141,22 +152,22 @@ int main()
         else if((wheel.sensor.flag==TRUE)&&(wheel.sensor.enable==TRUE)){
             GetRPM(&wheel);
         }
-//        else if((zero.sensor.CAN_flag==TRUE)&&(zero.sensor.enable==TRUE)){
-//            if(THROTTLE_IMPLAUSIBLE){
-//                CAN_Send_0(0x80,0,0,0,0,0,0,0); //put a 1 in the MSB to indicate implausible throttle
-//            }
-//           CAN_Send_0((uint8)(throttle.throttle>>8),(uint8)(throttle.throttle),0,0,0,0,0,0);
-//            zero.sensor.CAN_flag=FALSE;
-//        }
         else if((one.sensor.CAN_flag==TRUE)&&(one.sensor.enable==TRUE)){
             if(one.mV>4095){
                 one.mV = 4095;
             }
-            CAN_Send_1((uint8)(one.mV>>8) ,(uint8)(one.mV) ,0,0,0,0,0,0);
-            one.sensor.CAN_flag=FALSE;
+            one.sensor.sensorData.byte[0] = (uint8)(one.mV>>8);
+            one.sensor.sensorData.byte[1] = (uint8)(one.mV);
+            one.sensor.CAN_flag = FALSE;
         }
         else if((two.sensor.CAN_flag==TRUE)&&(two.sensor.enable==TRUE)){
-
+            if(two.mV>4095){
+                two.mV = 4095;   
+            }
+            two.sensor.sensorData.byte[0] = (uint8)(two.mV>>8);
+            two.sensor.sensorData.byte[1] = (uint8)(two.mV);
+            CAN_1_SendMsg(&two.sensor.sensorMsg);
+            two.sensor.CAN_flag = FALSE;
         }
         else if((three.sensor.CAN_flag==TRUE)&&(three.sensor.enable==TRUE)){
             if(three.mV>4095){
@@ -164,8 +175,8 @@ int main()
             }
             three.sensor.sensorData.byte[0] = (uint8)(three.mV>>8);
             three.sensor.sensorData.byte[1] = (uint8)(three.mV);
-            CAN_1_SendMsg(&one.sensor.sensorMsg);
-            three.sensor.CAN_flag=FALSE;
+            CAN_1_SendMsg(&three.sensor.sensorMsg);
+            three.sensor.CAN_flag = FALSE;
         }
         else if((four.sensor.CAN_flag==TRUE)&&(four.sensor.enable==TRUE)){
             if(four.mV>4095){
@@ -176,10 +187,10 @@ int main()
             CAN_1_SendMsg(&four.sensor.sensorMsg);
             four.sensor.CAN_flag=FALSE;
         }
-        else if((wheel.sensor.CAN_flag==TRUE)&&(wheel.sensor.enable==TRUE)){
-            CAN_Send_2((uint8)(wheel.rpm>>8),(uint8)(wheel.rpm),0,0,0,0,0,0);
-            wheel.sensor.CAN_flag=FALSE;
-        }
+//        else if((wheel.sensor.CAN_flag==TRUE)&&(wheel.sensor.enable==TRUE)){
+//            CAN_Send_2((uint8)(wheel.rpm>>8),(uint8)(wheel.rpm),0,0,0,0,0,0);
+//            wheel.sensor.CAN_flag=FALSE;
+//        }
         
         #endif
         
