@@ -3,11 +3,6 @@
 * UNCA MOTORSPORTS
 *******************************************************************************/
 
-//0x040 is throttle ID
-//0x041 is steering ID
-//0x042 is left rpm (and perhaps also right rpm. might combine the two into one message)
-//0x043 is right rpm
-
 #include <cydevice.h>
 #include "stdio.h"
 #include "stdlib.h"
@@ -39,39 +34,33 @@ static const uint8 CYCODE CAN_rate_config[16] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 CY_ISR(SysTick_ISR)
 {
     timer++;
-    if ((timer)    % GetRate(&zero.sensor)  == 0) { SetFlag(&zero.sensor,  TRUE); }
     if ((timer+1)  % GetRate(&one.sensor)   == 0) { SetFlag(&one.sensor,   TRUE); }
     if ((timer+2)  % GetRate(&two.sensor)   == 0) { SetFlag(&two.sensor,   TRUE); }
     if ((timer+3)  % GetRate(&three.sensor) == 0) { SetFlag(&three.sensor, TRUE); }
     if ((timer+4)  % GetRate(&four.sensor)  == 0) { SetFlag(&four.sensor,  TRUE); }
-    if ((timer+5)  % GetRate(&five.sensor)  == 0) { SetFlag(&five.sensor,  TRUE); }
-    if ((timer+6)  % GetRate(&left.sensor)  == 0) { SetFlag(&left.sensor,  TRUE); }
-    if ((timer+7)  % GetRate(&right.sensor) == 0) { SetFlag(&right.sensor, TRUE); }
-    if ((timer+8)  % GetCANRate(&zero.sensor)  == 0) { SetCANFlag(&zero.sensor,  TRUE); }
+    if ((timer+6)  % GetRate(&wheel.sensor)  == 0) { SetFlag(&wheel.sensor,  TRUE); }
     if ((timer+9)  % GetCANRate(&one.sensor)   == 0) { SetCANFlag(&one.sensor,   TRUE); }
     if ((timer+10) % GetCANRate(&two.sensor)   == 0) { SetCANFlag(&two.sensor,   TRUE); }
     if ((timer+11) % GetCANRate(&three.sensor) == 0) { SetCANFlag(&three.sensor, TRUE); }
     if ((timer+12) % GetCANRate(&four.sensor)  == 0) { SetCANFlag(&four.sensor,  TRUE); }
-    if ((timer+13) % GetCANRate(&five.sensor)  == 0) { SetCANFlag(&five.sensor,  TRUE); }
-    if ((timer+14) % GetCANRate(&left.sensor)  == 0) { SetCANFlag(&left.sensor,  TRUE); }
-    if ((timer+15) % GetCANRate(&right.sensor) == 0) { SetCANFlag(&right.sensor, TRUE); }
+    if ((timer+14) % GetCANRate(&wheel.sensor)  == 0) { SetCANFlag(&wheel.sensor,  TRUE); }
     //if ((timer) % 500 == 0) { Config();}
     if (timer >= TIMER_RATE)        { timer = 0; }
 }
 #endif
+
+void DMA_1_Config();
 
 int main()
 {
     
 
     /* Start the components */
+    DMA_1_Config();
     ADC_SAR_1_Start();
-    AMux_1_Start();
-    Encoder_Left_Start();
-    Encoder_Right_Start();
-    leftEncTimer_Start();
-    rightEncTimer_Start();
-    AMux_1_FastSelect(0);
+    ADC_SAR_1_StartConvert();
+    Encoder_Start();
+    Enc_Timer_Start();
     CAN_1_Start();
     //srand(12);
     
@@ -84,34 +73,26 @@ int main()
     Control_Reg_1_Write(1);
     
     
-    PotInit(&zero);
     PotInit(&one);
     PotInit(&two);
     PotInit(&three);
     PotInit(&four);
-    PotInit(&five);
-    EncoderInit(&left);
-    EncoderInit(&right);
+    EncoderInit(&wheel);
     
-    SensorEnable(&zero.sensor,  TRUE);
     SensorEnable(&one.sensor,   TRUE);
     SensorEnable(&two.sensor,   FALSE);
-    SensorEnable(&three.sensor, FALSE);
+    SensorEnable(&three.sensor, TRUE);
     SensorEnable(&four.sensor,  FALSE);
-    SensorEnable(&five.sensor,  FALSE);
-    SensorEnable(&left.sensor,  FALSE);
-    SensorEnable(&right.sensor, FALSE);
+    SensorEnable(&wheel.sensor, FALSE);
     
-    SensorSet(&zero.sensor,  0, 50, 1000, 100); //sensor, number, window, rate, CAN rate
-    SensorSet(&one.sensor,   1, 50, 1000, 100);
-    SensorSet(&two.sensor,   2,  1,     1,  1);
-    SensorSet(&three.sensor, 3,  1,     1,  1);
-    SensorSet(&four.sensor,  4,  1,     1,  1);
-    SensorSet(&five.sensor,  5,  1,     1,  1);
-    SensorSet(&left.sensor,  6, 50, 1000, 200);
-    SensorSet(&right.sensor, 7, 50, 1000, 200);
+    //sensor, number, window, rate, CAN rate
+    SensorSet(&one.sensor,   0, 50, 1000, 100);
+    SensorSet(&two.sensor,   1,  1,     1,  1);
+    SensorSet(&three.sensor, 2, 50, 1000, 100);
+    SensorSet(&four.sensor,  3,  1,     1,  1);
+    SensorSet(&wheel.sensor,  6, 50, 1000, 200);
     
-    ThrottleInit(&throttle,&zero);
+//    ThrottleInit(&throttle,&one);
     
     #ifdef LOOP
     /*Point the Systick vector to the ISR in this file */
@@ -136,16 +117,16 @@ int main()
     
     Control_Reg_1_Write(0);
     
+    CAN_Send_0('F','L',' ','G','O','O','D','!');
+    
     for(;;){
         //CAN_Send(0,0,0,0,0,0,0,0);
     
         //Config();
         #ifdef LOOP
-        if((zero.sensor.flag==TRUE)&&(zero.sensor.enable==TRUE)){
-            GetThrottle(&throttle,&throttle); //placeholder, will be throttleOne and throttleTwo.
-            //CAN_Send((uint8)(zero.mV>>8),(uint8)zero.mV,0,0,0,0,0,0);
-        }
-        else if((one.sensor.flag==TRUE)&&(one.sensor.enable==TRUE)){
+        //CAN_Send((uint8)(zero.mV>>8),(uint8)zero.mV,0,0,0,0,0,0);
+        
+        if((one.sensor.flag==TRUE)&&(one.sensor.enable==TRUE)){
             GetSample(&one);
         }
         else if((two.sensor.flag==TRUE)&&(two.sensor.enable==TRUE)){
@@ -157,22 +138,16 @@ int main()
         else if((four.sensor.flag==TRUE)&&(four.sensor.enable==TRUE)){
             GetSample(&four);
         }
-        else if((five.sensor.flag==TRUE)&&(five.sensor.enable==TRUE)){
-            GetSample(&five);
+        else if((wheel.sensor.flag==TRUE)&&(wheel.sensor.enable==TRUE)){
+            GetRPM(&wheel);
         }
-        else if((left.sensor.flag==TRUE)&&(left.sensor.enable==TRUE)){
-            GetRPM(&left);
-        }
-        else if((right.sensor.flag==TRUE)&&(right.sensor.enable==TRUE)){
-            GetRPM(&right);     
-        }
-        else if((zero.sensor.CAN_flag==TRUE)&&(zero.sensor.enable==TRUE)){
-            if(THROTTLE_IMPLAUSIBLE){
-                CAN_Send_0(0x80,0,0,0,0,0,0,0); //put a 1 in the MSB to indicate implausible throttle
-            }
-            CAN_Send_0((uint8)(throttle.throttle>>8),(uint8)(throttle.throttle),0,0,0,0,0,0);
-            zero.sensor.CAN_flag=FALSE;
-        }
+//        else if((zero.sensor.CAN_flag==TRUE)&&(zero.sensor.enable==TRUE)){
+//            if(THROTTLE_IMPLAUSIBLE){
+//                CAN_Send_0(0x80,0,0,0,0,0,0,0); //put a 1 in the MSB to indicate implausible throttle
+//            }
+//           CAN_Send_0((uint8)(throttle.throttle>>8),(uint8)(throttle.throttle),0,0,0,0,0,0);
+//            zero.sensor.CAN_flag=FALSE;
+//        }
         else if((one.sensor.CAN_flag==TRUE)&&(one.sensor.enable==TRUE)){
             if(one.mV>4095){
                 one.mV = 4095;
@@ -181,24 +156,29 @@ int main()
             one.sensor.CAN_flag=FALSE;
         }
         else if((two.sensor.CAN_flag==TRUE)&&(two.sensor.enable==TRUE)){
-            
+
         }
         else if((three.sensor.CAN_flag==TRUE)&&(three.sensor.enable==TRUE)){
-            
+            if(three.mV>4095){
+                three.mV = 4095;
+            }
+            three.sensor.sensorData.byte[0] = (uint8)(three.mV>>8);
+            three.sensor.sensorData.byte[1] = (uint8)(three.mV);
+            CAN_1_SendMsg(&one.sensor.sensorMsg);
+            three.sensor.CAN_flag=FALSE;
         }
         else if((four.sensor.CAN_flag==TRUE)&&(four.sensor.enable==TRUE)){
-            
+            if(four.mV>4095){
+                four.mV = 4095;
+            }
+            four.sensor.sensorData.byte[0] = (uint8)(four.mV>>8);
+            four.sensor.sensorData.byte[1] = (uint8)(four.mV);
+            CAN_1_SendMsg(&four.sensor.sensorMsg);
+            four.sensor.CAN_flag=FALSE;
         }
-        else if((five.sensor.CAN_flag==TRUE)&&(five.sensor.enable==TRUE)){
-            
-        }
-        else if((left.sensor.CAN_flag==TRUE)&&(left.sensor.enable==TRUE)){
-            CAN_Send_2((uint8)(left.rpm>>8),(uint8)(left.rpm),0,0,0,0,0,0);
-            left.sensor.CAN_flag=FALSE;
-        }
-        else if((right.sensor.CAN_flag==TRUE)&&(right.sensor.enable==TRUE)){
-            CAN_Send_3((uint8)(right.rpm>>8),(uint8)(right.rpm),0,0,0,0,0,0);
-            right.sensor.CAN_flag=FALSE;
+        else if((wheel.sensor.CAN_flag==TRUE)&&(wheel.sensor.enable==TRUE)){
+            CAN_Send_2((uint8)(wheel.rpm>>8),(uint8)(wheel.rpm),0,0,0,0,0,0);
+            wheel.sensor.CAN_flag=FALSE;
         }
         
         #endif
@@ -206,6 +186,41 @@ int main()
     }
 }
 
+void DMA_1_Config(void)
+{
+    
+/* Variable declarations for DMA_1 */
+/* Move these variable declarations to the top of the function */
+uint8 DMA_1_Chan;
+uint8 DMA_1_TD[4];
+
+/* Defines for DMA_1 */
+#define DMA_1_BYTES_PER_BURST 2
+#define DMA_1_REQUEST_PER_BURST 1
+#define DMA_1_SRC_BASE (CYDEV_PERIPH_BASE)
+#define DMA_1_DST_BASE (CYDEV_SRAM_BASE)
+
+
+/* DMA Configuration for DMA_1 */
+DMA_1_Chan = DMA_1_DmaInitialize(DMA_1_BYTES_PER_BURST, DMA_1_REQUEST_PER_BURST, 
+    HI16(DMA_1_SRC_BASE), HI16(DMA_1_DST_BASE));
+DMA_1_TD[0] = CyDmaTdAllocate();
+DMA_1_TD[1] = CyDmaTdAllocate();
+DMA_1_TD[2] = CyDmaTdAllocate();
+DMA_1_TD[3] = CyDmaTdAllocate();
+CyDmaTdSetConfiguration(DMA_1_TD[0], 2, DMA_1_TD[1], 0);
+CyDmaTdSetConfiguration(DMA_1_TD[1], 2, DMA_1_TD[2], 0);
+CyDmaTdSetConfiguration(DMA_1_TD[2], 2, DMA_1_TD[3], 0);
+CyDmaTdSetConfiguration(DMA_1_TD[3], 2, DMA_1_TD[0], 0);
+CyDmaTdSetAddress(DMA_1_TD[0], LO16((uint32)ADC_SAR_1_SAR_WRK0_PTR), LO16((uint32)&one.sensor.sample));
+CyDmaTdSetAddress(DMA_1_TD[1], LO16((uint32)ADC_SAR_1_SAR_WRK0_PTR), LO16((uint32)&two.sensor.sample));
+CyDmaTdSetAddress(DMA_1_TD[2], LO16((uint32)ADC_SAR_1_SAR_WRK0_PTR), LO16((uint32)&three.sensor.sample));
+CyDmaTdSetAddress(DMA_1_TD[3], LO16((uint32)ADC_SAR_1_SAR_WRK0_PTR), LO16((uint32)&four.sensor.sample));
+CyDmaChSetInitialTd(DMA_1_Chan, DMA_1_TD[0]);
+CyDmaChEnable(DMA_1_Chan, 1);
+
+    
+}
 
 
 /* [] END OF FILE */

@@ -448,12 +448,12 @@
   <Group key="Pin2">
     <Group key="0e74077e-3f77-48e5-a6e0-dc63da776cdd">
       <Group key="0">
-        <Data key="Port Format" value="3,2" />
+        <Data key="Port Format" value="3,1" />
       </Group>
     </Group>
     <Group key="4a6d0cee-4407-43d9-8e2b-25e45eab6e4f">
       <Group key="0">
-        <Data key="Port Format" value="3,1" />
+        <Data key="Port Format" value="3,0" />
       </Group>
     </Group>
     <Group key="5da2ee05-b995-4eb7-92e3-cece4070ab85">

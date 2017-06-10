@@ -144,7 +144,7 @@ static void CyClockStartupError(uint8 errorCode)
 }
 #endif
 
-#define CY_CFG_BASE_ADDR_COUNT 30u
+#define CY_CFG_BASE_ADDR_COUNT 27u
 CYPACKED typedef struct
 {
 	uint8 offset;
@@ -152,19 +152,19 @@ CYPACKED typedef struct
 } CYPACKED_ATTR cy_cfg_addrvalue_t;
 
 #define cy_cfg_addr_table ((const uint32 CYFAR *)(0x48000000u + CYAPP_ECC_OFFSET))
-#define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)(0x48000078u + CYAPP_ECC_OFFSET))
+#define cy_cfg_data_table ((const cy_cfg_addrvalue_t CYFAR *)(0x4800006Cu + CYAPP_ECC_OFFSET))
 
 /* IOPINS0_0 Address: CYREG_PRT0_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)(0x48000458u + CYAPP_ECC_OFFSET))
+#define BS_IOPINS0_0_VAL ((const uint8 CYFAR *)(0x480003A0u + CYAPP_ECC_OFFSET))
 
 /* IOPINS0_1 Address: CYREG_PRT1_DR Size (bytes): 10 */
-#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)(0x48000460u + CYAPP_ECC_OFFSET))
+#define BS_IOPINS0_1_VAL ((const uint8 CYFAR *)(0x480003A8u + CYAPP_ECC_OFFSET))
 
 /* IOPINS0_2 Address: CYREG_PRT2_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)(0x4800046Cu + CYAPP_ECC_OFFSET))
+#define BS_IOPINS0_2_VAL ((const uint8 CYFAR *)(0x480003B4u + CYAPP_ECC_OFFSET))
 
 /* IOPINS0_3 Address: CYREG_PRT3_DM0 Size (bytes): 8 */
-#define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)(0x48000474u + CYAPP_ECC_OFFSET))
+#define BS_IOPINS0_3_VAL ((const uint8 CYFAR *)(0x480003BCu + CYAPP_ECC_OFFSET))
 
 
 /*******************************************************************************
@@ -301,12 +301,12 @@ static void AnalogSetDefault(void)
 	/* Disable PRES while setting up SAR voltage reference */
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_RESET_CR4), (cr4 | 0x03u));
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_RESET_CR5), (cr5 | 0x03u));
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_PRT3_AG, 0x1Bu);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_CSR1, 0x40u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_CSR3, 0x40u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_DAC3_SW4, 0x30u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_SW0, 0xE0u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_SW0, 0xB0u);
 	CY_SET_XTND_REG8((void CYFAR *)CYREG_SAR0_SW3, 0x20u);
-	CY_SET_XTND_REG8((void CYFAR *)CYREG_BUS_SW0, 0xE0u);
+	CY_SET_XTND_REG8((void CYFAR *)CYREG_BUS_SW0, 0xB0u);
 	CyDelayUs(10u); /* Allow vref to settle before re-enabling PRES */
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_RESET_CR5), (cr5));
 	CY_SET_XTND_REG8((void CYFAR *)(CYREG_RESET_CR4), (cr4));
@@ -346,71 +346,6 @@ void SetAnalogRoutingPumps(uint8 enabled)
 }
 
 #define CY_AMUX_UNUSED CYREG_BOOST_SR
-/* This is an implementation detail of the AMux. Code that depends on it may be
-   incompatible with other versions of PSoC Creator. */
-uint8 CYXDATA * const CYCODE AMux_1__addrTable[6] = {
-	(uint8 CYXDATA *)CYREG_PRT3_AG, 
-	(uint8 CYXDATA *)CYREG_PRT3_AG, 
-	(uint8 CYXDATA *)CYREG_PRT3_AG, 
-	(uint8 CYXDATA *)CYREG_PRT3_AG, 
-	(uint8 CYXDATA *)CYREG_PRT3_AG, 
-	(uint8 CYXDATA *)CYREG_PRT3_AG, 
-};
-
-/* This is an implementation detail of the AMux. Code that depends on it may be
-   incompatible with other versions of PSoC Creator. */
-const uint8 CYCODE AMux_1__maskTable[6] = {
-	0x01u, 
-	0x02u, 
-	0x04u, 
-	0x08u, 
-	0x10u, 
-	0x20u, 
-};
-
-/*******************************************************************************
-* Function Name: AMux_1_Set
-********************************************************************************
-* Summary:
-*  This function is used to set a particular channel as active on the AMux.
-*
-* Parameters:  
-*   channel - The mux channel input to set as active
-*
-* Return:
-*   void
-*
-*******************************************************************************/
-void AMux_1_Set(uint8 channel)
-{
-	if (channel < 6)
-	{
-		*AMux_1__addrTable[channel] |= AMux_1__maskTable[channel];
-	}
-}
-
-/*******************************************************************************
-* Function Name: AMux_1_Unset
-********************************************************************************
-* Summary:
-*  This function is used to clear a particular channel from being active on the
-*  AMux.
-*
-* Parameters:  
-*   channel - The mux channel input to mark inactive
-*
-* Return:
-*   void
-*
-*******************************************************************************/
-void AMux_1_Unset(uint8 channel)
-{
-	if (channel < 6)
-	{
-		*AMux_1__addrTable[channel] &= (uint8)~AMux_1__maskTable[channel];
-	}
-}
-
 
 
 /*******************************************************************************
@@ -474,6 +409,9 @@ void cyfitter_cfg(void)
 		}
 
 		cfg_write_bytes32(cy_cfg_addr_table, cy_cfg_data_table);
+
+		/* Perform normal device configuration. Order is not critical for these items. */
+		CYMEMZERO((void CYFAR *)(CYREG_PHUB_CFGMEM0_CFG0), 4u);
 
 		/* Enable digital routing */
 		CY_SET_XTND_REG8((void CYFAR *)CYREG_BCTL0_BANK_CTL, CY_GET_XTND_REG8((void CYFAR *)CYREG_BCTL0_BANK_CTL) | 0x02u);

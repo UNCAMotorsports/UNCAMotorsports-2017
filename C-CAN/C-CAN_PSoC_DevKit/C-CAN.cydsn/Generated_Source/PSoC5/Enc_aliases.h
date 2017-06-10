@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: zero.h  
+* File Name: Enc.h  
 * Version 2.20
 *
 * Description:
@@ -15,8 +15,8 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#if !defined(CY_PINS_zero_ALIASES_H) /* Pins zero_ALIASES_H */
-#define CY_PINS_zero_ALIASES_H
+#if !defined(CY_PINS_Enc_ALIASES_H) /* Pins Enc_ALIASES_H */
+#define CY_PINS_Enc_ALIASES_H
 
 #include "cytypes.h"
 #include "cyfitter.h"
@@ -25,12 +25,12 @@
 /***************************************
 *              Constants        
 ***************************************/
-#define zero_0			(zero__0__PC)
-#define zero_0_INTR	((uint16)((uint16)0x0001u << zero__0__SHIFT))
+#define Enc_0			(Enc__0__PC)
+#define Enc_0_INTR	((uint16)((uint16)0x0001u << Enc__0__SHIFT))
 
-#define zero_INTR_ALL	 ((uint16)(zero_0_INTR))
+#define Enc_INTR_ALL	 ((uint16)(Enc_0_INTR))
 
-#endif /* End Pins zero_ALIASES_H */
+#endif /* End Pins Enc_ALIASES_H */
 
 
 /* [] END OF FILE */

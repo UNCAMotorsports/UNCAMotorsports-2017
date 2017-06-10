@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: Encoder_Right.c  
+* File Name: Encoder.c  
 * Version 3.0
 *
 *  Description:
@@ -16,13 +16,13 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#include "Encoder_Right.h"
+#include "Encoder.h"
 
-uint8 Encoder_Right_initVar = 0u;
+uint8 Encoder_initVar = 0u;
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_Init
+* Function Name: Encoder_Init
 ********************************************************************************
 * Summary:
 *     Initialize to the schematic state
@@ -34,97 +34,97 @@ uint8 Encoder_Right_initVar = 0u;
 *  void
 *
 *******************************************************************************/
-void Encoder_Right_Init(void) 
+void Encoder_Init(void) 
 {
-        #if (!Encoder_Right_UsingFixedFunction && !Encoder_Right_ControlRegRemoved)
+        #if (!Encoder_UsingFixedFunction && !Encoder_ControlRegRemoved)
             uint8 ctrl;
-        #endif /* (!Encoder_Right_UsingFixedFunction && !Encoder_Right_ControlRegRemoved) */
+        #endif /* (!Encoder_UsingFixedFunction && !Encoder_ControlRegRemoved) */
         
-        #if(!Encoder_Right_UsingFixedFunction) 
+        #if(!Encoder_UsingFixedFunction) 
             /* Interrupt State Backup for Critical Region*/
-            uint8 Encoder_Right_interruptState;
-        #endif /* (!Encoder_Right_UsingFixedFunction) */
+            uint8 Encoder_interruptState;
+        #endif /* (!Encoder_UsingFixedFunction) */
         
-        #if (Encoder_Right_UsingFixedFunction)
+        #if (Encoder_UsingFixedFunction)
             /* Clear all bits but the enable bit (if it's already set for Timer operation */
-            Encoder_Right_CONTROL &= Encoder_Right_CTRL_ENABLE;
+            Encoder_CONTROL &= Encoder_CTRL_ENABLE;
             
             /* Clear the mode bits for continuous run mode */
             #if (CY_PSOC5A)
-                Encoder_Right_CONTROL2 &= ((uint8)(~Encoder_Right_CTRL_MODE_MASK));
+                Encoder_CONTROL2 &= ((uint8)(~Encoder_CTRL_MODE_MASK));
             #endif /* (CY_PSOC5A) */
             #if (CY_PSOC3 || CY_PSOC5LP)
-                Encoder_Right_CONTROL3 &= ((uint8)(~Encoder_Right_CTRL_MODE_MASK));                
+                Encoder_CONTROL3 &= ((uint8)(~Encoder_CTRL_MODE_MASK));                
             #endif /* (CY_PSOC3 || CY_PSOC5LP) */
             /* Check if One Shot mode is enabled i.e. RunMode !=0*/
-            #if (Encoder_Right_RunModeUsed != 0x0u)
+            #if (Encoder_RunModeUsed != 0x0u)
                 /* Set 3rd bit of Control register to enable one shot mode */
-                Encoder_Right_CONTROL |= Encoder_Right_ONESHOT;
-            #endif /* (Encoder_Right_RunModeUsed != 0x0u) */
+                Encoder_CONTROL |= Encoder_ONESHOT;
+            #endif /* (Encoder_RunModeUsed != 0x0u) */
             
             /* Set the IRQ to use the status register interrupts */
-            Encoder_Right_CONTROL2 |= Encoder_Right_CTRL2_IRQ_SEL;
+            Encoder_CONTROL2 |= Encoder_CTRL2_IRQ_SEL;
             
             /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
-            Encoder_Right_RT1 &= ((uint8)(~Encoder_Right_RT1_MASK));
-            Encoder_Right_RT1 |= Encoder_Right_SYNC;     
+            Encoder_RT1 &= ((uint8)(~Encoder_RT1_MASK));
+            Encoder_RT1 |= Encoder_SYNC;     
                     
             /*Enable DSI Sync all all inputs of the Timer*/
-            Encoder_Right_RT1 &= ((uint8)(~Encoder_Right_SYNCDSI_MASK));
-            Encoder_Right_RT1 |= Encoder_Right_SYNCDSI_EN;
+            Encoder_RT1 &= ((uint8)(~Encoder_SYNCDSI_MASK));
+            Encoder_RT1 |= Encoder_SYNCDSI_EN;
 
         #else
-            #if(!Encoder_Right_ControlRegRemoved)
+            #if(!Encoder_ControlRegRemoved)
             /* Set the default compare mode defined in the parameter */
-            ctrl = Encoder_Right_CONTROL & ((uint8)(~Encoder_Right_CTRL_CMPMODE_MASK));
-            Encoder_Right_CONTROL = ctrl | Encoder_Right_DEFAULT_COMPARE_MODE;
+            ctrl = Encoder_CONTROL & ((uint8)(~Encoder_CTRL_CMPMODE_MASK));
+            Encoder_CONTROL = ctrl | Encoder_DEFAULT_COMPARE_MODE;
             
             /* Set the default capture mode defined in the parameter */
-            ctrl = Encoder_Right_CONTROL & ((uint8)(~Encoder_Right_CTRL_CAPMODE_MASK));
+            ctrl = Encoder_CONTROL & ((uint8)(~Encoder_CTRL_CAPMODE_MASK));
             
-            #if( 0 != Encoder_Right_CAPTURE_MODE_CONF)
-                Encoder_Right_CONTROL = ctrl | Encoder_Right_DEFAULT_CAPTURE_MODE;
+            #if( 0 != Encoder_CAPTURE_MODE_CONF)
+                Encoder_CONTROL = ctrl | Encoder_DEFAULT_CAPTURE_MODE;
             #else
-                Encoder_Right_CONTROL = ctrl;
-            #endif /* 0 != Encoder_Right_CAPTURE_MODE */ 
+                Encoder_CONTROL = ctrl;
+            #endif /* 0 != Encoder_CAPTURE_MODE */ 
             
-            #endif /* (!Encoder_Right_ControlRegRemoved) */
-        #endif /* (Encoder_Right_UsingFixedFunction) */
+            #endif /* (!Encoder_ControlRegRemoved) */
+        #endif /* (Encoder_UsingFixedFunction) */
         
         /* Clear all data in the FIFO's */
-        #if (!Encoder_Right_UsingFixedFunction)
-            Encoder_Right_ClearFIFO();
-        #endif /* (!Encoder_Right_UsingFixedFunction) */
+        #if (!Encoder_UsingFixedFunction)
+            Encoder_ClearFIFO();
+        #endif /* (!Encoder_UsingFixedFunction) */
         
         /* Set Initial values from Configuration */
-        Encoder_Right_WritePeriod(Encoder_Right_INIT_PERIOD_VALUE);
-        #if (!(Encoder_Right_UsingFixedFunction && (CY_PSOC5A)))
-            Encoder_Right_WriteCounter(Encoder_Right_INIT_COUNTER_VALUE);
-        #endif /* (!(Encoder_Right_UsingFixedFunction && (CY_PSOC5A))) */
-        Encoder_Right_SetInterruptMode(Encoder_Right_INIT_INTERRUPTS_MASK);
+        Encoder_WritePeriod(Encoder_INIT_PERIOD_VALUE);
+        #if (!(Encoder_UsingFixedFunction && (CY_PSOC5A)))
+            Encoder_WriteCounter(Encoder_INIT_COUNTER_VALUE);
+        #endif /* (!(Encoder_UsingFixedFunction && (CY_PSOC5A))) */
+        Encoder_SetInterruptMode(Encoder_INIT_INTERRUPTS_MASK);
         
-        #if (!Encoder_Right_UsingFixedFunction)
+        #if (!Encoder_UsingFixedFunction)
             /* Read the status register to clear the unwanted interrupts */
-            (void)Encoder_Right_ReadStatusRegister();
+            (void)Encoder_ReadStatusRegister();
             /* Set the compare value (only available to non-fixed function implementation */
-            Encoder_Right_WriteCompare(Encoder_Right_INIT_COMPARE_VALUE);
+            Encoder_WriteCompare(Encoder_INIT_COMPARE_VALUE);
             /* Use the interrupt output of the status register for IRQ output */
             
             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critical*/
             /* Enter Critical Region*/
-            Encoder_Right_interruptState = CyEnterCriticalSection();
+            Encoder_interruptState = CyEnterCriticalSection();
             
-            Encoder_Right_STATUS_AUX_CTRL |= Encoder_Right_STATUS_ACTL_INT_EN_MASK;
+            Encoder_STATUS_AUX_CTRL |= Encoder_STATUS_ACTL_INT_EN_MASK;
             
             /* Exit Critical Region*/
-            CyExitCriticalSection(Encoder_Right_interruptState);
+            CyExitCriticalSection(Encoder_interruptState);
             
-        #endif /* (!Encoder_Right_UsingFixedFunction) */
+        #endif /* (!Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_Enable
+* Function Name: Encoder_Enable
 ********************************************************************************
 * Summary:
 *     Enable the Counter
@@ -140,26 +140,26 @@ void Encoder_Right_Init(void)
 *   on the operation of the counter.
 *
 *******************************************************************************/
-void Encoder_Right_Enable(void) 
+void Encoder_Enable(void) 
 {
     /* Globally Enable the Fixed Function Block chosen */
-    #if (Encoder_Right_UsingFixedFunction)
-        Encoder_Right_GLOBAL_ENABLE |= Encoder_Right_BLOCK_EN_MASK;
-        Encoder_Right_GLOBAL_STBY_ENABLE |= Encoder_Right_BLOCK_STBY_EN_MASK;
-    #endif /* (Encoder_Right_UsingFixedFunction) */  
+    #if (Encoder_UsingFixedFunction)
+        Encoder_GLOBAL_ENABLE |= Encoder_BLOCK_EN_MASK;
+        Encoder_GLOBAL_STBY_ENABLE |= Encoder_BLOCK_STBY_EN_MASK;
+    #endif /* (Encoder_UsingFixedFunction) */  
         
     /* Enable the counter from the control register  */
     /* If Fixed Function then make sure Mode is set correctly */
     /* else make sure reset is clear */
-    #if(!Encoder_Right_ControlRegRemoved || Encoder_Right_UsingFixedFunction)
-        Encoder_Right_CONTROL |= Encoder_Right_CTRL_ENABLE;                
-    #endif /* (!Encoder_Right_ControlRegRemoved || Encoder_Right_UsingFixedFunction) */
+    #if(!Encoder_ControlRegRemoved || Encoder_UsingFixedFunction)
+        Encoder_CONTROL |= Encoder_CTRL_ENABLE;                
+    #endif /* (!Encoder_ControlRegRemoved || Encoder_UsingFixedFunction) */
     
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_Start
+* Function Name: Encoder_Start
 ********************************************************************************
 * Summary:
 *  Enables the counter for operation 
@@ -171,26 +171,26 @@ void Encoder_Right_Enable(void)
 *  void
 *
 * Global variables:
-*  Encoder_Right_initVar: Is modified when this function is called for the  
+*  Encoder_initVar: Is modified when this function is called for the  
 *   first time. Is used to ensure that initialization happens only once.
 *
 *******************************************************************************/
-void Encoder_Right_Start(void) 
+void Encoder_Start(void) 
 {
-    if(Encoder_Right_initVar == 0u)
+    if(Encoder_initVar == 0u)
     {
-        Encoder_Right_Init();
+        Encoder_Init();
         
-        Encoder_Right_initVar = 1u; /* Clear this bit for Initialization */        
+        Encoder_initVar = 1u; /* Clear this bit for Initialization */        
     }
     
     /* Enable the Counter */
-    Encoder_Right_Enable();        
+    Encoder_Enable();        
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_Stop
+* Function Name: Encoder_Stop
 ********************************************************************************
 * Summary:
 * Halts the counter, but does not change any modes or disable interrupts.
@@ -205,23 +205,23 @@ void Encoder_Right_Start(void)
 *               has no effect on the operation of the counter.
 *
 *******************************************************************************/
-void Encoder_Right_Stop(void) 
+void Encoder_Stop(void) 
 {
     /* Disable Counter */
-    #if(!Encoder_Right_ControlRegRemoved || Encoder_Right_UsingFixedFunction)
-        Encoder_Right_CONTROL &= ((uint8)(~Encoder_Right_CTRL_ENABLE));        
-    #endif /* (!Encoder_Right_ControlRegRemoved || Encoder_Right_UsingFixedFunction) */
+    #if(!Encoder_ControlRegRemoved || Encoder_UsingFixedFunction)
+        Encoder_CONTROL &= ((uint8)(~Encoder_CTRL_ENABLE));        
+    #endif /* (!Encoder_ControlRegRemoved || Encoder_UsingFixedFunction) */
     
     /* Globally disable the Fixed Function Block chosen */
-    #if (Encoder_Right_UsingFixedFunction)
-        Encoder_Right_GLOBAL_ENABLE &= ((uint8)(~Encoder_Right_BLOCK_EN_MASK));
-        Encoder_Right_GLOBAL_STBY_ENABLE &= ((uint8)(~Encoder_Right_BLOCK_STBY_EN_MASK));
-    #endif /* (Encoder_Right_UsingFixedFunction) */
+    #if (Encoder_UsingFixedFunction)
+        Encoder_GLOBAL_ENABLE &= ((uint8)(~Encoder_BLOCK_EN_MASK));
+        Encoder_GLOBAL_STBY_ENABLE &= ((uint8)(~Encoder_BLOCK_STBY_EN_MASK));
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_SetInterruptMode
+* Function Name: Encoder_SetInterruptMode
 ********************************************************************************
 * Summary:
 * Configures which interrupt sources are enabled to generate the final interrupt
@@ -234,14 +234,14 @@ void Encoder_Right_Stop(void)
 *  void
 *
 *******************************************************************************/
-void Encoder_Right_SetInterruptMode(uint8 interruptsMask) 
+void Encoder_SetInterruptMode(uint8 interruptsMask) 
 {
-    Encoder_Right_STATUS_MASK = interruptsMask;
+    Encoder_STATUS_MASK = interruptsMask;
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_ReadStatusRegister
+* Function Name: Encoder_ReadStatusRegister
 ********************************************************************************
 * Summary:
 *   Reads the status register and returns it's state. This function should use
@@ -258,15 +258,15 @@ void Encoder_Right_SetInterruptMode(uint8 interruptsMask)
 *   Status register bits may be clear on read. 
 *
 *******************************************************************************/
-uint8   Encoder_Right_ReadStatusRegister(void) 
+uint8   Encoder_ReadStatusRegister(void) 
 {
-    return Encoder_Right_STATUS;
+    return Encoder_STATUS;
 }
 
 
-#if(!Encoder_Right_ControlRegRemoved)
+#if(!Encoder_ControlRegRemoved)
 /*******************************************************************************
-* Function Name: Encoder_Right_ReadControlRegister
+* Function Name: Encoder_ReadControlRegister
 ********************************************************************************
 * Summary:
 *   Reads the control register and returns it's state. This function should use
@@ -280,14 +280,14 @@ uint8   Encoder_Right_ReadStatusRegister(void)
 *  (uint8) The contents of the control register
 *
 *******************************************************************************/
-uint8   Encoder_Right_ReadControlRegister(void) 
+uint8   Encoder_ReadControlRegister(void) 
 {
-    return Encoder_Right_CONTROL;
+    return Encoder_CONTROL;
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_WriteControlRegister
+* Function Name: Encoder_WriteControlRegister
 ********************************************************************************
 * Summary:
 *   Sets the bit-field of the control register.  This function should use
@@ -301,17 +301,17 @@ uint8   Encoder_Right_ReadControlRegister(void)
 *  (uint8) The contents of the control register
 *
 *******************************************************************************/
-void    Encoder_Right_WriteControlRegister(uint8 control) 
+void    Encoder_WriteControlRegister(uint8 control) 
 {
-    Encoder_Right_CONTROL = control;
+    Encoder_CONTROL = control;
 }
 
-#endif  /* (!Encoder_Right_ControlRegRemoved) */
+#endif  /* (!Encoder_ControlRegRemoved) */
 
 
-#if (!(Encoder_Right_UsingFixedFunction && (CY_PSOC5A)))
+#if (!(Encoder_UsingFixedFunction && (CY_PSOC5A)))
 /*******************************************************************************
-* Function Name: Encoder_Right_WriteCounter
+* Function Name: Encoder_WriteCounter
 ********************************************************************************
 * Summary:
 *   This funtion is used to set the counter to a specific value
@@ -323,25 +323,25 @@ void    Encoder_Right_WriteControlRegister(uint8 control)
 *  void 
 *
 *******************************************************************************/
-void Encoder_Right_WriteCounter(uint16 counter) \
+void Encoder_WriteCounter(uint16 counter) \
                                    
 {
-    #if(Encoder_Right_UsingFixedFunction)
+    #if(Encoder_UsingFixedFunction)
         /* assert if block is already enabled */
-        CYASSERT (0u == (Encoder_Right_GLOBAL_ENABLE & Encoder_Right_BLOCK_EN_MASK));
+        CYASSERT (0u == (Encoder_GLOBAL_ENABLE & Encoder_BLOCK_EN_MASK));
         /* If block is disabled, enable it and then write the counter */
-        Encoder_Right_GLOBAL_ENABLE |= Encoder_Right_BLOCK_EN_MASK;
-        CY_SET_REG16(Encoder_Right_COUNTER_LSB_PTR, (uint16)counter);
-        Encoder_Right_GLOBAL_ENABLE &= ((uint8)(~Encoder_Right_BLOCK_EN_MASK));
+        Encoder_GLOBAL_ENABLE |= Encoder_BLOCK_EN_MASK;
+        CY_SET_REG16(Encoder_COUNTER_LSB_PTR, (uint16)counter);
+        Encoder_GLOBAL_ENABLE &= ((uint8)(~Encoder_BLOCK_EN_MASK));
     #else
-        CY_SET_REG16(Encoder_Right_COUNTER_LSB_PTR, counter);
-    #endif /* (Encoder_Right_UsingFixedFunction) */
+        CY_SET_REG16(Encoder_COUNTER_LSB_PTR, counter);
+    #endif /* (Encoder_UsingFixedFunction) */
 }
-#endif /* (!(Encoder_Right_UsingFixedFunction && (CY_PSOC5A))) */
+#endif /* (!(Encoder_UsingFixedFunction && (CY_PSOC5A))) */
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_ReadCounter
+* Function Name: Encoder_ReadCounter
 ********************************************************************************
 * Summary:
 * Returns the current value of the counter.  It doesn't matter
@@ -354,28 +354,28 @@ void Encoder_Right_WriteCounter(uint16 counter) \
 *  (uint16) The present value of the counter.
 *
 *******************************************************************************/
-uint16 Encoder_Right_ReadCounter(void) 
+uint16 Encoder_ReadCounter(void) 
 {
     /* Force capture by reading Accumulator */
     /* Must first do a software capture to be able to read the counter */
     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
-    #if(Encoder_Right_UsingFixedFunction)
-		(void)CY_GET_REG16(Encoder_Right_COUNTER_LSB_PTR);
+    #if(Encoder_UsingFixedFunction)
+		(void)CY_GET_REG16(Encoder_COUNTER_LSB_PTR);
 	#else
-		(void)CY_GET_REG8(Encoder_Right_COUNTER_LSB_PTR_8BIT);
-	#endif/* (Encoder_Right_UsingFixedFunction) */
+		(void)CY_GET_REG8(Encoder_COUNTER_LSB_PTR_8BIT);
+	#endif/* (Encoder_UsingFixedFunction) */
     
     /* Read the data from the FIFO (or capture register for Fixed Function)*/
-    #if(Encoder_Right_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(Encoder_Right_STATICCOUNT_LSB_PTR));
+    #if(Encoder_UsingFixedFunction)
+        return ((uint16)CY_GET_REG16(Encoder_STATICCOUNT_LSB_PTR));
     #else
-        return (CY_GET_REG16(Encoder_Right_STATICCOUNT_LSB_PTR));
-    #endif /* (Encoder_Right_UsingFixedFunction) */
+        return (CY_GET_REG16(Encoder_STATICCOUNT_LSB_PTR));
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_ReadCapture
+* Function Name: Encoder_ReadCapture
 ********************************************************************************
 * Summary:
 *   This function returns the last value captured.
@@ -387,18 +387,18 @@ uint16 Encoder_Right_ReadCounter(void)
 *  (uint16) Present Capture value.
 *
 *******************************************************************************/
-uint16 Encoder_Right_ReadCapture(void) 
+uint16 Encoder_ReadCapture(void) 
 {
-    #if(Encoder_Right_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(Encoder_Right_STATICCOUNT_LSB_PTR));
+    #if(Encoder_UsingFixedFunction)
+        return ((uint16)CY_GET_REG16(Encoder_STATICCOUNT_LSB_PTR));
     #else
-        return (CY_GET_REG16(Encoder_Right_STATICCOUNT_LSB_PTR));
-    #endif /* (Encoder_Right_UsingFixedFunction) */
+        return (CY_GET_REG16(Encoder_STATICCOUNT_LSB_PTR));
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_WritePeriod
+* Function Name: Encoder_WritePeriod
 ********************************************************************************
 * Summary:
 * Changes the period of the counter.  The new period 
@@ -412,18 +412,18 @@ uint16 Encoder_Right_ReadCapture(void)
 *  void
 *
 *******************************************************************************/
-void Encoder_Right_WritePeriod(uint16 period) 
+void Encoder_WritePeriod(uint16 period) 
 {
-    #if(Encoder_Right_UsingFixedFunction)
-        CY_SET_REG16(Encoder_Right_PERIOD_LSB_PTR,(uint16)period);
+    #if(Encoder_UsingFixedFunction)
+        CY_SET_REG16(Encoder_PERIOD_LSB_PTR,(uint16)period);
     #else
-        CY_SET_REG16(Encoder_Right_PERIOD_LSB_PTR, period);
-    #endif /* (Encoder_Right_UsingFixedFunction) */
+        CY_SET_REG16(Encoder_PERIOD_LSB_PTR, period);
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_ReadPeriod
+* Function Name: Encoder_ReadPeriod
 ********************************************************************************
 * Summary:
 * Reads the current period value without affecting counter operation.
@@ -435,19 +435,19 @@ void Encoder_Right_WritePeriod(uint16 period)
 *  (uint16) Present period value.
 *
 *******************************************************************************/
-uint16 Encoder_Right_ReadPeriod(void) 
+uint16 Encoder_ReadPeriod(void) 
 {
-    #if(Encoder_Right_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(Encoder_Right_PERIOD_LSB_PTR));
+    #if(Encoder_UsingFixedFunction)
+        return ((uint16)CY_GET_REG16(Encoder_PERIOD_LSB_PTR));
     #else
-        return (CY_GET_REG16(Encoder_Right_PERIOD_LSB_PTR));
-    #endif /* (Encoder_Right_UsingFixedFunction) */
+        return (CY_GET_REG16(Encoder_PERIOD_LSB_PTR));
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
-#if (!Encoder_Right_UsingFixedFunction)
+#if (!Encoder_UsingFixedFunction)
 /*******************************************************************************
-* Function Name: Encoder_Right_WriteCompare
+* Function Name: Encoder_WriteCompare
 ********************************************************************************
 * Summary:
 * Changes the compare value.  The compare output will 
@@ -462,19 +462,19 @@ uint16 Encoder_Right_ReadPeriod(void)
 *  void
 *
 *******************************************************************************/
-void Encoder_Right_WriteCompare(uint16 compare) \
+void Encoder_WriteCompare(uint16 compare) \
                                    
 {
-    #if(Encoder_Right_UsingFixedFunction)
-        CY_SET_REG16(Encoder_Right_COMPARE_LSB_PTR, (uint16)compare);
+    #if(Encoder_UsingFixedFunction)
+        CY_SET_REG16(Encoder_COMPARE_LSB_PTR, (uint16)compare);
     #else
-        CY_SET_REG16(Encoder_Right_COMPARE_LSB_PTR, compare);
-    #endif /* (Encoder_Right_UsingFixedFunction) */
+        CY_SET_REG16(Encoder_COMPARE_LSB_PTR, compare);
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_ReadCompare
+* Function Name: Encoder_ReadCompare
 ********************************************************************************
 * Summary:
 * Returns the compare value.
@@ -486,15 +486,15 @@ void Encoder_Right_WriteCompare(uint16 compare) \
 *  (uint16) Present compare value.
 *
 *******************************************************************************/
-uint16 Encoder_Right_ReadCompare(void) 
+uint16 Encoder_ReadCompare(void) 
 {
-    return (CY_GET_REG16(Encoder_Right_COMPARE_LSB_PTR));
+    return (CY_GET_REG16(Encoder_COMPARE_LSB_PTR));
 }
 
 
-#if (Encoder_Right_COMPARE_MODE_SOFTWARE)
+#if (Encoder_COMPARE_MODE_SOFTWARE)
 /*******************************************************************************
-* Function Name: Encoder_Right_SetCompareMode
+* Function Name: Encoder_SetCompareMode
 ********************************************************************************
 * Summary:
 *  Sets the software controlled Compare Mode.
@@ -506,20 +506,20 @@ uint16 Encoder_Right_ReadCompare(void)
 *  void
 *
 *******************************************************************************/
-void Encoder_Right_SetCompareMode(uint8 compareMode) 
+void Encoder_SetCompareMode(uint8 compareMode) 
 {
     /* Clear the compare mode bits in the control register */
-    Encoder_Right_CONTROL &= ((uint8)(~Encoder_Right_CTRL_CMPMODE_MASK));
+    Encoder_CONTROL &= ((uint8)(~Encoder_CTRL_CMPMODE_MASK));
     
     /* Write the new setting */
-    Encoder_Right_CONTROL |= compareMode;
+    Encoder_CONTROL |= compareMode;
 }
-#endif  /* (Encoder_Right_COMPARE_MODE_SOFTWARE) */
+#endif  /* (Encoder_COMPARE_MODE_SOFTWARE) */
 
 
-#if (Encoder_Right_CAPTURE_MODE_SOFTWARE)
+#if (Encoder_CAPTURE_MODE_SOFTWARE)
 /*******************************************************************************
-* Function Name: Encoder_Right_SetCaptureMode
+* Function Name: Encoder_SetCaptureMode
 ********************************************************************************
 * Summary:
 *  Sets the software controlled Capture Mode.
@@ -531,19 +531,19 @@ void Encoder_Right_SetCompareMode(uint8 compareMode)
 *  void
 *
 *******************************************************************************/
-void Encoder_Right_SetCaptureMode(uint8 captureMode) 
+void Encoder_SetCaptureMode(uint8 captureMode) 
 {
     /* Clear the capture mode bits in the control register */
-    Encoder_Right_CONTROL &= ((uint8)(~Encoder_Right_CTRL_CAPMODE_MASK));
+    Encoder_CONTROL &= ((uint8)(~Encoder_CTRL_CAPMODE_MASK));
     
     /* Write the new setting */
-    Encoder_Right_CONTROL |= ((uint8)((uint8)captureMode << Encoder_Right_CTRL_CAPMODE0_SHIFT));
+    Encoder_CONTROL |= ((uint8)((uint8)captureMode << Encoder_CTRL_CAPMODE0_SHIFT));
 }
-#endif  /* (Encoder_Right_CAPTURE_MODE_SOFTWARE) */
+#endif  /* (Encoder_CAPTURE_MODE_SOFTWARE) */
 
 
 /*******************************************************************************
-* Function Name: Encoder_Right_ClearFIFO
+* Function Name: Encoder_ClearFIFO
 ********************************************************************************
 * Summary:
 *   This function clears all capture data from the capture FIFO
@@ -555,16 +555,16 @@ void Encoder_Right_SetCaptureMode(uint8 captureMode)
 *  None
 *
 *******************************************************************************/
-void Encoder_Right_ClearFIFO(void) 
+void Encoder_ClearFIFO(void) 
 {
 
-    while(0u != (Encoder_Right_ReadStatusRegister() & Encoder_Right_STATUS_FIFONEMP))
+    while(0u != (Encoder_ReadStatusRegister() & Encoder_STATUS_FIFONEMP))
     {
-        (void)Encoder_Right_ReadCapture();
+        (void)Encoder_ReadCapture();
     }
 
 }
-#endif  /* (!Encoder_Right_UsingFixedFunction) */
+#endif  /* (!Encoder_UsingFixedFunction) */
 
 
 /* [] END OF FILE */

@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: leftEncTimer.c  
+* File Name: Encoder.c  
 * Version 3.0
 *
 *  Description:
@@ -16,13 +16,13 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#include "leftEncTimer.h"
+#include "Encoder.h"
 
-uint8 leftEncTimer_initVar = 0u;
+uint8 Encoder_initVar = 0u;
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_Init
+* Function Name: Encoder_Init
 ********************************************************************************
 * Summary:
 *     Initialize to the schematic state
@@ -34,97 +34,97 @@ uint8 leftEncTimer_initVar = 0u;
 *  void
 *
 *******************************************************************************/
-void leftEncTimer_Init(void) 
+void Encoder_Init(void) 
 {
-        #if (!leftEncTimer_UsingFixedFunction && !leftEncTimer_ControlRegRemoved)
+        #if (!Encoder_UsingFixedFunction && !Encoder_ControlRegRemoved)
             uint8 ctrl;
-        #endif /* (!leftEncTimer_UsingFixedFunction && !leftEncTimer_ControlRegRemoved) */
+        #endif /* (!Encoder_UsingFixedFunction && !Encoder_ControlRegRemoved) */
         
-        #if(!leftEncTimer_UsingFixedFunction) 
+        #if(!Encoder_UsingFixedFunction) 
             /* Interrupt State Backup for Critical Region*/
-            uint8 leftEncTimer_interruptState;
-        #endif /* (!leftEncTimer_UsingFixedFunction) */
+            uint8 Encoder_interruptState;
+        #endif /* (!Encoder_UsingFixedFunction) */
         
-        #if (leftEncTimer_UsingFixedFunction)
+        #if (Encoder_UsingFixedFunction)
             /* Clear all bits but the enable bit (if it's already set for Timer operation */
-            leftEncTimer_CONTROL &= leftEncTimer_CTRL_ENABLE;
+            Encoder_CONTROL &= Encoder_CTRL_ENABLE;
             
             /* Clear the mode bits for continuous run mode */
             #if (CY_PSOC5A)
-                leftEncTimer_CONTROL2 &= ((uint8)(~leftEncTimer_CTRL_MODE_MASK));
+                Encoder_CONTROL2 &= ((uint8)(~Encoder_CTRL_MODE_MASK));
             #endif /* (CY_PSOC5A) */
             #if (CY_PSOC3 || CY_PSOC5LP)
-                leftEncTimer_CONTROL3 &= ((uint8)(~leftEncTimer_CTRL_MODE_MASK));                
+                Encoder_CONTROL3 &= ((uint8)(~Encoder_CTRL_MODE_MASK));                
             #endif /* (CY_PSOC3 || CY_PSOC5LP) */
             /* Check if One Shot mode is enabled i.e. RunMode !=0*/
-            #if (leftEncTimer_RunModeUsed != 0x0u)
+            #if (Encoder_RunModeUsed != 0x0u)
                 /* Set 3rd bit of Control register to enable one shot mode */
-                leftEncTimer_CONTROL |= leftEncTimer_ONESHOT;
-            #endif /* (leftEncTimer_RunModeUsed != 0x0u) */
+                Encoder_CONTROL |= Encoder_ONESHOT;
+            #endif /* (Encoder_RunModeUsed != 0x0u) */
             
             /* Set the IRQ to use the status register interrupts */
-            leftEncTimer_CONTROL2 |= leftEncTimer_CTRL2_IRQ_SEL;
+            Encoder_CONTROL2 |= Encoder_CTRL2_IRQ_SEL;
             
             /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
-            leftEncTimer_RT1 &= ((uint8)(~leftEncTimer_RT1_MASK));
-            leftEncTimer_RT1 |= leftEncTimer_SYNC;     
+            Encoder_RT1 &= ((uint8)(~Encoder_RT1_MASK));
+            Encoder_RT1 |= Encoder_SYNC;     
                     
             /*Enable DSI Sync all all inputs of the Timer*/
-            leftEncTimer_RT1 &= ((uint8)(~leftEncTimer_SYNCDSI_MASK));
-            leftEncTimer_RT1 |= leftEncTimer_SYNCDSI_EN;
+            Encoder_RT1 &= ((uint8)(~Encoder_SYNCDSI_MASK));
+            Encoder_RT1 |= Encoder_SYNCDSI_EN;
 
         #else
-            #if(!leftEncTimer_ControlRegRemoved)
+            #if(!Encoder_ControlRegRemoved)
             /* Set the default compare mode defined in the parameter */
-            ctrl = leftEncTimer_CONTROL & ((uint8)(~leftEncTimer_CTRL_CMPMODE_MASK));
-            leftEncTimer_CONTROL = ctrl | leftEncTimer_DEFAULT_COMPARE_MODE;
+            ctrl = Encoder_CONTROL & ((uint8)(~Encoder_CTRL_CMPMODE_MASK));
+            Encoder_CONTROL = ctrl | Encoder_DEFAULT_COMPARE_MODE;
             
             /* Set the default capture mode defined in the parameter */
-            ctrl = leftEncTimer_CONTROL & ((uint8)(~leftEncTimer_CTRL_CAPMODE_MASK));
+            ctrl = Encoder_CONTROL & ((uint8)(~Encoder_CTRL_CAPMODE_MASK));
             
-            #if( 0 != leftEncTimer_CAPTURE_MODE_CONF)
-                leftEncTimer_CONTROL = ctrl | leftEncTimer_DEFAULT_CAPTURE_MODE;
+            #if( 0 != Encoder_CAPTURE_MODE_CONF)
+                Encoder_CONTROL = ctrl | Encoder_DEFAULT_CAPTURE_MODE;
             #else
-                leftEncTimer_CONTROL = ctrl;
-            #endif /* 0 != leftEncTimer_CAPTURE_MODE */ 
+                Encoder_CONTROL = ctrl;
+            #endif /* 0 != Encoder_CAPTURE_MODE */ 
             
-            #endif /* (!leftEncTimer_ControlRegRemoved) */
-        #endif /* (leftEncTimer_UsingFixedFunction) */
+            #endif /* (!Encoder_ControlRegRemoved) */
+        #endif /* (Encoder_UsingFixedFunction) */
         
         /* Clear all data in the FIFO's */
-        #if (!leftEncTimer_UsingFixedFunction)
-            leftEncTimer_ClearFIFO();
-        #endif /* (!leftEncTimer_UsingFixedFunction) */
+        #if (!Encoder_UsingFixedFunction)
+            Encoder_ClearFIFO();
+        #endif /* (!Encoder_UsingFixedFunction) */
         
         /* Set Initial values from Configuration */
-        leftEncTimer_WritePeriod(leftEncTimer_INIT_PERIOD_VALUE);
-        #if (!(leftEncTimer_UsingFixedFunction && (CY_PSOC5A)))
-            leftEncTimer_WriteCounter(leftEncTimer_INIT_COUNTER_VALUE);
-        #endif /* (!(leftEncTimer_UsingFixedFunction && (CY_PSOC5A))) */
-        leftEncTimer_SetInterruptMode(leftEncTimer_INIT_INTERRUPTS_MASK);
+        Encoder_WritePeriod(Encoder_INIT_PERIOD_VALUE);
+        #if (!(Encoder_UsingFixedFunction && (CY_PSOC5A)))
+            Encoder_WriteCounter(Encoder_INIT_COUNTER_VALUE);
+        #endif /* (!(Encoder_UsingFixedFunction && (CY_PSOC5A))) */
+        Encoder_SetInterruptMode(Encoder_INIT_INTERRUPTS_MASK);
         
-        #if (!leftEncTimer_UsingFixedFunction)
+        #if (!Encoder_UsingFixedFunction)
             /* Read the status register to clear the unwanted interrupts */
-            (void)leftEncTimer_ReadStatusRegister();
+            (void)Encoder_ReadStatusRegister();
             /* Set the compare value (only available to non-fixed function implementation */
-            leftEncTimer_WriteCompare(leftEncTimer_INIT_COMPARE_VALUE);
+            Encoder_WriteCompare(Encoder_INIT_COMPARE_VALUE);
             /* Use the interrupt output of the status register for IRQ output */
             
             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critical*/
             /* Enter Critical Region*/
-            leftEncTimer_interruptState = CyEnterCriticalSection();
+            Encoder_interruptState = CyEnterCriticalSection();
             
-            leftEncTimer_STATUS_AUX_CTRL |= leftEncTimer_STATUS_ACTL_INT_EN_MASK;
+            Encoder_STATUS_AUX_CTRL |= Encoder_STATUS_ACTL_INT_EN_MASK;
             
             /* Exit Critical Region*/
-            CyExitCriticalSection(leftEncTimer_interruptState);
+            CyExitCriticalSection(Encoder_interruptState);
             
-        #endif /* (!leftEncTimer_UsingFixedFunction) */
+        #endif /* (!Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_Enable
+* Function Name: Encoder_Enable
 ********************************************************************************
 * Summary:
 *     Enable the Counter
@@ -140,26 +140,26 @@ void leftEncTimer_Init(void)
 *   on the operation of the counter.
 *
 *******************************************************************************/
-void leftEncTimer_Enable(void) 
+void Encoder_Enable(void) 
 {
     /* Globally Enable the Fixed Function Block chosen */
-    #if (leftEncTimer_UsingFixedFunction)
-        leftEncTimer_GLOBAL_ENABLE |= leftEncTimer_BLOCK_EN_MASK;
-        leftEncTimer_GLOBAL_STBY_ENABLE |= leftEncTimer_BLOCK_STBY_EN_MASK;
-    #endif /* (leftEncTimer_UsingFixedFunction) */  
+    #if (Encoder_UsingFixedFunction)
+        Encoder_GLOBAL_ENABLE |= Encoder_BLOCK_EN_MASK;
+        Encoder_GLOBAL_STBY_ENABLE |= Encoder_BLOCK_STBY_EN_MASK;
+    #endif /* (Encoder_UsingFixedFunction) */  
         
     /* Enable the counter from the control register  */
     /* If Fixed Function then make sure Mode is set correctly */
     /* else make sure reset is clear */
-    #if(!leftEncTimer_ControlRegRemoved || leftEncTimer_UsingFixedFunction)
-        leftEncTimer_CONTROL |= leftEncTimer_CTRL_ENABLE;                
-    #endif /* (!leftEncTimer_ControlRegRemoved || leftEncTimer_UsingFixedFunction) */
+    #if(!Encoder_ControlRegRemoved || Encoder_UsingFixedFunction)
+        Encoder_CONTROL |= Encoder_CTRL_ENABLE;                
+    #endif /* (!Encoder_ControlRegRemoved || Encoder_UsingFixedFunction) */
     
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_Start
+* Function Name: Encoder_Start
 ********************************************************************************
 * Summary:
 *  Enables the counter for operation 
@@ -171,26 +171,26 @@ void leftEncTimer_Enable(void)
 *  void
 *
 * Global variables:
-*  leftEncTimer_initVar: Is modified when this function is called for the  
+*  Encoder_initVar: Is modified when this function is called for the  
 *   first time. Is used to ensure that initialization happens only once.
 *
 *******************************************************************************/
-void leftEncTimer_Start(void) 
+void Encoder_Start(void) 
 {
-    if(leftEncTimer_initVar == 0u)
+    if(Encoder_initVar == 0u)
     {
-        leftEncTimer_Init();
+        Encoder_Init();
         
-        leftEncTimer_initVar = 1u; /* Clear this bit for Initialization */        
+        Encoder_initVar = 1u; /* Clear this bit for Initialization */        
     }
     
     /* Enable the Counter */
-    leftEncTimer_Enable();        
+    Encoder_Enable();        
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_Stop
+* Function Name: Encoder_Stop
 ********************************************************************************
 * Summary:
 * Halts the counter, but does not change any modes or disable interrupts.
@@ -205,23 +205,23 @@ void leftEncTimer_Start(void)
 *               has no effect on the operation of the counter.
 *
 *******************************************************************************/
-void leftEncTimer_Stop(void) 
+void Encoder_Stop(void) 
 {
     /* Disable Counter */
-    #if(!leftEncTimer_ControlRegRemoved || leftEncTimer_UsingFixedFunction)
-        leftEncTimer_CONTROL &= ((uint8)(~leftEncTimer_CTRL_ENABLE));        
-    #endif /* (!leftEncTimer_ControlRegRemoved || leftEncTimer_UsingFixedFunction) */
+    #if(!Encoder_ControlRegRemoved || Encoder_UsingFixedFunction)
+        Encoder_CONTROL &= ((uint8)(~Encoder_CTRL_ENABLE));        
+    #endif /* (!Encoder_ControlRegRemoved || Encoder_UsingFixedFunction) */
     
     /* Globally disable the Fixed Function Block chosen */
-    #if (leftEncTimer_UsingFixedFunction)
-        leftEncTimer_GLOBAL_ENABLE &= ((uint8)(~leftEncTimer_BLOCK_EN_MASK));
-        leftEncTimer_GLOBAL_STBY_ENABLE &= ((uint8)(~leftEncTimer_BLOCK_STBY_EN_MASK));
-    #endif /* (leftEncTimer_UsingFixedFunction) */
+    #if (Encoder_UsingFixedFunction)
+        Encoder_GLOBAL_ENABLE &= ((uint8)(~Encoder_BLOCK_EN_MASK));
+        Encoder_GLOBAL_STBY_ENABLE &= ((uint8)(~Encoder_BLOCK_STBY_EN_MASK));
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_SetInterruptMode
+* Function Name: Encoder_SetInterruptMode
 ********************************************************************************
 * Summary:
 * Configures which interrupt sources are enabled to generate the final interrupt
@@ -234,14 +234,14 @@ void leftEncTimer_Stop(void)
 *  void
 *
 *******************************************************************************/
-void leftEncTimer_SetInterruptMode(uint8 interruptsMask) 
+void Encoder_SetInterruptMode(uint8 interruptsMask) 
 {
-    leftEncTimer_STATUS_MASK = interruptsMask;
+    Encoder_STATUS_MASK = interruptsMask;
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_ReadStatusRegister
+* Function Name: Encoder_ReadStatusRegister
 ********************************************************************************
 * Summary:
 *   Reads the status register and returns it's state. This function should use
@@ -258,15 +258,15 @@ void leftEncTimer_SetInterruptMode(uint8 interruptsMask)
 *   Status register bits may be clear on read. 
 *
 *******************************************************************************/
-uint8   leftEncTimer_ReadStatusRegister(void) 
+uint8   Encoder_ReadStatusRegister(void) 
 {
-    return leftEncTimer_STATUS;
+    return Encoder_STATUS;
 }
 
 
-#if(!leftEncTimer_ControlRegRemoved)
+#if(!Encoder_ControlRegRemoved)
 /*******************************************************************************
-* Function Name: leftEncTimer_ReadControlRegister
+* Function Name: Encoder_ReadControlRegister
 ********************************************************************************
 * Summary:
 *   Reads the control register and returns it's state. This function should use
@@ -280,14 +280,14 @@ uint8   leftEncTimer_ReadStatusRegister(void)
 *  (uint8) The contents of the control register
 *
 *******************************************************************************/
-uint8   leftEncTimer_ReadControlRegister(void) 
+uint8   Encoder_ReadControlRegister(void) 
 {
-    return leftEncTimer_CONTROL;
+    return Encoder_CONTROL;
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_WriteControlRegister
+* Function Name: Encoder_WriteControlRegister
 ********************************************************************************
 * Summary:
 *   Sets the bit-field of the control register.  This function should use
@@ -301,17 +301,17 @@ uint8   leftEncTimer_ReadControlRegister(void)
 *  (uint8) The contents of the control register
 *
 *******************************************************************************/
-void    leftEncTimer_WriteControlRegister(uint8 control) 
+void    Encoder_WriteControlRegister(uint8 control) 
 {
-    leftEncTimer_CONTROL = control;
+    Encoder_CONTROL = control;
 }
 
-#endif  /* (!leftEncTimer_ControlRegRemoved) */
+#endif  /* (!Encoder_ControlRegRemoved) */
 
 
-#if (!(leftEncTimer_UsingFixedFunction && (CY_PSOC5A)))
+#if (!(Encoder_UsingFixedFunction && (CY_PSOC5A)))
 /*******************************************************************************
-* Function Name: leftEncTimer_WriteCounter
+* Function Name: Encoder_WriteCounter
 ********************************************************************************
 * Summary:
 *   This funtion is used to set the counter to a specific value
@@ -323,25 +323,25 @@ void    leftEncTimer_WriteControlRegister(uint8 control)
 *  void 
 *
 *******************************************************************************/
-void leftEncTimer_WriteCounter(uint16 counter) \
+void Encoder_WriteCounter(uint16 counter) \
                                    
 {
-    #if(leftEncTimer_UsingFixedFunction)
+    #if(Encoder_UsingFixedFunction)
         /* assert if block is already enabled */
-        CYASSERT (0u == (leftEncTimer_GLOBAL_ENABLE & leftEncTimer_BLOCK_EN_MASK));
+        CYASSERT (0u == (Encoder_GLOBAL_ENABLE & Encoder_BLOCK_EN_MASK));
         /* If block is disabled, enable it and then write the counter */
-        leftEncTimer_GLOBAL_ENABLE |= leftEncTimer_BLOCK_EN_MASK;
-        CY_SET_REG16(leftEncTimer_COUNTER_LSB_PTR, (uint16)counter);
-        leftEncTimer_GLOBAL_ENABLE &= ((uint8)(~leftEncTimer_BLOCK_EN_MASK));
+        Encoder_GLOBAL_ENABLE |= Encoder_BLOCK_EN_MASK;
+        CY_SET_REG16(Encoder_COUNTER_LSB_PTR, (uint16)counter);
+        Encoder_GLOBAL_ENABLE &= ((uint8)(~Encoder_BLOCK_EN_MASK));
     #else
-        CY_SET_REG16(leftEncTimer_COUNTER_LSB_PTR, counter);
-    #endif /* (leftEncTimer_UsingFixedFunction) */
+        CY_SET_REG16(Encoder_COUNTER_LSB_PTR, counter);
+    #endif /* (Encoder_UsingFixedFunction) */
 }
-#endif /* (!(leftEncTimer_UsingFixedFunction && (CY_PSOC5A))) */
+#endif /* (!(Encoder_UsingFixedFunction && (CY_PSOC5A))) */
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_ReadCounter
+* Function Name: Encoder_ReadCounter
 ********************************************************************************
 * Summary:
 * Returns the current value of the counter.  It doesn't matter
@@ -354,28 +354,28 @@ void leftEncTimer_WriteCounter(uint16 counter) \
 *  (uint16) The present value of the counter.
 *
 *******************************************************************************/
-uint16 leftEncTimer_ReadCounter(void) 
+uint16 Encoder_ReadCounter(void) 
 {
     /* Force capture by reading Accumulator */
     /* Must first do a software capture to be able to read the counter */
     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
-    #if(leftEncTimer_UsingFixedFunction)
-		(void)CY_GET_REG16(leftEncTimer_COUNTER_LSB_PTR);
+    #if(Encoder_UsingFixedFunction)
+		(void)CY_GET_REG16(Encoder_COUNTER_LSB_PTR);
 	#else
-		(void)CY_GET_REG8(leftEncTimer_COUNTER_LSB_PTR_8BIT);
-	#endif/* (leftEncTimer_UsingFixedFunction) */
+		(void)CY_GET_REG8(Encoder_COUNTER_LSB_PTR_8BIT);
+	#endif/* (Encoder_UsingFixedFunction) */
     
     /* Read the data from the FIFO (or capture register for Fixed Function)*/
-    #if(leftEncTimer_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(leftEncTimer_STATICCOUNT_LSB_PTR));
+    #if(Encoder_UsingFixedFunction)
+        return ((uint16)CY_GET_REG16(Encoder_STATICCOUNT_LSB_PTR));
     #else
-        return (CY_GET_REG16(leftEncTimer_STATICCOUNT_LSB_PTR));
-    #endif /* (leftEncTimer_UsingFixedFunction) */
+        return (CY_GET_REG16(Encoder_STATICCOUNT_LSB_PTR));
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_ReadCapture
+* Function Name: Encoder_ReadCapture
 ********************************************************************************
 * Summary:
 *   This function returns the last value captured.
@@ -387,18 +387,18 @@ uint16 leftEncTimer_ReadCounter(void)
 *  (uint16) Present Capture value.
 *
 *******************************************************************************/
-uint16 leftEncTimer_ReadCapture(void) 
+uint16 Encoder_ReadCapture(void) 
 {
-    #if(leftEncTimer_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(leftEncTimer_STATICCOUNT_LSB_PTR));
+    #if(Encoder_UsingFixedFunction)
+        return ((uint16)CY_GET_REG16(Encoder_STATICCOUNT_LSB_PTR));
     #else
-        return (CY_GET_REG16(leftEncTimer_STATICCOUNT_LSB_PTR));
-    #endif /* (leftEncTimer_UsingFixedFunction) */
+        return (CY_GET_REG16(Encoder_STATICCOUNT_LSB_PTR));
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_WritePeriod
+* Function Name: Encoder_WritePeriod
 ********************************************************************************
 * Summary:
 * Changes the period of the counter.  The new period 
@@ -412,18 +412,18 @@ uint16 leftEncTimer_ReadCapture(void)
 *  void
 *
 *******************************************************************************/
-void leftEncTimer_WritePeriod(uint16 period) 
+void Encoder_WritePeriod(uint16 period) 
 {
-    #if(leftEncTimer_UsingFixedFunction)
-        CY_SET_REG16(leftEncTimer_PERIOD_LSB_PTR,(uint16)period);
+    #if(Encoder_UsingFixedFunction)
+        CY_SET_REG16(Encoder_PERIOD_LSB_PTR,(uint16)period);
     #else
-        CY_SET_REG16(leftEncTimer_PERIOD_LSB_PTR, period);
-    #endif /* (leftEncTimer_UsingFixedFunction) */
+        CY_SET_REG16(Encoder_PERIOD_LSB_PTR, period);
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_ReadPeriod
+* Function Name: Encoder_ReadPeriod
 ********************************************************************************
 * Summary:
 * Reads the current period value without affecting counter operation.
@@ -435,19 +435,19 @@ void leftEncTimer_WritePeriod(uint16 period)
 *  (uint16) Present period value.
 *
 *******************************************************************************/
-uint16 leftEncTimer_ReadPeriod(void) 
+uint16 Encoder_ReadPeriod(void) 
 {
-    #if(leftEncTimer_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(leftEncTimer_PERIOD_LSB_PTR));
+    #if(Encoder_UsingFixedFunction)
+        return ((uint16)CY_GET_REG16(Encoder_PERIOD_LSB_PTR));
     #else
-        return (CY_GET_REG16(leftEncTimer_PERIOD_LSB_PTR));
-    #endif /* (leftEncTimer_UsingFixedFunction) */
+        return (CY_GET_REG16(Encoder_PERIOD_LSB_PTR));
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
-#if (!leftEncTimer_UsingFixedFunction)
+#if (!Encoder_UsingFixedFunction)
 /*******************************************************************************
-* Function Name: leftEncTimer_WriteCompare
+* Function Name: Encoder_WriteCompare
 ********************************************************************************
 * Summary:
 * Changes the compare value.  The compare output will 
@@ -462,19 +462,19 @@ uint16 leftEncTimer_ReadPeriod(void)
 *  void
 *
 *******************************************************************************/
-void leftEncTimer_WriteCompare(uint16 compare) \
+void Encoder_WriteCompare(uint16 compare) \
                                    
 {
-    #if(leftEncTimer_UsingFixedFunction)
-        CY_SET_REG16(leftEncTimer_COMPARE_LSB_PTR, (uint16)compare);
+    #if(Encoder_UsingFixedFunction)
+        CY_SET_REG16(Encoder_COMPARE_LSB_PTR, (uint16)compare);
     #else
-        CY_SET_REG16(leftEncTimer_COMPARE_LSB_PTR, compare);
-    #endif /* (leftEncTimer_UsingFixedFunction) */
+        CY_SET_REG16(Encoder_COMPARE_LSB_PTR, compare);
+    #endif /* (Encoder_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_ReadCompare
+* Function Name: Encoder_ReadCompare
 ********************************************************************************
 * Summary:
 * Returns the compare value.
@@ -486,15 +486,15 @@ void leftEncTimer_WriteCompare(uint16 compare) \
 *  (uint16) Present compare value.
 *
 *******************************************************************************/
-uint16 leftEncTimer_ReadCompare(void) 
+uint16 Encoder_ReadCompare(void) 
 {
-    return (CY_GET_REG16(leftEncTimer_COMPARE_LSB_PTR));
+    return (CY_GET_REG16(Encoder_COMPARE_LSB_PTR));
 }
 
 
-#if (leftEncTimer_COMPARE_MODE_SOFTWARE)
+#if (Encoder_COMPARE_MODE_SOFTWARE)
 /*******************************************************************************
-* Function Name: leftEncTimer_SetCompareMode
+* Function Name: Encoder_SetCompareMode
 ********************************************************************************
 * Summary:
 *  Sets the software controlled Compare Mode.
@@ -506,20 +506,20 @@ uint16 leftEncTimer_ReadCompare(void)
 *  void
 *
 *******************************************************************************/
-void leftEncTimer_SetCompareMode(uint8 compareMode) 
+void Encoder_SetCompareMode(uint8 compareMode) 
 {
     /* Clear the compare mode bits in the control register */
-    leftEncTimer_CONTROL &= ((uint8)(~leftEncTimer_CTRL_CMPMODE_MASK));
+    Encoder_CONTROL &= ((uint8)(~Encoder_CTRL_CMPMODE_MASK));
     
     /* Write the new setting */
-    leftEncTimer_CONTROL |= compareMode;
+    Encoder_CONTROL |= compareMode;
 }
-#endif  /* (leftEncTimer_COMPARE_MODE_SOFTWARE) */
+#endif  /* (Encoder_COMPARE_MODE_SOFTWARE) */
 
 
-#if (leftEncTimer_CAPTURE_MODE_SOFTWARE)
+#if (Encoder_CAPTURE_MODE_SOFTWARE)
 /*******************************************************************************
-* Function Name: leftEncTimer_SetCaptureMode
+* Function Name: Encoder_SetCaptureMode
 ********************************************************************************
 * Summary:
 *  Sets the software controlled Capture Mode.
@@ -531,19 +531,19 @@ void leftEncTimer_SetCompareMode(uint8 compareMode)
 *  void
 *
 *******************************************************************************/
-void leftEncTimer_SetCaptureMode(uint8 captureMode) 
+void Encoder_SetCaptureMode(uint8 captureMode) 
 {
     /* Clear the capture mode bits in the control register */
-    leftEncTimer_CONTROL &= ((uint8)(~leftEncTimer_CTRL_CAPMODE_MASK));
+    Encoder_CONTROL &= ((uint8)(~Encoder_CTRL_CAPMODE_MASK));
     
     /* Write the new setting */
-    leftEncTimer_CONTROL |= ((uint8)((uint8)captureMode << leftEncTimer_CTRL_CAPMODE0_SHIFT));
+    Encoder_CONTROL |= ((uint8)((uint8)captureMode << Encoder_CTRL_CAPMODE0_SHIFT));
 }
-#endif  /* (leftEncTimer_CAPTURE_MODE_SOFTWARE) */
+#endif  /* (Encoder_CAPTURE_MODE_SOFTWARE) */
 
 
 /*******************************************************************************
-* Function Name: leftEncTimer_ClearFIFO
+* Function Name: Encoder_ClearFIFO
 ********************************************************************************
 * Summary:
 *   This function clears all capture data from the capture FIFO
@@ -555,16 +555,16 @@ void leftEncTimer_SetCaptureMode(uint8 captureMode)
 *  None
 *
 *******************************************************************************/
-void leftEncTimer_ClearFIFO(void) 
+void Encoder_ClearFIFO(void) 
 {
 
-    while(0u != (leftEncTimer_ReadStatusRegister() & leftEncTimer_STATUS_FIFONEMP))
+    while(0u != (Encoder_ReadStatusRegister() & Encoder_STATUS_FIFONEMP))
     {
-        (void)leftEncTimer_ReadCapture();
+        (void)Encoder_ReadCapture();
     }
 
 }
-#endif  /* (!leftEncTimer_UsingFixedFunction) */
+#endif  /* (!Encoder_UsingFixedFunction) */
 
 
 /* [] END OF FILE */

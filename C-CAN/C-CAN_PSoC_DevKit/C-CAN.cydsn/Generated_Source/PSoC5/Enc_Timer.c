@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: rightEncTimer.c  
+* File Name: Enc_Timer.c  
 * Version 3.0
 *
 *  Description:
@@ -16,13 +16,13 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#include "rightEncTimer.h"
+#include "Enc_Timer.h"
 
-uint8 rightEncTimer_initVar = 0u;
+uint8 Enc_Timer_initVar = 0u;
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_Init
+* Function Name: Enc_Timer_Init
 ********************************************************************************
 * Summary:
 *     Initialize to the schematic state
@@ -34,97 +34,97 @@ uint8 rightEncTimer_initVar = 0u;
 *  void
 *
 *******************************************************************************/
-void rightEncTimer_Init(void) 
+void Enc_Timer_Init(void) 
 {
-        #if (!rightEncTimer_UsingFixedFunction && !rightEncTimer_ControlRegRemoved)
+        #if (!Enc_Timer_UsingFixedFunction && !Enc_Timer_ControlRegRemoved)
             uint8 ctrl;
-        #endif /* (!rightEncTimer_UsingFixedFunction && !rightEncTimer_ControlRegRemoved) */
+        #endif /* (!Enc_Timer_UsingFixedFunction && !Enc_Timer_ControlRegRemoved) */
         
-        #if(!rightEncTimer_UsingFixedFunction) 
+        #if(!Enc_Timer_UsingFixedFunction) 
             /* Interrupt State Backup for Critical Region*/
-            uint8 rightEncTimer_interruptState;
-        #endif /* (!rightEncTimer_UsingFixedFunction) */
+            uint8 Enc_Timer_interruptState;
+        #endif /* (!Enc_Timer_UsingFixedFunction) */
         
-        #if (rightEncTimer_UsingFixedFunction)
+        #if (Enc_Timer_UsingFixedFunction)
             /* Clear all bits but the enable bit (if it's already set for Timer operation */
-            rightEncTimer_CONTROL &= rightEncTimer_CTRL_ENABLE;
+            Enc_Timer_CONTROL &= Enc_Timer_CTRL_ENABLE;
             
             /* Clear the mode bits for continuous run mode */
             #if (CY_PSOC5A)
-                rightEncTimer_CONTROL2 &= ((uint8)(~rightEncTimer_CTRL_MODE_MASK));
+                Enc_Timer_CONTROL2 &= ((uint8)(~Enc_Timer_CTRL_MODE_MASK));
             #endif /* (CY_PSOC5A) */
             #if (CY_PSOC3 || CY_PSOC5LP)
-                rightEncTimer_CONTROL3 &= ((uint8)(~rightEncTimer_CTRL_MODE_MASK));                
+                Enc_Timer_CONTROL3 &= ((uint8)(~Enc_Timer_CTRL_MODE_MASK));                
             #endif /* (CY_PSOC3 || CY_PSOC5LP) */
             /* Check if One Shot mode is enabled i.e. RunMode !=0*/
-            #if (rightEncTimer_RunModeUsed != 0x0u)
+            #if (Enc_Timer_RunModeUsed != 0x0u)
                 /* Set 3rd bit of Control register to enable one shot mode */
-                rightEncTimer_CONTROL |= rightEncTimer_ONESHOT;
-            #endif /* (rightEncTimer_RunModeUsed != 0x0u) */
+                Enc_Timer_CONTROL |= Enc_Timer_ONESHOT;
+            #endif /* (Enc_Timer_RunModeUsed != 0x0u) */
             
             /* Set the IRQ to use the status register interrupts */
-            rightEncTimer_CONTROL2 |= rightEncTimer_CTRL2_IRQ_SEL;
+            Enc_Timer_CONTROL2 |= Enc_Timer_CTRL2_IRQ_SEL;
             
             /* Clear and Set SYNCTC and SYNCCMP bits of RT1 register */
-            rightEncTimer_RT1 &= ((uint8)(~rightEncTimer_RT1_MASK));
-            rightEncTimer_RT1 |= rightEncTimer_SYNC;     
+            Enc_Timer_RT1 &= ((uint8)(~Enc_Timer_RT1_MASK));
+            Enc_Timer_RT1 |= Enc_Timer_SYNC;     
                     
             /*Enable DSI Sync all all inputs of the Timer*/
-            rightEncTimer_RT1 &= ((uint8)(~rightEncTimer_SYNCDSI_MASK));
-            rightEncTimer_RT1 |= rightEncTimer_SYNCDSI_EN;
+            Enc_Timer_RT1 &= ((uint8)(~Enc_Timer_SYNCDSI_MASK));
+            Enc_Timer_RT1 |= Enc_Timer_SYNCDSI_EN;
 
         #else
-            #if(!rightEncTimer_ControlRegRemoved)
+            #if(!Enc_Timer_ControlRegRemoved)
             /* Set the default compare mode defined in the parameter */
-            ctrl = rightEncTimer_CONTROL & ((uint8)(~rightEncTimer_CTRL_CMPMODE_MASK));
-            rightEncTimer_CONTROL = ctrl | rightEncTimer_DEFAULT_COMPARE_MODE;
+            ctrl = Enc_Timer_CONTROL & ((uint8)(~Enc_Timer_CTRL_CMPMODE_MASK));
+            Enc_Timer_CONTROL = ctrl | Enc_Timer_DEFAULT_COMPARE_MODE;
             
             /* Set the default capture mode defined in the parameter */
-            ctrl = rightEncTimer_CONTROL & ((uint8)(~rightEncTimer_CTRL_CAPMODE_MASK));
+            ctrl = Enc_Timer_CONTROL & ((uint8)(~Enc_Timer_CTRL_CAPMODE_MASK));
             
-            #if( 0 != rightEncTimer_CAPTURE_MODE_CONF)
-                rightEncTimer_CONTROL = ctrl | rightEncTimer_DEFAULT_CAPTURE_MODE;
+            #if( 0 != Enc_Timer_CAPTURE_MODE_CONF)
+                Enc_Timer_CONTROL = ctrl | Enc_Timer_DEFAULT_CAPTURE_MODE;
             #else
-                rightEncTimer_CONTROL = ctrl;
-            #endif /* 0 != rightEncTimer_CAPTURE_MODE */ 
+                Enc_Timer_CONTROL = ctrl;
+            #endif /* 0 != Enc_Timer_CAPTURE_MODE */ 
             
-            #endif /* (!rightEncTimer_ControlRegRemoved) */
-        #endif /* (rightEncTimer_UsingFixedFunction) */
+            #endif /* (!Enc_Timer_ControlRegRemoved) */
+        #endif /* (Enc_Timer_UsingFixedFunction) */
         
         /* Clear all data in the FIFO's */
-        #if (!rightEncTimer_UsingFixedFunction)
-            rightEncTimer_ClearFIFO();
-        #endif /* (!rightEncTimer_UsingFixedFunction) */
+        #if (!Enc_Timer_UsingFixedFunction)
+            Enc_Timer_ClearFIFO();
+        #endif /* (!Enc_Timer_UsingFixedFunction) */
         
         /* Set Initial values from Configuration */
-        rightEncTimer_WritePeriod(rightEncTimer_INIT_PERIOD_VALUE);
-        #if (!(rightEncTimer_UsingFixedFunction && (CY_PSOC5A)))
-            rightEncTimer_WriteCounter(rightEncTimer_INIT_COUNTER_VALUE);
-        #endif /* (!(rightEncTimer_UsingFixedFunction && (CY_PSOC5A))) */
-        rightEncTimer_SetInterruptMode(rightEncTimer_INIT_INTERRUPTS_MASK);
+        Enc_Timer_WritePeriod(Enc_Timer_INIT_PERIOD_VALUE);
+        #if (!(Enc_Timer_UsingFixedFunction && (CY_PSOC5A)))
+            Enc_Timer_WriteCounter(Enc_Timer_INIT_COUNTER_VALUE);
+        #endif /* (!(Enc_Timer_UsingFixedFunction && (CY_PSOC5A))) */
+        Enc_Timer_SetInterruptMode(Enc_Timer_INIT_INTERRUPTS_MASK);
         
-        #if (!rightEncTimer_UsingFixedFunction)
+        #if (!Enc_Timer_UsingFixedFunction)
             /* Read the status register to clear the unwanted interrupts */
-            (void)rightEncTimer_ReadStatusRegister();
+            (void)Enc_Timer_ReadStatusRegister();
             /* Set the compare value (only available to non-fixed function implementation */
-            rightEncTimer_WriteCompare(rightEncTimer_INIT_COMPARE_VALUE);
+            Enc_Timer_WriteCompare(Enc_Timer_INIT_COMPARE_VALUE);
             /* Use the interrupt output of the status register for IRQ output */
             
             /* CyEnterCriticalRegion and CyExitCriticalRegion are used to mark following region critical*/
             /* Enter Critical Region*/
-            rightEncTimer_interruptState = CyEnterCriticalSection();
+            Enc_Timer_interruptState = CyEnterCriticalSection();
             
-            rightEncTimer_STATUS_AUX_CTRL |= rightEncTimer_STATUS_ACTL_INT_EN_MASK;
+            Enc_Timer_STATUS_AUX_CTRL |= Enc_Timer_STATUS_ACTL_INT_EN_MASK;
             
             /* Exit Critical Region*/
-            CyExitCriticalSection(rightEncTimer_interruptState);
+            CyExitCriticalSection(Enc_Timer_interruptState);
             
-        #endif /* (!rightEncTimer_UsingFixedFunction) */
+        #endif /* (!Enc_Timer_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_Enable
+* Function Name: Enc_Timer_Enable
 ********************************************************************************
 * Summary:
 *     Enable the Counter
@@ -140,26 +140,26 @@ void rightEncTimer_Init(void)
 *   on the operation of the counter.
 *
 *******************************************************************************/
-void rightEncTimer_Enable(void) 
+void Enc_Timer_Enable(void) 
 {
     /* Globally Enable the Fixed Function Block chosen */
-    #if (rightEncTimer_UsingFixedFunction)
-        rightEncTimer_GLOBAL_ENABLE |= rightEncTimer_BLOCK_EN_MASK;
-        rightEncTimer_GLOBAL_STBY_ENABLE |= rightEncTimer_BLOCK_STBY_EN_MASK;
-    #endif /* (rightEncTimer_UsingFixedFunction) */  
+    #if (Enc_Timer_UsingFixedFunction)
+        Enc_Timer_GLOBAL_ENABLE |= Enc_Timer_BLOCK_EN_MASK;
+        Enc_Timer_GLOBAL_STBY_ENABLE |= Enc_Timer_BLOCK_STBY_EN_MASK;
+    #endif /* (Enc_Timer_UsingFixedFunction) */  
         
     /* Enable the counter from the control register  */
     /* If Fixed Function then make sure Mode is set correctly */
     /* else make sure reset is clear */
-    #if(!rightEncTimer_ControlRegRemoved || rightEncTimer_UsingFixedFunction)
-        rightEncTimer_CONTROL |= rightEncTimer_CTRL_ENABLE;                
-    #endif /* (!rightEncTimer_ControlRegRemoved || rightEncTimer_UsingFixedFunction) */
+    #if(!Enc_Timer_ControlRegRemoved || Enc_Timer_UsingFixedFunction)
+        Enc_Timer_CONTROL |= Enc_Timer_CTRL_ENABLE;                
+    #endif /* (!Enc_Timer_ControlRegRemoved || Enc_Timer_UsingFixedFunction) */
     
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_Start
+* Function Name: Enc_Timer_Start
 ********************************************************************************
 * Summary:
 *  Enables the counter for operation 
@@ -171,26 +171,26 @@ void rightEncTimer_Enable(void)
 *  void
 *
 * Global variables:
-*  rightEncTimer_initVar: Is modified when this function is called for the  
+*  Enc_Timer_initVar: Is modified when this function is called for the  
 *   first time. Is used to ensure that initialization happens only once.
 *
 *******************************************************************************/
-void rightEncTimer_Start(void) 
+void Enc_Timer_Start(void) 
 {
-    if(rightEncTimer_initVar == 0u)
+    if(Enc_Timer_initVar == 0u)
     {
-        rightEncTimer_Init();
+        Enc_Timer_Init();
         
-        rightEncTimer_initVar = 1u; /* Clear this bit for Initialization */        
+        Enc_Timer_initVar = 1u; /* Clear this bit for Initialization */        
     }
     
     /* Enable the Counter */
-    rightEncTimer_Enable();        
+    Enc_Timer_Enable();        
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_Stop
+* Function Name: Enc_Timer_Stop
 ********************************************************************************
 * Summary:
 * Halts the counter, but does not change any modes or disable interrupts.
@@ -205,23 +205,23 @@ void rightEncTimer_Start(void)
 *               has no effect on the operation of the counter.
 *
 *******************************************************************************/
-void rightEncTimer_Stop(void) 
+void Enc_Timer_Stop(void) 
 {
     /* Disable Counter */
-    #if(!rightEncTimer_ControlRegRemoved || rightEncTimer_UsingFixedFunction)
-        rightEncTimer_CONTROL &= ((uint8)(~rightEncTimer_CTRL_ENABLE));        
-    #endif /* (!rightEncTimer_ControlRegRemoved || rightEncTimer_UsingFixedFunction) */
+    #if(!Enc_Timer_ControlRegRemoved || Enc_Timer_UsingFixedFunction)
+        Enc_Timer_CONTROL &= ((uint8)(~Enc_Timer_CTRL_ENABLE));        
+    #endif /* (!Enc_Timer_ControlRegRemoved || Enc_Timer_UsingFixedFunction) */
     
     /* Globally disable the Fixed Function Block chosen */
-    #if (rightEncTimer_UsingFixedFunction)
-        rightEncTimer_GLOBAL_ENABLE &= ((uint8)(~rightEncTimer_BLOCK_EN_MASK));
-        rightEncTimer_GLOBAL_STBY_ENABLE &= ((uint8)(~rightEncTimer_BLOCK_STBY_EN_MASK));
-    #endif /* (rightEncTimer_UsingFixedFunction) */
+    #if (Enc_Timer_UsingFixedFunction)
+        Enc_Timer_GLOBAL_ENABLE &= ((uint8)(~Enc_Timer_BLOCK_EN_MASK));
+        Enc_Timer_GLOBAL_STBY_ENABLE &= ((uint8)(~Enc_Timer_BLOCK_STBY_EN_MASK));
+    #endif /* (Enc_Timer_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_SetInterruptMode
+* Function Name: Enc_Timer_SetInterruptMode
 ********************************************************************************
 * Summary:
 * Configures which interrupt sources are enabled to generate the final interrupt
@@ -234,14 +234,14 @@ void rightEncTimer_Stop(void)
 *  void
 *
 *******************************************************************************/
-void rightEncTimer_SetInterruptMode(uint8 interruptsMask) 
+void Enc_Timer_SetInterruptMode(uint8 interruptsMask) 
 {
-    rightEncTimer_STATUS_MASK = interruptsMask;
+    Enc_Timer_STATUS_MASK = interruptsMask;
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_ReadStatusRegister
+* Function Name: Enc_Timer_ReadStatusRegister
 ********************************************************************************
 * Summary:
 *   Reads the status register and returns it's state. This function should use
@@ -258,15 +258,15 @@ void rightEncTimer_SetInterruptMode(uint8 interruptsMask)
 *   Status register bits may be clear on read. 
 *
 *******************************************************************************/
-uint8   rightEncTimer_ReadStatusRegister(void) 
+uint8   Enc_Timer_ReadStatusRegister(void) 
 {
-    return rightEncTimer_STATUS;
+    return Enc_Timer_STATUS;
 }
 
 
-#if(!rightEncTimer_ControlRegRemoved)
+#if(!Enc_Timer_ControlRegRemoved)
 /*******************************************************************************
-* Function Name: rightEncTimer_ReadControlRegister
+* Function Name: Enc_Timer_ReadControlRegister
 ********************************************************************************
 * Summary:
 *   Reads the control register and returns it's state. This function should use
@@ -280,14 +280,14 @@ uint8   rightEncTimer_ReadStatusRegister(void)
 *  (uint8) The contents of the control register
 *
 *******************************************************************************/
-uint8   rightEncTimer_ReadControlRegister(void) 
+uint8   Enc_Timer_ReadControlRegister(void) 
 {
-    return rightEncTimer_CONTROL;
+    return Enc_Timer_CONTROL;
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_WriteControlRegister
+* Function Name: Enc_Timer_WriteControlRegister
 ********************************************************************************
 * Summary:
 *   Sets the bit-field of the control register.  This function should use
@@ -301,17 +301,17 @@ uint8   rightEncTimer_ReadControlRegister(void)
 *  (uint8) The contents of the control register
 *
 *******************************************************************************/
-void    rightEncTimer_WriteControlRegister(uint8 control) 
+void    Enc_Timer_WriteControlRegister(uint8 control) 
 {
-    rightEncTimer_CONTROL = control;
+    Enc_Timer_CONTROL = control;
 }
 
-#endif  /* (!rightEncTimer_ControlRegRemoved) */
+#endif  /* (!Enc_Timer_ControlRegRemoved) */
 
 
-#if (!(rightEncTimer_UsingFixedFunction && (CY_PSOC5A)))
+#if (!(Enc_Timer_UsingFixedFunction && (CY_PSOC5A)))
 /*******************************************************************************
-* Function Name: rightEncTimer_WriteCounter
+* Function Name: Enc_Timer_WriteCounter
 ********************************************************************************
 * Summary:
 *   This funtion is used to set the counter to a specific value
@@ -323,25 +323,25 @@ void    rightEncTimer_WriteControlRegister(uint8 control)
 *  void 
 *
 *******************************************************************************/
-void rightEncTimer_WriteCounter(uint16 counter) \
+void Enc_Timer_WriteCounter(uint32 counter) \
                                    
 {
-    #if(rightEncTimer_UsingFixedFunction)
+    #if(Enc_Timer_UsingFixedFunction)
         /* assert if block is already enabled */
-        CYASSERT (0u == (rightEncTimer_GLOBAL_ENABLE & rightEncTimer_BLOCK_EN_MASK));
+        CYASSERT (0u == (Enc_Timer_GLOBAL_ENABLE & Enc_Timer_BLOCK_EN_MASK));
         /* If block is disabled, enable it and then write the counter */
-        rightEncTimer_GLOBAL_ENABLE |= rightEncTimer_BLOCK_EN_MASK;
-        CY_SET_REG16(rightEncTimer_COUNTER_LSB_PTR, (uint16)counter);
-        rightEncTimer_GLOBAL_ENABLE &= ((uint8)(~rightEncTimer_BLOCK_EN_MASK));
+        Enc_Timer_GLOBAL_ENABLE |= Enc_Timer_BLOCK_EN_MASK;
+        CY_SET_REG16(Enc_Timer_COUNTER_LSB_PTR, (uint16)counter);
+        Enc_Timer_GLOBAL_ENABLE &= ((uint8)(~Enc_Timer_BLOCK_EN_MASK));
     #else
-        CY_SET_REG16(rightEncTimer_COUNTER_LSB_PTR, counter);
-    #endif /* (rightEncTimer_UsingFixedFunction) */
+        CY_SET_REG24(Enc_Timer_COUNTER_LSB_PTR, counter);
+    #endif /* (Enc_Timer_UsingFixedFunction) */
 }
-#endif /* (!(rightEncTimer_UsingFixedFunction && (CY_PSOC5A))) */
+#endif /* (!(Enc_Timer_UsingFixedFunction && (CY_PSOC5A))) */
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_ReadCounter
+* Function Name: Enc_Timer_ReadCounter
 ********************************************************************************
 * Summary:
 * Returns the current value of the counter.  It doesn't matter
@@ -351,31 +351,31 @@ void rightEncTimer_WriteCounter(uint16 counter) \
 *  void:  
 *
 * Return: 
-*  (uint16) The present value of the counter.
+*  (uint32) The present value of the counter.
 *
 *******************************************************************************/
-uint16 rightEncTimer_ReadCounter(void) 
+uint32 Enc_Timer_ReadCounter(void) 
 {
     /* Force capture by reading Accumulator */
     /* Must first do a software capture to be able to read the counter */
     /* It is up to the user code to make sure there isn't already captured data in the FIFO */
-    #if(rightEncTimer_UsingFixedFunction)
-		(void)CY_GET_REG16(rightEncTimer_COUNTER_LSB_PTR);
+    #if(Enc_Timer_UsingFixedFunction)
+		(void)CY_GET_REG16(Enc_Timer_COUNTER_LSB_PTR);
 	#else
-		(void)CY_GET_REG8(rightEncTimer_COUNTER_LSB_PTR_8BIT);
-	#endif/* (rightEncTimer_UsingFixedFunction) */
+		(void)CY_GET_REG8(Enc_Timer_COUNTER_LSB_PTR_8BIT);
+	#endif/* (Enc_Timer_UsingFixedFunction) */
     
     /* Read the data from the FIFO (or capture register for Fixed Function)*/
-    #if(rightEncTimer_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(rightEncTimer_STATICCOUNT_LSB_PTR));
+    #if(Enc_Timer_UsingFixedFunction)
+        return ((uint32)CY_GET_REG16(Enc_Timer_STATICCOUNT_LSB_PTR));
     #else
-        return (CY_GET_REG16(rightEncTimer_STATICCOUNT_LSB_PTR));
-    #endif /* (rightEncTimer_UsingFixedFunction) */
+        return (CY_GET_REG24(Enc_Timer_STATICCOUNT_LSB_PTR));
+    #endif /* (Enc_Timer_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_ReadCapture
+* Function Name: Enc_Timer_ReadCapture
 ********************************************************************************
 * Summary:
 *   This function returns the last value captured.
@@ -384,46 +384,46 @@ uint16 rightEncTimer_ReadCounter(void)
 *  void
 *
 * Return: 
-*  (uint16) Present Capture value.
+*  (uint32) Present Capture value.
 *
 *******************************************************************************/
-uint16 rightEncTimer_ReadCapture(void) 
+uint32 Enc_Timer_ReadCapture(void) 
 {
-    #if(rightEncTimer_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(rightEncTimer_STATICCOUNT_LSB_PTR));
+    #if(Enc_Timer_UsingFixedFunction)
+        return ((uint32)CY_GET_REG16(Enc_Timer_STATICCOUNT_LSB_PTR));
     #else
-        return (CY_GET_REG16(rightEncTimer_STATICCOUNT_LSB_PTR));
-    #endif /* (rightEncTimer_UsingFixedFunction) */
+        return (CY_GET_REG24(Enc_Timer_STATICCOUNT_LSB_PTR));
+    #endif /* (Enc_Timer_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_WritePeriod
+* Function Name: Enc_Timer_WritePeriod
 ********************************************************************************
 * Summary:
 * Changes the period of the counter.  The new period 
 * will be loaded the next time terminal count is detected.
 *
 * Parameters:  
-*  period: (uint16) A value of 0 will result in
+*  period: (uint32) A value of 0 will result in
 *         the counter remaining at zero.  
 *
 * Return: 
 *  void
 *
 *******************************************************************************/
-void rightEncTimer_WritePeriod(uint16 period) 
+void Enc_Timer_WritePeriod(uint32 period) 
 {
-    #if(rightEncTimer_UsingFixedFunction)
-        CY_SET_REG16(rightEncTimer_PERIOD_LSB_PTR,(uint16)period);
+    #if(Enc_Timer_UsingFixedFunction)
+        CY_SET_REG16(Enc_Timer_PERIOD_LSB_PTR,(uint16)period);
     #else
-        CY_SET_REG16(rightEncTimer_PERIOD_LSB_PTR, period);
-    #endif /* (rightEncTimer_UsingFixedFunction) */
+        CY_SET_REG24(Enc_Timer_PERIOD_LSB_PTR, period);
+    #endif /* (Enc_Timer_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_ReadPeriod
+* Function Name: Enc_Timer_ReadPeriod
 ********************************************************************************
 * Summary:
 * Reads the current period value without affecting counter operation.
@@ -432,22 +432,22 @@ void rightEncTimer_WritePeriod(uint16 period)
 *  void:  
 *
 * Return: 
-*  (uint16) Present period value.
+*  (uint32) Present period value.
 *
 *******************************************************************************/
-uint16 rightEncTimer_ReadPeriod(void) 
+uint32 Enc_Timer_ReadPeriod(void) 
 {
-    #if(rightEncTimer_UsingFixedFunction)
-        return ((uint16)CY_GET_REG16(rightEncTimer_PERIOD_LSB_PTR));
+    #if(Enc_Timer_UsingFixedFunction)
+        return ((uint32)CY_GET_REG16(Enc_Timer_PERIOD_LSB_PTR));
     #else
-        return (CY_GET_REG16(rightEncTimer_PERIOD_LSB_PTR));
-    #endif /* (rightEncTimer_UsingFixedFunction) */
+        return (CY_GET_REG24(Enc_Timer_PERIOD_LSB_PTR));
+    #endif /* (Enc_Timer_UsingFixedFunction) */
 }
 
 
-#if (!rightEncTimer_UsingFixedFunction)
+#if (!Enc_Timer_UsingFixedFunction)
 /*******************************************************************************
-* Function Name: rightEncTimer_WriteCompare
+* Function Name: Enc_Timer_WriteCompare
 ********************************************************************************
 * Summary:
 * Changes the compare value.  The compare output will 
@@ -462,19 +462,19 @@ uint16 rightEncTimer_ReadPeriod(void)
 *  void
 *
 *******************************************************************************/
-void rightEncTimer_WriteCompare(uint16 compare) \
+void Enc_Timer_WriteCompare(uint32 compare) \
                                    
 {
-    #if(rightEncTimer_UsingFixedFunction)
-        CY_SET_REG16(rightEncTimer_COMPARE_LSB_PTR, (uint16)compare);
+    #if(Enc_Timer_UsingFixedFunction)
+        CY_SET_REG16(Enc_Timer_COMPARE_LSB_PTR, (uint16)compare);
     #else
-        CY_SET_REG16(rightEncTimer_COMPARE_LSB_PTR, compare);
-    #endif /* (rightEncTimer_UsingFixedFunction) */
+        CY_SET_REG24(Enc_Timer_COMPARE_LSB_PTR, compare);
+    #endif /* (Enc_Timer_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_ReadCompare
+* Function Name: Enc_Timer_ReadCompare
 ********************************************************************************
 * Summary:
 * Returns the compare value.
@@ -483,18 +483,18 @@ void rightEncTimer_WriteCompare(uint16 compare) \
 *  void:
 *
 * Return: 
-*  (uint16) Present compare value.
+*  (uint32) Present compare value.
 *
 *******************************************************************************/
-uint16 rightEncTimer_ReadCompare(void) 
+uint32 Enc_Timer_ReadCompare(void) 
 {
-    return (CY_GET_REG16(rightEncTimer_COMPARE_LSB_PTR));
+    return (CY_GET_REG24(Enc_Timer_COMPARE_LSB_PTR));
 }
 
 
-#if (rightEncTimer_COMPARE_MODE_SOFTWARE)
+#if (Enc_Timer_COMPARE_MODE_SOFTWARE)
 /*******************************************************************************
-* Function Name: rightEncTimer_SetCompareMode
+* Function Name: Enc_Timer_SetCompareMode
 ********************************************************************************
 * Summary:
 *  Sets the software controlled Compare Mode.
@@ -506,20 +506,20 @@ uint16 rightEncTimer_ReadCompare(void)
 *  void
 *
 *******************************************************************************/
-void rightEncTimer_SetCompareMode(uint8 compareMode) 
+void Enc_Timer_SetCompareMode(uint8 compareMode) 
 {
     /* Clear the compare mode bits in the control register */
-    rightEncTimer_CONTROL &= ((uint8)(~rightEncTimer_CTRL_CMPMODE_MASK));
+    Enc_Timer_CONTROL &= ((uint8)(~Enc_Timer_CTRL_CMPMODE_MASK));
     
     /* Write the new setting */
-    rightEncTimer_CONTROL |= compareMode;
+    Enc_Timer_CONTROL |= compareMode;
 }
-#endif  /* (rightEncTimer_COMPARE_MODE_SOFTWARE) */
+#endif  /* (Enc_Timer_COMPARE_MODE_SOFTWARE) */
 
 
-#if (rightEncTimer_CAPTURE_MODE_SOFTWARE)
+#if (Enc_Timer_CAPTURE_MODE_SOFTWARE)
 /*******************************************************************************
-* Function Name: rightEncTimer_SetCaptureMode
+* Function Name: Enc_Timer_SetCaptureMode
 ********************************************************************************
 * Summary:
 *  Sets the software controlled Capture Mode.
@@ -531,19 +531,19 @@ void rightEncTimer_SetCompareMode(uint8 compareMode)
 *  void
 *
 *******************************************************************************/
-void rightEncTimer_SetCaptureMode(uint8 captureMode) 
+void Enc_Timer_SetCaptureMode(uint8 captureMode) 
 {
     /* Clear the capture mode bits in the control register */
-    rightEncTimer_CONTROL &= ((uint8)(~rightEncTimer_CTRL_CAPMODE_MASK));
+    Enc_Timer_CONTROL &= ((uint8)(~Enc_Timer_CTRL_CAPMODE_MASK));
     
     /* Write the new setting */
-    rightEncTimer_CONTROL |= ((uint8)((uint8)captureMode << rightEncTimer_CTRL_CAPMODE0_SHIFT));
+    Enc_Timer_CONTROL |= ((uint8)((uint8)captureMode << Enc_Timer_CTRL_CAPMODE0_SHIFT));
 }
-#endif  /* (rightEncTimer_CAPTURE_MODE_SOFTWARE) */
+#endif  /* (Enc_Timer_CAPTURE_MODE_SOFTWARE) */
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_ClearFIFO
+* Function Name: Enc_Timer_ClearFIFO
 ********************************************************************************
 * Summary:
 *   This function clears all capture data from the capture FIFO
@@ -555,16 +555,16 @@ void rightEncTimer_SetCaptureMode(uint8 captureMode)
 *  None
 *
 *******************************************************************************/
-void rightEncTimer_ClearFIFO(void) 
+void Enc_Timer_ClearFIFO(void) 
 {
 
-    while(0u != (rightEncTimer_ReadStatusRegister() & rightEncTimer_STATUS_FIFONEMP))
+    while(0u != (Enc_Timer_ReadStatusRegister() & Enc_Timer_STATUS_FIFONEMP))
     {
-        (void)rightEncTimer_ReadCapture();
+        (void)Enc_Timer_ReadCapture();
     }
 
 }
-#endif  /* (!rightEncTimer_UsingFixedFunction) */
+#endif  /* (!Enc_Timer_UsingFixedFunction) */
 
 
 /* [] END OF FILE */

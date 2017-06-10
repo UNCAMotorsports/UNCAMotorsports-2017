@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: zero.c  
+* File Name: Enc.c  
 * Version 2.20
 *
 * Description:
@@ -15,15 +15,15 @@
 *******************************************************************************/
 
 #include "cytypes.h"
-#include "zero.h"
+#include "Enc.h"
 
 /* APIs are not generated for P15[7:6] on PSoC 5 */
 #if !(CY_PSOC5A &&\
-	 zero__PORT == 15 && ((zero__MASK & 0xC0) != 0))
+	 Enc__PORT == 15 && ((Enc__MASK & 0xC0) != 0))
 
 
 /*******************************************************************************
-* Function Name: zero_Write
+* Function Name: Enc_Write
 ****************************************************************************//**
 *
 * \brief Writes the value to the physical port (data output register), masking
@@ -52,17 +52,17 @@
 *  this function.
 *
 * \funcusage
-*  \snippet zero_SUT.c usage_zero_Write
+*  \snippet Enc_SUT.c usage_Enc_Write
 *******************************************************************************/
-void zero_Write(uint8 value)
+void Enc_Write(uint8 value)
 {
-    uint8 staticBits = (zero_DR & (uint8)(~zero_MASK));
-    zero_DR = staticBits | ((uint8)(value << zero_SHIFT) & zero_MASK);
+    uint8 staticBits = (Enc_DR & (uint8)(~Enc_MASK));
+    Enc_DR = staticBits | ((uint8)(value << Enc_SHIFT) & Enc_MASK);
 }
 
 
 /*******************************************************************************
-* Function Name: zero_SetDriveMode
+* Function Name: Enc_SetDriveMode
 ****************************************************************************//**
 *
 * \brief Sets the drive mode for each of the Pins component's pins.
@@ -85,16 +85,16 @@ void zero_Write(uint8 value)
 *  APIs (primary method) or disable interrupts around this function.
 *
 * \funcusage
-*  \snippet zero_SUT.c usage_zero_SetDriveMode
+*  \snippet Enc_SUT.c usage_Enc_SetDriveMode
 *******************************************************************************/
-void zero_SetDriveMode(uint8 mode)
+void Enc_SetDriveMode(uint8 mode)
 {
-	CyPins_SetPinDriveMode(zero_0, mode);
+	CyPins_SetPinDriveMode(Enc_0, mode);
 }
 
 
 /*******************************************************************************
-* Function Name: zero_Read
+* Function Name: Enc_Read
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port (pin status register) and masks 
@@ -108,16 +108,16 @@ void zero_SetDriveMode(uint8 mode)
 *  The current value for the pins in the component as a right justified number.
 *
 * \funcusage
-*  \snippet zero_SUT.c usage_zero_Read  
+*  \snippet Enc_SUT.c usage_Enc_Read  
 *******************************************************************************/
-uint8 zero_Read(void)
+uint8 Enc_Read(void)
 {
-    return (zero_PS & zero_MASK) >> zero_SHIFT;
+    return (Enc_PS & Enc_MASK) >> Enc_SHIFT;
 }
 
 
 /*******************************************************************************
-* Function Name: zero_ReadDataReg
+* Function Name: Enc_ReadDataReg
 ****************************************************************************//**
 *
 * \brief Reads the associated physical port's data output register and masks 
@@ -126,8 +126,8 @@ uint8 zero_Read(void)
 *
 * The data output register controls the signal applied to the physical pin in 
 * conjunction with the drive mode parameter. This is not the same as the 
-* preferred zero_Read() API because the 
-* zero_ReadDataReg() reads the data register instead of the status 
+* preferred Enc_Read() API because the 
+* Enc_ReadDataReg() reads the data register instead of the status 
 * register. For output pins this is a useful function to determine the value 
 * just written to the pin.
 *
@@ -136,19 +136,19 @@ uint8 zero_Read(void)
 *  justified number for the component instance.
 *
 * \funcusage
-*  \snippet zero_SUT.c usage_zero_ReadDataReg 
+*  \snippet Enc_SUT.c usage_Enc_ReadDataReg 
 *******************************************************************************/
-uint8 zero_ReadDataReg(void)
+uint8 Enc_ReadDataReg(void)
 {
-    return (zero_DR & zero_MASK) >> zero_SHIFT;
+    return (Enc_DR & Enc_MASK) >> Enc_SHIFT;
 }
 
 
 /* If interrupt is connected for this Pins component */ 
-#if defined(zero_INTSTAT) 
+#if defined(Enc_INTSTAT) 
 
     /*******************************************************************************
-    * Function Name: zero_SetInterruptMode
+    * Function Name: Enc_SetInterruptMode
     ****************************************************************************//**
     *
     * \brief Configures the interrupt mode for each of the Pins component's
@@ -161,12 +161,12 @@ uint8 zero_ReadDataReg(void)
     * \param position
     *  The pin position as listed in the Pins component. You may OR these to be 
     *  able to configure the interrupt mode of multiple pins within a Pins 
-    *  component. Or you may use zero_INTR_ALL to configure the
+    *  component. Or you may use Enc_INTR_ALL to configure the
     *  interrupt mode of all the pins in the Pins component.       
-    *  - zero_0_INTR       (First pin in the list)
-    *  - zero_1_INTR       (Second pin in the list)
+    *  - Enc_0_INTR       (First pin in the list)
+    *  - Enc_1_INTR       (Second pin in the list)
     *  - ...
-    *  - zero_INTR_ALL     (All pins in Pins component)
+    *  - Enc_INTR_ALL     (All pins in Pins component)
     *
     * \param mode
     *  Interrupt mode for the selected pins. Valid options are documented in
@@ -182,19 +182,19 @@ uint8 zero_ReadDataReg(void)
     *  port.
     *
     * \funcusage
-    *  \snippet zero_SUT.c usage_zero_SetInterruptMode
+    *  \snippet Enc_SUT.c usage_Enc_SetInterruptMode
     *******************************************************************************/
-    void zero_SetInterruptMode(uint16 position, uint16 mode)
+    void Enc_SetInterruptMode(uint16 position, uint16 mode)
     {
-		if((position & zero_0_INTR) != 0u) 
+		if((position & Enc_0_INTR) != 0u) 
 		{ 
-			 zero_0_INTTYPE_REG = (uint8)mode; 
+			 Enc_0_INTTYPE_REG = (uint8)mode; 
 		}
     }
     
     
     /*******************************************************************************
-    * Function Name: zero_ClearInterrupt
+    * Function Name: Enc_ClearInterrupt
     ****************************************************************************//**
     *
     * \brief Clears any active interrupts attached with the component and returns 
@@ -211,11 +211,11 @@ uint8 zero_ReadDataReg(void)
     *  those associated with the Pins component.
     *
     * \funcusage
-    *  \snippet zero_SUT.c usage_zero_ClearInterrupt
+    *  \snippet Enc_SUT.c usage_Enc_ClearInterrupt
     *******************************************************************************/
-    uint8 zero_ClearInterrupt(void)
+    uint8 Enc_ClearInterrupt(void)
     {
-        return (zero_INTSTAT & zero_MASK) >> zero_SHIFT;
+        return (Enc_INTSTAT & Enc_MASK) >> Enc_SHIFT;
     }
 
 #endif /* If Interrupts Are Enabled for this Pins component */ 

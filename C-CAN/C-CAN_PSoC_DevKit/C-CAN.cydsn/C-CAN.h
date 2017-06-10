@@ -31,6 +31,7 @@ bool THROTTLE_IMPLAUSIBLE;
 typedef struct Sensors { //Struct that holds all necessary data for a sensor
     char name[17];
     uint16 data[BUFF];
+    uint16 sample;
     uint32 accumulator;
     uint8 number;
     uint8 index;
@@ -40,6 +41,8 @@ typedef struct Sensors { //Struct that holds all necessary data for a sensor
     bool enable;
     uint16 rate;
     uint16 CAN_rate;
+    CAN_1_TX_MSG sensorMsg;
+    CAN_1_DATA_BYTES_MSG sensorData;
 }Sensor;
 
 typedef struct Pots { //Pot objects inherit Sensor variables
@@ -61,15 +64,14 @@ typedef struct Throttle {
     int16 timer_constant;
 }Throttle;
 
-Pot zero; //Each C-CAN is set up to read 6 analog pots and 2 encoders
+//Each C-CAN is set up to read 4 analog pots and 1 encoder
 Pot one;
 Pot two;
 Pot three;
 Pot four;
-Pot five;
-Encoder left;
-Encoder right;
+Encoder wheel;
 Throttle throttle;
+
 
 static bool temp_enable[8]; //Holds previous enable configuration during config()
 
@@ -85,15 +87,13 @@ uint8 RxFlag1;
 void GetSample(Pot * pot);
 void GetRPM(Encoder * encoder);
 void GetThrottle(Throttle * throttleOne, Throttle * throttleTwo);
-void SensorSet(Sensor * sensor, uint8 number_set, uint8 window_set, uint16 rate_set, uint16 CAN_rate_set);
+
+void SensorSet(Sensor * sensor, uint8 number_set,
+    uint8 window_set, uint16 rate_set, uint16 CAN_rate_set, uint32 CAN_ID_set);
+
 void ThrottleInit(Throttle * throttle, Pot * pot);
 void PotInit(Pot * pot);
 void EncoderInit(Encoder * encoder);
-
-void CAN_Send_0(uint8 zero, uint8 one, uint8 two, uint8 three, uint8 four, uint8 five, uint8 six, uint8 seven);
-void CAN_Send_1(uint8 zero, uint8 one, uint8 two, uint8 three, uint8 four, uint8 five, uint8 six, uint8 seven);
-void CAN_Send_2(uint8 zero, uint8 one, uint8 two, uint8 three, uint8 four, uint8 five, uint8 six, uint8 seven);
-void CAN_Send_3(uint8 zero, uint8 one, uint8 two, uint8 three, uint8 four, uint8 five, uint8 six, uint8 seven);
 
 void SetFlag(Sensor * sensor, bool flag_set);
 void SetCANFlag(Sensor * sensor, bool CAN_set);

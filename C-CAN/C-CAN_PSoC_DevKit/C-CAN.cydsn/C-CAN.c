@@ -23,16 +23,10 @@ void GetSample(Pot * pot){
     *to a millivolt value.
     *
     */
-    int16 temp;
-    AMux_1_FastSelect(pot->sensor.number);
-    ADC_SAR_1_StartConvert();
-    if(ADC_SAR_1_IsEndConversion(ADC_SAR_1_WAIT_FOR_RESULT))
-    {
-        temp = ADC_SAR_1_GetResult16();
-        pot->sensor.accumulator -= pot->sensor.data[pot->sensor.index];
-        pot->sensor.data[pot->sensor.index] = temp;
-        pot->sensor.accumulator += pot->sensor.data[pot->sensor.index];
-    }
+    pot->sensor.accumulator -= pot->sensor.data[pot->sensor.index];
+    pot->sensor.data[pot->sensor.index] = pot->sensor.sample;
+    pot->sensor.accumulator += pot->sensor.data[pot->sensor.index];
+    
     pot->sensor.index++;
     if(pot->sensor.index>=pot->sensor.window){
         pot->sensor.index = 0;
@@ -75,27 +69,17 @@ void GetRPM(Encoder * encoder){
     */
     
     
-    if(encoder->sensor.number == 6){ //calculate left rpm
-        encoder->accumulator -= encoder->sensor.data[encoder->sensor.index];
-        encoder->sensor.data[encoder->sensor.index] = Encoder_Left_ReadCounter();
-        Encoder_Left_WriteCounter(0); //clear the pulse counter
-        encoder->accumulator += encoder->sensor.data[encoder->sensor.index];
+    encoder->accumulator -= encoder->sensor.data[encoder->sensor.index];
+    encoder->sensor.data[encoder->sensor.index] = Encoder_ReadCounter();
+    Encoder_WriteCounter(0); //clear the pulse counter
+    encoder->accumulator += encoder->sensor.data[encoder->sensor.index];
         
         
         
-        encoder->rpm = (encoder->accumulator/encoder->sensor.window) * 100000 / (leftEncTimer_ReadCounter());
-        leftEncTimer_WriteCounter(0); //clear the microsecond counter
-    }
+    encoder->rpm = (encoder->accumulator/encoder->sensor.window) * 100000 / (Enc_Timer_ReadCounter());
+    Enc_Timer_WriteCounter(0); //clear the microsecond counter
     
-    if(encoder->sensor.number == 7){ //calculate right rpm
-        encoder->accumulator -= encoder->sensor.data[encoder->sensor.index];
-        encoder->sensor.data[encoder->sensor.index] = Encoder_Right_ReadCounter();
-        Encoder_Right_WriteCounter(0); //clear the pulse counter
-        encoder->accumulator += encoder->sensor.data[encoder->sensor.index];
-        
-        encoder->rpm = (encoder->accumulator/encoder->sensor.window) * 100000 / (rightEncTimer_ReadCounter());
-        rightEncTimer_WriteCounter(0); //clear the microsecond counter
-    }
+
     
     encoder->sensor.index++;
     if(encoder->sensor.index >= encoder->sensor.window){
@@ -162,8 +146,9 @@ void ThrottleInit(Throttle * throttle, Pot * pot){
     throttle->timer_constant = throttle->pot->sensor.rate * 0.1;
 }
 
-void SensorSet(Sensor * sensor, uint8 number_set, uint8 window_set, uint16 rate_set, uint16 CAN_rate_set){
-    
+void SensorSet(Sensor * sensor, uint8 number_set, uint8 window_set,
+    uint16 rate_set, uint16 CAN_rate_set, uint32 CAN_ID_set){
+    uint8 i = 0;
     /* This functions sets up a sensor. It should be called during initialization after
     *  the sensor objects have been initialized. It sets the filtering window, sensor number
     *  and sampling rate.
@@ -175,6 +160,15 @@ void SensorSet(Sensor * sensor, uint8 number_set, uint8 window_set, uint16 rate_
     sensor->CAN_rate = CAN_rate_set;
     if(window_set>=BUFF){
         sensor->window = BUFF;
+    }
+    sensor->sensorMsg.dlc = CAN_1_TX_DLC_MAX_VALUE;
+    sensor->sensorMsg.id = CAN_ID_set & 0x07FF;
+    sensor->sensorMsg.ide = 0;
+    sensor->sensorMsg.irq = 0;
+    sensor->sensorMsg.msg = &(sensor->sensorData);
+    sensor->sensorMsg.rtr = 0;
+    for(i = 0; i < 8; i++){
+        sensor->sensorData.byte[i] = 0;   
     }
 }
 
@@ -214,54 +208,6 @@ void EncoderInit(Encoder * encoder){
 
 void Config(void){
     
-}
-
-void CAN_Send_0(uint8 zero, uint8 one, uint8 two, uint8 three, uint8 four, uint8 five, uint8 six, uint8 seven){
-    TxMessage0[0] = zero;
-    TxMessage0[1] = one;
-    TxMessage0[2] = two;
-    TxMessage0[3] = three;
-    TxMessage0[4] = four;
-    TxMessage0[5] = five;
-    TxMessage0[6] = six;
-    TxMessage0[7] = seven;
-    CAN_1_SendMsg0();
-}
-
-void CAN_Send_1(uint8 zero, uint8 one, uint8 two, uint8 three, uint8 four, uint8 five, uint8 six, uint8 seven){
-    TxMessage1[0] = zero;
-    TxMessage1[1] = one;
-    TxMessage1[2] = two;
-    TxMessage1[3] = three;
-    TxMessage1[4] = four;
-    TxMessage1[5] = five;
-    TxMessage1[6] = six;
-    TxMessage1[7] = seven;
-    CAN_1_SendMsg1();
-}
-
-void CAN_Send_2(uint8 zero, uint8 one, uint8 two, uint8 three, uint8 four, uint8 five, uint8 six, uint8 seven){
-    TxMessage2[0] = zero;
-    TxMessage2[1] = one;
-    TxMessage2[2] = two;
-    TxMessage2[3] = three;
-    TxMessage2[4] = four;
-    TxMessage2[5] = five;
-    TxMessage2[6] = six;
-    TxMessage2[7] = seven;
-    CAN_1_SendMsg2();
-}
-
-void CAN_Send_3(uint8 zero, uint8 one, uint8 two, uint8 three, uint8 four, uint8 five, uint8 six, uint8 seven){
-    TxMessage3[0] = zero;
-    TxMessage3[1] = one;
-    TxMessage3[2] = two;
-    TxMessage3[3] = three;
-    TxMessage3[4] = four;
-    TxMessage3[5] = five;
-    TxMessage3[6] = six;
-    TxMessage3[7] = seven;
-    CAN_1_SendMsg3();
 }
     
 void SetFlag(Sensor * sensor, bool flag_set){ //Sets the execution flag for sensor sampling

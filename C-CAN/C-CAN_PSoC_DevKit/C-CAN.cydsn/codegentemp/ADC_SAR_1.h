@@ -165,8 +165,8 @@ extern volatile int16 ADC_SAR_1_shift;
 
 /* Default config values from user parameters */
 #define ADC_SAR_1_DEFAULT_RESOLUTION     (12u)   /* ADC resolution selected with parameters.*/
-#define ADC_SAR_1_DEFAULT_CONV_MODE      (1u)        /* Default conversion method */
-#define ADC_SAR_1_DEFAULT_INTERNAL_CLK   (1u)             /* Default clock selection */
+#define ADC_SAR_1_DEFAULT_CONV_MODE      (0u)        /* Default conversion method */
+#define ADC_SAR_1_DEFAULT_INTERNAL_CLK   (0u)             /* Default clock selection */
 #define ADC_SAR_1_DEFAULT_REFERENCE      (1u)         /* Default reference */
 #define ADC_SAR_1_DEFAULT_RANGE          (1u)       /* ADC Input Range selection */
 #define ADC_SAR_1_CLOCK_FREQUENCY        (18000000u)   /* Clock frequency */

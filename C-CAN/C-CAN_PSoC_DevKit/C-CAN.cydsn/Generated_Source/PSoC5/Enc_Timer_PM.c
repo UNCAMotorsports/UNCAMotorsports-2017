@@ -1,5 +1,5 @@
 /*******************************************************************************
-* File Name: rightEncTimer_PM.c  
+* File Name: Enc_Timer_PM.c  
 * Version 3.0
 *
 *  Description:
@@ -16,13 +16,13 @@
 * the software package with which this file was provided.
 *******************************************************************************/
 
-#include "rightEncTimer.h"
+#include "Enc_Timer.h"
 
-static rightEncTimer_backupStruct rightEncTimer_backup;
+static Enc_Timer_backupStruct Enc_Timer_backup;
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_SaveConfig
+* Function Name: Enc_Timer_SaveConfig
 ********************************************************************************
 * Summary:
 *     Save the current user configuration
@@ -34,27 +34,27 @@ static rightEncTimer_backupStruct rightEncTimer_backup;
 *  void
 *
 * Global variables:
-*  rightEncTimer_backup:  Variables of this global structure are modified to 
+*  Enc_Timer_backup:  Variables of this global structure are modified to 
 *  store the values of non retention configuration registers when Sleep() API is 
 *  called.
 *
 *******************************************************************************/
-void rightEncTimer_SaveConfig(void) 
+void Enc_Timer_SaveConfig(void) 
 {
-    #if (!rightEncTimer_UsingFixedFunction)
+    #if (!Enc_Timer_UsingFixedFunction)
 
-        rightEncTimer_backup.CounterUdb = rightEncTimer_ReadCounter();
+        Enc_Timer_backup.CounterUdb = Enc_Timer_ReadCounter();
 
-        #if(!rightEncTimer_ControlRegRemoved)
-            rightEncTimer_backup.CounterControlRegister = rightEncTimer_ReadControlRegister();
-        #endif /* (!rightEncTimer_ControlRegRemoved) */
+        #if(!Enc_Timer_ControlRegRemoved)
+            Enc_Timer_backup.CounterControlRegister = Enc_Timer_ReadControlRegister();
+        #endif /* (!Enc_Timer_ControlRegRemoved) */
 
-    #endif /* (!rightEncTimer_UsingFixedFunction) */
+    #endif /* (!Enc_Timer_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_RestoreConfig
+* Function Name: Enc_Timer_RestoreConfig
 ********************************************************************************
 *
 * Summary:
@@ -67,26 +67,26 @@ void rightEncTimer_SaveConfig(void)
 *  void
 *
 * Global variables:
-*  rightEncTimer_backup:  Variables of this global structure are used to 
+*  Enc_Timer_backup:  Variables of this global structure are used to 
 *  restore the values of non retention registers on wakeup from sleep mode.
 *
 *******************************************************************************/
-void rightEncTimer_RestoreConfig(void) 
+void Enc_Timer_RestoreConfig(void) 
 {      
-    #if (!rightEncTimer_UsingFixedFunction)
+    #if (!Enc_Timer_UsingFixedFunction)
 
-       rightEncTimer_WriteCounter(rightEncTimer_backup.CounterUdb);
+       Enc_Timer_WriteCounter(Enc_Timer_backup.CounterUdb);
 
-        #if(!rightEncTimer_ControlRegRemoved)
-            rightEncTimer_WriteControlRegister(rightEncTimer_backup.CounterControlRegister);
-        #endif /* (!rightEncTimer_ControlRegRemoved) */
+        #if(!Enc_Timer_ControlRegRemoved)
+            Enc_Timer_WriteControlRegister(Enc_Timer_backup.CounterControlRegister);
+        #endif /* (!Enc_Timer_ControlRegRemoved) */
 
-    #endif /* (!rightEncTimer_UsingFixedFunction) */
+    #endif /* (!Enc_Timer_UsingFixedFunction) */
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_Sleep
+* Function Name: Enc_Timer_Sleep
 ********************************************************************************
 * Summary:
 *     Stop and Save the user configuration
@@ -98,39 +98,39 @@ void rightEncTimer_RestoreConfig(void)
 *  void
 *
 * Global variables:
-*  rightEncTimer_backup.enableState:  Is modified depending on the enable 
+*  Enc_Timer_backup.enableState:  Is modified depending on the enable 
 *  state of the block before entering sleep mode.
 *
 *******************************************************************************/
-void rightEncTimer_Sleep(void) 
+void Enc_Timer_Sleep(void) 
 {
-    #if(!rightEncTimer_ControlRegRemoved)
+    #if(!Enc_Timer_ControlRegRemoved)
         /* Save Counter's enable state */
-        if(rightEncTimer_CTRL_ENABLE == (rightEncTimer_CONTROL & rightEncTimer_CTRL_ENABLE))
+        if(Enc_Timer_CTRL_ENABLE == (Enc_Timer_CONTROL & Enc_Timer_CTRL_ENABLE))
         {
             /* Counter is enabled */
-            rightEncTimer_backup.CounterEnableState = 1u;
+            Enc_Timer_backup.CounterEnableState = 1u;
         }
         else
         {
             /* Counter is disabled */
-            rightEncTimer_backup.CounterEnableState = 0u;
+            Enc_Timer_backup.CounterEnableState = 0u;
         }
     #else
-        rightEncTimer_backup.CounterEnableState = 1u;
-        if(rightEncTimer_backup.CounterEnableState != 0u)
+        Enc_Timer_backup.CounterEnableState = 1u;
+        if(Enc_Timer_backup.CounterEnableState != 0u)
         {
-            rightEncTimer_backup.CounterEnableState = 0u;
+            Enc_Timer_backup.CounterEnableState = 0u;
         }
-    #endif /* (!rightEncTimer_ControlRegRemoved) */
+    #endif /* (!Enc_Timer_ControlRegRemoved) */
     
-    rightEncTimer_Stop();
-    rightEncTimer_SaveConfig();
+    Enc_Timer_Stop();
+    Enc_Timer_SaveConfig();
 }
 
 
 /*******************************************************************************
-* Function Name: rightEncTimer_Wakeup
+* Function Name: Enc_Timer_Wakeup
 ********************************************************************************
 *
 * Summary:
@@ -143,20 +143,20 @@ void rightEncTimer_Sleep(void)
 *  void
 *
 * Global variables:
-*  rightEncTimer_backup.enableState:  Is used to restore the enable state of 
+*  Enc_Timer_backup.enableState:  Is used to restore the enable state of 
 *  block on wakeup from sleep mode.
 *
 *******************************************************************************/
-void rightEncTimer_Wakeup(void) 
+void Enc_Timer_Wakeup(void) 
 {
-    rightEncTimer_RestoreConfig();
-    #if(!rightEncTimer_ControlRegRemoved)
-        if(rightEncTimer_backup.CounterEnableState == 1u)
+    Enc_Timer_RestoreConfig();
+    #if(!Enc_Timer_ControlRegRemoved)
+        if(Enc_Timer_backup.CounterEnableState == 1u)
         {
             /* Enable Counter's operation */
-            rightEncTimer_Enable();
+            Enc_Timer_Enable();
         } /* Do nothing if Counter was disabled before */    
-    #endif /* (!rightEncTimer_ControlRegRemoved) */
+    #endif /* (!Enc_Timer_ControlRegRemoved) */
     
 }
 

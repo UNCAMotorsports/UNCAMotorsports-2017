@@ -7,7 +7,7 @@
   <width>32</width>
   <peripherals>
     <peripheral>
-      <name>rightEncTimer</name>
+      <name>Enc_Timer</name>
       <description>No description available</description>
       <baseAddress>0x0</baseAddress>
       <addressBlock>
@@ -17,569 +17,36 @@
       </addressBlock>
       <registers>
         <register>
-          <name>rightEncTimer_COUNTER</name>
-          <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x40006506</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>rightEncTimer_PERIOD</name>
-          <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006526</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>rightEncTimer_COMPARE</name>
-          <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x40006536</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>rightEncTimer_Control_Reg</name>
-          <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006577</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CTRL_ENABLE</name>
-              <description>Enable Counter</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CAPMODE</name>
-              <description>Capture mode</description>
-              <lsb>3</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CMPMODE</name>
-              <description>Compare mode</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>rightEncTimer_STATUS_MASK</name>
-          <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006587</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>COUNTER_STS_CMP</name>
-              <description>Compare output status</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_A0ZERO</name>
-              <description>A0 Zero ouput status</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_OVERFLOW</name>
-              <description>Overflow status </description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_UNDERFLOW</name>
-              <description>Underflow status </description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_CAPTURE</name>
-              <description>Capture Status</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_FULL</name>
-              <description>FIFO Full Status </description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_NEMPTY</name>
-              <description>FIFO Not Empty Status </description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>rightEncTimer_STATUS_AUX_CTRL</name>
-          <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006597</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>FIFO0_CLR</name>
-              <description>FIFO0 clear</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_CLR</name>
-              <description>FIFO1 clear</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO0_LVL</name>
-              <description>FIFO level</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_LVL</name>
-              <description>FIFO level</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>INT_EN</name>
-              <description>No description available</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_INT_EN0</name>
-                  <description>Interrupt disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_INT_EN1</name>
-                  <description>Interrupt enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CNT_START</name>
-              <description>FIFO0 clear</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_CNT_START0</name>
-                  <description>Disable counter</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_CNT_START1</name>
-                  <description>Enable counter</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>Encoder_Right</name>
-      <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>Encoder_Right_COUNTER</name>
-          <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x40006508</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>Encoder_Right_PERIOD</name>
-          <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x40006528</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>Encoder_Right_COMPARE</name>
-          <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x40006538</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>Encoder_Right_Control_Reg</name>
-          <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006579</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CTRL_ENABLE</name>
-              <description>Enable Counter</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CAPMODE</name>
-              <description>Capture mode</description>
-              <lsb>3</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CMPMODE</name>
-              <description>Compare mode</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>Encoder_Right_STATUS_MASK</name>
-          <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006589</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>COUNTER_STS_CMP</name>
-              <description>Compare output status</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_A0ZERO</name>
-              <description>A0 Zero ouput status</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_OVERFLOW</name>
-              <description>Overflow status </description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_UNDERFLOW</name>
-              <description>Underflow status </description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_CAPTURE</name>
-              <description>Capture Status</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_FULL</name>
-              <description>FIFO Full Status </description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_NEMPTY</name>
-              <description>FIFO Not Empty Status </description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>Encoder_Right_STATUS_AUX_CTRL</name>
-          <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006599</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>FIFO0_CLR</name>
-              <description>FIFO0 clear</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_CLR</name>
-              <description>FIFO1 clear</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO0_LVL</name>
-              <description>FIFO level</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_LVL</name>
-              <description>FIFO level</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>INT_EN</name>
-              <description>No description available</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_INT_EN0</name>
-                  <description>Interrupt disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_INT_EN1</name>
-                  <description>Interrupt enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CNT_START</name>
-              <description>FIFO0 clear</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_CNT_START0</name>
-                  <description>Disable counter</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_CNT_START1</name>
-                  <description>Enable counter</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>Control_Reg_1</name>
-      <description>No description available</description>
-      <baseAddress>0x4000647D</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>Control_Reg_1_CONTROL_REG</name>
-          <description>No description available</description>
-          <addressOffset>0x0</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-      </registers>
-    </peripheral>
-    <peripheral>
-      <name>leftEncTimer</name>
-      <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
-      <addressBlock>
-        <offset>0</offset>
-        <size>0x0</size>
-        <usage>registers</usage>
-      </addressBlock>
-      <registers>
-        <register>
-          <name>leftEncTimer_COUNTER</name>
+          <name>Enc_Timer_COUNTER</name>
           <description>UDB.A0 - Current Counter Value</description>
           <addressOffset>0x40006504</addressOffset>
-          <size>16</size>
+          <size>24</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>leftEncTimer_PERIOD</name>
+          <name>Enc_Timer_PERIOD</name>
           <description>UDB.D0 - Assigned Period</description>
           <addressOffset>0x40006524</addressOffset>
-          <size>16</size>
+          <size>24</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>leftEncTimer_COMPARE</name>
+          <name>Enc_Timer_COMPARE</name>
           <description>UDB.D1 - Assigned Compare Value</description>
           <addressOffset>0x40006534</addressOffset>
-          <size>16</size>
+          <size>24</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
         </register>
         <register>
-          <name>leftEncTimer_Control_Reg</name>
+          <name>Enc_Timer_Control_Reg</name>
           <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x40006576</addressOffset>
+          <addressOffset>0x40006574</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -609,9 +76,9 @@
           </fields>
         </register>
         <register>
-          <name>leftEncTimer_STATUS_MASK</name>
+          <name>Enc_Timer_STATUS_MASK</name>
           <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x40006585</addressOffset>
+          <addressOffset>0x40006586</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -669,9 +136,9 @@
           </fields>
         </register>
         <register>
-          <name>leftEncTimer_STATUS_AUX_CTRL</name>
+          <name>Enc_Timer_STATUS_AUX_CTRL</name>
           <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x40006595</addressOffset>
+          <addressOffset>0x40006596</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
@@ -943,9 +410,9 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>Encoder_Left</name>
+      <name>Control_Reg_1</name>
       <description>No description available</description>
-      <baseAddress>0x0</baseAddress>
+      <baseAddress>0x40006577</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0x0</size>
@@ -953,248 +420,13 @@
       </addressBlock>
       <registers>
         <register>
-          <name>Encoder_Left_COUNTER</name>
-          <description>UDB.A0 - Current Counter Value</description>
-          <addressOffset>0x4000650A</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>Encoder_Left_PERIOD</name>
-          <description>UDB.D0 - Assigned Period</description>
-          <addressOffset>0x4000652A</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>Encoder_Left_COMPARE</name>
-          <description>UDB.D1 - Assigned Compare Value</description>
-          <addressOffset>0x4000653A</addressOffset>
-          <size>16</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-        </register>
-        <register>
-          <name>Encoder_Left_Control_Reg</name>
-          <description>UDB Control Register - Assigned Control Register Value</description>
-          <addressOffset>0x4000657A</addressOffset>
+          <name>Control_Reg_1_CONTROL_REG</name>
+          <description>No description available</description>
+          <addressOffset>0x0</addressOffset>
           <size>8</size>
           <access>read-write</access>
           <resetValue>0</resetValue>
           <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>CTRL_ENABLE</name>
-              <description>Enable Counter</description>
-              <lsb>7</lsb>
-              <msb>7</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CAPMODE</name>
-              <description>Capture mode</description>
-              <lsb>3</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CTRL_CMPMODE</name>
-              <description>Compare mode</description>
-              <lsb>0</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>Encoder_Left_STATUS_MASK</name>
-          <description>UDB Status bits Interrupt Mask Enable Register</description>
-          <addressOffset>0x4000658B</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>COUNTER_STS_CMP</name>
-              <description>Compare output status</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_A0ZERO</name>
-              <description>A0 Zero ouput status</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_OVERFLOW</name>
-              <description>Overflow status </description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_UNDERFLOW</name>
-              <description>Underflow status </description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_CAPTURE</name>
-              <description>Capture Status</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_FULL</name>
-              <description>FIFO Full Status </description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COUNTER_STS_FIFO_NEMPTY</name>
-              <description>FIFO Not Empty Status </description>
-              <lsb>6</lsb>
-              <msb>6</msb>
-              <access>read-write</access>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>Encoder_Left_STATUS_AUX_CTRL</name>
-          <description>UDB Auxilliary Control Register</description>
-          <addressOffset>0x4000659B</addressOffset>
-          <size>8</size>
-          <access>read-write</access>
-          <resetValue>0</resetValue>
-          <resetMask>0</resetMask>
-          <fields>
-            <field>
-              <name>FIFO0_CLR</name>
-              <description>FIFO0 clear</description>
-              <lsb>0</lsb>
-              <msb>0</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_CLR</name>
-              <description>FIFO1 clear</description>
-              <lsb>1</lsb>
-              <msb>1</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_0</name>
-                  <description>Normal FIFO operation</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_CLR_1</name>
-                  <description>Clear FIFO state</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO0_LVL</name>
-              <description>FIFO level</description>
-              <lsb>2</lsb>
-              <msb>2</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>FIFO1_LVL</name>
-              <description>FIFO level</description>
-              <lsb>3</lsb>
-              <msb>3</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_0</name>
-                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_FIFO_LVL_1</name>
-                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>INT_EN</name>
-              <description>No description available</description>
-              <lsb>4</lsb>
-              <msb>4</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_INT_EN0</name>
-                  <description>Interrupt disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_INT_EN1</name>
-                  <description>Interrupt enabled</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CNT_START</name>
-              <description>FIFO0 clear</description>
-              <lsb>5</lsb>
-              <msb>5</msb>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>E_CNT_START0</name>
-                  <description>Disable counter</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>E_CNT_START1</name>
-                  <description>Enable counter</description>
-                  <value>1</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
         </register>
       </registers>
     </peripheral>
@@ -2926,6 +2158,262 @@
               <lsb>0</lsb>
               <msb>31</msb>
               <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>Encoder</name>
+      <description>No description available</description>
+      <baseAddress>0x0</baseAddress>
+      <addressBlock>
+        <offset>0</offset>
+        <size>0x0</size>
+        <usage>registers</usage>
+      </addressBlock>
+      <registers>
+        <register>
+          <name>Encoder_COUNTER</name>
+          <description>UDB.A0 - Current Counter Value</description>
+          <addressOffset>0x40006508</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>Encoder_PERIOD</name>
+          <description>UDB.D0 - Assigned Period</description>
+          <addressOffset>0x40006528</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>Encoder_COMPARE</name>
+          <description>UDB.D1 - Assigned Compare Value</description>
+          <addressOffset>0x40006538</addressOffset>
+          <size>16</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+        </register>
+        <register>
+          <name>Encoder_Control_Reg</name>
+          <description>UDB Control Register - Assigned Control Register Value</description>
+          <addressOffset>0x40006578</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>CTRL_ENABLE</name>
+              <description>Enable Counter</description>
+              <lsb>7</lsb>
+              <msb>7</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CAPMODE</name>
+              <description>Capture mode</description>
+              <lsb>3</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>CTRL_CMPMODE</name>
+              <description>Compare mode</description>
+              <lsb>0</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>Encoder_STATUS_MASK</name>
+          <description>UDB Status bits Interrupt Mask Enable Register</description>
+          <addressOffset>0x40006589</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>COUNTER_STS_CMP</name>
+              <description>Compare output status</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_A0ZERO</name>
+              <description>A0 Zero ouput status</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_OVERFLOW</name>
+              <description>Overflow status </description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_UNDERFLOW</name>
+              <description>Underflow status </description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_CAPTURE</name>
+              <description>Capture Status</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_FIFO_FULL</name>
+              <description>FIFO Full Status </description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+            </field>
+            <field>
+              <name>COUNTER_STS_FIFO_NEMPTY</name>
+              <description>FIFO Not Empty Status </description>
+              <lsb>6</lsb>
+              <msb>6</msb>
+              <access>read-write</access>
+            </field>
+          </fields>
+        </register>
+        <register>
+          <name>Encoder_STATUS_AUX_CTRL</name>
+          <description>UDB Auxilliary Control Register</description>
+          <addressOffset>0x40006599</addressOffset>
+          <size>8</size>
+          <access>read-write</access>
+          <resetValue>0</resetValue>
+          <resetMask>0</resetMask>
+          <fields>
+            <field>
+              <name>FIFO0_CLR</name>
+              <description>FIFO0 clear</description>
+              <lsb>0</lsb>
+              <msb>0</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_0</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_1</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1_CLR</name>
+              <description>FIFO1 clear</description>
+              <lsb>1</lsb>
+              <msb>1</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_0</name>
+                  <description>Normal FIFO operation</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_CLR_1</name>
+                  <description>Clear FIFO state</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO0_LVL</name>
+              <description>FIFO level</description>
+              <lsb>2</lsb>
+              <msb>2</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_0</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_1</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>FIFO1_LVL</name>
+              <description>FIFO level</description>
+              <lsb>3</lsb>
+              <msb>3</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_0</name>
+                  <description>FIFO LVL: input mode: FIFO not full; output mode: FIFO not empty</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_FIFO_LVL_1</name>
+                  <description>FIFO LVL: input mode: FIFO at least 1/2 empty; output mode: FIFO at least 1/2 full</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>INT_EN</name>
+              <description>No description available</description>
+              <lsb>4</lsb>
+              <msb>4</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_INT_EN0</name>
+                  <description>Interrupt disabled</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_INT_EN1</name>
+                  <description>Interrupt enabled</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>CNT_START</name>
+              <description>FIFO0 clear</description>
+              <lsb>5</lsb>
+              <msb>5</msb>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>E_CNT_START0</name>
+                  <description>Disable counter</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>E_CNT_START1</name>
+                  <description>Enable counter</description>
+                  <value>1</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
           </fields>
         </register>

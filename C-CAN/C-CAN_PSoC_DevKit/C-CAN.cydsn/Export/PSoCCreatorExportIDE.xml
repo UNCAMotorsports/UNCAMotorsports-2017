@@ -97,13 +97,9 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_1_IRQ.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_1_IRQ.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_1_theACLK.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_1_theACLK.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_1_Bypass_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_1_Bypass.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\ADC_SAR_1_Bypass.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\AMux_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\AMux_1.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RX_2_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RX_2.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\RX_2.h</File>
@@ -119,24 +115,8 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_2.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_3.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_3.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Encoder_Left.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Encoder_Left.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Encoder_Left_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_L_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_L.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_L.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Encoder_Right.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Encoder_Right.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Encoder_Right_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_R_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_R.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_R.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\leftEncTimer.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\leftEncTimer.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\leftEncTimer_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\rightEncTimer.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\rightEncTimer.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\rightEncTimer_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_4.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_4.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cybootloader.icf</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cybootloader.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Bootloadable_1.c</File>
@@ -147,18 +127,12 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\one_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\one.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\one.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\zero_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\zero.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\zero.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\three_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\three.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\three.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\four_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\four.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\four.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\five_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\five.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\five.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Em_EEPROM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Em_EEPROM.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Control_Reg_1.h</File>
@@ -167,6 +141,17 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\LED.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Encoder.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Encoder.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Encoder_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_Timer.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_Timer.h</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Enc_Timer_PM.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DMA_1_dma.c</File>
+          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DMA_1_dma.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\Export\ARM_GCC_Generic">
