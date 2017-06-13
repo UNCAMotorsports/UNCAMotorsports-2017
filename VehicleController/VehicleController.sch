@@ -850,13 +850,13 @@ F 3 "" H 1400 9750 50  0001 C CNN
 	1    1400 9750
 	1    0    0    -1  
 $EndComp
-Text Label 3100 8950 2    60   ~ 0
-12VOUT0
-Text Label 3100 9050 2    60   ~ 0
-12VOUT1
-Text Label 3100 9150 2    60   ~ 0
-12VOUT2
 Text Label 3100 9250 2    60   ~ 0
+12VOUT0
+Text Label 3100 9150 2    60   ~ 0
+12VOUT1
+Text Label 3100 9050 2    60   ~ 0
+12VOUT2
+Text Label 3100 8950 2    60   ~ 0
 12VOUT3
 $Comp
 L R_Small R15
@@ -950,13 +950,13 @@ F 3 "" H 1400 8650 50  0001 C CNN
 	1    1400 8650
 	1    0    0    -1  
 $EndComp
-Text Label 8950 4600 0    60   ~ 0
-12VOUT0
-Text Label 8950 4500 0    60   ~ 0
-12VOUT1
-Text Label 8950 4400 0    60   ~ 0
-12VOUT2
 Text Label 8950 4300 0    60   ~ 0
+12VOUT0
+Text Label 8950 4400 0    60   ~ 0
+12VOUT1
+Text Label 8950 4500 0    60   ~ 0
+12VOUT2
+Text Label 8950 4600 0    60   ~ 0
 12VOUT3
 $Comp
 L Polyfuse_Small F2
@@ -1202,13 +1202,13 @@ Connection ~ 3800 7450
 Wire Wire Line
 	3800 7050 3800 7850
 Wire Wire Line
-	9550 4300 8950 4300
+	9550 4600 8950 4600
 Wire Wire Line
-	8950 4400 9550 4400
+	8950 4500 9550 4500
 Wire Wire Line
-	9550 4500 8950 4500
+	9550 4400 8950 4400
 Wire Wire Line
-	8950 4600 9550 4600
+	8950 4300 9550 4300
 Wire Wire Line
 	2700 8750 3200 8750
 Wire Wire Line
@@ -1233,13 +1233,13 @@ Connection ~ 3750 9350
 Wire Wire Line
 	3750 9250 3400 9250
 Wire Wire Line
-	2700 9050 3200 9050
-Wire Wire Line
 	2700 9150 3200 9150
 Wire Wire Line
-	2700 9250 3200 9250
+	2700 9050 3200 9050
 Wire Wire Line
 	2700 8950 3200 8950
+Wire Wire Line
+	2700 9250 3200 9250
 Wire Wire Line
 	2700 9650 2800 9650
 Wire Wire Line
