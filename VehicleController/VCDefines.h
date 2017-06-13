@@ -1,8 +1,8 @@
 #pragma once
 
 #define VC_FW_VERSION   ("0.1")
-#define VC_CAN_BAUD     (1000000)
-#define VC_SERIAL_BAUD  (250000)
+#define VC_CAN_BAUD     (1000000U)
+#define VC_SERIAL_BAUD  (115200)
 
 #define PIN_START_CAR   (0)     // Input
 #define PIN_BRAKE_IN    (5)     // Input
@@ -24,5 +24,5 @@
 
 #define PIN_CLOSE_AIR   (32)    // Output
 
-#define GPS_DEBUG
-#define WAIT_GPS
+//#define GPS_DEBUG
+//#define WAIT_GPS

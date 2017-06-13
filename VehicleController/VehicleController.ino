@@ -16,7 +16,6 @@ void setup(){
     Serial.begin(VC_SERIAL_BAUD);
     Serial.print("UNCA Motorsports VCU Firmware Version ");
     Serial.println(VC_FW_VERSION);
-    delay(1000);
 
     // Set Pin Modes
     pinMode(PIN_START_CAR, INPUT);
@@ -39,6 +38,7 @@ void setup(){
 
     pinMode(PIN_CLOSE_AIR, OUTPUT);
 
+    digitalWriteFast(PIN_GPS_RST, HIGH);
 
     // Init pins
     // Init sensors
@@ -51,7 +51,6 @@ void setup(){
 
 void loop(){
 
-    readGPS();
     gpsTask();
     // Read CAN message
         // Handle CAN message
