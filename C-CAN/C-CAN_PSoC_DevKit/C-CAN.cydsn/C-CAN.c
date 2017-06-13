@@ -70,14 +70,11 @@ void GetRPM(Encoder * encoder){
     
     
     encoder->accumulator -= encoder->sensor.data[encoder->sensor.index];
-    encoder->sensor.data[encoder->sensor.index] = Encoder_ReadCounter();
-    Encoder_WriteCounter(0); //clear the pulse counter
+    encoder->sensor.data[encoder->sensor.index] = encoder->period;
     encoder->accumulator += encoder->sensor.data[encoder->sensor.index];
         
-        
-        
-    encoder->rpm = (encoder->accumulator/encoder->sensor.window) * 100000 / (Enc_Timer_ReadCounter());
-    Enc_Timer_WriteCounter(0); //clear the microsecond counter
+    
+    encoder->rpm = 1200000*(encoder->sensor.window)/(encoder->accumulator);
     
 
     

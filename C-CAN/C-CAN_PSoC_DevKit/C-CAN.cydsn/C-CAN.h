@@ -24,6 +24,12 @@
 #define TRANSMIT_BUFFER_SIZE  80
 #define PEDAL_THROW 2564
 
+#define ONE_EEPROM   0x0000
+#define TWO_EEPROM   0x0100
+#define THREE_EEPROM 0x0200
+#define FOUR_EEPROM  0x0300
+#define WHEEL_EEPROM 0x0400
+
 //throttle maximums and minimums in millivolts
 
 #define T_ONE_MAX 5000
@@ -60,7 +66,8 @@ typedef struct Pots { //Pot objects inherit Sensor variables
 typedef struct Encoders { //Encoder objects inherit Sensor variables
     Sensor sensor;
     float accumulator;
-    int16 rpm;
+    uint32 period;
+    uint16 rpm;
 }Encoder;
 
 typedef struct Throttle {

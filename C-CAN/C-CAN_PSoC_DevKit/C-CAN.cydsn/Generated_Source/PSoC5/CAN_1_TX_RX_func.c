@@ -25,7 +25,7 @@
 
 
 /* `#START TX_RX_FUNCTION` */
-
+#include "C-CAN.h"
 #define DATALENGTH1 0x08
 extern uint8 TxMessage0[8];
 extern uint8 TxMessage1[8];
@@ -665,7 +665,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_1_RX0_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_1_ReceiveMsg0
+    * FUNCTION NAME:   CAN_1_ReceiveMsgStart
     ********************************************************************************
     *
     * Summary:
@@ -683,15 +683,15 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_1_ReceiveMsg0(void) 
+    void CAN_1_ReceiveMsgStart(void) 
     {
-        /* `#START MESSAGE_0_RECEIVED` */
+        /* `#START MESSAGE_Start_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_1_RECEIVE_MSG_0_CALLBACK
-            CAN_1_ReceiveMsg_0_Callback();
-        #endif /* CAN_1_RECEIVE_MSG_0_CALLBACK */
+        #ifdef CAN_1_RECEIVE_MSG_Start_CALLBACK
+            CAN_1_ReceiveMsg_Start_Callback();
+        #endif /* CAN_1_RECEIVE_MSG_Start_CALLBACK */
 
         CAN_1_RX[0u].rxcmd.byte[0u] |= CAN_1_RX_ACK_MSG;
     }
@@ -700,7 +700,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_1_RX1_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:    CAN_1_ReceiveMsg1
+    * FUNCTION NAME:    CAN_1_ReceiveMsgMode
     ********************************************************************************
     *
     * Summary:
@@ -718,15 +718,15 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_1_ReceiveMsg1(void) 
+    void CAN_1_ReceiveMsgMode(void) 
     {
-        /* `#START MESSAGE_1_RECEIVED` */
+        /* `#START MESSAGE_Mode_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_1_RECEIVE_MSG_1_CALLBACK
-            CAN_1_ReceiveMsg_1_Callback();
-        #endif /* CAN_1_RECEIVE_MSG_1_CALLBACK */
+        #ifdef CAN_1_RECEIVE_MSG_Mode_CALLBACK
+            CAN_1_ReceiveMsg_Mode_Callback();
+        #endif /* CAN_1_RECEIVE_MSG_Mode_CALLBACK */
 
         CAN_1_RX[1u].rxcmd.byte[0u] |= CAN_1_RX_ACK_MSG;
     }
@@ -735,7 +735,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_1_RX2_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_1_ReceiveMsg2
+    * FUNCTION NAME:   CAN_1_ReceiveMsgID
     ********************************************************************************
     *
     * Summary:
@@ -753,15 +753,15 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_1_ReceiveMsg2(void) 
+    void CAN_1_ReceiveMsgID(void) 
     {
-        /* `#START MESSAGE_2_RECEIVED` */
+        /* `#START MESSAGE_ID_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_1_RECEIVE_MSG_2_CALLBACK
-            CAN_1_ReceiveMsg_2_Callback();
-        #endif /* CAN_1_RECEIVE_MSG_2_CALLBACK */
+        #ifdef CAN_1_RECEIVE_MSG_ID_CALLBACK
+            CAN_1_ReceiveMsg_ID_Callback();
+        #endif /* CAN_1_RECEIVE_MSG_ID_CALLBACK */
 
         CAN_1_RX[2u].rxcmd.byte[0u] |= CAN_1_RX_ACK_MSG;
     }
@@ -770,7 +770,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_1_RX3_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_1_ReceiveMsg3
+    * FUNCTION NAME:   CAN_1_ReceiveMsgName
     ********************************************************************************
     *
     * Summary:
@@ -788,15 +788,15 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_1_ReceiveMsg3(void) 
+    void CAN_1_ReceiveMsgName(void) 
     {
-        /* `#START MESSAGE_3_RECEIVED` */
+        /* `#START MESSAGE_Name_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_1_RECEIVE_MSG_3_CALLBACK
-            CAN_1_ReceiveMsg_3_Callback();
-        #endif /* CAN_1_RECEIVE_MSG_3_CALLBACK */
+        #ifdef CAN_1_RECEIVE_MSG_Name_CALLBACK
+            CAN_1_ReceiveMsg_Name_Callback();
+        #endif /* CAN_1_RECEIVE_MSG_Name_CALLBACK */
 
         CAN_1_RX[3u].rxcmd.byte[0u] |= CAN_1_RX_ACK_MSG;
     }
@@ -805,7 +805,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_1_RX4_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_1_ReceiveMsg4
+    * FUNCTION NAME:   CAN_1_ReceiveMsgStatus
     ********************************************************************************
     *
     * Summary:
@@ -823,15 +823,15 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_1_ReceiveMsg4(void) 
+    void CAN_1_ReceiveMsgStatus(void) 
     {
-        /* `#START MESSAGE_4_RECEIVED` */
+        /* `#START MESSAGE_Status_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_1_RECEIVE_MSG_4_CALLBACK
-            CAN_1_ReceiveMsg_4_Callback();
-        #endif /* CAN_1_RECEIVE_MSG_4_CALLBACK */
+        #ifdef CAN_1_RECEIVE_MSG_Status_CALLBACK
+            CAN_1_ReceiveMsg_Status_Callback();
+        #endif /* CAN_1_RECEIVE_MSG_Status_CALLBACK */
 
         CAN_1_RX[4u].rxcmd.byte[0u] |= CAN_1_RX_ACK_MSG;
     }
@@ -840,7 +840,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_1_RX5_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_1_ReceiveMsg5
+    * FUNCTION NAME:   CAN_1_ReceiveMsgGetConfig
     ********************************************************************************
     *
     * Summary:
@@ -858,15 +858,24 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_1_ReceiveMsg5(void) 
+    void CAN_1_ReceiveMsgGetConfig(void) 
     {
-        /* `#START MESSAGE_5_RECEIVED` */
-
+        /* `#START MESSAGE_GetConfig_RECEIVED` */
+            one.sensor.flag = FALSE;
+            two.sensor.flag = FALSE;
+            three.sensor.flag = FALSE;
+            four.sensor.flag = FALSE;
+            wheel.sensor.flag = FALSE;
+            one.sensor.CAN_flag = FALSE;
+            two.sensor.CAN_flag = FALSE;
+            three.sensor.CAN_flag = FALSE;
+            four.sensor.CAN_flag = FALSE;
+            wheel.sensor.CAN_flag = FALSE;
         /* `#END` */
 
-        #ifdef CAN_1_RECEIVE_MSG_5_CALLBACK
-            CAN_1_ReceiveMsg_5_Callback();
-        #endif /* CAN_1_RECEIVE_MSG_5_CALLBACK */
+        #ifdef CAN_1_RECEIVE_MSG_GetConfig_CALLBACK
+            CAN_1_ReceiveMsg_GetConfig_Callback();
+        #endif /* CAN_1_RECEIVE_MSG_GetConfig_CALLBACK */
 
         CAN_1_RX[5u].rxcmd.byte[0u] |= CAN_1_RX_ACK_MSG;
     }
@@ -875,7 +884,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_1_RX6_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_1_ReceiveMsg6
+    * FUNCTION NAME:   CAN_1_ReceiveMsgUpdateConfig
     ********************************************************************************
     *
     * Summary:
@@ -893,15 +902,15 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_1_ReceiveMsg6(void) 
+    void CAN_1_ReceiveMsgUpdateConfig(void) 
     {
-        /* `#START MESSAGE_6_RECEIVED` */
-
+        /* `#START MESSAGE_UpdateConfig_RECEIVED` */
+            
         /* `#END` */
 
-        #ifdef CAN_1_RECEIVE_MSG_6_CALLBACK
-            CAN_1_ReceiveMsg_6_Callback();
-        #endif /* CAN_1_RECEIVE_MSG_6_CALLBACK */
+        #ifdef CAN_1_RECEIVE_MSG_UpdateConfig_CALLBACK
+            CAN_1_ReceiveMsg_UpdateConfig_Callback();
+        #endif /* CAN_1_RECEIVE_MSG_UpdateConfig_CALLBACK */
 
         CAN_1_RX[6u].rxcmd.byte[0u] |= CAN_1_RX_ACK_MSG;
     }
@@ -910,7 +919,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_1_RX7_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_1_ReceiveMsg7
+    * FUNCTION NAME:   CAN_1_ReceiveMsgSoftReset
     ********************************************************************************
     *
     * Summary:
@@ -928,15 +937,15 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_1_ReceiveMsg7(void) 
+    void CAN_1_ReceiveMsgSoftReset(void) 
     {
-        /* `#START MESSAGE_7_RECEIVED` */
+        /* `#START MESSAGE_SoftReset_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_1_RECEIVE_MSG_7_CALLBACK
-            CAN_1_ReceiveMsg_7_Callback();
-        #endif /* CAN_1_RECEIVE_MSG_7_CALLBACK */
+        #ifdef CAN_1_RECEIVE_MSG_SoftReset_CALLBACK
+            CAN_1_ReceiveMsg_SoftReset_Callback();
+        #endif /* CAN_1_RECEIVE_MSG_SoftReset_CALLBACK */
 
         CAN_1_RX[7u].rxcmd.byte[0u] |= CAN_1_RX_ACK_MSG;
     }
@@ -945,7 +954,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
 
 #if (CAN_1_RX8_FUNC_ENABLE)
     /*******************************************************************************
-    * FUNCTION NAME:   CAN_1_ReceiveMsg8
+    * FUNCTION NAME:   CAN_1_ReceiveMsgHalt
     ********************************************************************************
     *
     * Summary:
@@ -963,15 +972,15 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     *  Depends on the Customer code.
     *
     *******************************************************************************/
-    void CAN_1_ReceiveMsg8(void) 
+    void CAN_1_ReceiveMsgHalt(void) 
     {
-        /* `#START MESSAGE_8_RECEIVED` */
+        /* `#START MESSAGE_Halt_RECEIVED` */
 
         /* `#END` */
 
-        #ifdef CAN_1_RECEIVE_MSG_8_CALLBACK
-            CAN_1_ReceiveMsg_8_Callback();
-        #endif /* CAN_1_RECEIVE_MSG_8_CALLBACK */
+        #ifdef CAN_1_RECEIVE_MSG_Halt_CALLBACK
+            CAN_1_ReceiveMsg_Halt_Callback();
+        #endif /* CAN_1_RECEIVE_MSG_Halt_CALLBACK */
 
         CAN_1_RX[8u].rxcmd.byte[0u] |= CAN_1_RX_ACK_MSG;
     }

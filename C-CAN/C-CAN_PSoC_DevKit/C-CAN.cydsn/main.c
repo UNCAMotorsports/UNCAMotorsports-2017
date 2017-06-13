@@ -74,16 +74,15 @@ int main()
     DMA_1_Config();
     ADC_SAR_1_Start();
     ADC_SAR_1_StartConvert();
-    Encoder_Start();
-    Enc_Timer_Start();
     CAN_1_Start();
+    Timer_1_Start();
+    Comp_1_Start();
     //srand(12);
     
     uint32 temp = 0;
     THROTTLE_IMPLAUSIBLE = 0;
     
     /* Initialize Variables */
-    Control_Reg_1_Write(1);
     
     
     PotInit(&one);
@@ -123,12 +122,8 @@ int main()
     
     /* Send message to verify COM port is connected properly */
     //UART_1_PutString("\n\rCOM Port Open\n\r");
-    Control_Reg_1_Write(1);
-    //LED_Write(1);
     
     CYGlobalIntEnable;
-    
-    Control_Reg_1_Write(0);
     
     for(;;){
         //CAN_Send(0,0,0,0,0,0,0,0);

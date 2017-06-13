@@ -426,6 +426,29 @@
                     if ((CAN_1_RX_MAILBOX_TYPE & shift) != 0u)
                     {
                         /* RX Full mailboxes handler */
+                        switch(mailboxNumber)
+                        {
+                            case 0u : CAN_1_ReceiveMsgStart();
+                            break;
+                            case 1u : CAN_1_ReceiveMsgMode();
+                            break;
+                            case 2u : CAN_1_ReceiveMsgID();
+                            break;
+                            case 3u : CAN_1_ReceiveMsgName();
+                            break;
+                            case 4u : CAN_1_ReceiveMsgStatus();
+                            break;
+                            case 5u : CAN_1_ReceiveMsgGetConfig();
+                            break;
+                            case 6u : CAN_1_ReceiveMsgUpdateConfig();
+                            break;
+                            case 7u : CAN_1_ReceiveMsgSoftReset();
+                            break;
+                            case 8u : CAN_1_ReceiveMsgHalt();
+                            break;
+                            default:
+                            break;
+                        }
                     }
                     else
                     {

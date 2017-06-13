@@ -46,7 +46,7 @@ extern uint8 CAN_1_initVar;
 #define CAN_1_ACK_ERR                        (0u)
 #define CAN_1_FORM_ERR                       (0u)
 #define CAN_1_CRC_ERR                        (0u)
-#define CAN_1_BUS_OFF                        (1u)
+#define CAN_1_BUS_OFF                        (0u)
 #define CAN_1_RX_MSG_LOST                    (0u)
 #define CAN_1_TX_MESSAGE                     (0u)
 #define CAN_1_RX_MESSAGE                     (1u)
@@ -83,15 +83,15 @@ extern uint8 CAN_1_initVar;
 #define CAN_1_TX5_FUNC_ENABLE          (0u)
 #define CAN_1_TX6_FUNC_ENABLE          (0u)
 #define CAN_1_TX7_FUNC_ENABLE          (0u)
-#define CAN_1_RX0_FUNC_ENABLE          (0u)
-#define CAN_1_RX1_FUNC_ENABLE          (0u)
-#define CAN_1_RX2_FUNC_ENABLE          (0u)
-#define CAN_1_RX3_FUNC_ENABLE          (0u)
-#define CAN_1_RX4_FUNC_ENABLE          (0u)
-#define CAN_1_RX5_FUNC_ENABLE          (0u)
-#define CAN_1_RX6_FUNC_ENABLE          (0u)
-#define CAN_1_RX7_FUNC_ENABLE          (0u)
-#define CAN_1_RX8_FUNC_ENABLE          (0u)
+#define CAN_1_RX0_FUNC_ENABLE          (1u)
+#define CAN_1_RX1_FUNC_ENABLE          (1u)
+#define CAN_1_RX2_FUNC_ENABLE          (1u)
+#define CAN_1_RX3_FUNC_ENABLE          (1u)
+#define CAN_1_RX4_FUNC_ENABLE          (1u)
+#define CAN_1_RX5_FUNC_ENABLE          (1u)
+#define CAN_1_RX6_FUNC_ENABLE          (1u)
+#define CAN_1_RX7_FUNC_ENABLE          (1u)
+#define CAN_1_RX8_FUNC_ENABLE          (1u)
 #define CAN_1_RX9_FUNC_ENABLE          (0u)
 #define CAN_1_RX10_FUNC_ENABLE         (0u)
 #define CAN_1_RX11_FUNC_ENABLE         (0u)
@@ -99,7 +99,7 @@ extern uint8 CAN_1_initVar;
 #define CAN_1_RX13_FUNC_ENABLE         (0u)
 #define CAN_1_RX14_FUNC_ENABLE         (0u)
 #define CAN_1_RX15_FUNC_ENABLE         (0u)
-#define CAN_1_RX_MAILBOX_TYPE          (0x0u)
+#define CAN_1_RX_MAILBOX_TYPE          (0x1FFu)
 #define CAN_1_TX_MAILBOX_TYPE          (0x0u)
 
 
@@ -306,31 +306,31 @@ void  CAN_1_ReceiveMsg(uint8 rxMailbox) ;
     uint8 CAN_1_SendMsg7(void) ;
 #endif /* CAN_1_TX7_FUNC_ENABLE */
 #if (CAN_1_RX0_FUNC_ENABLE)
-    void CAN_1_ReceiveMsg0(void) ;
+    void CAN_1_ReceiveMsgStart(void) ;
 #endif /* CAN_1_RX0_FUNC_ENABLE */
 #if (CAN_1_RX1_FUNC_ENABLE)
-    void CAN_1_ReceiveMsg1(void) ;
+    void CAN_1_ReceiveMsgMode(void) ;
 #endif /* CAN_1_RX1_FUNC_ENABLE */
 #if (CAN_1_RX2_FUNC_ENABLE)
-    void CAN_1_ReceiveMsg2(void) ;
+    void CAN_1_ReceiveMsgID(void) ;
 #endif /* CAN_1_RX2_FUNC_ENABLE */
 #if (CAN_1_RX3_FUNC_ENABLE)
-    void CAN_1_ReceiveMsg3(void) ;
+    void CAN_1_ReceiveMsgName(void) ;
 #endif /* CAN_1_RX3_FUNC_ENABLE */
 #if (CAN_1_RX4_FUNC_ENABLE)
-    void CAN_1_ReceiveMsg4(void) ;
+    void CAN_1_ReceiveMsgStatus(void) ;
 #endif /* CAN_1_RX4_FUNC_ENABLE */
 #if (CAN_1_RX5_FUNC_ENABLE)
-    void CAN_1_ReceiveMsg5(void) ;
+    void CAN_1_ReceiveMsgGetConfig(void) ;
 #endif /* CAN_1_RX5_FUNC_ENABLE */
 #if (CAN_1_RX6_FUNC_ENABLE)
-    void CAN_1_ReceiveMsg6(void) ;
+    void CAN_1_ReceiveMsgUpdateConfig(void) ;
 #endif /* CAN_1_RX6_FUNC_ENABLE */
 #if (CAN_1_RX7_FUNC_ENABLE)
-    void CAN_1_ReceiveMsg7(void) ;
+    void CAN_1_ReceiveMsgSoftReset(void) ;
 #endif /* CAN_1_RX7_FUNC_ENABLE */
 #if (CAN_1_RX8_FUNC_ENABLE)
-    void CAN_1_ReceiveMsg8(void) ;
+    void CAN_1_ReceiveMsgHalt(void) ;
 #endif /* CAN_1_RX8_FUNC_ENABLE */
 #if (CAN_1_RX9_FUNC_ENABLE)
     void CAN_1_ReceiveMsg9(void) ;
@@ -421,15 +421,15 @@ void  CAN_1_ReceiveMsg(uint8 rxMailbox) ;
 #define CAN_1_TX_MAILBOX_7             (7u)
 
 /* RX Defines to link mailbox names with mailbox numbers */
-#define CAN_1_RX_MAILBOX_0             (0u)
-#define CAN_1_RX_MAILBOX_1             (1u)
-#define CAN_1_RX_MAILBOX_2             (2u)
-#define CAN_1_RX_MAILBOX_3             (3u)
-#define CAN_1_RX_MAILBOX_4             (4u)
-#define CAN_1_RX_MAILBOX_5             (5u)
-#define CAN_1_RX_MAILBOX_6             (6u)
-#define CAN_1_RX_MAILBOX_7             (7u)
-#define CAN_1_RX_MAILBOX_8             (8u)
+#define CAN_1_RX_MAILBOX_Start         (0u)
+#define CAN_1_RX_MAILBOX_Mode          (1u)
+#define CAN_1_RX_MAILBOX_ID            (2u)
+#define CAN_1_RX_MAILBOX_Name          (3u)
+#define CAN_1_RX_MAILBOX_Status        (4u)
+#define CAN_1_RX_MAILBOX_GetConfig     (5u)
+#define CAN_1_RX_MAILBOX_UpdateConfig  (6u)
+#define CAN_1_RX_MAILBOX_SoftReset     (7u)
+#define CAN_1_RX_MAILBOX_Halt          (8u)
 #define CAN_1_RX_MAILBOX_9             (9u)
 #define CAN_1_RX_MAILBOX_10            (10u)
 #define CAN_1_RX_MAILBOX_11            (11u)
@@ -458,7 +458,7 @@ void  CAN_1_ReceiveMsg(uint8 rxMailbox) ;
 #endif /* (!(CY_PSOC3 || CY_PSOC5)) */
 
 /* Interrupts */
-#define CAN_1_INT_ENABLE                (0u)
+#define CAN_1_INT_ENABLE                (1u)
 
 #if (CY_PSOC3 || CY_PSOC5)
     #define CAN_1_INIT_INTERRUPT_MASK (((uint16) CAN_1_INT_ENABLE) | \

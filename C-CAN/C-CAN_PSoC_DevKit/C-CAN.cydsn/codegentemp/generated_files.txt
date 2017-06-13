@@ -34,11 +34,6 @@
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\two_aliases.h" value="HEADER;;;;;two" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\two.c" value="SOURCE_C;CortexM3;;;;two" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\two.h" value="HEADER;;;;;two" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Clock_1.c" value="SOURCE_C;CortexM3;;;;Clock_1" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Clock_1.h" value="HEADER;;;;;Clock_1" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\LED_aliases.h" value="HEADER;;;;;LED" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\LED.c" value="SOURCE_C;CortexM3;;;;LED" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\LED.h" value="HEADER;;;;;LED" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\RX_2_aliases.h" value="HEADER;;;;;RX_2" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\RX_2.c" value="SOURCE_C;CortexM3;;;;RX_2" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\RX_2.h" value="HEADER;;;;;RX_2" />
@@ -50,34 +45,36 @@
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\CAN_1_INT.c" value="SOURCE_C;CortexM3;;;;CAN_1" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\CAN_1_PM.c" value="SOURCE_C;CortexM3;;;;CAN_1" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\CAN_1_TX_RX_func.c" value="SOURCE_C;CortexM3;;;;CAN_1" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Encoder.c" value="SOURCE_C;CortexM3;;;;Encoder" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Encoder.h" value="HEADER;;;;;Encoder" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Encoder_PM.c" value="SOURCE_C;CortexM3;;;;Encoder" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Clock_2.c" value="SOURCE_C;CortexM3;;;;Clock_2" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Clock_2.h" value="HEADER;;;;;Clock_2" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Clock_3.c" value="SOURCE_C;CortexM3;;;;Clock_3" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Clock_3.h" value="HEADER;;;;;Clock_3" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Enc_aliases.h" value="HEADER;;;;;Enc" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Enc.c" value="SOURCE_C;CortexM3;;;;Enc" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Enc.h" value="HEADER;;;;;Enc" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Enc_Timer.c" value="SOURCE_C;CortexM3;;;;Enc_Timer" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Enc_Timer.h" value="HEADER;;;;;Enc_Timer" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Enc_Timer_PM.c" value="SOURCE_C;CortexM3;;;;Enc_Timer" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\placeholder_aliases.h" value="HEADER;;;;;placeholder" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\placeholder.c" value="SOURCE_C;CortexM3;;;;placeholder" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\placeholder.h" value="HEADER;;;;;placeholder" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\VDAC8_1.c" value="SOURCE_C;CortexM3;;;;VDAC8_1" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\VDAC8_1.h" value="HEADER;;;;;VDAC8_1" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\VDAC8_1_PM.c" value="SOURCE_C;CortexM3;;;;VDAC8_1" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\timer_clock.c" value="SOURCE_C;CortexM3;;;;timer_clock" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\timer_clock.h" value="HEADER;;;;;timer_clock" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Timer_1.c" value="SOURCE_C;CortexM3;;;;Timer_1" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Timer_1.h" value="HEADER;;;;;Timer_1" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Timer_1_PM.c" value="SOURCE_C;CortexM3;;;;Timer_1" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\isr_capture.c" value="SOURCE_C;CortexM3;;;;isr_capture" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\isr_capture.h" value="HEADER;;;;;isr_capture" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\ADC_SAR_1.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\ADC_SAR_1.h" value="HEADER;;;;;ADC_SAR_1" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\ADC_SAR_1_INT.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\ADC_SAR_1_PM.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Em_EEPROM.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Em_EEPROM.h" value="HEADER;;;;;Em_EEPROM" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\EEPROM.c" value="SOURCE_C;CortexM3;;;;EEPROM" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\EEPROM.h" value="HEADER;;;;;EEPROM" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Bootloadable_1.c" value="SOURCE_C;CortexM3;;;;Bootloadable_1" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Bootloadable_1.h" value="HEADER;;;;;Bootloadable_1" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Control_Reg_1.h" value="HEADER;;;;;Control_Reg_1" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Control_Reg_1.c" value="SOURCE_C;CortexM3;;;;Control_Reg_1" />
-  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Control_Reg_1_PM.c" value="SOURCE_C;CortexM3;;;;Control_Reg_1" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\DMA_1_dma.c" value="SOURCE_C;CortexM3;;;;DMA_1" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\DMA_1_dma.h" value="HEADER;;;;;DMA_1" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Clock_4.c" value="SOURCE_C;CortexM3;;;;Clock_4" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Clock_4.h" value="HEADER;;;;;Clock_4" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Comp_1.c" value="SOURCE_C;CortexM3;;;;Comp_1" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Comp_1.h" value="HEADER;;;;;Comp_1" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\Comp_1_PM.c" value="SOURCE_C;CortexM3;;;;Comp_1" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\zero_rpm.c" value="SOURCE_C;CortexM3;;;;zero_rpm" />
+  <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\zero_rpm.h" value="HEADER;;;;;zero_rpm" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\ADC_SAR_1_IRQ.c" value="SOURCE_C;CortexM3;;;;ADC_SAR_1_IRQ" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\ADC_SAR_1_IRQ.h" value="HEADER;;;;;ADC_SAR_1_IRQ" />
   <file name="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\codegentemp\ADC_SAR_1_Bypass_aliases.h" value="HEADER;;;;;ADC_SAR_1_Bypass" />
