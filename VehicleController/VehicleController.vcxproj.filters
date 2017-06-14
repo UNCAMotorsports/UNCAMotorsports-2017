@@ -27,5 +27,13 @@
     <ClInclude Include="VC_GPS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VC_CAN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="VC_CAN.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

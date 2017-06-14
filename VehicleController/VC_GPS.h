@@ -13,12 +13,22 @@ char readGPS(){
 
 bool gpsBegin(){
 
-    Serial3.begin(9600);
+    // We need to set the baud BEFORE setting rates, as the GPS module checks baud to
+    // ensure it can broadcast at those rates
+    Serial3.begin(9600);    // At cold start, the GPS is at 9600 baud
+    myGPS.sendCommand(PMTK_SET_BAUD_115200);    // Set the GPS to 115200 baud
+    Serial3.end();  // Stop the 9600 baud connection
+    delay(10);
+    Serial3.begin(115200);  // Reconnect at 115200 baud
+
     myGPS.sendCommand(PMTK_SET_NMEA_OUTPUT_RMCGGA);     // RMC and GGA data
-    myGPS.sendCommand(PMTK_SET_NMEA_UPDATE_5HZ);        // 5 Hz update rate
-    Serial.println("Waiting for GPS Fix...");
+    myGPS.sendCommand(PMTK_SET_NMEA_UPDATE_10HZ);       // 10 Hz update rate
+    myGPS.sendCommand(PMTK_API_SET_FIX_CTL_5HZ);        // 5 Hz fix rate
+    
+
 
 #ifdef WAIT_GPS
+    Serial.println("Waiting for GPS Fix...");
     uint32_t count = 0;
     while (1){
         myGPS.read();
@@ -38,6 +48,7 @@ bool gpsBegin(){
     }
 
 #endif
+    Serial.println(F("GPS Initialized."));
     return true;
 }
 
@@ -64,9 +75,9 @@ bool gpsTask(){
                 Serial.print(", ");
                 Serial.print(myGPS.longitude, 4); Serial.println(myGPS.lon);
                 Serial.print("Location (in degrees, works with Google Maps): ");
-                Serial.print(myGPS.latitudeDegrees, 4);
+                Serial.print(myGPS.latitudeDegrees, 6);
                 Serial.print(", ");
-                Serial.println(myGPS.longitudeDegrees, 4);
+                Serial.println(myGPS.longitudeDegrees, 6);
 
                 Serial.print("Speed (knots): "); Serial.println(myGPS.speed);
                 Serial.print("Angle: "); Serial.println(myGPS.angle);

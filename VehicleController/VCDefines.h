@@ -36,5 +36,5 @@
 
 #define PIN_DAC_LATCH   (39)
 
-#define GPS_DEBUG
+//#define GPS_DEBUG
 //#define WAIT_GPS
