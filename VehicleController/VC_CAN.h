@@ -82,78 +82,6 @@ typedef enum {
     CAN_MSG_NODEHALT = 0x04E
 } vc_can_id;
 
-void handleCANMessage(CAN_message_t *rxpt){
-    switch (rxpt->id){
-    case CAN_MSG_HARDFAULT: handle_hardFault(rxpt); break;
-    case CAN_MSG_SOFTFAULT: handle_softFault(rxpt); break;
-    case CAN_MSG_EXITVEHICLE: handle_exitVehicle(rxpt); break;
-    case CAN_MSG_CLEARFAULT: handle_clearFault(rxpt); break;
-    case CAN_MSG_READYTODRIVE: handle_readyToDrive(rxpt); break;
-    case CAN_MSG_GLVCURRENT: handle_glvCurrent(rxpt); break;
-    case CAN_MSG_TSCURRENT: handle_tsCurrent(rxpt); break;
-    case CAN_MSG_MOTOR1CURRENT: handle_motor1Current(rxpt); break;
-    case CAN_MSG_MOTOR2CURRENT: handle_motor2Current(rxpt); break;
-    case CAN_MSG_SHUTDOWNCURRENT: handle_shutdownCurrent(rxpt); break;
-    case CAN_MSG_GLVVOLTAGE: handle_glvVoltage(rxpt); break;
-    case CAN_MSG_THROTTLE: handle_throttle(rxpt); break;
-    case CAN_MSG_BRAKE: handle_brake(rxpt); break;
-    case CAN_MSG_STEERING: handle_steering(rxpt); break;
-    case CAN_MSG_FRRPM: handle_frRPM(rxpt); break;
-    case CAN_MSG_FLRPM: handle_flRPM(rxpt); break;
-    case CAN_MSG_RRRPM: handle_rrRPM(rxpt); break;
-    case CAN_MSG_RLRPM: handle_rlRPM(rxpt); break;
-    case CAN_MSG_FRSUS: handle_frSus(rxpt); break;
-    case CAN_MSG_FLSUS: handle_flSus(rxpt); break;
-    case CAN_MSG_RRSUS: handle_rrSus(rxpt); break;
-    case CAN_MSG_RLSUS: handle_rlSus(rxpt); break;
-    case CAN_MSG_MOTOR1RPM: handle_motor1RPM(rxpt); break;
-    case CAN_MSG_MOTOR2RPM: handle_motor2RPM(rxpt); break;
-    case CAN_MSG_GPSLAT: handle_gpsLat(rxpt); break;
-    case CAN_MSG_GPSLON: handle_gpsLon(rxpt); break;
-    case CAN_MSG_GPSSPEED: handle_gpsSpeed(rxpt); break;
-    case CAN_MSG_GPSALT: handle_gpsAlt(rxpt); break;
-    case CAN_MSG_BAROPRESS: handle_baroPress(rxpt); break;
-    case CAN_MSG_AMBTEMP: handle_ambTemp(rxpt); break;
-    case CAN_MSG_AXYZ: handle_Axyz(rxpt); break;
-    case CAN_MSG_GXYZ: handle_Gxyz(rxpt); break;
-    case CAN_MSG_MXYZ: handle_Mxyz(rxpt); break;
-    case CAN_MSG_GPSTIME: handle_gpsTime(rxpt); break;
-    case CAN_MSG_NUMSATS: handle_numSats(rxpt); break;
-    case CAN_MSG_YAW: handle_yaw(rxpt); break;
-    case CAN_MSG_PITCH: handle_pitch(rxpt); break;
-    case CAN_MSG_ROLL: handle_roll(rxpt); break;
-    case CAN_MSG_QW: handle_qw(rxpt); break;
-    case CAN_MSG_ALG: handle_alg(rxpt); break;
-    case CAN_MSG_STATEX: handle_stateX(rxpt); break;
-    case CAN_MSG_STATEY: handle_stateY(rxpt); break;
-    case CAN_MSG_STATEZ: handle_stateZ(rxpt); break;
-    case CAN_MSG_MOTOR1OUT: handle_motor1Out(rxpt); break;
-    case CAN_MSG_MOTOR2OUT: handle_motor2Out(rxpt); break;
-    case CAN_MSG_INTERLOCKOPEN: handle_interlockOpen(rxpt); break;
-    case CAN_MSG_PACKVOLAGE: handle_packVolage(rxpt); break;
-    case CAN_MSG_PACKCURRENT: handle_packCurrent(rxpt); break;
-    case CAN_MSG_PACKOVERUNDERVOLT: handle_packOverUnderVolt(rxpt); break;
-    case CAN_MSG_PACKOVERCURRENT: handle_packOverCurrent(rxpt); break;
-    case CAN_MSG_PACKSTATUS: handle_packStatus(rxpt); break;
-    case CAN_MSG_PACKCELLTEMP: handle_packCellTemp(rxpt); break;
-    case CAN_MSG_PACKAMBTEMP: handle_packAmbTemp(rxpt); break;
-    case CAN_MSG_MOTOROVERTEMP: handle_motorOverTemp(rxpt); break;
-    case CAN_MSG_MOTOROVERSPEED: handle_motorOverSpeed(rxpt); break;
-    case CAN_MSG_MOTORTEMP: handle_motorTemp(rxpt); break;
-    case CAN_MSG_MOTORRPM: handle_motorRPM(rxpt); break;
-    case CAN_MSG_MOTORTORQUE: handle_motorTorque(rxpt); break;
-    case CAN_MSG_MOTORPOWER: handle_motorPower(rxpt); break;
-    case CAN_MSG_NODESTART: handle_nodeStart(rxpt); break;
-    case CAN_MSG_NODEMODE: handle_nodeMode(rxpt); break;
-    case CAN_MSG_NODEID: handle_nodeID(rxpt); break;
-    case CAN_MSG_NODENAME: handle_nodeName(rxpt); break;
-    case CAN_MSG_NODESTATUS: handle_nodeStatus(rxpt); break;
-    case CAN_MSG_NODEGETCONFIG: handle_nodeGetConfig(rxpt); break;
-    case CAN_MSG_NODEUPDATECONFIG: handle_nodeUpdateConfig(rxpt); break;
-    case CAN_MSG_NODESOFTRESET: handle_nodeSoftReset(rxpt); break;
-    case CAN_MSG_NODEHALT: handle_nodeHalt(rxpt); break;
-    }
-}
 
 void handle_hardFault(CAN_message_t *rxpt){
     // Not Implemented
@@ -427,4 +355,78 @@ void handle_nodeHalt(CAN_message_t *rxpt){
     // Not Implemented
 }
 
+
+
+void handleCANMessage(CAN_message_t *rxpt){
+    switch (rxpt->id){
+    case CAN_MSG_HARDFAULT: handle_hardFault(rxpt); break;
+    case CAN_MSG_SOFTFAULT: handle_softFault(rxpt); break;
+    case CAN_MSG_EXITVEHICLE: handle_exitVehicle(rxpt); break;
+    case CAN_MSG_CLEARFAULT: handle_clearFault(rxpt); break;
+    case CAN_MSG_READYTODRIVE: handle_readyToDrive(rxpt); break;
+    case CAN_MSG_GLVCURRENT: handle_glvCurrent(rxpt); break;
+    case CAN_MSG_TSCURRENT: handle_tsCurrent(rxpt); break;
+    case CAN_MSG_MOTOR1CURRENT: handle_motor1Current(rxpt); break;
+    case CAN_MSG_MOTOR2CURRENT: handle_motor2Current(rxpt); break;
+    case CAN_MSG_SHUTDOWNCURRENT: handle_shutdownCurrent(rxpt); break;
+    case CAN_MSG_GLVVOLTAGE: handle_glvVoltage(rxpt); break;
+    case CAN_MSG_THROTTLE: handle_throttle(rxpt); break;
+    case CAN_MSG_BRAKE: handle_brake(rxpt); break;
+    case CAN_MSG_STEERING: handle_steering(rxpt); break;
+    case CAN_MSG_FRRPM: handle_frRPM(rxpt); break;
+    case CAN_MSG_FLRPM: handle_flRPM(rxpt); break;
+    case CAN_MSG_RRRPM: handle_rrRPM(rxpt); break;
+    case CAN_MSG_RLRPM: handle_rlRPM(rxpt); break;
+    case CAN_MSG_FRSUS: handle_frSus(rxpt); break;
+    case CAN_MSG_FLSUS: handle_flSus(rxpt); break;
+    case CAN_MSG_RRSUS: handle_rrSus(rxpt); break;
+    case CAN_MSG_RLSUS: handle_rlSus(rxpt); break;
+    case CAN_MSG_MOTOR1RPM: handle_motor1RPM(rxpt); break;
+    case CAN_MSG_MOTOR2RPM: handle_motor2RPM(rxpt); break;
+    case CAN_MSG_GPSLAT: handle_gpsLat(rxpt); break;
+    case CAN_MSG_GPSLON: handle_gpsLon(rxpt); break;
+    case CAN_MSG_GPSSPEED: handle_gpsSpeed(rxpt); break;
+    case CAN_MSG_GPSALT: handle_gpsAlt(rxpt); break;
+    case CAN_MSG_BAROPRESS: handle_baroPress(rxpt); break;
+    case CAN_MSG_AMBTEMP: handle_ambTemp(rxpt); break;
+    case CAN_MSG_AXYZ: handle_Axyz(rxpt); break;
+    case CAN_MSG_GXYZ: handle_Gxyz(rxpt); break;
+    case CAN_MSG_MXYZ: handle_Mxyz(rxpt); break;
+    case CAN_MSG_GPSTIME: handle_gpsTime(rxpt); break;
+    case CAN_MSG_NUMSATS: handle_numSats(rxpt); break;
+    case CAN_MSG_YAW: handle_yaw(rxpt); break;
+    case CAN_MSG_PITCH: handle_pitch(rxpt); break;
+    case CAN_MSG_ROLL: handle_roll(rxpt); break;
+    case CAN_MSG_QW: handle_qw(rxpt); break;
+    case CAN_MSG_ALG: handle_alg(rxpt); break;
+    case CAN_MSG_STATEX: handle_stateX(rxpt); break;
+    case CAN_MSG_STATEY: handle_stateY(rxpt); break;
+    case CAN_MSG_STATEZ: handle_stateZ(rxpt); break;
+    case CAN_MSG_MOTOR1OUT: handle_motor1Out(rxpt); break;
+    case CAN_MSG_MOTOR2OUT: handle_motor2Out(rxpt); break;
+    case CAN_MSG_INTERLOCKOPEN: handle_interlockOpen(rxpt); break;
+    case CAN_MSG_PACKVOLAGE: handle_packVolage(rxpt); break;
+    case CAN_MSG_PACKCURRENT: handle_packCurrent(rxpt); break;
+    case CAN_MSG_PACKOVERUNDERVOLT: handle_packOverUnderVolt(rxpt); break;
+    case CAN_MSG_PACKOVERCURRENT: handle_packOverCurrent(rxpt); break;
+    case CAN_MSG_PACKSTATUS: handle_packStatus(rxpt); break;
+    case CAN_MSG_PACKCELLTEMP: handle_packCellTemp(rxpt); break;
+    case CAN_MSG_PACKAMBTEMP: handle_packAmbTemp(rxpt); break;
+    case CAN_MSG_MOTOROVERTEMP: handle_motorOverTemp(rxpt); break;
+    case CAN_MSG_MOTOROVERSPEED: handle_motorOverSpeed(rxpt); break;
+    case CAN_MSG_MOTORTEMP: handle_motorTemp(rxpt); break;
+    case CAN_MSG_MOTORRPM: handle_motorRPM(rxpt); break;
+    case CAN_MSG_MOTORTORQUE: handle_motorTorque(rxpt); break;
+    case CAN_MSG_MOTORPOWER: handle_motorPower(rxpt); break;
+    case CAN_MSG_NODESTART: handle_nodeStart(rxpt); break;
+    case CAN_MSG_NODEMODE: handle_nodeMode(rxpt); break;
+    case CAN_MSG_NODEID: handle_nodeID(rxpt); break;
+    case CAN_MSG_NODENAME: handle_nodeName(rxpt); break;
+    case CAN_MSG_NODESTATUS: handle_nodeStatus(rxpt); break;
+    case CAN_MSG_NODEGETCONFIG: handle_nodeGetConfig(rxpt); break;
+    case CAN_MSG_NODEUPDATECONFIG: handle_nodeUpdateConfig(rxpt); break;
+    case CAN_MSG_NODESOFTRESET: handle_nodeSoftReset(rxpt); break;
+    case CAN_MSG_NODEHALT: handle_nodeHalt(rxpt); break;
+    }
+}
 #endif
