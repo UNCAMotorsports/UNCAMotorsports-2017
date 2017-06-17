@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN_PM.c">
+<ExpandedNodeIds>
+<v>AMS_psoc</v>
+<v>AMS_psoc\AMS</v>
+<v>AMS_psoc\AMS\TopDesign</v>
+<v>AMS_psoc\AMS\AMS.cydwr</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Pins</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Analog</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Clocks</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Interrupts</v>
+<v>AMS_psoc\AMS\AMS.cydwr\DMA</v>
+<v>AMS_psoc\AMS\AMS.cydwr\System</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Directives</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Flash Security</v>
+<v>AMS_psoc\AMS\AMS.cydwr\EEPROM</v>
+<v>AMS_psoc\AMS\Header Files</v>
+<v>AMS_psoc\AMS\Header Files\cyapicallbacks.h</v>
+<v>AMS_psoc\AMS\Source Files</v>
+<v>AMS_psoc\AMS\Source Files\main.c</v>
+<v>AMS_psoc\AMS\Generated_Source</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Bootloadable_1</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Bootloadable_1\Bootloadable_1.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Bootloadable_1\Bootloadable_1.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN_INT.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN_PM.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN_TX_RX_func.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Control_Reg_1</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Control_Reg_1\Control_Reg_1.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Control_Reg_1\Control_Reg_1.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Control_Reg_1\Control_Reg_1_PM.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\LED</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\LED\LED.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\LED\LED.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\LED\LED_aliases.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\RX_1</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\RX_1\RX_1.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\RX_1\RX_1.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\RX_1\RX_1_aliases.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\TX_1</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\TX_1\TX_1.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\TX_1\TX_1.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\TX_1\TX_1_aliases.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_audio.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_audio.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_boot.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_cdc.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_cdc.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_cdc.inf</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_cls.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_cydmac.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_descr.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_drv.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_episr.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_hid.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_hid.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_midi.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_midi.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_msc.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_msc.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_pm.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_pvt.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_std.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART\USBUART_vnd.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART_Dm</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART_Dm\USBUART_Dm.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART_Dm\USBUART_Dm.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART_Dm\USBUART_Dm_aliases.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART_Dp</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART_Dp\USBUART_Dp.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART_Dp\USBUART_Dp.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\USBUART_Dp\USBUART_Dp_aliases.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cybootloader.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cybootloader.icf</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cydevice.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cyfitter.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cymetadata.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\project.h</v>
+<v>AMS_psoc\Bootloader</v>
+<v>AMS_psoc\Bootloader\TopDesign</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr\Pins</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr\Analog</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr\Clocks</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr\Interrupts</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr\DMA</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr\System</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr\Directives</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr\Flash Security</v>
+<v>AMS_psoc\Bootloader\Bootloader.cydwr\EEPROM</v>
+<v>AMS_psoc\Bootloader\Header Files</v>
+<v>AMS_psoc\Bootloader\Header Files\cyapicallbacks.h</v>
+<v>AMS_psoc\Bootloader\Source Files</v>
+<v>AMS_psoc\Bootloader\Source Files\main.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\Bootloader</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\Bootloader\Bootloader.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\Bootloader\Bootloader.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\Bootloader\Bootloader_PVT.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\Clock_1</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\Clock_1\Clock_1.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\Clock_1\Clock_1.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\cmsis_gcc.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\LED</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\LED\LED.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\LED\LED.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\LED\LED_aliases.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\PWM_1</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\PWM_1\PWM_1.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\PWM_1\PWM_1.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\PWM_1\PWM_1_PM.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_audio.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_audio.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_boot.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_cdc.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_cdc.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_cdc.inf</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_cls.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_cydmac.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_descr.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_drv.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_episr.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_hid.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_hid.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_midi.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_midi.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_msc.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_msc.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_pm.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_pvt.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_std.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS\USBFS_vnd.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS_Dm</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS_Dm\USBFS_Dm.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS_Dm\USBFS_Dm.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS_Dm\USBFS_Dm_aliases.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS_Dp</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS_Dp\USBFS_Dp.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS_Dp\USBFS_Dp.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\USBFS_Dp\USBFS_Dp_aliases.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cydevice.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cyfitter.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\cymetadata.c</v>
+<v>AMS_psoc\Bootloader\Generated_Source\PSoC5\project.h</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>AMS_psoc</v>
+<v>AMS_psoc\AMS</v>
+<v>AMS_psoc\AMS\TopDesign</v>
+<v>AMS_psoc\AMS\AMS.cydwr</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Pins</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Analog</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Clocks</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Interrupts</v>
+<v>AMS_psoc\AMS\AMS.cydwr\DMA</v>
+<v>AMS_psoc\AMS\AMS.cydwr\System</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Directives</v>
+<v>AMS_psoc\AMS\AMS.cydwr\Flash Security</v>
+<v>AMS_psoc\AMS\AMS.cydwr\EEPROM</v>
+<v>AMS_psoc\AMS\Header Files</v>
+<v>AMS_psoc\AMS\Header Files\cyapicallbacks.h</v>
+<v>AMS_psoc\AMS\Source Files</v>
+<v>AMS_psoc\AMS\Source Files\main.c</v>
+<v>AMS_psoc\AMS\Generated_Source</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Bootloadable_1</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Bootloadable_1\Bootloadable_1.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Bootloadable_1\Bootloadable_1.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN_INT.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN_PM.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\CAN\CAN_TX_RX_func.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Control_Reg_1</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Control_Reg_1\Control_Reg_1.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Control_Reg_1\Control_Reg_1.h</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\Control_Reg_1\Control_Reg_1_PM.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>AMS_psoc\AMS\Generated_Source\PSoC5\cy_boot\cmsis_armcc.h</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="AMS_psoc\AMS">
+<ExpandedNodeIds>
+<v>AMS_psoc</v>
+<v>AMS_psoc\AMS</v>
+<v>AMS_psoc\AMS\TopDesign</v>
+<v>AMS_psoc\AMS\TopDesign\TopDesign.cysch</v>
+<v>AMS_psoc\Bootloader</v>
+<v>AMS_psoc\Bootloader\TopDesign</v>
+<v>AMS_psoc\Bootloader\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>AMS_psoc</v>
+<v>AMS_psoc\AMS</v>
+<v>AMS_psoc\AMS\TopDesign</v>
+<v>AMS_psoc\AMS\TopDesign\TopDesign.cysch</v>
+<v>AMS_psoc\Bootloader</v>
+<v>AMS_psoc\Bootloader\TopDesign</v>
+<v>AMS_psoc\Bootloader\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>AMS_psoc</v>
+<v>AMS_psoc\AMS</v>
+<v>AMS_psoc\AMS\CortexM3</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloadable_1.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_INT.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_PM.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_TX_RX_func.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1_PM.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cybootloader.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\LED.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_1.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\TX_1.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_audio.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_boot.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_cdc.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_cls.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_descr.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_Dm.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_Dp.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_drv.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_episr.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_hid.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_midi.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_msc.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_pm.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_std.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_vnd.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\AMS.cyacd</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\AMS.elf</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\AMS.hex</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\AMS.map</v>
+<v>AMS_psoc\AMS\AMS.gpdsc</v>
+<v>AMS_psoc\AMS\AMS.rpt</v>
+<v>AMS_psoc\AMS\AMS_timing.html</v>
+<v>AMS_psoc\Bootloader</v>
+<v>AMS_psoc\Bootloader\CortexM3</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloader.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_1.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\LED.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_1.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_audio.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_boot.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_cdc.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_cls.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_descr.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_Dm.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_Dp.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_drv.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_episr.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_hid.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_midi.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_msc.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_pm.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_std.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Listing Files\USBFS_vnd.lst</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Bootloader.elf</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Bootloader.hex</v>
+<v>AMS_psoc\Bootloader\CortexM3\ARM_GCC_493\Debug\Bootloader.map</v>
+<v>AMS_psoc\Bootloader\Bootloader.gpdsc</v>
+<v>AMS_psoc\Bootloader\Bootloader.rpt</v>
+<v>AMS_psoc\Bootloader\Bootloader_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>AMS_psoc</v>
+<v>AMS_psoc\AMS</v>
+<v>AMS_psoc\AMS\CortexM3</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloadable_1.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_INT.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_PM.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_TX_RX_func.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\Control_Reg_1_PM.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cybootloader.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\LED.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_1.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\TX_1.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_audio.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_boot.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_cdc.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_cls.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_descr.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_Dm.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_Dp.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_drv.lst</v>
+<v>AMS_psoc\AMS\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_episr.lst</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>AMS_psoc</v>
+<v>AMS_psoc\AMS</v>
+<v>AMS_psoc\AMS\PSoC 5LP Architecture TRM</v>
+<v>AMS_psoc\AMS\CY8C58LP Family Datasheet</v>
+<v>AMS_psoc\AMS\System Reference Guides</v>
+<v>AMS_psoc\AMS\System Reference Guides\cy_boot_v5_50</v>
+<v>AMS_psoc\AMS\Bootloadable_v1_50.pdf</v>
+<v>AMS_psoc\AMS\CAN_v3_0.pdf</v>
+<v>AMS_psoc\AMS\cy_pins_v2_20</v>
+<v>AMS_psoc\AMS\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>AMS_psoc\AMS\CyControlReg_v1_80.pdf</v>
+<v>AMS_psoc\AMS\USBFS_v3_10.pdf</v>
+<v>AMS_psoc\Bootloader</v>
+<v>AMS_psoc\Bootloader\PSoC 5LP Architecture TRM</v>
+<v>AMS_psoc\Bootloader\CY8C58LP Family Datasheet</v>
+<v>AMS_psoc\Bootloader\System Reference Guides</v>
+<v>AMS_psoc\Bootloader\System Reference Guides\cy_boot_v5_50</v>
+<v>AMS_psoc\Bootloader\Bootloader_v1_50.pdf</v>
+<v>AMS_psoc\Bootloader\cy_clock_v2_20.pdf</v>
+<v>AMS_psoc\Bootloader\cy_constant_v1_0.pdf</v>
+<v>AMS_psoc\Bootloader\cy_pins_v2_20.pdf</v>
+<v>AMS_psoc\Bootloader\PWM_v3_30.pdf</v>
+<v>AMS_psoc\Bootloader\USBFS_v3_10.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>AMS_psoc</v>
+<v>AMS_psoc\AMS</v>
+<v>AMS_psoc\AMS\PSoC 5LP Architecture TRM</v>
+<v>AMS_psoc\AMS\CY8C58LP Family Datasheet</v>
+<v>AMS_psoc\AMS\System Reference Guides</v>
+<v>AMS_psoc\AMS\System Reference Guides\cy_boot_v5_50</v>
+<v>AMS_psoc\AMS\Bootloadable_v1_50.pdf</v>
+<v>AMS_psoc\AMS\CAN_v3_0.pdf</v>
+<v>AMS_psoc\AMS\cy_pins_v2_20</v>
+<v>AMS_psoc\AMS\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>AMS_psoc\AMS\CyControlReg_v1_80.pdf</v>
+<v>AMS_psoc\AMS\USBFS_v3_10.pdf</v>
+<v>AMS_psoc\Bootloader</v>
+<v>AMS_psoc\Bootloader\PSoC 5LP Architecture TRM</v>
+<v>AMS_psoc\Bootloader\CY8C58LP Family Datasheet</v>
+<v>AMS_psoc\Bootloader\System Reference Guides</v>
+<v>AMS_psoc\Bootloader\System Reference Guides\cy_boot_v5_50</v>
+<v>AMS_psoc\Bootloader\Bootloader_v1_50.pdf</v>
+<v>AMS_psoc\Bootloader\cy_clock_v2_20.pdf</v>
+<v>AMS_psoc\Bootloader\cy_constant_v1_0.pdf</v>
+<v>AMS_psoc\Bootloader\cy_pins_v2_20.pdf</v>
+<v>AMS_psoc\Bootloader\PWM_v3_30.pdf</v>
+<v>AMS_psoc\Bootloader\USBFS_v3_10.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\AMS.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\AMS.cydsn\AMS.cydwr" />
+<name v=".\AMS.cydsn\main.c" />
+<name v=".\AMS.cydsn\Generated_Source\PSoC5\CAN_TX_RX_func.c" />
+<name v=".\AMS.cydsn\Generated_Source\PSoC5\CAN_INT.c" />
+<name v=".\AMS.cydsn\Generated_Source\PSoC5\CAN.h" />
+<name v=".\AMS.cydsn\Generated_Source\PSoC5\cyfitter.h" />
+<name v=".\AMS.cydsn\Generated_Source\PSoC5\cydevice_trm.h" />
+<name v=".\AMS.cydsn\Generated_Source\PSoC5\USBUART.c" />
+<name v=".\AMS.cydsn\Generated_Source\PSoC5\CAN_PM.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1017, 531" SelectedTabbedMdiWindow="935d0c4b-91f8-48a6-b5ff-166ed963e3e7"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="e71e21ef-44e6-473b-8445-02cd8622b83f" Guid="f3e9a8e8-693b-414e-94f2-d291f768b71e" /><DocumentWindow Key="efec4c2e-1c3d-44d2-b249-e1530901d47f" Guid="07ed9077-e1f0-4372-9ed3-2dc05dc5be31" /><DocumentWindow Key="5c5e2d19-a32e-47e4-b24a-efe968624605" Guid="935d0c4b-91f8-48a6-b5ff-166ed963e3e7" /><DocumentWindow Key="4a816f79-6dd9-4c1c-afe7-2ad0c1deb68b" Guid="b66a4241-2ee8-4afa-9efd-93ef5eee5953" /><DocumentWindow Key="7890b93f-c3e9-4986-86a7-8a19be7976f1" Guid="d29a6416-b2f4-4c13-a683-6c3750804c2b" /><DocumentWindow Key="da4b8643-e2df-4acd-b8e1-0f90c828f5a9" Guid="2ba3c0fa-4890-4661-845b-1ed06d7c89f4" /><DocumentWindow Key="1215be1a-2eac-4d8d-afc1-461229f6d15d" Guid="7f9ec70a-885b-440d-a7db-325d7f539922" /><DocumentWindow Key="04caff64-5f1b-4f0b-96ca-187076307249" Guid="f8352870-6758-43f6-b110-1dcf8811d77b" /><DocumentWindow Key="b1a66f70-e6aa-425f-ad04-20d0b4b77536" Guid="d0d89bbb-cc5e-483a-9542-09fb53bdfaff" /><DocumentWindow Key="2945c293-fd24-47de-904f-08f7abfde305" Guid="99903cba-97fe-44d0-a6b9-50505a2de886" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
