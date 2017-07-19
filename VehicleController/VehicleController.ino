@@ -1,4 +1,5 @@
-
+#include "VC_Timers.h"
+#include "VC_VarStore.h"
 #include "VC_CAN.h"
 #include "VCDefines.h"
 #include "VC_GPS.h"
@@ -13,6 +14,15 @@ FlexCAN CANBus(0);
 CAN_message_t rxmsg, txmsg;
 
 mcp47FEB22 myDAC(0);
+
+IntervalTimer msTimer;
+
+vc_state_type state = VC_INIT_STATE;
+
+void msTimerISR() {
+    if (throttleTimer) throttleTimer--;
+    if (brakeTimer) brakeTimer--;
+}
 
 void setup(){
     // Set Pin Modes
@@ -116,6 +126,7 @@ void setup(){
     Serial.println("Done scanning bus 1.");
 #endif
 
+    
     // Start communication to the DAC & zero the outputs
     myDAC.begin();
     myDAC.analogWrite(0, 0);
@@ -124,26 +135,35 @@ void setup(){
 void loop(){
 
     checkIncomingBytes();
+    if (state == VC_INIT_STATE) {
+        if (CANBus.available()) {
+            msTimer.begin(msTimerISR, 1000); // Starts a 1ms timer interrupt
+            state = VC_RUNNING_STATE;
+        }
+    }
 
-    if (CANBus.available()){
+    if (CANBus.available()) {
         CANBus.read(rxmsg);
         handleCANMessage(&rxmsg);
     }
-
+    
     gpsTask();
-    // Read CAN message
-        // Handle CAN message
 
-    // Anything changed?
-        // Update Filter Measurements
+    if (state == VC_RUNNING_STATE) {
+        uint16_t tempThrottle = getThrottle();
+        myDAC.analogWrite(tempThrottle, tempThrottle);
 
-    // Any Timeouts?
-        // Handle Timeout
-    // Compute New(est) state
+        if (!throttleTimer) {
+            state = VC_ABORT_STATE;
+            myDAC.analogWrite(0, 0);
+            Serial.println("Throttle timeout!");
+        }
 
-    // Every 1ms:
-        // Update Control Loop
-        // Update Throttle
+        if (!brakeTimer)
+            state = VC_ABORT_STATE;
+            myDAC.analogWrite(0, 0);
+            Serial.println("Brake timeout!");
+    }
 }
 
 void checkIncomingBytes(){

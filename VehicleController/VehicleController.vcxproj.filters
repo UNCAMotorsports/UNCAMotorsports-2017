@@ -30,5 +30,19 @@
     <ClInclude Include="VC_CAN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VC_VarStore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VC_Timers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="VC_VarStore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VC_Timers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

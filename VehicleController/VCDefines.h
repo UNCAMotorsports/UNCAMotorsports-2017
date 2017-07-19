@@ -1,6 +1,6 @@
 #pragma once
 
-#define VC_FW_VERSION   ("0.1")
+#define VC_FW_VERSION   ("0.3")
 #define VC_CAN_BAUD     (1000000)
 #define VC_SERIAL_BAUD  (250000)
 
@@ -51,3 +51,11 @@
 //#define GPS_DEBUG
 //#define WAIT_GPS
 #define DEBUG_I2C
+#define DEBUG
+
+
+typedef enum {
+    VC_INIT_STATE,
+    VC_RUNNING_STATE,
+    VC_ABORT_STATE
+} vc_state_type;
