@@ -84,9 +84,6 @@
     <ClInclude Include="VC_GPS.h" />
     <ClInclude Include="__vm\.VehicleController.vsarduino.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="VC_CAN.cpp" />
-  </ItemGroup>
   <PropertyGroup>
     <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
   </PropertyGroup>
