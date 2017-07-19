@@ -75,8 +75,6 @@ int main()
     ADC_SAR_1_Start();
     ADC_SAR_1_StartConvert();
     CAN_1_Start();
-    Timer_1_Start();
-    Comp_1_Start();
     //srand(12);
     
     uint32 temp = 0;
@@ -89,13 +87,13 @@ int main()
     PotInit(&two);
     PotInit(&three);
     PotInit(&four);
-    EncoderInit(&wheel);
+//    EncoderInit(&wheel);
     
     SensorEnable(&one.sensor,   TRUE);
     SensorEnable(&two.sensor,   TRUE);
     SensorEnable(&three.sensor, TRUE);
     SensorEnable(&four.sensor,  TRUE);
-    SensorEnable(&wheel.sensor, FALSE);
+//    SensorEnable(&wheel.sensor, FALSE);
     
     //sensor, number, window, rate, CAN rate, CAN msg ID
     SensorSet(&one.sensor,   0, 50, 1000, 100, 0x01Du);
@@ -144,15 +142,17 @@ int main()
         else if((four.sensor.flag==TRUE)&&(four.sensor.enable==TRUE)){
             GetSample(&four);
         }
-        else if((wheel.sensor.flag==TRUE)&&(wheel.sensor.enable==TRUE)){
-            GetRPM(&wheel);
-        }
+//        else if((wheel.sensor.flag==TRUE)&&(wheel.sensor.enable==TRUE)){
+//            GetRPM(&wheel);
+ //       }
         else if((one.sensor.CAN_flag==TRUE)&&(one.sensor.enable==TRUE)){
             if(one.mV>4095){
                 one.mV = 4095;
             }
             one.sensor.sensorData.byte[0] = (uint8)(one.mV>>8);
             one.sensor.sensorData.byte[1] = (uint8)(one.mV);
+            one.sensor.sensorMsg.msg = &(one.sensor.sensorData);
+            CAN_1_SendMsg(&one.sensor.sensorMsg);
             one.sensor.CAN_flag = FALSE;
         }
         else if((two.sensor.CAN_flag==TRUE)&&(two.sensor.enable==TRUE)){
@@ -161,6 +161,7 @@ int main()
             }
             two.sensor.sensorData.byte[0] = (uint8)(two.mV>>8);
             two.sensor.sensorData.byte[1] = (uint8)(two.mV);
+            two.sensor.sensorMsg.msg = &(two.sensor.sensorData);
             CAN_1_SendMsg(&two.sensor.sensorMsg);
             two.sensor.CAN_flag = FALSE;
         }
@@ -170,6 +171,7 @@ int main()
             }
             three.sensor.sensorData.byte[0] = (uint8)(three.mV>>8);
             three.sensor.sensorData.byte[1] = (uint8)(three.mV);
+            three.sensor.sensorMsg.msg = &(three.sensor.sensorData);
             CAN_1_SendMsg(&three.sensor.sensorMsg);
             three.sensor.CAN_flag = FALSE;
         }
@@ -179,6 +181,7 @@ int main()
             }
             four.sensor.sensorData.byte[0] = (uint8)(four.mV>>8);
             four.sensor.sensorData.byte[1] = (uint8)(four.mV);
+            four.sensor.sensorMsg.msg = &(four.sensor.sensorData);
             CAN_1_SendMsg(&four.sensor.sensorMsg);
             four.sensor.CAN_flag=FALSE;
         }

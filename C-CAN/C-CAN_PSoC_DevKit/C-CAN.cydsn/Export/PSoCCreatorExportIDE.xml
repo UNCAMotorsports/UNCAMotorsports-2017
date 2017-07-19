@@ -109,11 +109,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CAN_1_INT.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CAN_1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\CAN_1_TX_RX_func.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\timer_clock.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\timer_clock.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Timer_1_PM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_4.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Clock_4.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cybootloader.icf</File>
@@ -136,19 +131,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\DMA_1_dma.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\EEPROM.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\placeholder_aliases.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\placeholder.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\placeholder.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VDAC8_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VDAC8_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\VDAC8_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_1.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_1.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\Comp_1_PM.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_capture.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_capture.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\zero_rpm.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\zero_rpm.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\C-CAN.cydsn\Export\ARM_GCC_Generic">

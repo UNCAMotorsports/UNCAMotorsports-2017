@@ -1,42 +1,24 @@
 dont_use_io iocell 1 0
 dont_use_io iocell 1 1
 dont_use_io iocell 1 3
-set_location "\Timer_1:TimerUDB:status_tc\" macrocell 1 3 0 0
 set_location "Net_1536_1" macrocell 2 0 0 0
-set_location "\Timer_1:TimerUDB:capt_int_temp\" macrocell 1 4 1 1
-set_location "Net_1600" macrocell 0 3 0 1
-set_location "\Timer_1:TimerUDB:sT24:timerdp:u0\" datapathcell 0 3 2 
-set_location "\Timer_1:TimerUDB:capt_fifo_load\" macrocell 1 4 0 0
 set_location "AMux_1_Decoder_one_hot_3" macrocell 3 0 1 0
-set_location "\Timer_1:TimerUDB:int_capt_count_1\" macrocell 1 4 1 0
 set_location "AMux_1_Decoder_one_hot_2" macrocell 3 0 0 3
-set_location "\Timer_1:TimerUDB:capture_last\" macrocell 1 4 0 1
 set_location "AMux_1_Decoder_one_hot_1" macrocell 3 0 0 2
-set_location "\Timer_1:TimerUDB:rstSts:stsreg\" statusicell 1 4 4 
 set_location "AMux_1_Decoder_old_id_1" macrocell 3 0 1 1
 set_location "AMux_1_Decoder_old_id_0" macrocell 3 0 0 1
-set_location "\Timer_1:TimerUDB:sT24:timerdp:u1\" datapathcell 1 3 2 
-set_location "\Timer_1:TimerUDB:int_capt_count_0\" macrocell 1 4 0 2
 set_location "AMux_1_Decoder_one_hot_0" macrocell 3 0 0 0
-set_location "\Timer_1:TimerUDB:sT24:timerdp:u2\" datapathcell 1 4 2 
 set_location "Net_1536_0" macrocell 2 0 0 1
 set_location "DMA_1" drqcell -1 -1 0
-set_location "\Timer_1:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" controlcell 1 4 6 
+set_location "ClockBlock" clockblockcell -1 -1 0
 set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 0
 set_location "\CAN_1:CanIP\" cancell -1 -1 0
-set_location "\Comp_1:ctComp\" comparatorcell -1 -1 3
-set_location "\VDAC8_1:viDAC8\" vidaccell -1 -1 1
 set_location "\ADC_SAR_1:IRQ\" interrupt -1 -1 0
-set_location "zero_rpm" interrupt -1 -1 2
 set_io "TX_2(0)" iocell 1 5
 set_location "\CAN_1:isr\" interrupt -1 -1 16
-set_location "isr_capture" interrupt -1 -1 1
-set_io "three(0)" iocell 3 3
 set_io "\ADC_SAR_1:Bypass(0)\" iocell 0 4
 set_io "RX_2(0)" iocell 1 4
-set_location "ClockBlock" clockblockcell -1 -1 0
-# Note: port 15 is the logical name for port 8
-set_io "placeholder(0)" iocell 15 0
+set_io "three(0)" iocell 3 3
 set_io "four(0)" iocell 3 4
 set_io "two(0)" iocell 3 1
 set_io "one(0)" iocell 3 0

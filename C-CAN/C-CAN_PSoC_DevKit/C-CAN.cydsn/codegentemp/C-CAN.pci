@@ -1,5 +1,5 @@
 # C-CAN
-# 2017-06-12 22:59:06Z
+# 2017-07-18 20:03:14Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -13,8 +13,5 @@ set_io "four(0)" iocell 3 4
 set_io "two(0)" iocell 3 1
 set_io "RX_2(0)" iocell 1 4
 set_io "TX_2(0)" iocell 1 5
-set_io "placeholder(0)" iocell 15 0
 set_io "\ADC_SAR_1:Bypass(0)\" iocell 0 4
-set_location "\VDAC8_1:viDAC8\" vidaccell -1 -1 1
 set_location "\ADC_SAR_1:ADC_SAR\" sarcell -1 -1 0
-set_location "\Comp_1:ctComp\" comparatorcell -1 -1 3

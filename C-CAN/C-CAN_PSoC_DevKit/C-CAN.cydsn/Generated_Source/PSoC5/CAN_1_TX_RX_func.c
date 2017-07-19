@@ -25,7 +25,7 @@
 
 
 /* `#START TX_RX_FUNCTION` */
-#include "C-CAN.h"
+
 #define DATALENGTH1 0x08
 extern uint8 TxMessage0[8];
 extern uint8 TxMessage1[8];
@@ -861,16 +861,7 @@ void CAN_1_ReceiveMsg(uint8 rxMailbox)
     void CAN_1_ReceiveMsgGetConfig(void) 
     {
         /* `#START MESSAGE_GetConfig_RECEIVED` */
-            one.sensor.flag = FALSE;
-            two.sensor.flag = FALSE;
-            three.sensor.flag = FALSE;
-            four.sensor.flag = FALSE;
-            wheel.sensor.flag = FALSE;
-            one.sensor.CAN_flag = FALSE;
-            two.sensor.CAN_flag = FALSE;
-            three.sensor.CAN_flag = FALSE;
-            four.sensor.CAN_flag = FALSE;
-            wheel.sensor.CAN_flag = FALSE;
+
         /* `#END` */
 
         #ifdef CAN_1_RECEIVE_MSG_GetConfig_CALLBACK
