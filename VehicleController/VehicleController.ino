@@ -126,10 +126,12 @@ void setup(){
     Serial.println("Done scanning bus 1.");
 #endif
 
-    
     // Start communication to the DAC & zero the outputs
     myDAC.begin();
     myDAC.analogWrite(0, 0);
+
+    digitalWriteFast(PIN_SHUTDOWN_CTRL, HIGH);
+    digitalWriteFast(PIN_CLOSE_AIR, HIGH);
 }
 
 void loop(){
@@ -137,6 +139,11 @@ void loop(){
     checkIncomingBytes();
     if (state == VC_INIT_STATE) {
         if (CANBus.available()) {
+            // Beep the beeper
+            digitalWriteFast(PIN_5V_0, HIGH);
+            delay(1500);
+            digitalWriteFast(PIN_5V_0, LOW);
+
             msTimer.begin(msTimerISR, 1000); // Starts a 1ms timer interrupt
             state = VC_RUNNING_STATE;
         }
