@@ -1,6 +1,7 @@
 #pragma once
 
 #define VC_FW_VERSION   ("0.3")
+#define VC_FW_VERSION   ("0.4")
 #define VC_CAN_BAUD     (1000000)
 #define VC_SERIAL_BAUD  (250000)
 
