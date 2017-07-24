@@ -129,35 +129,61 @@ void setup(){
     // Start communication to the DAC & zero the outputs
     myDAC.begin();
     myDAC.analogWrite(0, 0);
-
-    digitalWriteFast(PIN_SHUTDOWN_CTRL, HIGH);
-    digitalWriteFast(PIN_CLOSE_AIR, HIGH);
 }
 
 void loop(){
 
+    // Check for bytes waiting on the Serial connection (Primarily for debug purposes)
     checkIncomingBytes();
+
+    if (CANBus.available()) {
+        CANBus.read(rxmsg);
+        handleCANMessage(&rxmsg);
+    }
+
+    gpsTask();
+
     if (state == VC_INIT_STATE) {
-        if (CANBus.available()) {
+        
+        // Start the car!
+        if(digitalRead(PIN_START_CAR) == LOW){
+
             // Beep the beeper
-            digitalWriteFast(PIN_5V_0, HIGH);
-            delay(1500);
-            digitalWriteFast(PIN_5V_0, LOW);
+            //digitalWriteFast(PIN_5V_0, HIGH);
+            //delay(1500);
+            //digitalWriteFast(PIN_5V_0, LOW);
+
+            // Close the shutdown circuit, and precharge for 100ms
+            digitalWriteFast(PIN_SHUTDOWN_CTRL, HIGH);
+            digitalWriteFast(PIN_PRECHARGE, HIGH);
+            delay(100);
+
+            // Close AIR+
+            digitalWriteFast(PIN_CLOSE_AIR, HIGH);
+            digitalWriteFast(PIN_PRECHARGE, LOW);
+            delay(100);
 
             msTimer.begin(msTimerISR, 1000); // Starts a 1ms timer interrupt
             state = VC_RUNNING_STATE;
         }
     }
 
-    if (CANBus.available()) {
-        CANBus.read(rxmsg);
-        handleCANMessage(&rxmsg);
-    }
-    
-    gpsTask();
-
     if (state == VC_RUNNING_STATE) {
+
+        if (digitalRead(PIN_START_CAR) == HIGH) {
+            digitalWriteFast(PIN_CLOSE_AIR, LOW);
+            delay(10);
+            digitalWriteFast(PIN_SHUTDOWN_CTRL, LOW);
+            msTimer.end();
+            
+            state = VC_INIT_STATE;
+        }
+
         uint16_t tempThrottle = getThrottle();
+        if (tempThrottle > 4095) {
+            tempThrottle = 0;
+            state = VC_ABORT_STATE;
+        }
         myDAC.analogWrite(tempThrottle, tempThrottle);
 
         if (!throttleTimer) {
@@ -194,6 +220,8 @@ void checkIncomingBytes(){
     }
 }
 
+// Begins transmission for all available on a given i2c_t3 bus
+// If a device reports back, this function will alert the user
 void scanI2CBus(i2c_t3* buspt){
     int nDevices = 0;
     for (uint8_t i = 1; i < 127; i++){
