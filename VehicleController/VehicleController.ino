@@ -166,13 +166,15 @@ void loop(){
             Serial.println("Throttle timeout!");
         }
 
-        if (!brakeTimer)
+        if (!brakeTimer) {
             state = VC_ABORT_STATE;
             myDAC.analogWrite(0, 0);
             Serial.println("Brake timeout!");
+        }
     }
 }
 
+// Called at the beginning of every loop
 void checkIncomingBytes(){
     if (Serial.available()){
         char in = Serial.read();
