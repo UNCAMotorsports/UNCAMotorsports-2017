@@ -172,7 +172,6 @@ void loop(){
 
         if (digitalRead(PIN_START_CAR) == HIGH) {
             digitalWriteFast(PIN_CLOSE_AIR, LOW);
-            delay(10);
             digitalWriteFast(PIN_SHUTDOWN_CTRL, LOW);
             msTimer.end();
             
