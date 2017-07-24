@@ -26,7 +26,7 @@ void msTimerISR() {
 
 void setup(){
     // Set Pin Modes
-    pinMode(PIN_START_CAR, INPUT);
+    pinMode(PIN_START_CAR, INPUT_PULLUP);
     pinMode(PIN_BRAKE_IN, INPUT);
     pinMode(PIN_1PPS, INPUT);
     pinMode(PIN_3D_FIX, INPUT);
