@@ -1,6 +1,18 @@
 #pragma once
 
-#define VC_FW_VERSION   ("0.3")
+// Comment or remove these definitions to stop respective debug code from being compiled
+//#define DEBUG_THROTTLE
+//#define DEBUG_RPM
+//#define DEBUG_STEERING
+//#define DEBUG_PROFILING
+//#define LOGGER_DEBUG
+//#define LOGGING
+
+// Teensy's max and min macros use non-standard gnu extensions... these are simpler for integers etc.
+#define simple_max(a,b) (((a)>(b)) ? (a) : (b))
+#define simple_min(a,b) (((a)<(b)) ? (a) : (b))
+#define simple_constrain(amt,low,high) (((amt)<(low)) ? (low) : ((amt > high) ? (high) : (amt)))
+
 #define VC_FW_VERSION   ("0.4")
 #define VC_CAN_BAUD     (1000000)
 #define VC_SERIAL_BAUD  (250000)
@@ -48,11 +60,6 @@
 
 #define PIN_BATT_SENSE          (A21)
 #define PIN_SHUTDOWN_CURRENT    (A22)
-
-//#define GPS_DEBUG
-//#define WAIT_GPS
-#define DEBUG_I2C
-#define DEBUG
 
 
 typedef enum {
