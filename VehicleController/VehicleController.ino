@@ -129,6 +129,15 @@ void setup(){
     // Start communication to the DAC & zero the outputs
     myDAC.begin();
     myDAC.analogWrite(0, 0);
+
+#ifdef DEBUG_STATE
+    Serial.println("State: INIT_STATE");
+#endif
+    Serial.println("Waiting on CAN Bus");
+    while (!CANBus.available()){
+        checkIncomingBytes();
+    }
+    Serial.println("First CAN message received!");
 }
 
 void loop(){
@@ -165,6 +174,9 @@ void loop(){
 
             msTimer.begin(msTimerISR, 1000); // Starts a 1ms timer interrupt
             state = VC_RUNNING_STATE;
+#ifdef DEBUG_STATE
+            Serial.println("State:  RUNNING_STATE");
+#endif
         }
     }
 
@@ -187,12 +199,18 @@ void loop(){
 
         if (!throttleTimer) {
             state = VC_ABORT_STATE;
+#ifdef DEBUG_STATE
+            Serial.println("State:  ABORT_STATE");
+#endif
             myDAC.analogWrite(0, 0);
             Serial.println("Throttle timeout!");
         }
 
         if (!brakeTimer) {
             state = VC_ABORT_STATE;
+#ifdef DEBUG_STATE
+            Serial.println("State:  ABORT_STATE");
+#endif
             myDAC.analogWrite(0, 0);
             Serial.println("Brake timeout!");
         }
