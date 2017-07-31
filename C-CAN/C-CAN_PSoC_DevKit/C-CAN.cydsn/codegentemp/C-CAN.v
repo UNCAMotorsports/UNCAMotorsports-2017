@@ -1,6 +1,6 @@
 // ======================================================================
 // C-CAN.v generated from TopDesign.cysch
-// 07/18/2017 at 16:03
+// 07/25/2017 at 22:03
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
