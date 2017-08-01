@@ -1,3 +1,4 @@
+#include <EEPROM.h>
 #include "VC_Timers.h"
 #include "VC_VarStore.h"
 #include "VC_CAN.h"
@@ -25,6 +26,13 @@ void msTimerISR() {
 }
 
 void setup(){
+
+    // Increment & store the number of times the device has started
+    uint16_t numStartups = EEPROM.read(EEPROM_STARTUP_INDEX) << 8 | EEPROM.read(EEPROM_STARTUP_INDEX + 1);
+    numStartups++;
+    EEPROM.write(EEPROM_STARTUP_INDEX, numStartups >> 8);   // MSB
+    EEPROM.write(EEPROM_STARTUP_INDEX + 1, numStartups & 0xff); // LSB
+
     // Set Pin Modes
     pinMode(PIN_START_CAR, INPUT_PULLUP);
     pinMode(PIN_BRAKE_IN, INPUT);

@@ -22,6 +22,9 @@
 #define VC_CAN_BAUD     (1000000)
 #define VC_SERIAL_BAUD  (250000)
 
+#define EEPROM_STARTUP_INDEX    (0)
+
+// Pin Definitions
 #define PIN_START_CAR   (0)     // Input
 #define PIN_CANTX       (3)
 #define PIN_CANRX       (4)
