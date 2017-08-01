@@ -1,8 +1,11 @@
 #pragma once
 
 // Comment or remove these definitions to stop respective debug code from being compiled
-#define DEBUG_I2C
+//+
+//#define DEBUG_I2C
 #define DEBUG_STATE
+//#define DEBUG_NO_TIMEOUTS
+//#define DEBUG_GPS
 //#define DEBUG_THROTTLE
 //#define DEBUG_RPM
 //#define DEBUG_STEERING
