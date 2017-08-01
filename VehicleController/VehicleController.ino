@@ -1,28 +1,37 @@
 #include <EEPROM.h>
+#include <kinetis_flexcan.h>
+#include <FlexCAN.h>
 #include "VC_Timers.h"
 #include "VC_VarStore.h"
 #include "VC_CAN.h"
 #include "VCDefines.h"
 #include "VC_GPS.h"
 #include <i2c_t3.h>
-#include <kinetis_flexcan.h>
 
 #include <mcp47FEB22.h>
 
 Adafruit_GPS* gpsPt;
 
-FlexCAN CANBus(0);
+FlexCAN CANBus(VC_CAN_BAUD);
 CAN_message_t rxmsg, txmsg;
+CAN_filter_t cmask;
+
 
 mcp47FEB22 myDAC(0);
 
-IntervalTimer msTimer;
+IntervalTimer msTimer, globalTimer;
 
 vc_state_type state = VC_INIT_STATE;
 
 void msTimerISR() {
     if (throttleTimer) throttleTimer--;
     if (brakeTimer) brakeTimer--;
+}
+
+void globalTimerISR(){
+    static uint32_t masterTimer = 0;    // This only gets executed the first time the function is called
+    masterTimer++;
+    if (masterTimer % (1000 / MSG_RATE_GPS) == 0) gpsFlag = true;
 }
 
 void setup(){
@@ -95,6 +104,11 @@ void setup(){
     pinMode(PIN_BATT_SENSE, INPUT);
     pinMode(PIN_SHUTDOWN_CURRENT, INPUT);
 
+    pinMode(PIN_CANTX, OUTPUT);
+    digitalWriteFast(PIN_CANTX, LOW);
+
+    pinMode(PIN_CANRX, INPUT);
+
 
     analogReadResolution(12);
 
@@ -111,7 +125,11 @@ void setup(){
     delay(1000);
     
     // Initialize CAN Bus
-    CANBus.begin(VC_CAN_BAUD);
+    cmask.ext = 0;
+    cmask.id = 0;
+    cmask.rtr = 0;
+    CANBus.begin();
+
 
     // Initialize GPS Module
     gpsBegin();
@@ -141,11 +159,25 @@ void setup(){
 #ifdef DEBUG_STATE
     Serial.println("State: INIT_STATE");
 #endif
+
+    digitalWriteFast(PIN_SHUTDOWN_CTRL, HIGH);
+
+
     Serial.println("Waiting on CAN Bus");
+    //while (true){}
+    txmsg.id = 0xfff;
+    txmsg.len = 2;
+    txmsg.buf[0] = 1;
+    txmsg.buf[1] = 2;
+    
     while (!CANBus.available()){
         checkIncomingBytes();
+        CANBus.write(txmsg);
+        delay(10);
     }
     Serial.println("First CAN message received!");
+
+    globalTimer.begin(globalTimerISR, 1000);    // Starts an IntervalTimer which calls globalTimerISR at 1000Hz (1ms)
 }
 
 void loop(){
@@ -158,7 +190,27 @@ void loop(){
         handleCANMessage(&rxmsg);
     }
 
+    // This will eventually update the fields in the Adafruit_GPS object
+    // Accessing data can be done through the "gpsPt" pointer, as shown below
     gpsTask();
+
+    // gpsFlag is set by globalTimer at 10Hz
+    if (gpsFlag){
+        txmsg.id = CAN_MSG_GPSTIME; // See VC_CAN.h for enum list
+        txmsg.ext = 0;  // 11-bit frame, true for 29-bit frame
+        txmsg.len = 8;  // Bytes in data field
+        txmsg.buf[0] = gpsPt->year;
+        txmsg.buf[1] = gpsPt->month;
+        txmsg.buf[2] = gpsPt->day;
+        txmsg.buf[3] = gpsPt->hour;
+        txmsg.buf[4] = gpsPt->minute;
+        txmsg.buf[5] = gpsPt->seconds;
+        txmsg.buf[6] = gpsPt->milliseconds >> 8;    // MSB
+        txmsg.buf[7] = gpsPt->milliseconds & 0xff;  // LSB
+        CANBus.write(txmsg);
+
+        gpsFlag = false;
+    }
 
     if (state == VC_INIT_STATE) {
         
@@ -171,7 +223,7 @@ void loop(){
             //digitalWriteFast(PIN_5V_0, LOW);
 
             // Close the shutdown circuit, and precharge for 100ms
-            digitalWriteFast(PIN_SHUTDOWN_CTRL, HIGH);
+            
             digitalWriteFast(PIN_PRECHARGE, HIGH);
             delay(100);
 
@@ -180,10 +232,13 @@ void loop(){
             digitalWriteFast(PIN_PRECHARGE, LOW);
             delay(100);
 
+#ifndef DEBUG_NO_TIMEOUTS
             msTimer.begin(msTimerISR, 1000); // Starts a 1ms timer interrupt
+#endif
+
             state = VC_RUNNING_STATE;
 #ifdef DEBUG_STATE
-            Serial.println("State:  RUNNING_STATE");
+            Serial.println("State: RUNNING_STATE");
 #endif
         }
     }
@@ -192,9 +247,14 @@ void loop(){
 
         if (digitalRead(PIN_START_CAR) == HIGH) {
             digitalWriteFast(PIN_CLOSE_AIR, LOW);
-            digitalWriteFast(PIN_SHUTDOWN_CTRL, LOW);
+            //digitalWriteFast(PIN_SHUTDOWN_CTRL, LOW);
+#ifndef DEBUG_NO_TIMEOUTS
             msTimer.end();
+#endif
             
+#ifdef DEBUG_STATE
+            Serial.println("State: INIT_STATE");
+#endif
             state = VC_INIT_STATE;
         }
 

@@ -11,6 +11,7 @@
 
 #include <FlexCAN.h>
 #include "VC_VarStore.h"
+#include "VC_Timers.h"
 
 typedef enum {
     CAN_MSG_HARDFAULT = 0x000,
@@ -130,12 +131,12 @@ void handle_glvVoltage(CAN_message_t *rxpt){
 
 void handle_throttle(CAN_message_t *rxpt){
     setThrottle(rxpt->buf[0] << 8 || rxpt->buf[1]);
-    throttleTimer = THROTTLE_TIMEOUT;
+    throttleTimer = TIMEOUT_THROTTLE;
 }
 
 void handle_brake(CAN_message_t *rxpt){
     setBrake(rxpt->buf[0] << 8 || rxpt->buf[1]);
-    brakeTimer = BRAKE_TIMEOUT;
+    brakeTimer = TIMEOUT_BRAKE;
 }
 
 void handle_steering(CAN_message_t *rxpt){

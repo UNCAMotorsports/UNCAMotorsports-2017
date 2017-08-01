@@ -57,7 +57,7 @@ bool gpsTask(){
     if (myGPS.newNMEAreceived()){
         if (myGPS.parse(myGPS.lastNMEA()))
         {
-#ifdef GPS_DEBUG
+#ifdef DEBUG_GPS
             Serial.print("\nTime: ");
             Serial.print(myGPS.hour, DEC); Serial.print(':');
             Serial.print(myGPS.minute, DEC); Serial.print(':');

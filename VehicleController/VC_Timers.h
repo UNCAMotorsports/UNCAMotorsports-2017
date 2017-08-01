@@ -9,10 +9,14 @@
 	#include "WProgram.h"
 #endif
 
-#define THROTTLE_TIMEOUT    (100)                   // Timeout throttle after 100ms
-#define BRAKE_TIMEOUT       (100)                   // Timeout brake after 100ms
+#define TIMEOUT_THROTTLE    (100)                   // Timeout throttle after 100ms
+#define TIMEOUT_BRAKE       (100)                   // Timeout brake after 100ms
+
+#define MSG_RATE_GPS        (10)                    // GPS will send a message at 10Hz
 
 extern uint32_t throttleTimer;
 extern uint32_t brakeTimer;
+
+extern volatile uint8_t gpsFlag;
 
 #endif
