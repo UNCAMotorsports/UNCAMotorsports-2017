@@ -16,9 +16,54 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
+<v>C-CAN\C-CAN\TopDesign</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr</v>
+<v>C-CAN\C-CAN\Header Files</v>
+<v>C-CAN\C-CAN\Source Files</v>
+<v>C-CAN\C-CAN\Generated_Source</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
+<v>C-CAN\C-CAN\TopDesign</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Pins</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Analog</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Clocks</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Interrupts</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\DMA</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\System</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Directives</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\Flash Security</v>
+<v>C-CAN\C-CAN\C-CAN.cydwr\EEPROM</v>
+<v>C-CAN\C-CAN\Header Files</v>
+<v>C-CAN\C-CAN\Header Files\C-CAN.h</v>
+<v>C-CAN\C-CAN\Source Files</v>
+<v>C-CAN\C-CAN\Source Files\C-CAN.c</v>
+<v>C-CAN\C-CAN\Source Files\main.c</v>
+<v>C-CAN\C-CAN\Generated_Source</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_Bypass</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\ADC_SAR_1_IRQ</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Bootloadable_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1.h</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_INT.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_PM.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\CAN_1\CAN_1_TX_RX_func.c</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\Clock_4</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\cy_boot</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\DMA_1</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\EEPROM</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\four</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\one</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\RX_2</v>
+<v>C-CAN\C-CAN\Generated_Source\PSoC5\three</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -27,14 +72,94 @@
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
+<v>C-CAN\C-CAN\CortexM3</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_Bypass.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloadable_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_INT.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_PM.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_TX_RX_func.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\C-CAN.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_4.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cybootloader.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\DMA_1_dma.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\EEPROM.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\four.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\one.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_2.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\three.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\two.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\TX_2.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.cyacd</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.elf</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.hex</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\C-CAN.map</v>
+<v>C-CAN\C-CAN\C-CAN.gpdsc</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
+<v>C-CAN\C-CAN\CortexM3</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_Bypass.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_INT.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_IRQ.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_1_PM.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Bootloadable_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_INT.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_PM.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CAN_1_TX_RX_func.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\C-CAN.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Clock_4.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cybootloader.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\DMA_1_dma.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\EEPROM.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\four.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\one.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_2.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\three.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\two.lst</v>
+<v>C-CAN\C-CAN\CortexM3\ARM_GCC_493\Debug\Listing Files\TX_2.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -45,9 +170,26 @@
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="C-CAN">
 <ExpandedNodeIds>
 <v>C-CAN</v>
+<v>C-CAN\C-CAN\PSoC 5LP Architecture TRM</v>
+<v>C-CAN\C-CAN\CY8C58LP Family Datasheet</v>
+<v>C-CAN\C-CAN\System Reference Guides</v>
+<v>C-CAN\C-CAN\System Reference Guides\cy_boot_v5_50</v>
+<v>C-CAN\C-CAN\ADC_SAR_v3_0.pdf</v>
+<v>C-CAN\C-CAN\AMuxHw_v1_50.pdf</v>
+<v>C-CAN\C-CAN\BasicCounter_v1_0.pdf</v>
+<v>C-CAN\C-CAN\Bootloadable_v1_50.pdf</v>
+<v>C-CAN\C-CAN\CAN_v3_0.pdf</v>
+<v>C-CAN\C-CAN\cy_clock_v2_20.pdf</v>
+<v>C-CAN\C-CAN\cy_constant_v1_0</v>
+<v>C-CAN\C-CAN\cy_constant_v1_0\cy_constant_v1_0.pdf</v>
+<v>C-CAN\C-CAN\cy_dma_v1_70.pdf</v>
+<v>C-CAN\C-CAN\cy_pins_v2_20</v>
+<v>C-CAN\C-CAN\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>C-CAN\C-CAN\EEPROM_v3_0.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>C-CAN</v>
+<v>C-CAN\C-CAN</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -61,14 +203,21 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\C-CAN.cydsn\main.c" />
+<name v=".\C-CAN.cydsn\C-CAN.c" />
+<name v=".\C-CAN.cydsn\C-CAN.h" />
+<name v=".\C-CAN.cydsn\C-CAN.cydwr" />
+<name v=".\C-CAN.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\C-CAN.cydsn\Generated_Source\PSoC5\CAN_1.h" />
+</OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
   Actipro Docking/MDI for WinForms
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1271, 531" SelectedTabbedMdiWindow="12c3a546-0263-4e65-b78a-e409e9806c89"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1047, 533" SelectedTabbedMdiWindow="8a87bb3e-a3b5-40b1-972d-ee66ee1f8aa6"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c3a546-0263-4e65-b78a-e409e9806c89" /><DocumentWindow Key="8314423c-ecdf-4172-ae92-939c61606aa7" Guid="573e8a51-b3c4-42b3-8392-7de3e9c25355" /><DocumentWindow Key="8d2e1421-9055-4200-9df3-14f730931a69" Guid="421fbe36-93d8-4796-9f5b-f2574489a1d9" /><DocumentWindow Key="dc18a935-a96f-449a-a823-958948957100" Guid="e984447b-e196-489a-8946-7b816e770ec2" /><DocumentWindow Key="ac3ab915-832d-4dd3-aacd-0eca89c99db0" Guid="7fb18e09-70e7-40f0-9bf7-092f2547f26b" /><DocumentWindow Key="7e37038b-92d7-43bb-b9c2-58ef964ce53c" Guid="8a87bb3e-a3b5-40b1-972d-ee66ee1f8aa6" /><DocumentWindow Key="149f8169-fcfe-49cb-bdeb-fd9cc547e5cd" Guid="e6a353d6-29a4-4b65-8d49-47906ebf0538" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

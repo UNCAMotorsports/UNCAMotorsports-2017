@@ -1,5 +1,5 @@
 # C-CAN
-# 2017-07-18 20:03:14Z
+# 2017-07-26 02:03:57Z
 
 # IO_0@[IOP=(1)][IoId=(0)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 0
@@ -7,6 +7,10 @@ dont_use_io iocell 1 0
 dont_use_io iocell 1 1
 # IO_3@[IOP=(1)][IoId=(3)] is reserved: SWDDebugEnabled
 dont_use_io iocell 1 3
+# IO_0@[IOP=(15)][IoId=(0)] is reserved: MhzXtalEnabled
+dont_use_io iocell 15 0
+# IO_1@[IOP=(15)][IoId=(1)] is reserved: MhzXtalEnabled
+dont_use_io iocell 15 1
 set_io "three(0)" iocell 3 3
 set_io "one(0)" iocell 3 0
 set_io "four(0)" iocell 3 4
