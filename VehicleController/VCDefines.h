@@ -18,7 +18,7 @@
 #define simple_min(a,b) (((a)<(b)) ? (a) : (b))
 #define simple_constrain(amt,low,high) (((amt)<(low)) ? (low) : ((amt > high) ? (high) : (amt)))
 
-#define VC_FW_VERSION   ("0.4")
+#define VC_FW_VERSION   ("0.6")
 #define VC_CAN_BAUD     (1000000)
 #define VC_SERIAL_BAUD  (250000)
 
