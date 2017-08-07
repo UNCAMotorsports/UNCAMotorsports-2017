@@ -36,12 +36,18 @@
     <ClInclude Include="VC_Timers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mcp47FEB22.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VC_VarStore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="VC_Timers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mcp47FEB22.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
