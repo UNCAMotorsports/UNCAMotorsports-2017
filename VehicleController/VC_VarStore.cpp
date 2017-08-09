@@ -9,6 +9,13 @@ static uint16_t brakeVal;
 
 void setThrottle(uint16_t val)
 {
+	static int i = 0;
+	if (i >= 25) {
+		i = 0;
+		Serial.println(val);
+
+	}
+	i++;
     throttleVal = val;
 }
 

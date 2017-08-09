@@ -130,12 +130,12 @@ void handle_glvVoltage(CAN_message_t *rxpt){
 }
 
 void handle_throttle(CAN_message_t *rxpt){
-    setThrottle(rxpt->buf[0] << 8 || rxpt->buf[1]);
+    setThrottle(rxpt->buf[0] << 8 | rxpt->buf[1]);
     throttleTimer = TIMEOUT_THROTTLE;
 }
 
 void handle_brake(CAN_message_t *rxpt){
-    setBrake(rxpt->buf[0] << 8 || rxpt->buf[1]);
+    setBrake(rxpt->buf[0] << 8 | rxpt->buf[1]);
     brakeTimer = TIMEOUT_BRAKE;
 }
 

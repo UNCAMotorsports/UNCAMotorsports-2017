@@ -12,7 +12,8 @@
 
 Adafruit_GPS* gpsPt;
 
-FlexCAN CANBus(0);
+//FlexCAN Can0(1000000);
+
 CAN_message_t rxmsg, txmsg;
 CAN_filter_t cmask;
 
@@ -127,7 +128,7 @@ void setup(){
     cmask.ext = 0;
     cmask.id = 0;
     cmask.rtr = 0;
-    CANBus.begin(&cmask);
+    Can0.begin();
 
 
     // Initialize GPS Module
@@ -169,10 +170,13 @@ void setup(){
     //txmsg.buf[0] = 1;
     //txmsg.buf[1] = 2;
     
-    while (!CANBus.available()){
+    while (!Can0.available()){
         checkIncomingBytes();
-        //CANBus.write(txmsg);
-        delay(10);
+        //Can0.write(txmsg);
+		Serial.println(Can0.available());
+		Can0.read(rxmsg);
+		Serial.println(rxmsg.id);
+        delay(1000);
     }
     Serial.println("First CAN message received!");
 
@@ -184,8 +188,8 @@ void loop(){
     // Check for bytes waiting on the Serial connection (Primarily for debug purposes)
     checkIncomingBytes();
 
-    if (CANBus.available()) {
-        CANBus.read(rxmsg);
+    if (Can0.available()) {
+        Can0.read(rxmsg);
         handleCANMessage(&rxmsg);
     }
 
@@ -206,7 +210,7 @@ void loop(){
         txmsg.buf[5] = gpsPt->seconds;
         txmsg.buf[6] = gpsPt->milliseconds >> 8;    // MSB
         txmsg.buf[7] = gpsPt->milliseconds & 0xff;  // LSB
-        CANBus.write(txmsg);
+        Can0.write(txmsg);
 
         gpsFlag = false;
     }
@@ -258,6 +262,9 @@ void loop(){
         }
 
         uint16_t tempThrottle = getThrottle();
+#ifdef DEBUG_THROTTLE
+		Serial.println(tempThrottle);
+#endif
         if (tempThrottle > 4095) {
             tempThrottle = 0;
             state = VC_ABORT_STATE;

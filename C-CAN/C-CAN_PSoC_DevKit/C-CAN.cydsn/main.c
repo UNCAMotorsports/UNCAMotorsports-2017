@@ -91,12 +91,12 @@ int main()
     
     SensorEnable(&one.sensor,   TRUE);
     SensorEnable(&two.sensor,   TRUE);
-    SensorEnable(&three.sensor, TRUE);
+    SensorEnable(&three.sensor, FALSE);
     SensorEnable(&four.sensor,  TRUE);
 //    SensorEnable(&wheel.sensor, FALSE);
     
     //sensor, number, window, rate, CAN rate, CAN msg ID
-    SensorSet(&one.sensor,   0, 50, 1000, 100, 0x01Du);
+    SensorSet(&one.sensor,   0, 50, 1000, 100, 0x010u);
     SensorSet(&two.sensor,   1, 50, 1000, 100, 0x011u); //brakes
     SensorSet(&three.sensor, 2, 50, 1000, 100, 0x01Eu);
     SensorSet(&four.sensor,  3, 50, 1000, 100, 0x012u); //steering
@@ -149,6 +149,19 @@ int main()
             if(one.mV>4095){
                 one.mV = 4095;
             }
+            one.mV = 4000 - one.mV;
+            
+            if(one.mV < 250){
+                one.mV = 0;
+            }
+            if(one.mV > 2000){
+                one.mV = 2000;
+            }
+            
+            one.mV = 4095 / 1750 * one.mV;
+                
+            //hardwire throttle values to make sense
+            
             one.sensor.sensorData.byte[0] = (uint8)(one.mV>>8);
             one.sensor.sensorData.byte[1] = (uint8)(one.mV);
             one.sensor.sensorMsg.msg = &(one.sensor.sensorData);
