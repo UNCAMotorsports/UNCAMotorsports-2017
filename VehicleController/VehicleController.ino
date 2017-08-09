@@ -8,14 +8,13 @@
 #include "VC_GPS.h"
 #include <i2c_t3.h>
 
-#include <mcp47FEB22.h>
+#include "mcp47FEB22.h"
 
 Adafruit_GPS* gpsPt;
 
-FlexCAN CANBus(VC_CAN_BAUD);
+FlexCAN CANBus(0);
 CAN_message_t rxmsg, txmsg;
 CAN_filter_t cmask;
-
 
 mcp47FEB22 myDAC(0);
 
@@ -128,7 +127,7 @@ void setup(){
     cmask.ext = 0;
     cmask.id = 0;
     cmask.rtr = 0;
-    CANBus.begin();
+    CANBus.begin(&cmask);
 
 
     // Initialize GPS Module
@@ -165,14 +164,14 @@ void setup(){
 
     Serial.println("Waiting on CAN Bus");
     //while (true){}
-    txmsg.id = 0xfff;
-    txmsg.len = 2;
-    txmsg.buf[0] = 1;
-    txmsg.buf[1] = 2;
+    //txmsg.id = 0xfff;
+    //txmsg.len = 2;
+    //txmsg.buf[0] = 1;
+    //txmsg.buf[1] = 2;
     
     while (!CANBus.available()){
         checkIncomingBytes();
-        CANBus.write(txmsg);
+        //CANBus.write(txmsg);
         delay(10);
     }
     Serial.println("First CAN message received!");

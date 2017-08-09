@@ -1,4 +1,4 @@
-#include <Adafruit_GPS.h>
+#include "Adafruit_GPS.h"
 #include "VCDefines.h"
 
 Adafruit_GPS myGPS(&Serial3);
