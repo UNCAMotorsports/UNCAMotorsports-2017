@@ -6,7 +6,7 @@
 #define DEBUG_STATE
 //#define DEBUG_NO_TIMEOUTS
 //#define DEBUG_GPS
-//#define DEBUG_THROTTLE
+#define DEBUG_THROTTLE
 //#define DEBUG_RPM
 //#define DEBUG_STEERING
 //#define DEBUG_PROFILING
