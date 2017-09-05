@@ -162,11 +162,7 @@ void setup(){
     
     while (!Can0.available()){
         checkIncomingBytes();
-        //Can0.write(txmsg);
-		Serial.println(Can0.available());
 		Can0.read(rxmsg);
-		Serial.println(rxmsg.id);
-        delay(1000);
     }
     Serial.println("First CAN message received!");
 
@@ -216,14 +212,19 @@ void loop(){
             //digitalWriteFast(PIN_5V_0, LOW);
 
             // Close the shutdown circuit, and precharge for 100ms
+            digitalWriteFast(PIN_SHUTDOWN_CTRL, HIGH);
             
             digitalWriteFast(PIN_PRECHARGE, HIGH);
             delay(100);
 
             // Close AIR+
             digitalWriteFast(PIN_CLOSE_AIR, HIGH);
+            delay(100);
+
+            // Open Precharge relay
             digitalWriteFast(PIN_PRECHARGE, LOW);
             delay(100);
+            
 
 #ifndef DEBUG_NO_TIMEOUTS
             msTimer.begin(msTimerISR, 1000); // Starts a 1ms timer interrupt
@@ -240,7 +241,7 @@ void loop(){
 
         if (digitalRead(PIN_START_CAR) == HIGH) {
             digitalWriteFast(PIN_CLOSE_AIR, LOW);
-            //digitalWriteFast(PIN_SHUTDOWN_CTRL, LOW);
+            digitalWriteFast(PIN_SHUTDOWN_CTRL, LOW);
 #ifndef DEBUG_NO_TIMEOUTS
             msTimer.end();
 #endif
