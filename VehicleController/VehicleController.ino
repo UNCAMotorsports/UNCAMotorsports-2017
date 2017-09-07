@@ -101,15 +101,13 @@ void setup(){
     // SENTRAL/Sensor Fusion interrupt.  Not connected due to board mistake.
     pinMode(PIN_IMU_INT, INPUT);
 
+    // Analog pin for sensing battery voltage
     pinMode(PIN_BATT_SENSE, INPUT);
+
+    // Analog pin for sensing shutdown circuit current
     pinMode(PIN_SHUTDOWN_CURRENT, INPUT);
 
-    pinMode(PIN_CANTX, OUTPUT);
-    digitalWriteFast(PIN_CANTX, LOW);
-
-    pinMode(PIN_CANRX, INPUT);
-
-
+    // Set Analog reads to 12 bits
     analogReadResolution(12);
 
     Serial.begin(VC_SERIAL_BAUD);
@@ -160,23 +158,11 @@ void setup(){
     Serial.println("State: INIT_STATE");
 #endif
 
-    digitalWriteFast(PIN_SHUTDOWN_CTRL, HIGH);
-
-
     Serial.println("Waiting on CAN Bus");
-    //while (true){}
-    //txmsg.id = 0xfff;
-    //txmsg.len = 2;
-    //txmsg.buf[0] = 1;
-    //txmsg.buf[1] = 2;
     
     while (!Can0.available()){
         checkIncomingBytes();
-        //Can0.write(txmsg);
-		Serial.println(Can0.available());
 		Can0.read(rxmsg);
-		Serial.println(rxmsg.id);
-        delay(1000);
     }
     Serial.println("First CAN message received!");
 
@@ -226,14 +212,19 @@ void loop(){
             //digitalWriteFast(PIN_5V_0, LOW);
 
             // Close the shutdown circuit, and precharge for 100ms
+            digitalWriteFast(PIN_SHUTDOWN_CTRL, HIGH);
             
             digitalWriteFast(PIN_PRECHARGE, HIGH);
             delay(100);
 
             // Close AIR+
             digitalWriteFast(PIN_CLOSE_AIR, HIGH);
+            delay(100);
+
+            // Open Precharge relay
             digitalWriteFast(PIN_PRECHARGE, LOW);
             delay(100);
+            
 
 #ifndef DEBUG_NO_TIMEOUTS
             msTimer.begin(msTimerISR, 1000); // Starts a 1ms timer interrupt
@@ -250,7 +241,7 @@ void loop(){
 
         if (digitalRead(PIN_START_CAR) == HIGH) {
             digitalWriteFast(PIN_CLOSE_AIR, LOW);
-            //digitalWriteFast(PIN_SHUTDOWN_CTRL, LOW);
+            digitalWriteFast(PIN_SHUTDOWN_CTRL, LOW);
 #ifndef DEBUG_NO_TIMEOUTS
             msTimer.end();
 #endif
@@ -311,7 +302,7 @@ void checkIncomingBytes(){
     }
 }
 
-// Begins transmission for all available on a given i2c_t3 bus
+// Begins transmission for all available addresses on a given i2c_t3 bus
 // If a device reports back, this function will alert the user
 void scanI2CBus(i2c_t3* buspt){
     int nDevices = 0;
