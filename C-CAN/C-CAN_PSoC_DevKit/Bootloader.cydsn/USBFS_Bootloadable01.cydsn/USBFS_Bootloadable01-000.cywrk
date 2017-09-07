@@ -2,16 +2,14 @@
 <CyXmlSerializer>
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
-<CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="Bootloader-000" persistent="Bootloader-000.cywrk" platform="NOT_USED">
-<current_project name="..\..\..\..\..\..\Desktop\cy8ckit-059\lcd\Design01.cydsn\Design01.cyprj" />
+<CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="USBFS_Bootloadable01-000" persistent="USBFS_Bootloadable01-000.cywrk" platform="NOT_USED">
+<current_project name=".\USBFS_Bootloadable01.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
-<v>.\Bootloader.cyprj</v>
-<v>..\C-CAN.cydsn\C-CAN.cyprj</v>
-<v>..\..\..\..\..\..\Desktop\cy8ckit-059\lcd\Design01.cydsn\Design01.cyprj</v>
+<v>.\USBFS_Bootloadable01.cyprj</v>
 </projects>
-<workspace_id v="176de7ff-52cc-4ad3-8788-a4e146a3fb7a" />
+<workspace_id v="2a6fb7d6-8dec-4c5b-ac8a-586fb1827f21" />
 <WriteAppVersionLastSavedWith v="4.0.0.432" />
 <WriteAppMarketingVersionLastSavedWith v="4.0 Update 1" />
 <CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyPrjDependencyList" version="4">

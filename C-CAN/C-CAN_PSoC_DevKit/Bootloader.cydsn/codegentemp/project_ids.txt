@@ -1,6 +1,7 @@
-C:\Users\Patrick\Desktop\cy8ckit-059\AMS_psoc\AMS.cydsn\AMS.cyprj|8d1d2300-cec1-4143-b2c0-a45d4535573a
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|356373a6-2721-4f07-92b2-344991b02bd8
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|d767c726-898b-4671-9dfd-3b5c1c315747
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c330d777-dd19-4ea2-8652-743e0fd700cd
-C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|760e7a14-4a6f-412e-b9cb-cea44685888a
-C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\Bootloader.cyprj|254ac3b7-c562-458d-be05-4b73dcc5045b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|ac1aa4a2-bd6d-428c-b3ec-3624fd44efb1
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|3aaaed07-ed14-4c1e-b556-cd23d3683222
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|5f9b4eb3-faa4-4ef6-b011-b0f9feb5e44b
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2f21e24d-ffd8-459d-8290-b5de6433e9ae
+C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|8b5c2051-3f15-489e-8309-764bc52ae166
+C:\Users\Patrick\Desktop\cy8ckit-059\lcd\lcd_test\Design01.cydsn\Design01.cyprj|65ca7365-7a30-454c-9825-4dd97a88807c
+C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\Bootloader.cyprj|551c1996-8241-4475-8515-82cf60f679a2

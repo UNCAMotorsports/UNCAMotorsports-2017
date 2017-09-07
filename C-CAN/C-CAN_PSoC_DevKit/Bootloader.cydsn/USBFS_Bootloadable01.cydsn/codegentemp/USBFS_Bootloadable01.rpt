@@ -1,0 +1,15 @@
+Loading plugins phase: Elapsed time ==> 0s.304ms
+<CYPRESSTAG name="CyDsfit arguments...">
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\USBFS_Bootloadable01.cydsn\USBFS_Bootloadable01.cyprj -d CY8C5868AXI-LP035 -s C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\USBFS_Bootloadable01.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE</CYPRESSTAG>
+<CYPRESSTAG name="Design elaboration results...">
+ADD: pft.M0074: information: A (re)build is required to use the analog device editor. Unable to load the necessary information from the cyfit file. Partial/wrong data will be displayed until this has been resolved.
+ * C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\USBFS_Bootloadable01.cydsn\USBFS_Bootloadable01.cydwr ()
+
+</CYPRESSTAG>
+Elaboration phase: Elapsed time ==> 0s.760ms
+ADD: pft.M0086: error: Error in component: Bootloadable. The referenced Bootloader is invalid. Verify the Bootloader dependency is correct in the Bootloadable Component, then build project. Invalid bootloader hex file. Unable to read the hex file (C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\USBFS_Bootloader.cydsn\CortexM3\ARM_GCC_493\Release\USBFS_Bootloader.hex). The path does not exist.
+ * C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\USBFS_Bootloadable01.cydsn\TopDesign\PSoC5\TopDesign.cysch (Instance:Bootloadable)
+
+ADD: pft.M0086: error: Error in component: Bootloadable. The referenced Bootloader is invalid. Verify the Bootloader dependency is correct in the Bootloadable Component, then build project. Invalid bootloader elf file. Unable to read the elf file (C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\USBFS_Bootloader.cydsn\CortexM3\ARM_GCC_493\Release\USBFS_Bootloader.elf). The path does not exist.
+ * C:\Users\Patrick\Documents\GitHub\UNCAMotorsports-2017\C-CAN\C-CAN_PSoC_DevKit\Bootloader.cydsn\USBFS_Bootloadable01.cydsn\TopDesign\PSoC5\TopDesign.cysch (Instance:Bootloadable)
+
