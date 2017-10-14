@@ -1,6 +1,6 @@
 -- Project:   Bootloader
--- Generated: 09/01/2017 23:05:50
--- PSoC Creator  4.0 Update 1
+-- Generated: 10/13/2017 13:27:58
+-- PSoC Creator  4.1 Update 1
 
 ENTITY Bootloader IS
     PORT(
@@ -29,11 +29,11 @@ ARCHITECTURE __DEFAULT__ OF Bootloader IS
     SIGNAL ClockBlock_XTAL : bit;
     SIGNAL ClockBlock_XTAL_32KHZ : bit;
     SIGNAL LED(0)__PA : bit;
-    SIGNAL Net_12 : bit;
     SIGNAL Net_137 : bit;
     ATTRIBUTE global_signal OF Net_137 : SIGNAL IS true;
     SIGNAL Net_137_local : bit;
     SIGNAL Net_17 : bit;
+    SIGNAL Net_243 : bit;
     SIGNAL \PWM_1:Net_54\ : bit;
     SIGNAL \PWM_1:Net_63\ : bit;
     SIGNAL \\\USBFS:Dm(0)\\__PA\ : bit;
@@ -585,7 +585,7 @@ BEGIN
         GENERIC MAP(
             cy_registers => "")
         PORT MAP(
-            sof_int => Net_12,
+            sof_int => Net_243,
             arb_int => \USBFS:Net_1889\,
             usb_int => \USBFS:Net_1876\,
             ept_int_8 => \USBFS:ep_int_8\,

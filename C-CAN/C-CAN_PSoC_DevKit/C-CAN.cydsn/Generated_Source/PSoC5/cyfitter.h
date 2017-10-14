@@ -478,6 +478,9 @@
 #define ADC_SAR_1_IRQ__INTC_SET_EN_REG CYREG_NVIC_SETENA0
 #define ADC_SAR_1_IRQ__INTC_SET_PD_REG CYREG_NVIC_SETPEND0
 
+/* Port_for_fun */
+#define Port_for_fun_Sync_ctrl_reg__REMOVED 1u
+
 /* Miscellaneous */
 #define BCLK__BUS_CLK__HZ 72000000U
 #define BCLK__BUS_CLK__KHZ 72000U

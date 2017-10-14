@@ -1,6 +1,6 @@
 // ======================================================================
 // C-CAN.v generated from TopDesign.cysch
-// 08/09/2017 at 17:41
+// 09/11/2017 at 17:01
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -476,9 +476,32 @@ endmodule
 `include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\BasicCounter_v1_0\BasicCounter_v1_0.v"
 `endif
 
+// Component: CyControlReg_v1_80
+`ifdef CY_BLK_DIR
+`undef CY_BLK_DIR
+`endif
+
+`ifdef WARP
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v"
+`else
+`define CY_BLK_DIR "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80"
+`include "C:\Program Files (x86)\Cypress\PSoC Creator\4.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyControlReg_v1_80\CyControlReg_v1_80.v"
+`endif
+
 // top
 module top ;
 
+          wire  Net_1662;
+          wire  Net_1661;
+          wire  Net_1660;
+          wire  Net_1659;
+          wire  Net_1658;
+          wire  Net_1657;
+          wire  Net_1656;
+          wire  Net_1655;
+          wire  Net_1654;
+          wire  Net_1653;
           wire  Net_1545;
           wire  Net_1535;
           wire  Net_1534;
@@ -1053,6 +1076,30 @@ module top ;
 		Clock_4
 		 (.clock_out(Net_1524));
 
+
+    CyControlReg_v1_80 Port_for_fun (
+        .control_1(Net_1653),
+        .control_2(Net_1654),
+        .control_3(Net_1655),
+        .control_0(Net_1656),
+        .control_4(Net_1657),
+        .control_5(Net_1658),
+        .control_6(Net_1659),
+        .control_7(Net_1660),
+        .clock(1'b0),
+        .reset(1'b0));
+    defparam Port_for_fun.Bit0Mode = 0;
+    defparam Port_for_fun.Bit1Mode = 0;
+    defparam Port_for_fun.Bit2Mode = 0;
+    defparam Port_for_fun.Bit3Mode = 0;
+    defparam Port_for_fun.Bit4Mode = 0;
+    defparam Port_for_fun.Bit5Mode = 0;
+    defparam Port_for_fun.Bit6Mode = 0;
+    defparam Port_for_fun.Bit7Mode = 0;
+    defparam Port_for_fun.BitValue = 0;
+    defparam Port_for_fun.BusDisplay = 0;
+    defparam Port_for_fun.ExtrReset = 0;
+    defparam Port_for_fun.NumOutputs = 8;
 
 
 

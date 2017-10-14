@@ -4,10 +4,17 @@
   <block name="cy_constant_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="EEPROM" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="Bootloadable_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="Clock_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="cy_constant_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Port_for_fun" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="DMA_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="Clock_4" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="four" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="two" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="three" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="one" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="RX_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="AMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="ADC_SAR_1" BASE="0x0" SIZE="0x0" desc="SAR ADC" visible="true" hidden="false">
     <block name="ZeroTerminal_8" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="ZeroTerminal_7" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -47,10 +54,7 @@
     <register name="SAR_CLK" address="0x40005B27" bitWidth="8" desc="SAR Clock Selection Register" hidden="false" />
     <register name="SAR_WRK" address="0x40005BA0" bitWidth="16" desc="SAR working register" hidden="false" />
   </block>
-  <block name="four" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="two" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="three" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="one" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
+  <block name="TX_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
   <block name="CAN_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false">
     <block name="CanIP" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
     <block name="Clock" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
@@ -336,7 +340,4 @@
       <field name="DATA_LOW" from="31" to="0" access="RW" resetVal="" desc="Lower Data Bytes" hidden="false" />
     </register>
   </block>
-  <block name="AMux_1" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="RX_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
-  <block name="TX_2" BASE="0x0" SIZE="0x0" desc="" visible="true" hidden="false" />
 </blockRegMap>

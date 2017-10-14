@@ -2,7 +2,7 @@
 --	Conversion of C-CAN.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Wed Aug 09 17:41:46 2017
+--	Mon Sep 11 17:01:41 2017
 --
 
 USE cypress.cypress.all;
@@ -311,6 +311,32 @@ SIGNAL \BasicCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_1\ : bit;
 SIGNAL \BasicCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\ : bit;
 SIGNAL \BasicCounter:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ : bit;
 SIGNAL Net_1535 : bit;
+SIGNAL \Port_for_fun:clk\ : bit;
+SIGNAL \Port_for_fun:rst\ : bit;
+SIGNAL Net_1656 : bit;
+SIGNAL \Port_for_fun:control_out_0\ : bit;
+SIGNAL Net_1653 : bit;
+SIGNAL \Port_for_fun:control_out_1\ : bit;
+SIGNAL Net_1654 : bit;
+SIGNAL \Port_for_fun:control_out_2\ : bit;
+SIGNAL Net_1655 : bit;
+SIGNAL \Port_for_fun:control_out_3\ : bit;
+SIGNAL Net_1657 : bit;
+SIGNAL \Port_for_fun:control_out_4\ : bit;
+SIGNAL Net_1658 : bit;
+SIGNAL \Port_for_fun:control_out_5\ : bit;
+SIGNAL Net_1659 : bit;
+SIGNAL \Port_for_fun:control_out_6\ : bit;
+SIGNAL Net_1660 : bit;
+SIGNAL \Port_for_fun:control_out_7\ : bit;
+SIGNAL \Port_for_fun:control_7\ : bit;
+SIGNAL \Port_for_fun:control_6\ : bit;
+SIGNAL \Port_for_fun:control_5\ : bit;
+SIGNAL \Port_for_fun:control_4\ : bit;
+SIGNAL \Port_for_fun:control_3\ : bit;
+SIGNAL \Port_for_fun:control_2\ : bit;
+SIGNAL \Port_for_fun:control_1\ : bit;
+SIGNAL \Port_for_fun:control_0\ : bit;
 SIGNAL \MODULE_2:g1:a0:newa_1\ : bit;
 SIGNAL MODIN2_1 : bit;
 SIGNAL \MODULE_2:g1:a0:newa_0\ : bit;
@@ -989,6 +1015,16 @@ Clock_4:cy_clock_v1_0
 		is_digital=>'1')
 	PORT MAP(clock_out=>Net_1524,
 		dig_domain_out=>open);
+\Port_for_fun:Sync:ctrl_reg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"00000000",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>zero,
+		clock=>zero,
+		control=>(\Port_for_fun:control_7\, \Port_for_fun:control_6\, \Port_for_fun:control_5\, \Port_for_fun:control_4\,
+			\Port_for_fun:control_3\, \Port_for_fun:control_2\, \Port_for_fun:control_1\, \Port_for_fun:control_0\));
 AMux_1_Decoder_old_id_1:cy_dff
 	PORT MAP(d=>Net_1536_1,
 		clk=>Net_1524,

@@ -478,6 +478,9 @@
 .set ADC_SAR_1_IRQ__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
 .set ADC_SAR_1_IRQ__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
 
+/* Port_for_fun */
+.set Port_for_fun_Sync_ctrl_reg__REMOVED, 1
+
 /* Miscellaneous */
 .set BCLK__BUS_CLK__HZ, 72000000
 .set BCLK__BUS_CLK__KHZ, 72000
