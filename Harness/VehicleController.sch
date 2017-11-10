@@ -38,7 +38,7 @@ EELAYER 26 0
 EELAYER END
 $Descr B 17000 11000
 encoding utf-8
-Sheet 2 6
+Sheet 2 9
 Title "Vehicle Controller"
 Date "2017-03-11"
 Rev "001"
