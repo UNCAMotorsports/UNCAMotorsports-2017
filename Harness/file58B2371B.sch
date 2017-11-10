@@ -1,0 +1,338 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:SystemBlocks
+LIBS:UNCAMotorsports
+LIBS:Common-Parts-Library-CPL
+LIBS:relays
+LIBS:switches
+LIBS:2017_Harness-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title "Vehicle Controller"
+Date "2017-03-11"
+Rev "001"
+Comp "UNC Asheville Motorsports"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L FGMMOPA6H U12
+U 1 1 58B2411D
+P 6950 3150
+F 0 "U12" H 7000 3837 60  0000 C CNN
+F 1 "FGMMOPA6H" H 7000 3731 60  0000 C CNN
+F 2 "UNCAMotorsports:GPS_16x16" H 6950 3400 60  0001 C CNN
+F 3 "" H 6950 3400 60  0000 C CNN
+	1    6950 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C10
+U 1 1 58B24124
+P 5450 3000
+F 0 "C10" H 5542 3046 50  0000 L CNN
+F 1 "0.1uF" H 5542 2955 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5450 3000 50  0001 C CNN
+F 3 "" H 5450 3000 50  0000 C CNN
+	1    5450 3000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R_Small R31
+U 1 1 58B2412B
+P 6150 2600
+F 0 "R31" V 6250 2600 50  0000 C CNN
+F 1 "10k" V 6050 2600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 6150 2600 50  0001 C CNN
+F 3 "" H 6150 2600 50  0000 C CNN
+	1    6150 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR053
+U 1 1 58B24137
+P 5450 3800
+F 0 "#PWR053" H 5450 3550 50  0001 C CNN
+F 1 "GND" H 5455 3627 50  0000 C CNN
+F 2 "" H 5450 3800 50  0000 C CNN
+F 3 "" H 5450 3800 50  0000 C CNN
+	1    5450 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L U.FL_Antenna U13
+U 1 1 58B24140
+P 7850 3650
+F 0 "U13" H 7700 3500 60  0000 C CNN
+F 1 "U.FL_Antenna" H 8150 3800 60  0001 C CNN
+F 2 "UNCAMotorsports:U.FL-CON" H 7850 3650 60  0001 C CNN
+F 3 "" H 7850 3650 60  0000 C CNN
+	1    7850 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR054
+U 1 1 58B24148
+P 8100 4050
+F 0 "#PWR054" H 8100 3800 50  0001 C CNN
+F 1 "GND" H 8105 3877 50  0000 C CNN
+F 2 "" H 8100 4050 50  0000 C CNN
+F 3 "" H 8100 4050 50  0000 C CNN
+	1    8100 4050
+	1    0    0    -1  
+$EndComp
+Text HLabel 6050 3150 0    60   Input ~ 0
+3D-FIX
+Text HLabel 6250 3550 0    60   Input ~ 0
+GPS_TX
+Text HLabel 6250 3650 0    60   Input ~ 0
+GPS_RX
+Text HLabel 6050 3050 0    60   Input ~ 0
+VBACKUP
+$Comp
+L +3.3V #PWR055
+U 1 1 58B276E4
+P 5450 2300
+F 0 "#PWR055" H 5450 2150 50  0001 C CNN
+F 1 "+3.3V" H 5465 2473 50  0000 C CNN
+F 2 "" H 5450 2300 50  0000 C CNN
+F 3 "" H 5450 2300 50  0000 C CNN
+	1    5450 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR056
+U 1 1 58B23C84
+P 3700 3600
+F 0 "#PWR056" H 3700 3350 50  0001 C CNN
+F 1 "GND" H 3705 3427 50  0000 C CNN
+F 2 "" H 3700 3600 50  0000 C CNN
+F 3 "" H 3700 3600 50  0000 C CNN
+	1    3700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR057
+U 1 1 58B23C75
+P 3700 2400
+F 0 "#PWR057" H 3700 2250 50  0001 C CNN
+F 1 "+3.3V" H 3715 2573 50  0000 C CNN
+F 2 "" H 3700 2400 50  0000 C CNN
+F 3 "" H 3700 2400 50  0000 C CNN
+	1    3700 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R30
+U 1 1 58B23C6D
+P 3700 2600
+F 0 "R30" H 3759 2646 50  0000 L CNN
+F 1 "220" H 3759 2555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 3700 2600 50  0001 C CNN
+F 3 "" H 3700 2600 50  0000 C CNN
+	1    3700 2600
+	1    0    0    -1  
+$EndComp
+Text HLabel 4250 3300 2    60   Input ~ 0
+3D-FIX
+Text HLabel 8850 3000 2    60   Input ~ 0
+1PPS
+Text HLabel 6050 2850 0    60   Input ~ 0
+GPS_RST
+Wire Wire Line
+	5450 2300 5450 2900
+Wire Wire Line
+	6050 2850 6500 2850
+Wire Wire Line
+	5450 3100 5450 3800
+Wire Wire Line
+	5450 3450 6500 3450
+Connection ~ 5450 3450
+Wire Wire Line
+	7600 3650 7500 3650
+Wire Wire Line
+	8100 3950 8000 3950
+Wire Wire Line
+	8100 2850 8100 4050
+Wire Wire Line
+	8000 3850 8100 3850
+Connection ~ 8100 3950
+Wire Wire Line
+	7500 2850 8100 2850
+Connection ~ 8100 3850
+Wire Wire Line
+	7500 3450 8400 3450
+Wire Wire Line
+	7500 3550 8100 3550
+Connection ~ 8100 3550
+Wire Wire Line
+	6050 3150 6500 3150
+Wire Wire Line
+	6250 3550 6500 3550
+Wire Wire Line
+	6250 3650 6500 3650
+Wire Wire Line
+	6500 2950 6400 2950
+Wire Wire Line
+	6400 2950 6400 3450
+Connection ~ 6400 3450
+Wire Wire Line
+	6050 3050 6500 3050
+Wire Wire Line
+	4000 3300 4250 3300
+Wire Wire Line
+	3700 3600 3700 3500
+Wire Wire Line
+	3700 3100 3700 3000
+Wire Wire Line
+	3700 2400 3700 2500
+Wire Wire Line
+	3700 2700 3700 2800
+Wire Wire Line
+	6150 2850 6150 2700
+Wire Wire Line
+	5450 2400 6400 2400
+Wire Wire Line
+	6400 2400 6400 2750
+Wire Wire Line
+	6400 2750 6500 2750
+Connection ~ 5450 2400
+Wire Wire Line
+	6150 2500 6150 2400
+Connection ~ 6150 2400
+Connection ~ 6150 2850
+NoConn ~ 7500 3350
+$Comp
+L C_Small C11
+U 1 1 58B346B2
+P 6250 3300
+F 0 "C11" H 6342 3346 50  0000 L CNN
+F 1 "0.1uF" H 6342 3255 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 6250 3300 50  0001 C CNN
+F 3 "" H 6250 3300 50  0000 C CNN
+	1    6250 3300
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3200 6250 3050
+Connection ~ 6250 3050
+Wire Wire Line
+	6250 3400 6250 3450
+Connection ~ 6250 3450
+$Comp
+L LED_Small_ALT D10
+U 1 1 58C36B03
+P 3700 2900
+F 0 "D10" V 3746 2832 50  0000 R CNN
+F 1 "3DFix" V 3655 2832 50  0000 R CNN
+F 2 "LEDs:LED-0805" V 0   0   50  0001 C CNN
+F 3 "" V 0   0   50  0001 C CNN
+	1    3700 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Q_NMOS_GSD Q3
+U 1 1 591B9790
+P 3800 3300
+F 0 "Q3" H 4000 3350 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 4000 3250 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 4000 3400 50  0001 C CNN
+F 3 "" H 3800 3300 50  0001 C CNN
+	1    3800 3300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_GSD Q7
+U 1 1 591A0E4B
+P 8600 3450
+F 0 "Q7" H 8800 3500 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 8800 3400 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 8800 3550 50  0001 C CNN
+F 3 "" H 8600 3450 50  0001 C CNN
+	1    8600 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3000 8850 3000
+Wire Wire Line
+	8700 3000 8700 3250
+$Comp
+L R_Small R49
+U 1 1 591A10E5
+P 8300 3250
+F 0 "R49" H 8359 3296 50  0000 L CNN
+F 1 "DNP" H 8359 3205 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 8300 3250 50  0001 C CNN
+F 3 "" H 8300 3250 50  0001 C CNN
+	1    8300 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3150 8300 3000
+Connection ~ 8700 3000
+Wire Wire Line
+	8300 3350 8300 3550
+Connection ~ 8300 3450
+$Comp
+L R_Small R50
+U 1 1 591A11A1
+P 8300 3650
+F 0 "R50" H 8359 3696 50  0000 L CNN
+F 1 "DNP" H 8359 3605 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 8300 3650 50  0001 C CNN
+F 3 "" H 8300 3650 50  0001 C CNN
+	1    8300 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 3750 8300 3800
+Wire Wire Line
+	8300 3800 8700 3800
+Wire Wire Line
+	8700 3650 8700 3900
+$Comp
+L GND #PWR058
+U 1 1 591A124C
+P 8700 3900
+F 0 "#PWR058" H 8700 3650 50  0001 C CNN
+F 1 "GND" H 8705 3727 50  0000 C CNN
+F 2 "" H 8700 3900 50  0000 C CNN
+F 3 "" H 8700 3900 50  0000 C CNN
+	1    8700 3900
+	1    0    0    -1  
+$EndComp
+Connection ~ 8700 3800
+$EndSCHEMATC
